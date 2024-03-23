@@ -1,6 +1,6 @@
 import { 
       RiContactsBook2Line, RiHome3Line, 
-      RiHome2Fill, RiUser6Line, RiUser6Fill,
+      RiHome3Fill, RiUser6Line, RiUser6Fill,
       RiContactsBook2Fill } from "react-icons/ri";
 import { IoBriefcase, IoBriefcaseOutline } from "react-icons/io5";
     
@@ -12,7 +12,7 @@ const data = {
                   name: 'Home',
                   icon: RiHome3Line,
                   isTrue: false,
-                  isFocusedIcon: RiHome2Fill,
+                  isFocusedIcon: RiHome3Fill,
                   alt: "home-icon",
                   id: 3   
             },

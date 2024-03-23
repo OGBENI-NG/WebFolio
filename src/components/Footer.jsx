@@ -1,14 +1,20 @@
 import React from 'react'
-import data from '../data'
 
 
 
-export default function Footer() {
 
-  const footerData = data.footerEl.map(item => (
-    <div key={item.id} className='flex flex-col items-center'>
-      <div className='text-primary'>{item.icon({ size: 35})}</div>
-      <span>{item.name}</span>
+export default function Footer({footerItems, handleIconClick}) {
+
+  const footerData = footerItems.map(item => (
+    <div 
+      key={item.id} 
+      onClick={() => handleIconClick(item.id)}
+      className='flex flex-col items-center font-Solway'
+    >
+      <div className={`${item.isTrue ? 'text-brand' : 'text-primary'}  transition-all `}>
+        {item.isTrue ? item.isFocusedIcon({ size: 35 }) : item.icon({ size: 35 })}
+      </div>
+      <span className='text-base font-semibold'>{item.name}</span>
     </div>
   ))
   
