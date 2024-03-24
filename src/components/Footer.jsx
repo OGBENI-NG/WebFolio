@@ -1,31 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import data from '../data';
 
+export default function Footer({ themeColor }) {
+  const [footerItems, setFooterItems] = useState(data.footerEl);
 
-
-
-export default function Footer({footerItems, handleIconClick}) {
+  const handleIconClick = (id) => {
+    const updatedItems = footerItems.map(item => {
+      if (item.id === id) {
+        return { ...item, isTrue: true };
+      } else {
+        return { ...item, isTrue: false };
+      }
+    });
+    setFooterItems(updatedItems);
+  };
 
   const footerData = footerItems.map(item => (
-    <div 
-      key={item.id} 
+    <NavLink
+      key={item.id}
+      to={item.name.toLowerCase() === 'home' ? '/' : `/${item.name.toLowerCase()}`}
+      activeClassName="text-brand"
+      className={`flex flex-col items-center font-OpenSan ${item.isTrue ? 'text-brand' : themeColor} transition-all`}
       onClick={() => handleIconClick(item.id)}
-      className='flex flex-col items-center font-Solway'
     >
-      <div className={`${item.isTrue ? 'text-brand' : 'text-primary'}  transition-all `}>
-        {item.isTrue ? item.isFocusedIcon({ size: 35 }) : item.icon({ size: 35 })}
+      <div>
+        {item.isTrue ? item.isFocusedIcon({ size: 25 }) : item.icon({ size: 25 })}
       </div>
-      <span className='text-base font-semibold'>{item.name}</span>
-    </div>
-  ))
-  
-  return (
-    <footer className='flex items-center justify-between py-2
-        px-5 fixed bottom-0 right-0 left-0 bg-white text-primary
-        backdrop-blur-[100px] border-t-[1.5px] border-borderColor
+      <span className="text-[14px] font-semibold">{item.name}</span>
+    </NavLink>
 
-      '
-      >
-        {footerData}
+  ));
+
+  return (
+    <footer className="flex items-center justify-between py-2 px-5 fixed bottom-0 right-0 left-0 bg-white text-primary border-t-[1px] bg-white/10 backdrop-blur-[100px] border-borderColor">
+      {footerData}
     </footer>
-  )
+  );
 }

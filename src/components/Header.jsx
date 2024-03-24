@@ -1,18 +1,32 @@
 import React from 'react'
 import { LuSun } from "react-icons/lu";
+import { HiMoon } from "react-icons/hi2";
+import logo from "../asset/img/🦆 icon _code_.svg"
 
-export default function Header({logo}) {
+
+export default function Header({themeColor, theme, toggleTheme}) {
+
+  const switchIcon = theme === "light" 
+    ?
+      <HiMoon className='w-full h-full'/>
+    : 
+      <LuSun className='w-full h-full text-mainBg'/> 
+  ;
+
+  
   return (
     <header className={`flex items-center justify-between py-5 px-4
-      bg-white backdrop-blur-[100px] border-b-[1.5px]
+      border-b-[1px] bg-white/10 backdrop-blur-[100px]
       border-borderColor fixed left-0 right-0 top-0`}>
       <img 
         src={logo} 
         alt="logo"
         className='w-[35px] h-[35px]' 
       />
-      <h1 className='font-Solway text-primary text-3xl font-semibold'>WebFolio</h1>
-      <LuSun className='h-[35px] w-[35px]'/>
+      <h1 className={`font-Solway ${themeColor} text-3xl font-semibold`}>WebFolio</h1>
+      <div onClick={toggleTheme} className='w-[35px] h-[35px]'>
+        {switchIcon}
+      </div>
     </header>
   )
 }

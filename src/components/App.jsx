@@ -1,38 +1,32 @@
-import React, { useEffect, useState } from 'react'
-import logo from '../asset/img/🦆 icon _code_.svg'
-import logoIllustration from '../asset/img/intro-illtra.svg'
-import Header from './Header'
-import Intro from './Intro'
-import Footer from './Footer'
-import data from '../data'
+import React, { useEffect, useState, useContext } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Layout from './Home/Layout'
+import Home from './Home/Home'
+import Work from './Work'
+import About from './About'
+import Contact from './Contact'
+
+
+import ThemeContext from '../UseThemeContext'
 
 export default function App() {
-
-  const [footerItems, setFooterItems] = useState(data.footerEl)
-
-  const handleIconClick = (id) => {
-    const updatedItems = footerItems.map(item => {
-      if (item.id === id) {
-        return { ...item, isTrue: true }
-      } else {
-        return { ...item, isTrue: false }
-      }
-    })
-    setFooterItems(updatedItems)
-  }
+  const {theme} = useContext(ThemeContext)
+  
 
   return(
-    <div className='bg-mainBg h-screen'>
-      <Header 
-        logo={logo}
-      />
-      <Intro
-        logoIllustration={logoIllustration} 
-      />
-      <Footer 
-        footerItems={footerItems}
-        handleIconClick={handleIconClick}
-      />
+    <div className={`overflow-x-hidden h-screen
+      ${theme === "light" ? 'bg-mainBg' : 'bg-mainBgDark'}  `}
+    >
+      <Router>
+        <Routes>
+          <Route path='/' element={<Layout/>}>
+            <Route index element={<Home/>}/>
+            <Route path='Work' element={<Work/>}/>
+            <Route path='about' element={<About/>}/>
+            <Route path='contact' element={<Contact/>}/>
+          </Route>
+        </Routes>
+      </Router>
     </div>
   )
 }
