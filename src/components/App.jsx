@@ -5,6 +5,7 @@ import Home from './Home/Home'
 import Work from './Work'
 import About from './About'
 import Contact from './Contact'
+import PageNotFound from './PageNotFound'
 
 
 import ThemeContext from '../UseThemeContext'
@@ -24,6 +25,7 @@ export default function App() {
             <Route path='Work' element={<Work/>}/>
             <Route path='about' element={<About/>}/>
             <Route path='contact' element={<Contact/>}/>
+            <Route path='*' element={<PageNotFound/>}/>
           </Route>
         </Routes>
       </Router>

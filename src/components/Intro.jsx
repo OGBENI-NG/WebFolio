@@ -46,7 +46,7 @@ export default function Intro({switchIllustration, theme, themeColor}) {
           <span className={`${themeColor}`}>I’m Adeolu Miracle, </span>
           <span className={`${themeColor}`}>{`${displayedText} |`}</span>
         </h1>
-        <p className={`text-xl pt-6 pr-[49px] 
+        <p className={`text-xl pt-6 w-[290px] font-medium
           ${theme === "light" ? "text-secondary" : "text-secondaryDark"} `}
         >
           I am a frontend developer with a passion 

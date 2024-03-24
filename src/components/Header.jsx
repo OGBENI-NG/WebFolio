@@ -16,8 +16,8 @@ export default function Header({themeColor, theme, toggleTheme}) {
   
   return (
     <header className={`flex items-center justify-between py-5 px-4
-      border-b-[1px] bg-white/10 backdrop-blur-[100px]
-      border-borderColor fixed left-0 right-0 top-0`}>
+      border-b-[1.5px] bg-white/5 backdrop-blur-[100px]
+      border-borderColor fixed left-0 right-0 top-0 z-10`}>
       <img 
         src={logo} 
         alt="logo"

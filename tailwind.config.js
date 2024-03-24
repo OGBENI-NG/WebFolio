@@ -13,7 +13,7 @@ export default {
       colors: {
         primary: '#045658',
         primaryDark: '#03C2C7',
-        borderColor: 'D7D5D5',
+        borderColor: '5B5B5B',
         mainBg: '#FFFFFF',
         mainBgDark: '#101111',
         brand: '#EF6101',

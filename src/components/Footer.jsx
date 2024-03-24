@@ -1,40 +1,50 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import data from '../data';
+import React, { useState } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
+import data from '../data'
 
 export default function Footer({ themeColor }) {
-  const [footerItems, setFooterItems] = useState(data.footerEl);
+  const [footerItems, setFooterItems] = useState(data.footerEl)
+  const location = useLocation()
 
   const handleIconClick = (id) => {
     const updatedItems = footerItems.map(item => {
       if (item.id === id) {
-        return { ...item, isTrue: true };
+        return { ...item, isTrue: true }
       } else {
-        return { ...item, isTrue: false };
+        return { ...item, isTrue: false }
       }
-    });
-    setFooterItems(updatedItems);
-  };
+    })
+    setFooterItems(updatedItems)
+  }
 
-  const footerData = footerItems.map(item => (
-    <NavLink
-      key={item.id}
-      to={item.name.toLowerCase() === 'home' ? '/' : `/${item.name.toLowerCase()}`}
-      activeClassName="text-brand"
-      className={`flex flex-col items-center font-OpenSan ${item.isTrue ? 'text-brand' : themeColor} transition-all`}
-      onClick={() => handleIconClick(item.id)}
-    >
-      <div>
-        {item.isTrue ? item.isFocusedIcon({ size: 25 }) : item.icon({ size: 25 })}
-      </div>
-      <span className="text-[14px] font-semibold">{item.name}</span>
-    </NavLink>
+  const footerData = footerItems.map(item => {
+    const isActive = location.pathname === (item.name.toLowerCase() === 'home' ? '/' : `/${item.name.toLowerCase()}`)
+    const classNames = `flex flex-col gap-[3px] items-center font-OpenSan 
+      ${isActive ? 'text-brand font-extrabold' : themeColor} transition-all`
+    ;
 
-  ));
+    return (
+      <NavLink
+        key={item.id}
+        to={item.name.toLowerCase() === 'home' ? '/' : `/${item.name.toLowerCase()}`}
+        className={classNames}
+        onClick={() => handleIconClick(item.id)}
+      >
+        <div>
+          {isActive ? item.isFocusedIcon({ size: 28 }) : item.icon({ size: 28 })}
+        </div>
+        <span className="text-[14px] font-bold">{item.name}</span>
+      </NavLink>
+    )
+  })
 
   return (
-    <footer className="flex items-center justify-between py-2 px-5 fixed bottom-0 right-0 left-0 bg-white text-primary border-t-[1px] bg-white/10 backdrop-blur-[100px] border-borderColor">
+    <footer className="flex items-center justify-between
+     py-[10px] px-5 fixed bottom-0 right-0 left-0 bg-white
+      text-primary border-t-[1.5px] bg-white/5 backdrop-blur-[100px] 
+      border-borderColor"
+    >
       {footerData}
     </footer>
-  );
+  )
 }
