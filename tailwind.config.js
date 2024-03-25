@@ -12,7 +12,7 @@ export default {
       },
       colors: {
         primary: '#045658',
-        primaryDark: '#03C2C7',
+        primaryDark: '#0AADB1',
         borderColor: '5B5B5B',
         mainBg: '#FFFFFF',
         mainBgDark: '#101111',
@@ -21,6 +21,15 @@ export default {
         secondaryDark: '#EEEEEE'
       }
     },
+    animation: {
+      'infinite-scroll': 'infinite-scroll 25s linear infinite',
+    },
+    keyframes: {
+      'infinite-scroll': {
+        from: { transform: 'translateX(0)' },
+        to: { transform: 'translateX(-100%)' },
+      }
+    }
   },
   plugins: [],
 }

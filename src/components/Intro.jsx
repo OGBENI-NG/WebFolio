@@ -37,7 +37,7 @@ export default function Intro({switchIllustration, theme, themeColor}) {
 
 
   return (
-    <section className='pt-[130px] w-full'>
+    <section className='pt-[130px] w-full transition-all'>
      <div className='px-5'>
       <h1 className='text-brand transition-[.5s] font-OpenSan text-[30px] 
         font-bold leading-normal'
@@ -46,7 +46,7 @@ export default function Intro({switchIllustration, theme, themeColor}) {
           <span className={`${themeColor}`}>I’m Adeolu Miracle, </span>
           <span className={`${themeColor}`}>{`${displayedText} |`}</span>
         </h1>
-        <p className={`text-xl pt-6 w-[290px] font-medium
+        <p className={`text-xl pt-6 w-[315px] font-medium
           ${theme === "light" ? "text-secondary" : "text-secondaryDark"} `}
         >
           I am a frontend developer with a passion 
@@ -57,7 +57,7 @@ export default function Intro({switchIllustration, theme, themeColor}) {
       <img 
         src={switchIllustration} 
         alt="illustration" 
-        className={`pt-8`}
+        className={`pt-8 `}
       />
     </section>
   )

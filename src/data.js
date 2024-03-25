@@ -23,7 +23,7 @@ const data = {
       workEl: [
             {
                   id: generateUniqueId(),
-                  name: 'Landing-page',
+                  name: 'Manage-landing-page',
                   type: 'web',
                   live: 'https://velvety-brioche-957d1f.netlify.app/',
                   image: landingPageImg,

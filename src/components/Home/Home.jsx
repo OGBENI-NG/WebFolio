@@ -5,6 +5,7 @@ import logoIllusDark from '../../asset/img/intro-illus-dark.svg'
 import ThemeContext from '../../UseThemeContext'
 import SelectedWork from './SelectedWork'
 import data from '../../data'
+import SkillsIcons from './SkillsIcons'
 
 
 export default function Home() {
@@ -16,9 +17,17 @@ export default function Home() {
     : logoIllusDark
   ;
 
-  const themeColor = theme === "light" ?
-    "block text-primary" : "block text-primaryDark"
+  const layoutTheme = theme === 'light' 
+    ? 'bg-[#E1E1E1] border-borderColor' 
+    : 'bg-[#363636] border-[#263238] '
   ;
+
+  const themeColor = theme === "light" 
+    ? "block text-primary" 
+    : "block text-primaryDark"
+  ;
+
+  const centerTxt = ` ${themeColor} pb-5 font-Solway text-2xl font-bold text-center`
  
 
   return (
@@ -28,9 +37,14 @@ export default function Home() {
         theme={theme}
         themeColor={themeColor}
       />
+      <SkillsIcons 
+        themeColor={themeColor}
+      />
       <SelectedWork
         data={data}
         themeColor={themeColor}
+        layoutTheme={layoutTheme}
+        centerTxt={centerTxt}
       />
     </main>
   )

@@ -1,15 +1,20 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-export default function SelectedWork({data, themeColor}) {
+export default function SelectedWork({data, themeColor, layoutTheme, centerTxt}) {
 
   const SelectedWorkEl = data.workEl.slice(0, 3)
-  const renderSelectedWork = SelectedWorkEl.map(item => (
-    <div key={item.id} className='py-3'>
+  const renderSelectedWork = SelectedWorkEl.map((item, index) => (
+    <div 
+      key={item.id} 
+      className={`${index === SelectedWorkEl.length - 1 ? 'pb-3' : 'pb-14'}`}
+    >
       <div>
         <img src={item.image} alt="" />
       </div>
-      <div className={`flex items-center py-3 px-5 text-2xl
-       bg-white/10 backdrop-blur-[100px] font-medium ${themeColor}`}
+      <div className={`flex items-center py-3 px-5 text-xl
+       ${layoutTheme}  backdrop-blur-[100px] border-b-[1px]
+       font-bold ${themeColor}`}
       >
         <a 
           href={item.live} 
@@ -29,11 +34,17 @@ export default function SelectedWork({data, themeColor}) {
   ))
 
   return (
-    <section className='pb-[130px]'>
-      <h2 className={`${themeColor} py-10 font-Solway text-3xl font-bold text-center`}>
-        Work
+    <section className='pb-[140px]'>
+      <h2 className={`${centerTxt}`}>
+        My works Examples
       </h2>
       {renderSelectedWork}
+      <NavLink 
+        to="work" 
+        className={`${centerTxt} underline text-lg`}
+      >
+        More works
+      </NavLink>
     </section>
   )
 }
