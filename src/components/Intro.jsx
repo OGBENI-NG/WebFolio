@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import CustomSVG from './Home/CustomSvg'
 
 
-export default function Intro({switchIllustration, theme, themeColor}) {
+export default function Intro({switchIllustration, theme, themeColor, frameLogo}) {
 
   const textsEl = [
     {text: 'Frontend Developer', color: "text-green-500"},
@@ -41,19 +42,21 @@ export default function Intro({switchIllustration, theme, themeColor}) {
   }, [currentWordIndex, currentIndex, isDeleting]);
   
 
-
-
   return (
-    <section className='pt-[135px] w-full transition-all'>
-     <div className='px-5'>
-      <h1 className='text-brand transition-[.5s] font-OpenSan text-[30px] 
-        font-bold leading-relaxed'
-      >
-          Hello 
-          <span className={`${themeColor}`}>I’m Adeolu Miracle, </span>
-          <span className={`${textsEl[currentWordIndex].color} transition-all`}>
-            {`${displayedText} |`}
-          </span>
+    <section className='pt-[135px] w-full transition-all relative z-[0]'>
+      <div  className='block absolute -z-[3] right-0 top-0 '>
+      <CustomSVG width="297" height="369" theme={theme} />
+      </div>
+    
+      <div className='px-5'>
+        <h1 className='text-brand transition-[.5s] font-OpenSan text-[30px] 
+          font-bold leading-relaxed'
+        >
+            Hello 
+            <span className={`${themeColor}`}>I’m Adeolu Miracle, </span>
+            <span className={`${textsEl[currentWordIndex].color} transition-all`}>
+              {`${displayedText} |`}
+            </span>
         </h1>
         <p className={`text-xl pt-6 w-[315px] font-medium
           ${theme === "light" ? "text-secondary" : "text-secondaryDark"} `}

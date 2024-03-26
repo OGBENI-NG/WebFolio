@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import Intro from '../Intro'
 import logoIllustration from '../../asset/img/intro-illtra.svg'
 import logoIllusDark from '../../asset/img/intro-illus-dark.svg'
+import frameLogo from '../../asset/img/frame.svg'
 import ThemeContext from '../../UseThemeContext'
 import SelectedWork from './SelectedWork'
 import data from '../../data'
@@ -27,7 +28,7 @@ export default function Home() {
     : "block text-primaryDark"
   ;
 
-  const centerTxt = ` ${themeColor} font-Solway text-2xl font-bold text-center`
+  const centerTxt = ` ${themeColor} font-Solway text-2xl font-bold w-max m-auto`
  
 
   return (
@@ -36,9 +37,11 @@ export default function Home() {
         switchIllustration={switchIllustration}
         theme={theme}
         themeColor={themeColor}
+        frameLogo={frameLogo}
       />
       <SkillsIcons 
         themeColor={themeColor}
+        theme={theme}
       />
       <SelectedWork
         data={data}

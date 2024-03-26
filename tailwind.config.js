@@ -17,7 +17,7 @@ export default {
         mainBg: '#FFFFFF',
         mainBgDark: '#101111',
         brand: '#EF6101',
-        secondary: '#8A8686',
+        secondary: '838282',
         secondaryDark: '#EEEEEE'
       }
     },
