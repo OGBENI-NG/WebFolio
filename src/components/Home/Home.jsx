@@ -27,7 +27,7 @@ export default function Home() {
     : "block text-primaryDark"
   ;
 
-  const centerTxt = ` ${themeColor} pb-5 font-Solway text-2xl font-bold text-center`
+  const centerTxt = ` ${themeColor} font-Solway text-2xl font-bold text-center`
  
 
   return (

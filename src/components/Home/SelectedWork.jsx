@@ -7,7 +7,7 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
   const renderSelectedWork = SelectedWorkEl.map((item, index) => (
     <div 
       key={item.id} 
-      className={`${index === SelectedWorkEl.length - 1 ? 'pb-3' : 'pb-14'}`}
+      className={`${index === SelectedWorkEl.length - 1 ? 'pb-4' : 'pb-14'}`}
     >
       <div>
         <img src={item.image} alt="" />
@@ -34,8 +34,8 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
   ))
 
   return (
-    <section className='pb-[140px]'>
-      <h2 className={`${centerTxt}`}>
+    <section className='pb-[140px] overflow-x-hidden'>
+      <h2 className={`${centerTxt} pb-6`}>
         My works Examples
       </h2>
       {renderSelectedWork}
