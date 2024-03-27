@@ -15,7 +15,7 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
       <div>
         <img src={item.image} alt="work-icon" />
       </div>
-      <div className={`flex items-center py-3 px-5 text-xl overflow-hidden
+      <div className={`flex items-center py-3 px-5 text-xl 
        ${layoutTheme}  backdrop-blur-[100px] border-b-[1px] 
        font-bold ${themeColor}`}
       >

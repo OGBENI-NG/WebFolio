@@ -33,7 +33,7 @@ export default function Layout() {
         layoutTheme={layoutTheme}
         switchIcon={switchIcon}
       />
-        <main>
+        <main className='overflow-hidden'>
           <Outlet/>
         </main>
       <Footer 

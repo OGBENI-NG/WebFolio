@@ -11,7 +11,7 @@ export default function SkillsIcons({themeColor, theme}) {
 
     return (
         <section className='py-[120px] transition-all overflow-hidden relative z-0'>
-            <div className='absolute w-full top-[20px] -z-[1]'>
+            <div className='absolute w-full top-[20px] -z-[1] -right-[10px]'>
                 <CustomSVG width='380px' theme={theme}/>
             </div>
             <div className={`${themeColor} text-center text-2xl font-bold pb-5 font-Solway`}>

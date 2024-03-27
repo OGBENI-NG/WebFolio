@@ -15,7 +15,7 @@ export default function App() {
   
 
   return(
-    <div className={`overflow-x-hidden h-screen !scroll-smooth 
+    <div className={`overflow-x-hidden min-h-screen !scroll-smooth 
       font-OpenSan
       ${theme === "light" ? 'bg-mainBg' : 'bg-mainBgDark'}  `}
     >
