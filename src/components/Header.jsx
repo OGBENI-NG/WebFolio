@@ -7,7 +7,7 @@ export default function Header(
   ) {
 
   return (
-    <header className={`flex items-center justify-between py-5 px-4
+    <header className={`flex items-center justify-between p-5 px-4
       border-b-[1px] ${layoutTheme} backdrop-blur-[100px]
        fixed w-full top-0 z-50`}>
       <img 

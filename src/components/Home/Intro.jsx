@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import CustomSVG from './Home/CustomSvg'
+import CustomSVG from '../CustomSvg'
 
 
-export default function Intro({switchIllustration, theme, themeColor, frameLogo}) {
+export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) {
 
   const textsEl = [
     {text: 'Frontend Developer', color: "text-green-500"},
@@ -48,8 +48,8 @@ export default function Intro({switchIllustration, theme, themeColor, frameLogo}
       <CustomSVG width="297" height="369" theme={theme} />
       </div>
     
-      <div className='px-5'>
-        <h1 className='text-brand transition-[.5s] font-OpenSan text-[30px] 
+      <div className='px-4'>
+        <h1 className='text-brand font-OpenSan text-[30px] 
           font-bold leading-relaxed'
         >
             Hello 
@@ -58,8 +58,7 @@ export default function Intro({switchIllustration, theme, themeColor, frameLogo}
               {`${displayedText} |`}
             </span>
         </h1>
-        <p className={`text-xl pt-6 w-[315px] font-medium
-          ${theme === "light" ? "text-secondary" : "text-secondaryDark"} `}
+        <p className={`text-xl pt-6 w-[315px] font-medium ${bodyTxt} `}
         >
           I am a frontend developer with a passion 
           for creating intuitive and user-friendly
@@ -69,7 +68,7 @@ export default function Intro({switchIllustration, theme, themeColor, frameLogo}
       <img 
         src={switchIllustration} 
         alt="illustration" 
-        className={`pt-8 `}
+        className={`pt-8 transition-all`}
       />
     </section>
   )

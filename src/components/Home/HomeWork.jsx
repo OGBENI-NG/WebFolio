@@ -6,7 +6,7 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
 
   const hoverColor = `hover:text-[#607681] hover:underline`
 
-  const SelectedWorkEl = data.workEl.slice(0, 3)
+  const SelectedWorkEl = data.workEl.slice(0, 4)
   const renderSelectedWork = SelectedWorkEl.map((item, index) => (
     <div 
       key={item.id} 
@@ -16,7 +16,7 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
         <img src={item.image} alt="work-icon" />
       </div>
       <div className={`flex items-center py-3 px-5 text-xl 
-       ${layoutTheme}  backdrop-blur-[100px] border-b-[1px] 
+       ${layoutTheme} overflow-hidden backdrop-blur-[100px] border-b-[1px] 
        font-bold ${themeColor}`}
       >
         <a 
@@ -39,13 +39,13 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
 
   
   return (
-    <section className='pb-[140px] mt-[20px]'>
+    <section className='pb-[70px] mt-[20px]'>
       <h2 className={`${centerTxt} pb-6`}>
         My works Examples
       </h2>
       {renderSelectedWork}
       <NavLink 
-        to="work" 
+        to="works" 
         className={`${centerTxt} ${hoverColor} underline text-lg`}
       >
         More works

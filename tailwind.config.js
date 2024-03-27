@@ -16,9 +16,9 @@ export default {
         borderColor: '5B5B5B',
         mainBg: '#FFFFFF',
         mainBgDark: '#101111',
-        brand: '#EF6101',
+        brand: '#FF6700',
         secondary: '838282',
-        secondaryDark: '#EEEEEE'
+        secondaryDark: '#BCBABA'
       }
     },
     animation: {

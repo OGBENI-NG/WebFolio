@@ -70,7 +70,7 @@ const data = {
                   id: generateUniqueId()   
             },
             {
-                  name: 'Work',
+                  name: 'Works',
                   icon: IoBriefcaseOutline,
                   isTrue: false,
                   isFocusedIcon: IoBriefcase,

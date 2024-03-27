@@ -1,12 +1,13 @@
 import React, {useContext} from 'react'
-import Intro from '../Intro'
+import Intro from './Intro'
 import logoIllustration from '../../asset/img/intro-illtra.svg'
 import logoIllusDark from '../../asset/img/intro-illus-dark.svg'
 import frameLogo from '../../asset/img/frame.svg'
 import ThemeContext from '../../UseThemeContext'
-import SelectedWork from './SelectedWork'
+import HomeWork from './HomeWork'
 import data from '../../data'
 import SkillsIcons from './SkillsIcons'
+import HomeAbout from './HomeAbout'
 
 
 export default function Home() {
@@ -28,6 +29,8 @@ export default function Home() {
     : "block text-primaryDark"
   ;
 
+  const bodyTxt = theme === "light" ? "text-secondary" : "text-secondaryDark"
+
   const centerTxt = ` ${themeColor} font-Solway text-2xl font-bold w-max m-auto`
  
 
@@ -38,16 +41,22 @@ export default function Home() {
         theme={theme}
         themeColor={themeColor}
         frameLogo={frameLogo}
+        bodyTxt={bodyTxt}
       />
       <SkillsIcons 
         themeColor={themeColor}
         theme={theme}
       />
-      <SelectedWork
+      <HomeWork
         data={data}
         themeColor={themeColor}
         layoutTheme={layoutTheme}
         centerTxt={centerTxt}
+      />
+      <HomeAbout
+        theme={theme}
+        themeColor={themeColor}
+        bodyTxt={bodyTxt}
       />
     </main>
   )

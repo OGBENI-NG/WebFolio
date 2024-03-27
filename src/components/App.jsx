@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Layout from './Home/Layout'
+import Layout from './Layout'
 import Home from './Home/Home'
-import Work from './Work'
-import About from './About'
-import Contact from './Contact'
+import Work from './Work/Work'
+import About from './About/About'
+import Contact from './Contact/Contact'
 import PageNotFound from './PageNotFound'
 
 
@@ -23,7 +23,7 @@ export default function App() {
         <Routes>
           <Route path='/' element={<Layout/>}>
             <Route index element={<Home/>}/>
-            <Route path='Work' element={<Work/>}/>
+            <Route path='Works' element={<Work/>}/>
             <Route path='about' element={<About/>}/>
             <Route path='contact' element={<Contact/>}/>
             <Route path='*' element={<PageNotFound/>}/>

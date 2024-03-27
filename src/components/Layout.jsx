@@ -2,9 +2,9 @@ import React,{useContext} from 'react'
 import { Outlet } from "react-router-dom"
 import { LuSun } from "react-icons/lu";
 import { HiMoon } from "react-icons/hi2";
-import Header from '../Header'
-import Footer from '../Footer'
-import ThemeContext from '../../UseThemeContext'
+import Header from './Header'
+import Footer from './Footer'
+import ThemeContext from '../UseThemeContext'
 
 
 export default function Layout() {
