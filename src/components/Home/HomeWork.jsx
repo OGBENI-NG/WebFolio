@@ -16,7 +16,7 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
         <img src={item.image} alt="work-icon" />
       </div>
       <div className={`flex items-center py-3 px-5 text-xl 
-       ${layoutTheme} overflow-hidden backdrop-blur-[100px] border-b-[1px] 
+       ${layoutTheme} backdrop-blur-[100px] border-b-[1px] 
        font-bold ${themeColor}`}
       >
         <a 
@@ -39,7 +39,7 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
 
   
   return (
-    <section className='pb-[70px] mt-[20px]'>
+    <section className='pb-[0px] mt-[20px] relative z-[1]'>
       <h2 className={`${centerTxt} pb-6`}>
         My works Examples
       </h2>

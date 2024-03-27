@@ -12,7 +12,6 @@ import ThemeContext from '../UseThemeContext'
 
 export default function App() {
   const {theme} = useContext(ThemeContext)
-  
 
   return(
     <div className={`overflow-x-hidden min-h-screen !scroll-smooth 
