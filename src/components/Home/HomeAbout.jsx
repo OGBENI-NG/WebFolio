@@ -2,7 +2,7 @@ import React from 'react'
 import CustomSVG from '../CustomSvg'
 import { NavLink } from 'react-router-dom'
 
-export default function HomeAbout({theme, themeColor, bodyTxt}) {
+export default function HomeAbout({theme, themeColor, bodyTxt, centerTxt}) {
   return (
     <div className='relative py-[150px] -z-[0] px-4 '>
       <div className='absolute -left-[90px] -top-[100px] ' >
@@ -19,18 +19,18 @@ export default function HomeAbout({theme, themeColor, bodyTxt}) {
         />
         </svg>
       </div>
-      <div className='absolute w-full top-[60px] -right-[85px] -z-[1]'>
+      <div className='absolute w-full top-[40px] -right-[90px] -z-[1]'>
         <CustomSVG theme={theme} />
       </div>
-      <div className='w-[300px]'>
-        <h2 className='text-2xl font-Solway font-bold text-brand'>
+      <div className=''>
+        <h2 className={`text-center text-2xl font-Solway font-bold text-brand`}>
           About me
           <span className={`py-3 ${themeColor}`}>I Enjoy Solving Problems With Scalable Solutions</span>
         </h2>
       </div>
-      <p className={`text-base font-semibold border-l-[2px] border-brand pl-2
-       ${bodyTxt} w-[350px] mt-2`}>
-      My name is Adeolu Miracle, and I'm a passionate frontend developer based in Lagos, Nigeria. I began my coding journey in 2019, and since then, I've been captivated by the art of creating intuitive and visually appealing user experiences. Over time, I've honed my skills in HTML, CSS, and JavaScript, which form the foundation of any great web application... 
+      <p className={`text-base font-medium border-t-[2px] border-brand pt-2
+       ${bodyTxt}  mt-2 text-center backdrop-blur-[100px]`}>
+      My name is <span className='font-bold text-brand'>Adeolu Miracle</span> , and I'm a passionate frontend developer based in Lagos, Nigeria. I began my coding journey in 2019, and since then, I've been captivated by the art of creating intuitive and visually appealing user experiences. Over time, I've honed my skills in HTML, CSS, and JavaScript, which form the foundation of any great web application... 
       <NavLink 
         className='pb-1 px-2 leading-none font-semibold text-brand underline bg-brand/15 rounded-lg' 
         to='about'>

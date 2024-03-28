@@ -10,12 +10,12 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
   const renderSelectedWork = SelectedWorkEl.map((item, index) => (
     <div 
       key={item.id} 
-      className={`${index === SelectedWorkEl.length - 1 ? 'pb-4' : 'pb-14'}`}
+      className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-14'}`}
     >
       <div>
         <img src={item.image} alt="work-icon" />
       </div>
-      <div className={`flex items-center py-3 px-5 text-xl 
+      <div className={`flex items-center py-3 px-4 text-xl 
        ${layoutTheme} backdrop-blur-[100px] border-b-[1px] 
        font-bold ${themeColor}`}
       >
@@ -29,9 +29,9 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
         <a 
           href={item.gitRepository} 
           target='_blank'
-          className='ml-auto text-brand'
+          className='ml-auto text-brand hover:text-brand/50'
         >
-          {item.gitIcon({size: 40})}
+          {item.gitIcon({size: 40, })}
         </a>
       </div>
     </div>
@@ -40,13 +40,15 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
   
   return (
     <section className='pb-[0px] mt-[20px] relative z-[1]'>
-      <h2 className={`${centerTxt} pb-6`}>
+      <h2 className={`${centerTxt} pb-6 m-auto`}>
         My works Examples
       </h2>
       {renderSelectedWork}
       <NavLink 
         to="works" 
-        className={`${centerTxt} ${hoverColor} underline text-lg`}
+        className={`${centerTxt} ${hoverColor} ${layoutTheme}
+          underline text-lg ml-auto py-3
+          px-4 shadow-md shadow-primary/30 rounded-bl-lg`}
       >
         More works
       </NavLink>

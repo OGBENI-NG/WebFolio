@@ -13,11 +13,11 @@ export default {
       colors: {
         primary: '#045658',
         primaryDark: '#F4F4F4',
-        borderColor: '5B5B5B',
+        borderColor: '#5B5B5B',
         mainBg: '#FFFFFF',
         mainBgDark: '#101111',
         brand: '#FF6700',
-        secondary: '838282',
+        secondary: '#838282',
         secondaryDark: '#BCBABA'
       }
     },

@@ -21,7 +21,7 @@ export default function Home() {
 
   const layoutTheme = theme === 'light' 
     ? 'bg-[#E1E1E1] border-borderColor' 
-    : 'bg-[#363636] border-[#263238] '
+    : 'bg-[#363636] border-[#5F5F5F]'
   ;
 
   const themeColor = theme === "light" 
@@ -31,7 +31,7 @@ export default function Home() {
 
   const bodyTxt = theme === "light" ? "text-secondary" : "text-secondaryDark"
 
-  const centerTxt = ` ${themeColor} font-Solway text-2xl font-bold w-max m-auto`
+  const centerTxt = ` ${themeColor} font-Solway text-2xl font-bold w-max`
  
 
   return (
@@ -57,6 +57,7 @@ export default function Home() {
         theme={theme}
         themeColor={themeColor}
         bodyTxt={bodyTxt}
+        centerTxt={centerTxt}
       />
     </main>
   )
