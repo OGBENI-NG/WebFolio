@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 export default function HomeAbout({theme, themeColor, bodyTxt, centerTxt}) {
   return (
-    <div className='relative py-[100px] -z-[0] px-4 transition-all'>
+    <div className='relative py-[100px] -z-[0] px-4'>
       <div className='absolute -left-[90px] -top-[100px] -z-[1]' >
         <svg 
           width="251" height="225" viewBox="0 0 251 225" 

@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import Intro from './Intro'
 import logoIllustration from '../../asset/img/intro-illtra.svg'
 import logoIllusDark from '../../asset/img/intro-illus-dark.svg'
@@ -13,6 +13,22 @@ import HomeContact from './HomeContact'
 
 export default function Home() {
   const {theme} = useContext(ThemeContext)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  })
+
+  const handleChange = (e) => {
+    const {id, value} = e.target
+    setFormData({...formData, [id]: value})
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(formData)
+  }
 
 
   const switchIllustration = theme === "light" 
@@ -51,6 +67,8 @@ export default function Home() {
     : "hover:bg-[#363636] hover:underline"
   ;
 
+ 
+
   return (
     <main>
       <Intro 
@@ -82,6 +100,9 @@ export default function Home() {
         formTheme={formTheme}
         inputColor={inputColor}
         labelColor={labelColor}
+        handleChange={handleChange}
+        formData={formData}
+        handleSubmit={handleSubmit}
       />
     </main>
   )

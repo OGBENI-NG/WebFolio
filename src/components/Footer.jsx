@@ -41,7 +41,7 @@ export default function Footer({ themeColor, layoutTheme }) {
 
   return (
     <footer className={`flex items-center justify-between
-     py-[10px] px-5 fixed bottom-0 w-full z-50 transition-all
+     py-[10px] px-5 fixed bottom-0 w-full z-50 transition-[.5s]
      ${layoutTheme } border-t-[1px] backdrop-blur-[100px] `}
     >
       {footerData}

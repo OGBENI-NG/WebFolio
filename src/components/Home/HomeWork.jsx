@@ -10,7 +10,7 @@ export default function SelectedWork({data, themeColor, linkColor, layoutTheme, 
   const renderSelectedWork = SelectedWorkEl.map((item, index) => (
     <div 
       key={item.id} 
-      className={`transition-all ${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-14'}`}
+      className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-14'}`}
     >
       <div>
         <img src={item.image} alt="work-icon" />
@@ -23,6 +23,7 @@ export default function SelectedWork({data, themeColor, linkColor, layoutTheme, 
           href={item.live} 
           target='_blank'
           className={`${hoverColor}`}
+          title="work-name"
         >
           {item.name}
         </a>
@@ -30,6 +31,7 @@ export default function SelectedWork({data, themeColor, linkColor, layoutTheme, 
           href={item.gitRepository} 
           target='_blank'
           className='ml-auto text-brand hover:text-brand/50'
+          title="github-link"
         >
           {item.gitIcon({size: 40, })}
         </a>
@@ -48,7 +50,7 @@ export default function SelectedWork({data, themeColor, linkColor, layoutTheme, 
         to="works" 
         className={`${linkColor} bg-red-600 text-mainBg
          text-lg ml-auto py-3 font-bold block w-max
-          px-4 shadow-md shadow-primary/15 rounded-bl-md`}
+          px-4 shadow rounded-bl-md`}
       >
         More works
       </NavLink>

@@ -1,72 +1,102 @@
 import React from 'react'
 
-export default function HomeContact({centerTxt, formTheme, inputColor, labelColor}) {
+export default function HomeContact(
+  {centerTxt, formTheme, inputColor, 
+    labelColor, formData, handleChange, handleSubmit}
+  ) {
+
+
   const inputStyle = `${inputColor}
-    w-full h-[50px] rounded-[8px] outline:none 
-    text-lg px-3 peer placeholder-transparent 
-    focus:outline-none font-semibold transition-all`
+    w-full h-[55px] rounded-[8px] outline:none 
+    text-lg px-4 peer placeholder-transparent 
+    focus:outline-none font-semibold transition-[.5s]`
   ;
 
-    const labelStyle = `${labelColor} absolute left-2 font-bold
-     -top-5 text-lg  peer-placeholder-shown:top-[6px]  
-     peer-focus:-top-5 py-1 px-2 rounded-[6px] transition-all`
+  const labelStyle = `${labelColor} absolute left-2 font-bold
+    -top-5 text-lg peer-placeholder-shown:top-[8px] 
+    peer-focus:shadow transition-[.5s]
+    peer-focus:-top-5 py-1 px-2 rounded-[6px]`
+  ;
 
 
   return (
-    <form id='form' className={`py-[100px] ${formTheme} `}>
+    <form 
+      onSubmit={handleSubmit} 
+      id='form' 
+      className={`py-[100px] ${formTheme} `}
+    >
       <h1 className={`text-2xl font-bold leading-relaxed pb-5 text-brand m-auto text-center`}>
         Get in touch
         <span className={`m-auto ${centerTxt}`}>feel free to contact </span>
       </h1>
 
-      <div className='flex flex-col gap-8 px-4 py-6'>
+      <div className='flex flex-col gap-7 px-4'>
         <div className='relative'>
           <input 
             type='text' 
             id='name' 
             placeholder='not-shown'
+            autoComplete="off"
+            value={formData.name}
+            onChange={handleChange}
             className={`${inputStyle}`}
           />
           <label 
-            
             className={`${labelStyle}`}
-            htmlFor='name'>Name</label>
+            htmlFor='name'>Name
+          </label>
         </div>
         <div className='relative'>
           <input 
             type='email' 
             id='email' 
             placeholder='not-shown'
+            autoComplete="off"
+            value={formData.email}
+            onChange={handleChange}
             className={`${inputStyle}`}
           />
           <label 
-          className={`${labelStyle}`}
-          htmlFor='email'>Email</label>
+            className={`${labelStyle}`}
+            htmlFor='email'>Email
+          </label>
         </div>
         <div className='relative'>
           <input 
             type='tel' 
             id='phone' 
             placeholder='not-shown'
+            autoComplete="off"
+            value={formData.phone}
+            onChange={handleChange}
             className={`${inputStyle}`}
           />
           <label 
-          className={`${labelStyle}`}
-          htmlFor='phone'>Phone</label>
+            className={`${labelStyle}`}
+            htmlFor='phone'>Phone
+          </label>
         </div>
-        <div className='relative'>
+        <div className='relative m-0 p-0'>
           <textarea 
             id='text-area' 
             placeholder='not-shown'
-            className={` p-4 resize-none h-[150px] ${inputStyle}`}
+            autoComplete="off"
+            value={formData.message}
+            onChange={handleChange}
+            className={`${inputColor}
+            w-full h-[158px] rounded-[8px] outline:none 
+            text-lg p-4 peer leading-tight placeholder-transparent resize-none
+            focus:outline-none font-semibold transition-all`}
           />
           <label 
-          className={`${labelStyle}`}
-          htmlFor='text-area'>Message</label>
+            className={`${labelStyle}`}
+            htmlFor='text-area'>Message
+          </label>
         </div>
         <button 
           type='submit'
-          className={`bg-primary p-4 text-xl text-mainBg rounded-lg`}
+          className={`bg-primary shadow p-4 text-xl text-mainBg
+             rounded-lg `}
         >Submit</button>
       </div>
     </form>
