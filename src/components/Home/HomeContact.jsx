@@ -4,12 +4,12 @@ export default function HomeContact({centerTxt, formTheme, inputColor, labelColo
   const inputStyle = `${inputColor}
     w-full h-[50px] rounded-[8px] outline:none 
     text-lg px-3 peer placeholder-transparent 
-    focus:outline-none font-semibold transition-all transition-colors`
+    focus:outline-none font-semibold transition-all`
   ;
 
     const labelStyle = `${labelColor} absolute left-2 font-bold
      -top-5 text-lg  peer-placeholder-shown:top-[6px]  
-     peer-focus:-top-5 py-1 px-2 rounded-[6px] transition-all transition-colors`
+     peer-focus:-top-5 py-1 px-2 rounded-[6px] transition-all`
 
 
   return (
@@ -19,7 +19,7 @@ export default function HomeContact({centerTxt, formTheme, inputColor, labelColo
         <span className={`m-auto ${centerTxt}`}>feel free to contact </span>
       </h1>
 
-      <div className='divide-y flex flex-col gap-8 px-4 py-6'>
+      <div className='flex flex-col gap-8 px-4 py-6'>
         <div className='relative'>
           <input 
             type='text' 
@@ -58,7 +58,7 @@ export default function HomeContact({centerTxt, formTheme, inputColor, labelColo
           <textarea 
             id='text-area' 
             placeholder='not-shown'
-            className={`${inputStyle} p-4 resize-none h-[150px]`}
+            className={` p-4 resize-none h-[150px] ${inputStyle}`}
           />
           <label 
           className={`${labelStyle}`}
