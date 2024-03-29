@@ -1,16 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export default function SelectedWork({data, themeColor, layoutTheme, centerTxt}) {
+export default function SelectedWork({data, themeColor, linkColor, layoutTheme, centerTxt}) {
+ 
 
-
-  const hoverColor = `hover:text-[#607681] hover:underline`
+  const hoverColor = `hover:text-primary/60 hover:underline`
 
   const SelectedWorkEl = data.workEl.slice(0, 4)
   const renderSelectedWork = SelectedWorkEl.map((item, index) => (
     <div 
       key={item.id} 
-      className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-14'}`}
+      className={`transition-all ${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-14'}`}
     >
       <div>
         <img src={item.image} alt="work-icon" />
@@ -46,9 +46,9 @@ export default function SelectedWork({data, themeColor, layoutTheme, centerTxt})
       {renderSelectedWork}
       <NavLink 
         to="works" 
-        className={`${centerTxt} ${hoverColor} ${layoutTheme}
-          underline text-lg ml-auto py-3
-          px-4 shadow-md shadow-primary/30 rounded-bl-lg`}
+        className={`${linkColor} bg-red-600 text-mainBg
+         text-lg ml-auto py-3 font-bold block w-max
+          px-4 shadow-md shadow-primary/15 rounded-bl-md`}
       >
         More works
       </NavLink>

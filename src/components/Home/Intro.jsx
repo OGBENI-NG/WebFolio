@@ -43,7 +43,7 @@ export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) 
   
 
   return (
-    <section className='pt-[135px] w-full transition-all relative z-[0]'>
+    <section className='transition-colors pt-[135px] w-full relative z-[0]'>
       <div  className='block absolute -z-[3] right-0 top-0 '>
       <CustomSVG width="297" height="369" theme={theme} />
       </div>
@@ -54,7 +54,7 @@ export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) 
         >
             Hello 
             <span className={`${themeColor}`}>I’m Adeolu Miracle, </span>
-            <span className={`${textsEl[currentWordIndex].color} transition-all`}>
+            <span className={`${textsEl[currentWordIndex].color}`}>
               {`${displayedText} |`}
             </span>
         </h1>
@@ -68,7 +68,7 @@ export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) 
       <img 
         src={switchIllustration} 
         alt="illustration" 
-        className={`pt-8 transition-all`}
+        className={`pt-8`}
       />
     </section>
   )

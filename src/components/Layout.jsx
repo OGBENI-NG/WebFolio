@@ -21,7 +21,7 @@ export default function Layout() {
     "block text-primary" : "block text-primaryDark"
   ;
   const layoutTheme = theme === 'light' 
-    ? 'bg-white/80 border-borderColor' : 'bg-black/80 border-[#263238]'
+    ? 'bg-white/80 border-borderColor' : 'bg-black/80 border-primary/80'
   ;
 
   return (
@@ -33,7 +33,7 @@ export default function Layout() {
         layoutTheme={layoutTheme}
         switchIcon={switchIcon}
       />
-        <main className='overflow-hidden'>
+        <main className='overflow-hidden transition-all'>
           <Outlet/>
         </main>
       <Footer 
