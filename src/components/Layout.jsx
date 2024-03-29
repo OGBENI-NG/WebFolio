@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom"
 import { LuSun } from "react-icons/lu";
 import { HiMoon } from "react-icons/hi2";
 import Header from './Header'
-import Footer from './Footer'
+import NavBar from './NavBar'
 import ThemeContext from '../UseThemeContext'
 
 
@@ -36,7 +36,7 @@ export default function Layout() {
         <main className='overflow-hidden transition-[.5s]'>
           <Outlet/>
         </main>
-      <Footer 
+      <NavBar 
         themeColor={themeColor}
         layoutTheme={layoutTheme}
       />

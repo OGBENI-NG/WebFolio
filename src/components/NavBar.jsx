@@ -2,25 +2,25 @@ import React, { useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import data from '../data'
 
-export default function Footer({ themeColor, layoutTheme }) {
-  const [footerItems, setFooterItems] = useState(data.footerEl)
+export default function NavBar({ themeColor, layoutTheme }) {
+  const [navBarItems, setNavBarItems] = useState(data.navBarEl)
   const location = useLocation()
 
   const handleIconClick = (id) => {
-    const updatedItems = footerItems.map(item => {
+    const updatedItems = navBarItems.map(item => {
       if (item.id === id) {
         return { ...item, isTrue: true }
       } else {
         return { ...item, isTrue: false }
       }
     })
-    setFooterItems(updatedItems)
+    setNavBarItems(updatedItems)
   }
 
-  const footerData = footerItems.map(item => {
+  const navBarData = navBarItems.map(item => {
     const isActive = location.pathname === (item.name.toLowerCase() === 'home' ? '/' : `/${item.name.toLowerCase()}`)
 
-    const classNames = `flex flex-col gap-[3px] items-center font-OpenSan 
+    const navbarStyle = `flex flex-col gap-[3px] items-center font-OpenSan 
       ${isActive ? 'text-brand font-extrabold' : themeColor} transition-all`
     ;
 
@@ -28,7 +28,7 @@ export default function Footer({ themeColor, layoutTheme }) {
       <NavLink
         key={item.id}
         to={item.name.toLowerCase() === 'home' ? '/' : `/${item.name.toLowerCase()}`}
-        className={classNames}
+        className={navbarStyle}
         onClick={() => handleIconClick(item.id)}
       >
         <div>
@@ -40,11 +40,11 @@ export default function Footer({ themeColor, layoutTheme }) {
   })
 
   return (
-    <footer className={`flex items-center justify-between
+    <nav className={`flex items-center justify-between
      py-[10px] px-5 fixed bottom-0 w-full z-50 transition-[.5s]
      ${layoutTheme } border-t-[1px] backdrop-blur-[100px] `}
     >
-      {footerData}
-    </footer>
+      {navBarData}
+    </nav>
   )
 }

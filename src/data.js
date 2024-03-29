@@ -59,7 +59,7 @@ const data = {
             },
 
       ],
-      footerEl: [
+      navBarEl: [
             
             {
                   name: 'Home',

@@ -14,8 +14,8 @@ export default function HomeContact(
 
   const labelStyle = `${labelColor} absolute left-2 font-bold
     -top-5 text-lg peer-placeholder-shown:top-[8px] 
-    peer-focus:shadow transition-[.5s]
-    peer-focus:-top-5 py-1 px-2 rounded-[6px]`
+    peer-focus:shadow transition-[.5s] 
+    peer-focus:-top-6 py-1 px-2 rounded-[6px]`
   ;
 
 
@@ -25,12 +25,14 @@ export default function HomeContact(
       id='form' 
       className={`py-[100px] ${formTheme} `}
     >
-      <h1 className={`text-2xl font-bold leading-relaxed pb-5 text-brand m-auto text-center`}>
+      <h1 className={`text-2xl font-bold leading-relaxed 
+        pb-8 text-brand m-auto text-center`}
+      >
         Get in touch
         <span className={`m-auto ${centerTxt}`}>feel free to contact </span>
       </h1>
 
-      <div className='flex flex-col gap-7 px-4'>
+      <div className='flex flex-col gap-8 px-4'>
         <div className='relative'>
           <input 
             type='text' 
@@ -78,9 +80,8 @@ export default function HomeContact(
         </div>
         <div className='relative m-0 p-0'>
           <textarea 
-            id='text-area' 
+            id='message' 
             placeholder='not-shown'
-            autoComplete="off"
             value={formData.message}
             onChange={handleChange}
             className={`${inputColor}
@@ -96,7 +97,7 @@ export default function HomeContact(
         <button 
           type='submit'
           className={`bg-primary shadow p-4 text-xl text-mainBg
-             rounded-lg `}
+             rounded-lg -mt-3`}
         >Submit</button>
       </div>
     </form>

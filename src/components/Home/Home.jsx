@@ -28,6 +28,7 @@ export default function Home() {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(formData)
+    setFormData('')
   }
 
 
@@ -51,12 +52,12 @@ export default function Home() {
   ;
 
   const inputColor = theme === "light"
-   ? "border-[1.5px] border-primary text-primary bg-[#dbdada]"
-   : "border-none bg-[#4b4b4b] text-mainBg"
+   ? "border-[1.5px] border-primary text-primary bg-[#e1e1e1]"
+   : "border-none bg-[#333333] text-primaryDark"
   ;
 
   const labelColor = theme === "light"
-    ? "bg-[#dbdada] text-primary":"bg-[#4b4b4b] text-mainBg"
+    ? "bg-[#e1e1e1] text-primary":"bg-[#333333] text-mainBg"
   ;
   const bodyTxt = theme === "light" ? "text-secondary" : "text-secondaryDark"
 
