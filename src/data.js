@@ -1,8 +1,10 @@
 import { 
-      RiContactsBook2Line, RiHome3Line, 
-      RiHome3Fill, RiUser6Line, RiUser6Fill,
+      RiContactsBook2Line, RiHome3Line, RiTwitterXFill, RiFacebookFill,
+      RiHome3Fill, RiUser6Line, RiUser6Fill,  
       RiContactsBook2Fill, RiGithubFill } from "react-icons/ri";
-import { IoBriefcase, IoBriefcaseOutline } from "react-icons/io5";
+import { IoBriefcase, IoBriefcaseOutline, IoLogoLinkedin, IoLocationOutline} from "react-icons/io5";
+import {FaPhoneAlt, FaRegEnvelope} from "react-icons/fa";
+import { MdOutlineLocalPhone } from "react-icons/md";
 import landingPageImg from "./asset/img/landing-page.png"
 import shortlyUrl from "./asset/img/shortly.png"
 import productPageImg from "./asset/img/product-page.png"
@@ -96,6 +98,51 @@ const data = {
             
             
       ],
+      footerEl: [
+            {
+                  name: 'adeolumiracle@yahoo.com',
+                  type: 'info',
+                  id: generateUniqueId(),
+                  iconN: FaRegEnvelope
+            },
+            {
+                  name: '+2348146432387',
+                  type: 'info',
+                  id: generateUniqueId(),
+                  iconN: MdOutlineLocalPhone
+
+            },
+            {
+                  name: 'Lagos, NG',
+                  type: 'info',
+                  id: generateUniqueId(),
+                  iconN: IoLocationOutline
+            },
+            {
+                  icon: RiTwitterXFill,
+                  type: 'icon',
+                  id: generateUniqueId(),
+                  live: 'x.com/miracleadeolu'
+            },
+            {
+                  icon: IoLogoLinkedin,
+                  type: 'icon',
+                  id: generateUniqueId(),
+                  live: 'https://www.linkedin.com/in/adeolu-miracle-998047259/'
+            },
+            {
+                  icon: RiGithubFill,
+                  type: 'icon',
+                  id: generateUniqueId(),
+                  live: 'https://github.com/OGBENI-NG'
+            },
+            {
+                  icon: RiFacebookFill,
+                  type: 'icon',
+                  id: generateUniqueId(),
+                  live: 'https://www.facebook.com/profile.php?id=100090510967232&mibextid=AEUHqQ'
+            },
+      ]
 };
 
 export default data;

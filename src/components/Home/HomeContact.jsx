@@ -5,7 +5,6 @@ export default function HomeContact(
     labelColor, formData, handleChange, handleSubmit}
   ) {
 
-
   const inputStyle = `${inputColor}
     w-full h-[55px] rounded-[8px] outline:none 
     text-lg px-4 peer placeholder-transparent 
@@ -18,12 +17,11 @@ export default function HomeContact(
     peer-focus:-top-6 py-1 px-2 rounded-[6px]`
   ;
 
-
   return (
     <form 
       onSubmit={handleSubmit} 
       id='form' 
-      className={`py-[100px] ${formTheme} `}
+      className={`py-[100px] transition-[.5s] ${formTheme} `}
     >
       <h1 className={`text-2xl font-bold leading-relaxed 
         pb-8 text-brand m-auto text-center`}

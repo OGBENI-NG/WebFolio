@@ -9,6 +9,7 @@ import data from '../../data'
 import SkillsIcons from './SkillsIcons'
 import HomeAbout from './HomeAbout'
 import HomeContact from './HomeContact'
+import HomeFooter from './HomeFooter'
 
 
 export default function Home() {
@@ -104,6 +105,10 @@ export default function Home() {
         handleChange={handleChange}
         formData={formData}
         handleSubmit={handleSubmit}
+      />
+      <HomeFooter 
+        data={data}
+        themeColor={themeColor}
       />
     </main>
   )
