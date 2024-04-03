@@ -69,6 +69,10 @@ export default function Home() {
     : "hover:bg-[#363636] hover:underline"
   ;
 
+  const hoverColor = theme === "light"
+    ? "hover:text-primary/60"
+    : "hover:text-primaryDark/60"
+
  
 
   return (
@@ -90,6 +94,7 @@ export default function Home() {
         layoutTheme={layoutTheme}
         centerTxt={centerTxt}
         linkColor={linkColor}
+        hoverColor={hoverColor}
       />
       <HomeAbout
         theme={theme}

@@ -11,12 +11,12 @@ export default {
         Solway: ['Solway', 'serif'],
       },
       colors: {
-        primary: '#045658',
+        primary: '#1C4243',
         primaryDark: '#F4F4F4',
         borderColor: '#E0DDDD',
         mainBg: '#FFFFFF',
         mainBgDark: '#101111',
-        brand: '#FF6700',
+        brand: '#0B5AF1',
         secondary: '#838282',
         secondaryDark: '#BCBABA'
       }

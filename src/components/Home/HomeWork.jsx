@@ -1,10 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export default function SelectedWork({data, themeColor, linkColor, layoutTheme, centerTxt}) {
+export default function SelectedWork(
+  {data, themeColor, linkColor, layoutTheme, centerTxt, hoverColor}
+  ) {
  
 
-  const hoverColor = `hover:text-primary/60 hover:underline`
+  
 
   const SelectedWorkEl = data.workEl.slice(0, 4)
   const renderSelectedWork = SelectedWorkEl.map((item, index) => (
