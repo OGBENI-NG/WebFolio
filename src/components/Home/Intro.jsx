@@ -7,7 +7,7 @@ export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) 
   const textsEl = [
     {text: 'Frontend Developer', color: "text-green-500"},
     {text: 'Creative Designer', color: "text-red-500"},
-    {text: 'Freelancer', color: "text-pink-500"},
+    {text: 'Freelancer', color: "#0B5AF1"},
 
   ]
   const [currentWordIndex, setCurrentWordIndex] = useState(0)

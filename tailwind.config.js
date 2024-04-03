@@ -14,7 +14,7 @@ export default {
         primary: '#1C4243',
         primaryDark: '#F4F4F4',
         borderColor: '#E0DDDD',
-        mainBg: '#FFFFFF',
+        mainBg: '#F3F3F3',
         mainBgDark: '#101111',
         brand: '#0B5AF1',
         secondary: '#838282',

@@ -12,7 +12,7 @@ export default function SelectedWork(
   const renderSelectedWork = SelectedWorkEl.map((item, index) => (
     <div 
       key={item.id} 
-      className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-14'}`}
+      className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-6'}`}
     >
       <div>
         <img src={item.image} alt="work-icon" />
@@ -43,7 +43,7 @@ export default function SelectedWork(
 
   
   return (
-    <section className='pb-[0px] mt-[20px] relative z-[1]'>
+    <section className=' mt-[20px] relative z-[1]'>
       <h2 className={`${centerTxt} pb-6 m-auto`}>
         My works Examples
       </h2>
