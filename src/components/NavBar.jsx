@@ -23,7 +23,7 @@ export default function NavBar({ themeColor, layoutTheme }) {
     const navbarStyle = `flex flex-col gap-[2px] items-center font-OpenSan 
       ${isActive 
         ? `text-brand font-extrabold before:content-[''] before:w-[50px] 
-          before:h-[2px] before:absolute before:bg-brand before:top-0 
+          before:h-[2.5px] before:absolute before:bg-brand before:top-0 
           before:transition-[.5s]` 
       : `${themeColor} before:w-[0px]` } transition-[.5s]`
     ;
