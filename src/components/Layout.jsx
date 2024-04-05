@@ -28,14 +28,16 @@ export default function Layout() {
       <HiMoon className='w-full h-full'/>
     : 
       <LuSun className='w-full h-full text-mainBg'/> 
+  ;
   
-
   const themeColor = theme === "light" ?
     "block text-primary" : "block text-primaryDark"
-  
+  ;
+
   const layoutTheme = theme === 'light' 
-    ? 'bg-white/75 border-borderColor/80' : 'bg-black/75 border-primary/50'
-  
+    ? 'bg-white/75 border-borderColor/80' 
+    : 'bg-black/75 border-primary/50'
+  ;
 
   return (
     <div>

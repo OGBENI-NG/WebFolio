@@ -19,17 +19,34 @@ export default {
         brand: '#0B5AF1',
         secondary: '#838282',
         secondaryDark: '#BCBABA'
-      }
+      },
+      animation: {
+        fadeInUp: 'fadeInUp 2s ease 0s 1 normal forwards',
+        fadeOut: 'fadeOutUp 2s ease 0s 1 normal forwards'
+      },
+      keyframes: {
+        fadeInUp: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(25px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+        },
+        fadeOut: {
+          '0%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+          '100%': {
+            opacity: '0',
+            transform: 'translateY(25px)'
+          },
+        }
+      },
     },
-    animation: {
-      'infinite-scroll': 'infinite-scroll 25s linear infinite',
-    },
-    keyframes: {
-      'infinite-scroll': {
-        from: { transform: 'translateX(0)' },
-        to: { transform: 'translateX(-100%)' },
-      }
-    }
   },
   plugins: [],
-}
+};

@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Section from '../Section'
 
 export default function SelectedWork(
   {data, themeColor, linkColor, layoutTheme, centerTxt, hoverColor}
@@ -14,6 +15,7 @@ export default function SelectedWork(
       key={item.id} 
       className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-6'}`}
     >
+      <Section>
       <div>
         <img src={item.image} alt="work-icon" />
       </div>
@@ -38,24 +40,29 @@ export default function SelectedWork(
           {item.gitIcon({size: 40, })}
         </a>
       </div>
+      </Section>
     </div>
   ))
 
   
   return (
-    <section className=' mt-[20px] relative z-[1]'>
-      <h2 className={`${centerTxt} pb-6 m-auto`}>
-        My works Examples
-      </h2>
+    
+    <div className=' mt-[20px] relative z-[1]'>
+      <Section>
+        <h2 className={`${centerTxt} pb-6 m-auto`}>
+          My works Examples
+        </h2>
+      </Section>
       {renderSelectedWork}
       <NavLink 
         to="works" 
         className={`${linkColor} bg-red-600 text-mainBg
-         text-lg ml-auto py-3 font-bold block w-max
+        text-lg ml-auto py-3 font-bold block w-max
           px-4 shadow rounded-bl-md`}
       >
         More works
       </NavLink>
-    </section>
+    </div>
+    
   )
 }
