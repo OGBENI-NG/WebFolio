@@ -28,7 +28,7 @@ export default {
         fadeInUp: {
           '0%': {
             opacity: '0',
-            transform: 'translateY(25px)'
+            transform: 'translateY(20px)'
           },
           '100%': {
             opacity: '1',
@@ -42,7 +42,7 @@ export default {
           },
           '100%': {
             opacity: '0',
-            transform: 'translateY(25px)'
+            transform: 'translateY(20px)'
           },
         }
       },
