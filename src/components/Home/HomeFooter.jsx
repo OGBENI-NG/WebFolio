@@ -34,7 +34,7 @@ export default function HomeFooter({data, themeColor}) {
       <div className='flex items-center justify-center gap-8'>
         {renderLinksIcon}
       </div>
-      <span className='block text-center pt-10 text-xl font-bold'>&copy; 2023</span>
+      <span className='block text-center pt-10 text-xl font-bold'>&copy; 2024</span>
 
     </footer>
   )
