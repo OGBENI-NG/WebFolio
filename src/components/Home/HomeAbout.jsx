@@ -1,9 +1,12 @@
 import React from 'react'
 import CustomSVG from '../CustomSvg'
 import { NavLink } from 'react-router-dom'
+import Section from '../Section'
+
 
 export default function HomeAbout({theme, themeColor, bodyTxt, centerTxt}) {
   return (
+    <Section>
     <div className='relative py-[100px] -z-[0] px-4'>
       <div className='absolute -left-[90px] -top-[100px] -z-[1]' >
         <svg 
@@ -38,5 +41,6 @@ export default function HomeAbout({theme, themeColor, bodyTxt, centerTxt}) {
       </NavLink>
       </p>
     </div>
+    </Section>
   )
 }

@@ -9,7 +9,7 @@ export default function Section({children}) {
   return (
     <section
       ref={ref}
-      className={` ${inView ? 'animate-fadeInUp' : 'animate-fadeOut'}`}
+      className={` ${inView ? 'animate-fadeInUp' : 'opacity-100'}`}
     >
       {children}
     </section>
