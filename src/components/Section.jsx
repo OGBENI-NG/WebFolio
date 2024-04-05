@@ -9,7 +9,7 @@ export default function Section({children}) {
   return (
     <section
       ref={ref}
-      className={` ${inView ? 'animate-fadeInUp backdrop-blur-[12px]' : 'opacity-100 backdrop-blur-none'}`}
+      className={` ${inView ? 'animate-fadeInUp' : 'opacity-100'}`}
     >
       {children}
     </section>

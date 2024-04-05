@@ -21,18 +21,20 @@ export default {
         secondaryDark: '#BCBABA'
       },
       animation: {
-        fadeInUp: 'fadeInUp 0.5s ease-out',
-        fadeOut: 'fadeOutUp 0.5s ease-out'
+        fadeInUp: 'fadeInUp 2s ease 0s 1 normal forwards',
+        fadeOut: 'fadeOutUp 2s ease 0s 1 normal forwards'
       },
       keyframes: {
         fadeInUp: {
           '0%': {
             opacity: '0',
-            transform: 'translateY(20%)'
+            transform: 'scale(0.5)',
+           
           },
           '100%': {
             opacity: '1',
-            transform: 'translateY(0%)'
+            transform: 'scale(1)',
+           
           },
         },
       },
