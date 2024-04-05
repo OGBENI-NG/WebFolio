@@ -1,4 +1,5 @@
 import React from 'react'
+import Section from '../Section';
 
 export default function HomeContact(
   {centerTxt, formTheme, inputColor, 
@@ -18,6 +19,7 @@ export default function HomeContact(
   ;
 
   return (
+    <Section>
     <form 
       onSubmit={handleSubmit} 
       id='form' 
@@ -99,5 +101,6 @@ export default function HomeContact(
         >Submit</button>
       </div>
     </form>
+    </Section>
   )
 }
