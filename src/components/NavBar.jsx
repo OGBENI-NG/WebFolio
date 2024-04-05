@@ -45,9 +45,9 @@ export default function NavBar({ themeColor, layoutTheme, visible }) {
 
   return (
     <nav className={`flex items-center justify-between
-     pb-[15px] pt-[4px] px-5 fixed bottom-0 w-full z-50 transition-[.5s]
+     ${visible ? "pb-[15px]" : "pb-[2px]"} pt-[4px] px-5 fixed bottom-0 w-full z-50 transition-[.5s]
      ${layoutTheme} border-t-[1px] backdrop-blur-[100px] 
-     ${visible ? "opacity-100" : "opacity-30"}`}
+     ${visible ? "opacity-100" : "opacity-35"}`}
     >
       {navBarData}
     </nav>
