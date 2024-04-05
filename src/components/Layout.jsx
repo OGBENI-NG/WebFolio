@@ -34,7 +34,7 @@ export default function Layout() {
     "block text-primary" : "block text-primaryDark"
   
   const layoutTheme = theme === 'light' 
-    ? 'bg-white/80 border-borderColor' : 'bg-black/80 border-primary/80'
+    ? 'bg-white/75 border-borderColor/80' : 'bg-black/75 border-primary/50'
   
 
   return (

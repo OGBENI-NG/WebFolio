@@ -18,7 +18,7 @@ export default function SelectedWork(
         <img src={item.image} alt="work-icon" />
       </div>
       <div className={`flex items-center py-3 px-4 text-xl 
-       ${layoutTheme} backdrop-blur-[100px] border-b-[1px] 
+       ${layoutTheme} backdrop-blur-[100px] 
        font-bold ${themeColor}`}
       >
         <a 

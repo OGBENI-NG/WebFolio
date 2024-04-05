@@ -14,7 +14,7 @@ export default function Header(
       <img 
         src={logo} 
         alt="logo"
-        className='w-[70px] h-[70px]' 
+        className='w-[60px] h-[60px]' 
       />
       <h1 className={`font-Solway ${themeColor} text-3xl font-semibold`}>WebFolio</h1>
       <div onClick={toggleTheme} className='w-[35px] h-[35px]'>
