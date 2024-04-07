@@ -1,12 +1,11 @@
 import React from 'react'
 import CustomSVG from '../CustomSvg'
 import { NavLink } from 'react-router-dom'
-import Section from '../Section'
+import AnimateSections from '../AnimateSections'
 
 
 export default function HomeAbout({theme, themeColor, bodyTxt, centerTxt}) {
   return (
-    <Section>
     <div className='relative py-[100px] -z-[0] px-4'>
       <div className='absolute -left-[90px] -top-[100px] -z-[1]' >
         <svg 
@@ -25,22 +24,23 @@ export default function HomeAbout({theme, themeColor, bodyTxt, centerTxt}) {
       <div className='absolute w-full top-[40px] -right-[90px] -z-[1]'>
         <CustomSVG theme={theme} />
       </div>
-      <div className=''>
+      <AnimateSections className=''>
         <h2 className={`text-center text-2xl font-Solway font-bold text-brand`}>
           About me
           <span className={`p-2 ${themeColor}`}>I Enjoy Solving Problems With Scalable Solutions</span>
         </h2>
-      </div>
-      <p className={`text-base font-medium border-t-[2px] border-brand p-2 pb-5
-       ${bodyTxt}   mt-2 text-center backdrop-blur-[100px] w-full`}>
-      My name is <span className='font-bold text-brand/85'>Adeolu Miracle</span> , and I'm a passionate frontend developer based in Lagos, Nigeria. I began my coding journey in 2019, and since then, I've been captivated by the art of creating intuitive and visually appealing user experiences. Over time, I've honed my skills in HTML, CSS, and JavaScript, which form the foundation of any great web application... 
-      <NavLink 
-        className='pb-1 px-2 leading-none font-semibold text-brand underline bg-brand/10 rounded-lg' 
-        to='about'>
-          Read More
-      </NavLink>
-      </p>
+      </AnimateSections>
+      <AnimateSections>
+        <p className={`text-base font-medium border-t-[2px] border-brand p-2 pb-5
+        ${bodyTxt}   mt-2 text-center backdrop-blur-[100px] w-full`}>
+        My name is <span className='font-bold text-brand/85'>Adeolu Miracle</span> , and I'm a passionate frontend developer based in Lagos, Nigeria. I began my coding journey in 2019, and since then, I've been captivated by the art of creating intuitive and visually appealing user experiences. Over time, I've honed my skills in HTML, CSS, and JavaScript, which form the foundation of any great web application... 
+        <NavLink 
+          className='pb-1 px-2 leading-none font-semibold text-brand underline bg-brand/10 rounded-lg' 
+          to='about'>
+            Read More
+        </NavLink>
+        </p>
+      </AnimateSections>
     </div>
-    </Section>
   )
 }
