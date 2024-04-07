@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 export default function AnimateSections({ children, className }) {
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0.4
+    threshold: 0.2
   });
 
   useEffect(() => {
