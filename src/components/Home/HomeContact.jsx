@@ -1,5 +1,6 @@
 import React from 'react'
 import Section from '../AnimateSections';
+import CustomButton from '../CustomButton';
 
 export default function HomeContact(
   {centerTxt, formTheme, inputColor, 
@@ -94,13 +95,7 @@ export default function HomeContact(
             htmlFor='text-area'>Message
           </label>
         </div>
-        <button 
-          type='submit'
-          className={`shadow-lg shadow-brand/25 p-4 text-xl text-mainBg 
-          hover:bg-transparent hover:border hover:border-brand bg-brand
-          rounded-lg -mt-3 font-bold transition-all duration-300
-          hover:text-brand`}
-        >Submit</button>
+        <CustomButton className={`py-2 -mt-3`} type={'submit'}>Submit</CustomButton>
       </div>
     </form>
   )
