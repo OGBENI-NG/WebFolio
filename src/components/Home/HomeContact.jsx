@@ -13,7 +13,7 @@ export default function HomeContact(
   ;
 
   const labelStyle = `${labelColor} absolute left-2 font-bold
-    -top-5 text-lg peer-placeholder-shown:top-[8px]
+    -top-5 text-lg peer-placeholder-shown:top-[8px] backdrop-blur
     peer-focus:shadow transition-all duration-300 
     peer-focus:-top-6 py-1 px-2 rounded-[6px] `
   ;
@@ -96,8 +96,10 @@ export default function HomeContact(
         </div>
         <button 
           type='submit'
-          className={`bg-primary shadow p-4 text-xl text-mainBg
-             rounded-lg -mt-3`}
+          className={` shadow p-4 text-xl text-mainBg 
+          hover:bg-transparent border hover:border-brand bg-brand
+          rounded-lg -mt-3 font-bold transition-all duration-300
+          hover:text-brand`}
         >Submit</button>
       </div>
     </form>

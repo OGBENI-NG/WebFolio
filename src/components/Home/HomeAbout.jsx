@@ -16,8 +16,8 @@ export default function HomeAbout({theme, themeColor, bodyTxt, centerTxt}) {
            195.458C66.7601 103.24 -28.5858 62.1616 9.84243 15.7727C48.2706
            -30.6162 73.9886 42.5563 194.936 27.4686C195.131 
           111.389 279.297 160.765 240.869 207.154Z`} 
-          fill={`${theme === 'light' ? '#E0E0E0' : '#E0E0E0'}  `} 
-          fillOpacity={`${theme === 'light' ? '0.2555' : '0.10'} `}
+          fill={`${theme === 'light' ? '#E0E0E0' : '#1D353F'}  `} 
+          fillOpacity={`${theme === 'light' ? '0.2555' : '0.25'} `}
         />
         </svg>
       </div>

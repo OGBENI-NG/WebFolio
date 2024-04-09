@@ -40,7 +40,7 @@ export default function Home() {
 
   const layoutTheme = theme === 'light' 
     ? 'bg-[#E1E1E1] border-borderColor' 
-    : 'bg-[#363636] border-[#5F5F5F]'
+    : 'bg-[#1D353F] border-[#5F5F5F]'
   ;
 
   const themeColor = theme === "light" 
@@ -59,7 +59,7 @@ export default function Home() {
 
   const labelColor = theme === "light"
     ? "peer-placeholder-shown:bg-white text-primary"
-    : "peer-placeholder-shown:bg-slate-900/40 text-mainBg"
+    : "peer-placeholder-shown:bg-slate-800/40 text-mainBg"
   ;
   const bodyTxt = theme === "light" ? "text-secondary" : "text-secondaryDark"
 
@@ -73,6 +73,12 @@ export default function Home() {
   const hoverColor = theme === "light"
     ? "hover:text-primary/60"
     : "hover:text-primaryDark/60"
+  ;
+
+  const footerTheme = theme === "light"
+    ? "bg-slate-800"
+    : "bg-slate-700/20"
+  ;
 
  
 
@@ -115,6 +121,7 @@ export default function Home() {
       <HomeFooter 
         data={data}
         themeColor={themeColor}
+        footerTheme={footerTheme}
       />
     </main>
   )
