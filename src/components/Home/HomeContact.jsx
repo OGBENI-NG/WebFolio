@@ -23,7 +23,7 @@ export default function HomeContact(
     <form 
       onSubmit={handleSubmit} 
       id='form' 
-      className={`py-[100px] transition-[.5s] ${formTheme} `}
+      className={`py-[100px] transition-[.5s] ${formTheme} overflow-x-hidden`}
     >
       <h1 className={`text-2xl font-bold leading-relaxed 
         pb-8 text-brand m-auto text-center`}
