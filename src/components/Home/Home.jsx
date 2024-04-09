@@ -58,7 +58,8 @@ export default function Home() {
   ;
 
   const labelColor = theme === "light"
-    ? "bg-white text-primary":"bg-[#333333] text-mainBg"
+    ? "peer-placeholder-shown:bg-white text-primary"
+    : "peer-placeholder-shown:bg-slate-900/40 text-mainBg"
   ;
   const bodyTxt = theme === "light" ? "text-secondary" : "text-secondaryDark"
 

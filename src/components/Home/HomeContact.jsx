@@ -13,9 +13,9 @@ export default function HomeContact(
   ;
 
   const labelStyle = `${labelColor} absolute left-2 font-bold
-    -top-5 text-lg peer-placeholder-shown:top-[8px] 
+    -top-5 text-lg peer-placeholder-shown:top-[8px]
     peer-focus:shadow transition-all duration-300 
-    peer-focus:-top-6 py-1 px-2 rounded-[6px]`
+    peer-focus:-top-6 py-1 px-2 rounded-[6px] `
   ;
 
   return (
