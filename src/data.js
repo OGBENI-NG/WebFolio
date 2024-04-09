@@ -3,12 +3,16 @@ import {
       RiHome3Fill, RiUser6Line, RiUser6Fill,  
       RiContactsBook2Fill, RiGithubFill } from "react-icons/ri";
 import { IoBriefcase, IoBriefcaseOutline, IoLogoLinkedin, IoLocationOutline} from "react-icons/io5";
-import {FaPhoneAlt, FaRegEnvelope} from "react-icons/fa";
+import {FaRegEnvelope} from "react-icons/fa";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import landingPageImg from "./asset/img/landing-page.png"
 import shortlyUrl from "./asset/img/shortly.png"
 import productPageImg from "./asset/img/product-page.png"
 import ageCalculatorImg from "./asset/img/age-calculator.png"
+import calculator from "./asset/img/calcu.png"
+import commentSection from "./asset/img/comment.png"
+import jobLister from "./asset/img/job-list.png"
+import todo from "./asset/img/todo-main.png"
 
 const generateUniqueId = (() => {
       const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min)
@@ -20,26 +24,25 @@ const generateUniqueId = (() => {
 })()
     
   
-    
 const data = {
       workEl: [
             {
                   id: generateUniqueId(),
                   name: 'Manage-landing-page',
-                  type: 'web',
                   live: 'https://velvety-brioche-957d1f.netlify.app/',
                   image: landingPageImg,
                   gitRepository: 'https://github.com/OGBENI-NG/manage-landing-page-master',
-                  gitIcon: RiGithubFill
+                  gitIcon: RiGithubFill,
+                  alt: 'landing-page-img'
             },
             {
                   id: generateUniqueId(),
                   name: 'Shortly-URL',
-                  type: 'web',
                   live: 'https://moonlit-twilight-1225c8.netlify.app/',
                   image: shortlyUrl, 
                   gitRepository: 'https://github.com/OGBENI-NG/url-shortening-api-master',
-                  gitIcon: RiGithubFill
+                  gitIcon: RiGithubFill,
+                  alt: 'shortly-url-img'
             },
             {
                   id: generateUniqueId(),
@@ -48,7 +51,8 @@ const data = {
                   image: productPageImg,
                   liveApp: 'https://ornate-biscuit-723ae1.netlify.app/',
                   gitRepository: 'https://github.com/OGBENI-NG/e-commerce-product-page',
-                  gitIcon: RiGithubFill
+                  gitIcon: RiGithubFill,
+                  alt: 'product-page-img'
             },
             {
                   id: generateUniqueId(),
@@ -57,7 +61,48 @@ const data = {
                   image: ageCalculatorImg,
                   liveApp: 'https://age-calculator-by-ade.netlify.app/',
                   gitRepository: 'https://github.com/OGBENI-NG/age-calculator-app-main',
-                  gitIcon: RiGithubFill
+                  gitIcon: RiGithubFill,
+                  alt: 'age-calculator-img'
+            },
+            {
+                  id: generateUniqueId(),
+                  name: 'Dynamic calculator',
+                  type: "web",
+                  image: calculator,
+                  liveApp: 'https://age-calculator-by-ade.netlify.app/',
+                  gitRepository: 'https://github.com/OGBENI-NG/age-calculator-app-main',
+                  gitIcon: RiGithubFill,
+                  alt: 'dynamic-calculator-img'
+            },
+            {
+                  id: generateUniqueId(),
+                  name: 'Job listing',
+                  type: "web",
+                  image: jobLister,
+                  liveApp: ' https://rad-panda-9b4e17.netlify.app/',
+                  gitRepository: 'https://github.com/OGBENI-NG/job-listings',
+                  gitIcon: RiGithubFill,
+                  alt: 'job-listings-img',
+            },
+            {
+                  id: generateUniqueId(),
+                  name: 'Todo main',
+                  type: "web",
+                  image: todo,
+                  liveApp: 'https://jade-genie-7c9245.netlify.app/',
+                  gitRepository: 'https://github.com/OGBENI-NG/todo-app-main',
+                  gitIcon: RiGithubFill,
+                  alt: 'todo-img'
+            },
+            {
+                  id: generateUniqueId(),
+                  name: 'Interactive comment section',
+                  type: "web",
+                  image: commentSection,
+                  liveApp: 'https://comments-section-adeolu.netlify.app/',
+                  gitRepository: 'https://github.com/OGBENI-NG/interactive-comments-section-main',
+                  gitIcon: RiGithubFill,
+                  alt: 'comments-section-img'
             },
 
       ],

@@ -9,12 +9,12 @@ export default function HomeContact(
   const inputStyle = `${inputColor}
     w-full h-[55px] rounded-[8px] outline:none 
     text-lg px-4 peer placeholder-transparent 
-    focus:outline-none font-semibold transition-[.5s]`
+    focus:outline-none font-semibold transition-all duration-300`
   ;
 
   const labelStyle = `${labelColor} absolute left-2 font-bold
     -top-5 text-lg peer-placeholder-shown:top-[8px] 
-    peer-focus:shadow transition-[.5s] 
+    peer-focus:shadow transition-all duration-300 
     peer-focus:-top-6 py-1 px-2 rounded-[6px]`
   ;
 

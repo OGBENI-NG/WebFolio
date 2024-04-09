@@ -16,7 +16,7 @@ export default {
         borderColor: '#E0DDDD',
         mainBg: '#F3F3F3',
         mainBgDark: '#101111',
-        brand: '#0B5AF1',
+        brand: '#38bdf8',
         secondary: '#838282',
         secondaryDark: '#BCBABA'
       },

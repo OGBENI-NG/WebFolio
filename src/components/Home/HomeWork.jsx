@@ -16,8 +16,8 @@ export default function SelectedWork(
       className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-6'}`}
     >
       <Section>
-      <div>
-        <img src={item.image} alt="work-icon" />
+      <div className=' w-full h-[250px]'>
+        <img className='w-full h-full' src={item.image} alt={item.alt} />
       </div>
       <div className={`flex items-center py-3 px-4 text-xl 
        ${layoutTheme} backdrop-blur-[100px] 

@@ -49,16 +49,16 @@ export default function Home() {
   ;
 
   const formTheme = theme === "light" 
-    ? "bg-[#ECECEC]":"bg-[#232323]"
+    ? "bg-slate-400/10":"bg-slate-800"
   ;
 
   const inputColor = theme === "light"
-   ? "border-[1.5px] border-primary text-primary bg-[#e1e1e1]"
-   : "border-none bg-[#333333] text-primaryDark"
+   ? "border border-slate-900/10 border-primary text-primary bg-white"
+   : "border border-slate-300/10 bg-slate-900/40 text-primaryDark"
   ;
 
   const labelColor = theme === "light"
-    ? "bg-[#e1e1e1] text-primary":"bg-[#333333] text-mainBg"
+    ? "bg-white text-primary":"bg-[#333333] text-mainBg"
   ;
   const bodyTxt = theme === "light" ? "text-secondary" : "text-secondaryDark"
 

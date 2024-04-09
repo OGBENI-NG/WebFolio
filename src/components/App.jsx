@@ -14,9 +14,9 @@ export default function App() {
   const {theme} = useContext(ThemeContext)
 
   return(
-    <div className={`overflow-x-hidden min-h-screen !scroll-smooth 
+    <div className={`antialiased overflow-x-hidden min-h-screen !scroll-smooth 
       font-OpenSan 
-      ${theme === "light" ? 'bg-mainBg' : 'bg-mainBgDark'}  `}
+      ${theme === "light" ? 'bg-white' : 'bg-slate-900'}  `}
     >
       <Router>
         <Routes>

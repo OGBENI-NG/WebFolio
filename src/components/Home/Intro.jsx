@@ -43,7 +43,7 @@ export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) 
   
 
   return (
-    <section className='pt-[135px] w-full relative z-[0]'>
+    <section className='pt-[135px] w-full relative z-[0] transition-all duration-300'>
       <div  className='block absolute -z-[3] right-0 top-0 '>
       <CustomSVG width="297" height="369" theme={theme} />
       </div>
