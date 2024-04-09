@@ -96,8 +96,8 @@ export default function HomeContact(
         </div>
         <button 
           type='submit'
-          className={` shadow p-4 text-xl text-mainBg 
-          hover:bg-transparent border hover:border-brand bg-brand
+          className={`shadow-lg shadow-brand/25 p-4 text-xl text-mainBg 
+          hover:bg-transparent hover:border hover:border-brand bg-brand
           rounded-lg -mt-3 font-bold transition-all duration-300
           hover:text-brand`}
         >Submit</button>
