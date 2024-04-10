@@ -53,13 +53,13 @@ export default function Home() {
   ;
 
   const inputColor = theme === "light"
-   ? "border border-slate-900/10 border-primary text-primary bg-white"
-   : "border border-slate-300/10 bg-slate-900/40 text-primaryDark"
+   ? "border border-slate-900/10 text-primary bg-white"
+   : "border border-slate-300/10 bg-slate-900/80 text-primaryDark"
   ;
 
   const labelColor = theme === "light"
     ? "peer-placeholder-shown:bg-white text-primary"
-    : "peer-placeholder-shown:bg-slate-800/40 text-mainBg"
+    : "peer-placeholder-shown:bg-slate-900/50 text-mainBg"
   ;
   const bodyTxt = theme === "light" ? "text-secondary" : "text-secondaryDark"
 

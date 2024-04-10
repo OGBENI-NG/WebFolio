@@ -28,7 +28,6 @@ export default function Work({theme}) {
       hoverColor={hoverColor}
       themeColor={themeColor}
       className={`pb-8`}
-
     />
   ))
   return (
@@ -36,7 +35,7 @@ export default function Work({theme}) {
       {workItems}
       <div className='px-4'> 
         <CustomButton className={`w-full py-2`}>
-          <a href="https://github.com/OGBENI-NG" target='_blank'>More work on github</a>
+          <a href="https://github.com/OGBENI-NG" target="_blank">More work on github</a>
         </CustomButton>
       </div>
     </div>

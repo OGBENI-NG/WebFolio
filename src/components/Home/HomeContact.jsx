@@ -14,9 +14,11 @@ export default function HomeContact(
   ;
 
   const labelStyle = `${labelColor} absolute left-2 font-bold
-    -top-5 text-lg peer-placeholder-shown:top-[8px] backdrop-blur
+    -top-5 shadow text-lg peer-placeholder-shown:top-[8px] 
+    backdrop-blur-[100px]
     peer-focus:shadow transition-all duration-300 
-    peer-focus:-top-6 py-1 px-2 rounded-[6px] `
+    peer-focus:-top-6 py-1 px-2 rounded-[6px] 
+    peer-placeholder-shown:shadow-none`
   ;
 
   return (

@@ -3,6 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import AnimateSections from '../AnimateSections';
 import WorkItem from '../WorkItems'
+import CustomButton from '../CustomButton';
 
 
 export default function SelectedWork({
@@ -14,8 +15,8 @@ export default function SelectedWork({
   themeColor,
 
   }) {
-    
-  const SelectedWorkEl = data.workEl.slice(0, 3);
+
+  const SelectedWorkEl = data.workEl.slice(2, 5);
 
   return (
     <div className="mt-[20px] relative z-[1]">
@@ -32,15 +33,18 @@ export default function SelectedWork({
           hoverColor={hoverColor}
           themeColor={themeColor}
           className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-10'}`}
+          target={'_blank'}
+          
         />
       ))}
-      <NavLink
-        to="works"
-        className={`${linkColor} bg-red-600 text-mainBg text-lg ml-auto 
-        py-3 font-bold block w-max px-4 shadow rounded-bl-md`}
-      >
-        More works
-      </NavLink>
+      <div className='px-4 pt-4'>
+        <CustomButton className={`w-full py-2`}>
+          <NavLink to="works">
+            More works
+          </NavLink>
+        </CustomButton>
+      </div>
+      
     </div>
   );
 }

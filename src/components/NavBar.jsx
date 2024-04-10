@@ -23,7 +23,7 @@ export default function NavBar({ themeColor, layoutTheme, visible }) {
     const navbarStyle = `flex flex-col gap-[2px] items-center font-OpenSan 
       ${isActive 
       ? `text-brand font-extrabold before:content-[''] before:w-[60px] 
-        before:h-[3.5px] before:absolute before:bg-brand before:-top-[1px] 
+        before:h-[3.5px] before:absolute before:bg-brand before:-top-[1.1px] 
         before:transition-all duration-300` 
       : `${themeColor} before:w-[0px]` } transition-all duration-300`
     ;
@@ -49,7 +49,7 @@ export default function NavBar({ themeColor, layoutTheme, visible }) {
   return (
     <nav className={`flex items-center justify-between
      ${visible ? "pb-[20px] opacity-100" : "pb-[2px] opacity-25"} 
-     pt-[4px] px-5 fixed bottom-0 w-full z-50 transition-all duration-300
+     pt-[6px] px-4 fixed bottom-0 w-full z-50 transition-all duration-300
      ${layoutTheme} border-t`}
     >
       {navBarData}

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import Layout from './Layout'
 import Home from './Home/Home'
 import Work from './Work/Work'
@@ -12,6 +12,7 @@ import ThemeContext from '../UseThemeContext'
 
 export default function App() {
   const {theme} = useContext(ThemeContext)
+  
 
   return(
     <div className={`antialiased overflow-x-hidden min-h-screen !scroll-smooth 
