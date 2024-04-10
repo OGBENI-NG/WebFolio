@@ -8,7 +8,7 @@ export default function Header(
 
   return (
     <header className={`flex items-center justify-between py-2 px-4
-      border-b ${layoutTheme} support backdrop-blur
+      border-b ${layoutTheme}
        fixed w-full z-50 transition-all duration-300
        ${visible ? 'top-0 opacity-100' : 'opacity-0'}`}>
       <img 

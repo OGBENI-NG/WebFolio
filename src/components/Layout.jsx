@@ -35,8 +35,8 @@ export default function Layout() {
   ;
 
   const layoutTheme = theme === 'light' 
-    ? 'bg-white/75 border-slate-900/10' 
-    : 'bg-black/75 border-slate-300/10'
+    ? 'bg-white border-slate-900/10' 
+    : 'bg-slate-900 border-slate-300/10'
   ;
 
   return (

@@ -22,9 +22,9 @@ export default function NavBar({ themeColor, layoutTheme, visible }) {
 
     const navbarStyle = `flex flex-col gap-[2px] items-center font-OpenSan 
       ${isActive 
-      ? `text-brand font-extrabold before:content-[''] before:w-[50px] 
-        before:h-[2.5px] before:absolute before:bg-brand before:top-0 
-        before:transition-[.5s]` 
+      ? `text-brand font-extrabold before:content-[''] before:w-[60px] 
+        before:h-[3.5px] before:absolute before:bg-brand before:-top-[1px] 
+        before:transition-all duration-300` 
       : `${themeColor} before:w-[0px]` } transition-all duration-300`
     ;
 
@@ -38,19 +38,19 @@ export default function NavBar({ themeColor, layoutTheme, visible }) {
         <div>
           {isActive ? item.isFocusedIcon({ size: 25 }) : item.icon({ size: 25 })}
         </div>
-        <span className={`text-[14px] font-bold`}>{item.name}</span>
+        <span className={`text-[14px] font-bold`}
+        >
+          {item.name}
+        </span>
       </NavLink>
     )
   })
 
   return (
     <nav className={`flex items-center justify-between
-     ${visible ? "pb-[20px] opacity-100" : "pb-[2px] opacity-35"} 
-     pt-[4px] px-5 fixed bottom-0 w-full z-50 transition-[.5s]
-     ${layoutTheme} border-t backdrop-blur-[100px]
-     
-     
-     `}
+     ${visible ? "pb-[20px] opacity-100" : "pb-[2px] opacity-25"} 
+     pt-[4px] px-5 fixed bottom-0 w-full z-50 transition-all duration-300
+     ${layoutTheme} border-t`}
     >
       {navBarData}
     </nav>
