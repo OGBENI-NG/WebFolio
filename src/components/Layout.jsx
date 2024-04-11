@@ -35,8 +35,8 @@ export default function Layout() {
   ;
 
   const layoutTheme = theme === 'light' 
-    ? 'bg-white border-slate-900/10' 
-    : 'bg-slate-900 border-slate-300/10'
+    ? 'bg-white/95 border-slate-900/10 transition-all duration-500 backdrop-blur' 
+    : 'bg-slate-900/95 border-slate-300/10 transition-all duration-500 backdrop-blur'
   ;
 
   return (
@@ -49,7 +49,7 @@ export default function Layout() {
         switchIcon={switchIcon}
         visible={visible}
       />
-        <main className='overflow-hidden transition-all duration-300'>
+        <main className='overflow-hidden transition-all duration-500'>
           <Outlet/>
         </main>
       <NavBar 

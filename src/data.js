@@ -29,7 +29,7 @@ const data = {
             {
                   id: generateUniqueId(),
                   name: 'Manage-landing-page',
-                  live: 'https://velvety-brioche-957d1f.netlify.app/',
+                  liveApp: 'https://velvety-brioche-957d1f.netlify.app/',
                   image: landingPageImg,
                   gitRepository: 'https://github.com/OGBENI-NG/manage-landing-page-master',
                   gitIcon: RiGithubFill,
@@ -38,7 +38,7 @@ const data = {
             {
                   id: generateUniqueId(),
                   name: 'Shortly-URL',
-                  live: 'https://moonlit-twilight-1225c8.netlify.app/',
+                  liveApp: 'https://moonlit-twilight-1225c8.netlify.app/',
                   image: shortlyUrl, 
                   gitRepository: 'https://github.com/OGBENI-NG/url-shortening-api-master',
                   gitIcon: RiGithubFill,

@@ -36,9 +36,9 @@ export default function NavBar({ themeColor, layoutTheme, visible }) {
         onClick={() => handleIconClick(item.id)}
       >
         <div>
-          {isActive ? item.isFocusedIcon({ size: 25 }) : item.icon({ size: 25 })}
+          {isActive ? item.isFocusedIcon({ size: 24 }) : item.icon({ size: 24 })}
         </div>
-        <span className={`text-[14px] font-bold`}
+        <span className={`text-[12px] tracking-wide font-bold`}
         >
           {item.name}
         </span>
@@ -49,7 +49,7 @@ export default function NavBar({ themeColor, layoutTheme, visible }) {
   return (
     <nav className={`flex items-center justify-between
      ${visible ? "pb-[20px] opacity-100" : "pb-[2px] opacity-25"} 
-     pt-[6px] px-4 fixed bottom-0 w-full z-50 transition-all duration-300
+     pt-[6px] px-4 fixed bottom-0 w-full z-50 
      ${layoutTheme} border-t`}
     >
       {navBarData}

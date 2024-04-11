@@ -27,12 +27,15 @@ export default function HomeAbout({theme, themeColor, bodyTxt, centerTxt}) {
       <AnimateSections className=''>
         <h2 className={`text-center text-2xl font-Solway font-bold text-brand`}>
           About me
-          <span className={`p-2 ${themeColor}`}>I Enjoy Solving Problems With Scalable Solutions</span>
+          <span className={`p-2 ${themeColor}`}>
+            I Enjoy Solving Problems With Scalable Solutions
+          </span>
         </h2>
       </AnimateSections>
       <AnimateSections>
-        <p className={`text-base font-medium border-t-[2px] border-brand py-2 px-3 pb-5
-        ${bodyTxt}   mt-2 text-center backdrop-blur-[100px] w-full`}>
+        <p className={`text-[20px] tracking-wide font-medium border-t-[2px]
+         border-brand py-2 px-1 pb-5
+        ${bodyTxt} mt-2 text-clip text-justify backdrop-blur w-full`}>
         My name is <span className='font-bold text-brand/85'>Adeolu Miracle</span> , and I'm a passionate frontend developer based in Lagos, Nigeria. I began my coding journey in 2019, and since then, I've been captivated by the art of creating intuitive and visually appealing user experiences. Over time, I've honed my skills in HTML, CSS, and JavaScript, which form the foundation of any great web application... 
         <NavLink 
           className='pb-1 px-2 leading-none font-semibold text-brand underline bg-brand/10 rounded-lg' 

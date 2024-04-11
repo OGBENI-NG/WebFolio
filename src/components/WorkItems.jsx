@@ -1,7 +1,7 @@
 import React from 'react';
 import AnimateSections from './AnimateSections';
 
-export default function WorkItem({ item, layoutTheme, themeColor, hoverColor, className, target }) {
+export default function WorkItem({ item, layoutTheme, themeColor, hoverColor, className }) {
 
   return (
     <div className={`${className}`}>
@@ -20,5 +20,5 @@ export default function WorkItem({ item, layoutTheme, themeColor, hoverColor, cl
         </div>
       </AnimateSections>
     </div>
-  );
+  )
 }

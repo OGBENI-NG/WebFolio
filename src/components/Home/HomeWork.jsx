@@ -33,7 +33,6 @@ export default function SelectedWork({
           hoverColor={hoverColor}
           themeColor={themeColor}
           className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-10'}`}
-          target={'_blank'}
           
         />
       ))}
