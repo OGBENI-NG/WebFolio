@@ -18,8 +18,10 @@ export default function SkillsIcons({themeColor, theme}) {
             </div>
             <AnimateSections>
                 <div className={`${themeColor} text-center text-2xl font-bold pb-5 font-Solway`}>
-                    <h1>What i can do</h1>
-                    <h2>Skills</h2>
+                    <h1>
+                        What i can do 
+                        <span className='text-brand block underline'>Skills</span>
+                    </h1>
                 </div>
             </AnimateSections>
             <AnimateSections>

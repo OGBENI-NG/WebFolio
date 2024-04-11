@@ -8,7 +8,6 @@ import CustomButton from '../CustomButton';
 
 export default function SelectedWork({
   data,
-  linkColor,
   centerTxt,
   layoutTheme,
   hoverColor,
@@ -22,7 +21,7 @@ export default function SelectedWork({
     <div className="mt-[20px] relative z-[1]">
       <AnimateSections>
         <h2 className={`${centerTxt} pb-6 m-auto`}>
-          My works Examples
+          My works <span className='text-brand underline'>Examples</span>
         </h2>
       </AnimateSections>
       {SelectedWorkEl.map((item, index) => (

@@ -10,7 +10,7 @@ export default function Header(
     <header className={`flex items-center justify-between py-2 px-4
       border-b ${layoutTheme}
        fixed w-full z-50 transition-all duration-300
-       ${visible ? 'top-0 opacity-100' : 'opacity-0'}`}>
+       ${visible ? 'top-0 opacity-100 h-[75px]' : 'h-[0px] opacity-0'}`}>
       <img 
         src={logo} 
         alt="logo"

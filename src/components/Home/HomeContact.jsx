@@ -10,13 +10,13 @@ export default function HomeContact(
   const inputStyle = `${inputColor}
     w-full h-[55px] rounded-[8px] outline:none 
     text-lg px-4 peer placeholder-transparent 
-    focus:outline-none font-semibold transition-all duration-300`
+    focus:outline-none font-semibold transition-all duration-500`
   ;
 
   const labelStyle = `${labelColor} absolute left-2 font-bold
     -top-5 shadow text-lg peer-placeholder-shown:top-[8px] 
     backdrop-blur-[100px]
-    peer-focus:shadow transition-all duration-300 
+    peer-focus:shadow transition-all duration-500 
     peer-focus:-top-6 py-1 px-2 rounded-[6px] 
     peer-placeholder-shown:shadow-none`
   ;
@@ -26,7 +26,7 @@ export default function HomeContact(
     <form 
       onSubmit={handleSubmit} 
       id='form' 
-      className={`py-[100px] transition-[.5s] ${formTheme} overflow-x-hidden`}
+      className={`py-[100px] ${formTheme} overflow-x-hidden`}
     >
       <h1 className={`text-2xl font-bold leading-relaxed 
         pb-8 text-brand m-auto text-center`}
