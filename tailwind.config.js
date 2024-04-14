@@ -18,7 +18,12 @@ export default {
         mainBgDark: '#101111',
         brand: '#38bdf8',
         secondary: '#838282',
-        secondaryDark: '#BCBABA'
+        secondaryDark: '#BCBABA',
+        darkest: "#0F172A",
+        dark: "#37476C",
+        mid: "#CBD5E1",
+        light: "#E6ECF3",
+        lightest: "#FFFFFF"
       },
       animation: {
         fadeInUp: 'fadeInUp .7s ease 0s 1 normal forwards',

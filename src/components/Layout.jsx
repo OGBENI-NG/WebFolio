@@ -7,7 +7,7 @@ import NavBar from './NavBar'
 import ThemeContext from '../UseThemeContext'
 
 
-export default function Layout() {
+export default function Layout({themeColor}) {
   const {theme, toggleTheme} = useContext(ThemeContext)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
@@ -30,13 +30,10 @@ export default function Layout() {
       <LuSun className='w-full h-full text-mainBg'/> 
   ;
   
-  const themeColor = theme === "light" ?
-    "block text-primary" : "block text-primaryDark"
-  ;
+  
 
-  const layoutTheme = theme === 'light' 
-    ? 'bg-white/95 border-slate-900/10 transition-all duration-500 backdrop-blur' 
-    : 'bg-slate-900/95 border-slate-300/10 transition-all duration-500 backdrop-blur'
+  const headerNavbarTheme = `transition-all duration-500 backdrop-blur px-5
+    ${theme === 'light' ? 'bg-light border-mid ' : 'bg-darkest border-mid/20 '}` 
   ;
 
   return (
@@ -45,7 +42,7 @@ export default function Layout() {
         themeColor={themeColor}
         toggleTheme={toggleTheme}
         theme={theme}
-        layoutTheme={layoutTheme}
+        headerNavbarTheme={headerNavbarTheme}
         switchIcon={switchIcon}
         visible={visible}
       />
@@ -54,7 +51,7 @@ export default function Layout() {
         </main>
       <NavBar 
         themeColor={themeColor}
-        layoutTheme={layoutTheme}
+        headerNavbarTheme={headerNavbarTheme}
         visible={visible}
       />
     </div>

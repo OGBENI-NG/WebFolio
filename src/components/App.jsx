@@ -12,21 +12,53 @@ import ThemeContext from '../UseThemeContext'
 
 export default function App() {
   const {theme, openId, toggleDescription} = useContext(ThemeContext)
+
+
+  //light
+  const themeColor = theme === "light" 
+    ? "block text-darkest" 
+    : "block text-lightest"
+  ;
+  const appTheme = theme === "light" ? 'bg-light' : 'bg-darkest';
+
+  const layoutTheme = theme === 'light' 
+    ? 'bg-lightest border-mid/10' 
+    : 'bg-dark/30 border-mid/20'
+  ;
+  const bodyTxt = theme === "light" ? "text-dark" : "text-light";
+
+  const highLightTxt = `text-brand text-3xl block`
+
+  const highLightTxtOne = ` 
+    leading-loose pb-5 m-auto text-center
+    ${theme === 'light' ? 'text-dark' : 'text-light'} 
+     font-inherit mr-auto text-lg font-bold w-max `
+  ;
   
 
   return(
-    <div className={`antialiased overflow-x-hidden min-h-screen !scroll-smooth 
-      font-OpenSan 
-      ${theme === "light" ? 'bg-white' : 'bg-slate-900'}  `}
+    <div className={`antialiased overflow-x-hidden min-h-screen 
+     !scroll-smooth font-OpenSan ${appTheme}  `}
     >
       <Router>
         <Routes>
-          <Route path='/' element={<Layout/>}>
+          <Route path='/' element={
+            <Layout 
+                themeColor={themeColor}
+              />
+            }
+          >
             <Route index element={
-              <Home 
-                theme={theme} 
-                openId={openId} 
-                toggleDescription={toggleDescription}/>
+                <Home 
+                  theme={theme} 
+                  openId={openId} 
+                  toggleDescription={toggleDescription}
+                  themeColor={themeColor} 
+                  layoutTheme={layoutTheme}
+                  highLightTxtOne={highLightTxtOne}
+                  bodyTxt={bodyTxt}
+                  highLightTxt={highLightTxt} 
+                />
               }
             />
             <Route 
@@ -36,6 +68,11 @@ export default function App() {
                   theme={theme} 
                   openId={openId} 
                   toggleDescription={toggleDescription}
+                  themeColor={themeColor} 
+                  layoutTheme={layoutTheme} 
+                  highLightTxtOne={highLightTxtOne}
+                  bodyTxt={bodyTxt}
+                  highLightTxt={highLightTxt} 
                 />
               }
             />

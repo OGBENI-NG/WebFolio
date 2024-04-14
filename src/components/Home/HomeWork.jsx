@@ -8,23 +8,24 @@ import CustomButton from '../CustomButton';
 
 export default function SelectedWork({
   data,
-  centerTxt,
+  highLightTxtOne,
   layoutTheme,
   hoverColor,
   themeColor,
   bodyTxt,
   toggleDescription,
-  openId
+  openId,
+  highLightTxt
 
   }) {
 
   const SelectedWorkEl = data.workEl.slice(2, 5);
 
   return (
-    <div className="mt-[20px] relative z-[1]">
+    <div className="px-5 mt-[20px] relative z-[1]">
       <AnimateSections>
-        <h2 className={`${centerTxt} pb-6 m-auto`}>
-          My works <span className='text-brand underline'>Examples</span>
+        <h2 className={`${highLightTxtOne}`}>
+          What i have made <span className={highLightTxt}>Work</span>
         </h2>
       </AnimateSections>
       {SelectedWorkEl.map((item, index) => (
@@ -34,7 +35,7 @@ export default function SelectedWork({
           layoutTheme={layoutTheme} 
           hoverColor={hoverColor}
           themeColor={themeColor}
-          className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-7'}`}
+          className={`${index === SelectedWorkEl.length - 1 ? 'py-0' : 'pb-7'}`}
           bodyTxt={bodyTxt}
           openId={openId}
           toggleDescription={toggleDescription}

@@ -3,7 +3,7 @@ import Section from '../AnimateSections';
 import CustomButton from '../CustomButton';
 
 export default function HomeContact(
-  {centerTxt, formTheme, inputColor, 
+  {highLightTxt, highLightTxtOne, formTheme, inputColor, 
     labelColor, formData, handleChange, handleSubmit}
   ) {
 
@@ -26,16 +26,15 @@ export default function HomeContact(
     <form 
       onSubmit={handleSubmit} 
       id='form' 
-      className={`py-[100px] ${formTheme} overflow-x-hidden`}
+      className={`py-[100px] px-5 ${formTheme} overflow-x-hidden`}
     >
-      <h1 className={`text-2xl font-bold leading-relaxed 
-        pb-8 text-brand m-auto text-center`}
+      <h1 className={`${highLightTxtOne}`}
       >
-        Get in touch
-        <span className={`m-auto ${centerTxt}`}>feel free to contact </span>
+        Get in touch 
+        <span className={`${highLightTxt}`}>feel free to contact</span>
       </h1>
 
-      <div className='flex flex-col gap-8 px-4'>
+      <div className='flex flex-col gap-8'>
         <div className='relative'>
           <input 
             type='text' 

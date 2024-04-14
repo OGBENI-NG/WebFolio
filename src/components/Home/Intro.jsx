@@ -43,12 +43,12 @@ export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) 
   
 
   return (
-    <section className='pt-[135px] w-full relative z-[0] transition-all duration-300'>
+    <article className='pt-[135px] w-full relative z-[0] transition-all duration-300'>
       <div  className='block absolute -z-[3] right-0 top-0 '>
-      <CustomSVG width="297" height="369" theme={theme} />
+        <CustomSVG width="297" height="369" theme={theme} />
       </div>
     
-      <div className='px-4'>
+      <section className='px-5'>
         <h1 className='text-brand font-OpenSan text-[30px] 
           font-bold leading-relaxed'
         >
@@ -64,12 +64,12 @@ export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) 
           for creating intuitive and user-friendly
           web interfaces.
         </p>
-      </div>
+      </section>
       <img 
         src={switchIllustration} 
         alt="illustration" 
         className={`pt-8`}
       />
-    </section>
+    </article>
   )
 }

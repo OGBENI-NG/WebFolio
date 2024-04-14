@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import data from '../data'
 
-export default function NavBar({ themeColor, layoutTheme, visible }) {
+export default function NavBar({ themeColor, headerNavbarTheme, visible }) {
   const [navBarItems, setNavBarItems] = useState(data.navBarEl)
   const location = useLocation()
 
@@ -49,8 +49,8 @@ export default function NavBar({ themeColor, layoutTheme, visible }) {
   return (
     <nav className={`flex items-center justify-between
      ${visible ? "pb-[20px] opacity-100" : "pb-[2px] opacity-25"} 
-     pt-[6px] px-4 fixed bottom-0 w-full z-50 
-     ${layoutTheme} border-t`}
+     pt-[6px] fixed bottom-0 w-full z-50 
+     ${headerNavbarTheme} border-t`}
     >
       {navBarData}
     </nav>

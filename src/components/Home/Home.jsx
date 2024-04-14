@@ -11,7 +11,12 @@ import HomeContact from './HomeContact'
 import HomeFooter from './HomeFooter'
 
 
-export default function Home({theme, openId, toggleDescription}) {
+export default function Home(
+    {theme, openId, toggleDescription, 
+    themeColor, layoutTheme, highLightTxtOne, 
+    bodyTxt, highLightTxt}  
+  ) {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,15 +41,7 @@ export default function Home({theme, openId, toggleDescription}) {
     : logoIllusDark
   ;
 
-  const layoutTheme = theme === 'light' 
-    ? 'bg-[#E1E1E1] border-borderColor' 
-    : 'bg-[#1D353F] border-[#5F5F5F]'
-  ;
-
-  const themeColor = theme === "light" 
-    ? "block text-primary" 
-    : "block text-primaryDark"
-  ;
+  
 
   const formTheme = theme === "light" 
     ? "bg-slate-400/10":"bg-slate-800"
@@ -59,19 +56,9 @@ export default function Home({theme, openId, toggleDescription}) {
     ? "peer-placeholder-shown:bg-white text-primary"
     : "peer-placeholder-shown:bg-slate-900/50 text-mainBg"
   ;
-  const bodyTxt = theme === "light" ? "text-secondary" : "text-secondaryDark"
+  
 
-  const centerTxt = ` ${themeColor} font-Solway text-2xl font-bold w-max`
-
-  const linkColor = theme === "light" 
-    ? "hover:text-red-700 hover:bg-red-500/30 hover:underline" 
-    : "hover:bg-[#363636] hover:underline"
-  ;
-
-  const hoverColor = theme === "light"
-    ? "hover:text-primary/60"
-    : "hover:text-primaryDark/60"
-  ;
+  
 
   const footerTheme = theme === "light"
     ? "bg-slate-800"
@@ -79,7 +66,6 @@ export default function Home({theme, openId, toggleDescription}) {
   ;
 
  
-
   return (
     <main>
       <Intro 
@@ -90,34 +76,38 @@ export default function Home({theme, openId, toggleDescription}) {
         bodyTxt={bodyTxt}
       />
       <SkillsIcons 
-        themeColor={themeColor}
+        highLightTxtOne={highLightTxtOne}
         theme={theme}
+        highLightTxt={highLightTxt}
+        bodyTxt={bodyTxt}
       />
       <HomeWork
         data={data}
         themeColor={themeColor}
         layoutTheme={layoutTheme}
-        centerTxt={centerTxt}
-        linkColor={linkColor}
-        hoverColor={hoverColor}
+        highLightTxtOne={highLightTxtOne}
         bodyTxt={bodyTxt}
         toggleDescription={toggleDescription}
         openId={openId}
+        highLightTxt={highLightTxt}
       />
       <HomeAbout
         theme={theme}
         themeColor={themeColor}
         bodyTxt={bodyTxt}
-        centerTxt={centerTxt}
+        highLightTxtOne={highLightTxtOne}
+        highLightTxt={highLightTxt}
       />
       <HomeContact
-        centerTxt={centerTxt}
+        highLightTxtOne={highLightTxtOne}
         formTheme={formTheme}
         inputColor={inputColor}
         labelColor={labelColor}
         handleChange={handleChange}
         formData={formData}
         handleSubmit={handleSubmit}
+        highLightTxt={highLightTxt}
+        bodyTxt={bodyTxt}
       />
       <HomeFooter 
         data={data}

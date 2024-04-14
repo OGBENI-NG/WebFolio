@@ -1,8 +1,9 @@
 import React from 'react';
 import AnimateSections from './AnimateSections';
 import { FaChevronDown, FaGithub } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
 
-export default function WorkItem({ item, layoutTheme, themeColor, hoverColor, 
+export default function WorkItem({ item, layoutTheme, themeColor,
   className, bodyTxt, openId, toggleDescription }) {
 
   return (
@@ -10,19 +11,16 @@ export default function WorkItem({ item, layoutTheme, themeColor, hoverColor,
       <AnimateSections>
         <section className={`overflow-hidden`}>
           <div className="w-full h-[250px]">
-            <img className="w-full h-full" src={item.image} alt={item.alt} />
+            <img className="w-full h-full rounded-t-xl" src={item.image} alt={item.alt} />
           </div>
-          <div className={`flex items-center p-4 text-xl 
+          <div className={`flex items-center p-4 text-xl  
+            ${openId === item.id ? 'rounded-b-none' : 'rounded-b-xl'}
             ${layoutTheme} backdrop-blur font-bold ${themeColor}`}
           >
-            <a href={item.liveApp} target='_blank' className={hoverColor} title="work-name">
+            <p>
               {item.name}
-            </a>
+            </p>
             <div className='flex items-center ml-auto gap-4'>
-              <a href={item.gitRepository} target='_blank' 
-                className="ml-auto text-brand hover:text-brand/50" title="github-link">
-               <FaGithub className='text-[37px]'/>
-              </a>
               <button 
                 className='bg-brand/15 text-brand p-[10px] rounded-full' 
                 onClick={() => toggleDescription(item.id)}> {/* Pass item.id to toggleDescription */}
@@ -32,12 +30,24 @@ export default function WorkItem({ item, layoutTheme, themeColor, hoverColor,
             </div>
           </div>
           {/* Render description only if isShow is true */}
-          <div className={`transition-all duration-500  ${layoutTheme}
-          ${openId === item.id ? 'h-[235px] rounded-b-[30px]' : 'h-[0] opacity-0 rounded-none'}`}>
-            <p className={`p-4 
-               font-semibold text-lg rounded-b-full ${bodyTxt}`}>
-              {item.description}
-            </p>
+          <div className={`transition-all duration-500 ${layoutTheme} 
+          ${openId === item.id ? 'h-[310px] rounded-b-xl' : 'h-[0] opacity-0 rounded-none'}`}>
+            <div className='px-4'>
+              <p className={` 
+                font-semibold text-lg rounded-b-full ${bodyTxt}`}>
+                {item.description}
+              </p>
+              <div className='flex items-center gap-x-4 pt-6'>
+                <a href={item.gitRepository} target='_blank' 
+                  className="text-brand hover:text-brand/50" title="github-link">
+                <FaGithub className='text-[37px]'/>
+                </a>
+                <a href={item.liveApp} target='_blank' 
+                  className=" text-brand hover:text-brand/50" title="github-link">
+                <FiExternalLink className='text-[37px]'/>
+                </a>
+              </div>
+            </div>
           </div>
          
         </section>

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import AnimateSections from '../AnimateSections'
 
 
-export default function HomeAbout({theme, themeColor, bodyTxt, centerTxt}) {
+export default function HomeAbout({theme, themeColor, bodyTxt,}) {
   return (
     <div className='relative py-[100px] -z-[0] px-4'>
       <div className='absolute -left-[90px] -top-[100px] -z-[1]' >

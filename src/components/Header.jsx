@@ -3,13 +3,13 @@ import logo from "../asset/img/🦆 icon _code_.svg"
 
 
 export default function Header(
-  {themeColor, toggleTheme, layoutTheme, switchIcon, visible}
+  {themeColor, toggleTheme, headerNavbarTheme, switchIcon, visible}
   ) {
 
   return (
-    <header className={`flex items-center justify-between py-2 px-4
-      border-b ${layoutTheme}
-       fixed w-full z-50 transition-all duration-300
+    <header className={`flex items-center justify-between py-2
+      border-b ${headerNavbarTheme}
+       fixed w-full z-50 
        ${visible ? 'top-0 opacity-100 h-[75px]' : 'h-[0px] opacity-0'}`}>
       <img 
         src={logo} 

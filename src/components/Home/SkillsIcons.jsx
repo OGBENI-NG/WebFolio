@@ -7,25 +7,25 @@ import AnimateSections from '../AnimateSections';
 
 
 
-export default function SkillsIcons({themeColor, theme}) {
-    const styleIcons = `w-[80px] h-[80px] text-[#455A64]`
+export default function SkillsIcons({highLightTxtOne, theme, highLightTxt}) {
+    const styleIcons = `text-[70px] ${theme === 'light' ? 'text-darkest' : 'text-light'}`
 
     return (
       
-        <section className='py-[120px] transition-all overflow-hidden relative z-0'>
+        <article className='py-[100px] px-5 transition-all overflow-hidden relative z-0 w-full'>
             <div className='absolute w-full top-[20px] -z-[1] -right-[60px]'>
                 <CustomSVG width='380px' theme={theme}/>
             </div>
             <AnimateSections>
-                <div className={`${themeColor} text-center text-2xl font-bold pb-5 font-Solway`}>
+                <div className={`${highLightTxtOne}`}>
                     <h1>
                         What i can do 
-                        <span className='text-brand block underline'>Skills</span>
+                        <span className={highLightTxt}>Skills</span>
                     </h1>
                 </div>
             </AnimateSections>
             <AnimateSections>
-                <div className='flex items-center flex-wrap justify-center gap-3 '>
+                <div className='grid grid-cols-5 gap-x-0 gap-y-2'>
                     <RiHtml5Line className={styleIcons}/>
                     <RiCss3Line className={styleIcons}/>
                     <RiJavascriptLine className={styleIcons}/>
@@ -36,7 +36,7 @@ export default function SkillsIcons({themeColor, theme}) {
                     <TbBrandFramer  className={styleIcons}/>
                 </div>
             </AnimateSections>
-        </section>
+        </article>
         
     )
 }
