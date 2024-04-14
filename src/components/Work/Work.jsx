@@ -3,7 +3,7 @@ import data from '../../data'
 import WorkItem from '../WorkItems'
 import CustomButton from '../CustomButton';
 
-export default function Work({theme}) {
+export default function Work({theme, openId, toggleDescription}) {
 
   const hoverColor = theme === "light"
     ? "hover:text-primary/60"
@@ -11,7 +11,7 @@ export default function Work({theme}) {
   ;
   
   const layoutTheme = theme === 'light' 
-  ? 'bg-[#E1E1E1] border-slate-900/10' 
+  ? 'bg-[#EDEDED] border-slate-900/10' 
   : 'bg-[#1D353F] border-slate-300/10'
   ;
   
@@ -20,6 +20,7 @@ export default function Work({theme}) {
   : "block text-primaryDark"
   ;
   const centerTxt = ` ${themeColor} font-Solway text-2xl font-bold w-max`;
+  const bodyTxt = theme === "light" ? "text-secondary" : "text-secondaryDark"
 
   const workItems = data.workEl.map(item => (
     <WorkItem
@@ -28,7 +29,10 @@ export default function Work({theme}) {
       layoutTheme={layoutTheme} 
       hoverColor={hoverColor}
       themeColor={themeColor}
-      className={`pb-8`}
+      className={`pb-7`}
+      bodyTxt={bodyTxt}
+      openId={openId}
+      toggleDescription={toggleDescription}
     />
   ))
   return (

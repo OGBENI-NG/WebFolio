@@ -3,7 +3,6 @@ import Intro from './Intro'
 import logoIllustration from '../../asset/img/intro-illtra.svg'
 import logoIllusDark from '../../asset/img/intro-illus-dark.svg'
 import frameLogo from '../../asset/img/frame.svg'
-import ThemeContext from '../../UseThemeContext'
 import HomeWork from './HomeWork'
 import data from '../../data'
 import SkillsIcons from './SkillsIcons'
@@ -12,8 +11,7 @@ import HomeContact from './HomeContact'
 import HomeFooter from './HomeFooter'
 
 
-export default function Home() {
-  const {theme} = useContext(ThemeContext)
+export default function Home({theme, openId, toggleDescription}) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -102,6 +100,9 @@ export default function Home() {
         centerTxt={centerTxt}
         linkColor={linkColor}
         hoverColor={hoverColor}
+        bodyTxt={bodyTxt}
+        toggleDescription={toggleDescription}
+        openId={openId}
       />
       <HomeAbout
         theme={theme}

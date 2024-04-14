@@ -11,7 +11,7 @@ import PageNotFound from './PageNotFound'
 import ThemeContext from '../UseThemeContext'
 
 export default function App() {
-  const {theme} = useContext(ThemeContext)
+  const {theme, openId, toggleDescription} = useContext(ThemeContext)
   
 
   return(
@@ -22,8 +22,23 @@ export default function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Layout/>}>
-            <Route index element={<Home/>}/>
-            <Route path='Works' element={<Work theme={theme}/>}/>
+            <Route index element={
+              <Home 
+                theme={theme} 
+                openId={openId} 
+                toggleDescription={toggleDescription}/>
+              }
+            />
+            <Route 
+              path='Works' 
+              element={
+                <Work 
+                  theme={theme} 
+                  openId={openId} 
+                  toggleDescription={toggleDescription}
+                />
+              }
+            />
             <Route path='about' element={<About/>}/>
             <Route path='contact' element={<Contact/>}/>
             <Route path='*' element={<PageNotFound/>}/>

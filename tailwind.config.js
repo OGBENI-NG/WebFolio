@@ -22,19 +22,30 @@ export default {
       },
       animation: {
         fadeInUp: 'fadeInUp .7s ease 0s 1 normal forwards',
-        fadeOut: 'fadeOutUp .7s ease 0s 1 normal forwards'
+        fadeOut: 'fadeOutUp .7s ease 0s 1 normal forwards',
+        slideIn: 'slideIn .5s ease 0s 1 normal forwards',
       },
       keyframes: {
         fadeInUp: {
           '0%': {
             opacity: '0',
             transform: 'scale(0.5)',
-           
           },
           '100%': {
             opacity: '1',
             transform: 'scale(1)',
-           
+          },
+        },
+        slideIn: {
+          '0%': {
+            transform: 'scaleY(0)',
+            transformOrigin: '100% 0%',
+            opacity: 0
+          },
+          '100%': {
+            transform: 'scaleY(1)',
+            transformOrigin: '100% 0%',
+            opacity: 1
           },
         },
       },

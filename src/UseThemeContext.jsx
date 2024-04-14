@@ -14,8 +14,15 @@ export const ThemeProvider = ({ children }) => {
     setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'))
   }
 
+  const [openId, setOpenId] = useState(null);
+
+  const toggleDescription = (id) => {
+    setOpenId(prevId => (prevId === id ? null : id));
+  };
+
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, openId, toggleDescription }}>
       {children}
     </ThemeContext.Provider>
   )

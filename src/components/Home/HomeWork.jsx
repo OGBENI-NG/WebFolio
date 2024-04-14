@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import AnimateSections from '../AnimateSections';
 import WorkItem from '../WorkItems'
@@ -12,6 +12,9 @@ export default function SelectedWork({
   layoutTheme,
   hoverColor,
   themeColor,
+  bodyTxt,
+  toggleDescription,
+  openId
 
   }) {
 
@@ -31,8 +34,10 @@ export default function SelectedWork({
           layoutTheme={layoutTheme} 
           hoverColor={hoverColor}
           themeColor={themeColor}
-          className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-10'}`}
-          
+          className={`${index === SelectedWorkEl.length - 1 ? 'pb-0' : 'pb-7'}`}
+          bodyTxt={bodyTxt}
+          openId={openId}
+          toggleDescription={toggleDescription}
         />
       ))}
       <div className='px-4 pt-4'>
