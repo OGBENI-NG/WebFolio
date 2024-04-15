@@ -31,7 +31,7 @@ export default function Layout({themeColor, appTheme}) {
   ;
   
   const headerNavbarTheme = `transition-all duration-500 px-5
-    ${theme === 'light' ? 'bg-lightest/90 border-mid/90 ' : 'bg-darkest border-mid/15 '}` 
+    ${theme === 'light' ? 'bg-lightest border-mid/90 ' : 'bg-darkest border-mid/15 '}` 
   ;
 
   return (
