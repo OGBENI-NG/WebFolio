@@ -41,7 +41,7 @@ export default function SelectedWork({
           toggleDescription={toggleDescription}
         />
       ))}
-      <div className='pt-5'>
+      <div className='pt-5 relative -z-[1]'>
         <NavLink to="works">
           <CustomButton className={`w-full py-2`}>
             More works

@@ -7,7 +7,7 @@ import AnimateSections from '../AnimateSections'
 export default function HomeAbout({theme, themeColor, bodyTxt,}) {
   return (
     <div className='relative py-[100px] -z-[0] px-4'>
-      <div className='absolute -left-[90px] -top-[100px] -z-[1]' >
+      <div className='absolute -left-[90px] -top-[100px] -z-[2]' >
         <svg 
           width="251" height="225" viewBox="0 0 251 225" 
           fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -16,8 +16,8 @@ export default function HomeAbout({theme, themeColor, bodyTxt,}) {
            195.458C66.7601 103.24 -28.5858 62.1616 9.84243 15.7727C48.2706
            -30.6162 73.9886 42.5563 194.936 27.4686C195.131 
           111.389 279.297 160.765 240.869 207.154Z`} 
-          fill={`${theme === 'light' ? '#E0E0E0' : '#1D353F'}  `} 
-          fillOpacity={`${theme === 'light' ? '0.2555' : '0.25'} `}
+          fill={`${theme === 'light' ? '#CBD5E1' : '#CBD5E1'}  `} 
+          fillOpacity={`${theme === 'light' ? '0.17' : '0.0290'} `}
         />
         </svg>
       </div>
