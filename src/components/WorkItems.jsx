@@ -9,12 +9,11 @@ export default function WorkItem({ item, layoutTheme, themeColor,
   return (
     <div className={`${className} `}>
       <AnimateSections>
-        <section className={`overflow-hidden`}>
+        <section className={`overflow-hidden shadow-md rounded-lg`}>
           <div className="w-full h-[250px]">
-            <img className="w-full h-full rounded-t-lg" src={item.image} alt={item.alt} />
+            <img className="w-full h-full" src={item.image} alt={item.alt} />
           </div>
           <div className={`flex items-center p-4 text-xl  
-            ${openId === item.id ? 'rounded-b-none' : 'rounded-b-xl shadow-md'}
             ${layoutTheme} backdrop-blur font-bold ${themeColor}`}
           >
             <p>
