@@ -41,28 +41,8 @@ export default function Home(
     : logoIllusDark
   ;
 
-  
-
-  const formTheme = theme === "light" 
-    ? "bg-slate-400/10":"bg-slate-800"
-  ;
-
-  const inputColor = theme === "light"
-   ? "border border-slate-900/10 text-primary bg-white"
-   : "border border-slate-300/10 bg-slate-900/80 text-primaryDark"
-  ;
-
-  const labelColor = theme === "light"
-    ? "peer-placeholder-shown:bg-white text-primary"
-    : "peer-placeholder-shown:bg-slate-900/50 text-mainBg"
-  ;
-  
-
-  
-
-  const footerTheme = theme === "light"
-    ? "bg-slate-800"
-    : "bg-slate-700/20"
+  const footerTheme = ` 
+    ${theme === "light"? "bg-lightest": "bg-darkest"}` 
   ;
 
  
@@ -93,16 +73,13 @@ export default function Home(
       />
       <HomeAbout
         theme={theme}
-        themeColor={themeColor}
         bodyTxt={bodyTxt}
         highLightTxtOne={highLightTxtOne}
         highLightTxt={highLightTxt}
       />
       <HomeContact
         highLightTxtOne={highLightTxtOne}
-        formTheme={formTheme}
-        inputColor={inputColor}
-        labelColor={labelColor}
+        theme={theme}
         handleChange={handleChange}
         formData={formData}
         handleSubmit={handleSubmit}
@@ -113,6 +90,7 @@ export default function Home(
         data={data}
         themeColor={themeColor}
         footerTheme={footerTheme}
+        bodyTxt={bodyTxt}
       />
     </main>
   )

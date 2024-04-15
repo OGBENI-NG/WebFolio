@@ -30,8 +30,8 @@ export default function Layout({themeColor, appTheme}) {
       <LuSun className='w-full h-full text-mainBg'/> 
   ;
   
-  const headerNavbarTheme = `transition-all duration-500 backdrop-blur px-5
-    ${theme === 'light' ? 'bg-lightest/90 border-mid ' : 'bg-darkest border-mid/20 '}` 
+  const headerNavbarTheme = `transition-all duration-500 px-5
+    ${theme === 'light' ? 'bg-lightest/90 border-mid/90 ' : 'bg-darkest border-mid/15 '}` 
   ;
 
   return (
@@ -44,7 +44,7 @@ export default function Layout({themeColor, appTheme}) {
         switchIcon={switchIcon}
         visible={visible}
       />
-        <main className='overflow-hidden transition-all duration-500'>
+        <main className='overflow-hidden'>
           <Outlet/>
         </main>
       <NavBar 

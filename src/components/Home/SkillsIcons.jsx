@@ -17,10 +17,10 @@ export default function SkillsIcons({highLightTxtOne, theme, highLightTxt}) {
                 <CustomSVG width='380px' theme={theme}/>
             </div>
             <AnimateSections>
-                <div className={`${highLightTxtOne}`}>
+                <div className={`${highLightTxt}`}>
                     <h1>
-                        What i can do 
-                        <span className={highLightTxt}>Skills</span>
+                        Skills
+                        <span className={highLightTxtOne}>What i can do</span>
                     </h1>
                 </div>
             </AnimateSections>

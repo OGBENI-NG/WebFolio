@@ -9,19 +9,19 @@ export default function WorkItem({ item, layoutTheme, themeColor,
   return (
     <div className={`${className} `}>
       <AnimateSections>
-        <section className={`overflow-hidden shadow-md rounded-lg`}>
+        <section className={`overflow-hidden shadow-sm rounded-lg`}>
           <div className="w-full h-[250px]">
             <img className="w-full h-full" src={item.image} alt={item.alt} />
           </div>
           <div className={`flex items-center p-4 text-xl  
-            ${layoutTheme} backdrop-blur font-bold ${themeColor}`}
+            ${layoutTheme} font-bold ${themeColor}`}
           >
             <p>
               {item.name}
             </p>
             <div className='flex items-center ml-auto gap-4'>
               <button 
-                className='bg-brand/10 shadow-md text-brand p-[10px] rounded-full' 
+                className='bg-brand/5 shadow-sm shadow-brand/30 text-brand p-[10px] rounded-full' 
                 onClick={() => toggleDescription(item.id)}> {/* Pass item.id to toggleDescription */}
                 <FaChevronDown className={`transition-all  duration-500 text-lg
                   ${openId === item.id ? '-rotate-360' : 'rotate-180'}`}/>

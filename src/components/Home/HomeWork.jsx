@@ -24,8 +24,9 @@ export default function SelectedWork({
   return (
     <div className="px-5 mt-[20px] relative z-[1]">
       <AnimateSections>
-        <h2 className={`${highLightTxtOne}`}>
-          What i have made <span className={highLightTxt}>Work</span>
+        <h2 className={`${highLightTxt}`}>
+          Work
+          <span className={highLightTxtOne}>What i have made</span>
         </h2>
       </AnimateSections>
       {SelectedWorkEl.map((item, index) => (

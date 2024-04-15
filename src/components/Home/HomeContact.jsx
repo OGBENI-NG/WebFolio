@@ -3,9 +3,19 @@ import Section from '../AnimateSections';
 import CustomButton from '../CustomButton';
 
 export default function HomeContact(
-  {highLightTxt, highLightTxtOne, formTheme, inputColor, 
-    labelColor, formData, handleChange, handleSubmit}
+  {highLightTxt, highLightTxtOne, 
+     formData, handleChange, handleSubmit, theme}
   ) {
+
+  const inputColor =  theme === "light"
+  ? "border border-slate-900/10 text-darkest bg-lightest" 
+   : "border border-slate-300/10 bg-darkest text-lightest";
+  ;
+
+  const labelColor = theme === "light"
+    ? "bg-lightest text-darkest"
+    : "bg-darkest text-lightest"
+  ;
 
   const inputStyle = `${inputColor}
     w-full h-[55px] rounded-[8px] outline:none 
@@ -15,10 +25,13 @@ export default function HomeContact(
 
   const labelStyle = `${labelColor} absolute left-2 font-bold
     -top-5 shadow text-lg peer-placeholder-shown:top-[8px] 
-    backdrop-blur-[100px]
     peer-focus:shadow transition-all duration-500 
     peer-focus:-top-6 py-1 px-2 rounded-[6px] 
-    peer-placeholder-shown:shadow-none`
+    peer-placeholder-shown:shadow-none `
+  ;
+
+  const formTheme = theme === "light" 
+    ? "bg-light/40":"bg-dark/20"
   ;
 
   return (
@@ -26,15 +39,15 @@ export default function HomeContact(
     <form 
       onSubmit={handleSubmit} 
       id='form' 
-      className={`py-[100px] px-5 ${formTheme} overflow-x-hidden`}
+      className={`py-[80px] px-5 ${formTheme} overflow-x-hidden`}
     >
-      <h1 className={`${highLightTxtOne}`}
+      <h1 className={`${highLightTxt}`}
       >
         Get in touch 
-        <span className={`${highLightTxt}`}>feel free to contact</span>
+        <span className={`${highLightTxtOne}`}>feel free to contact</span>
       </h1>
 
-      <div className='flex flex-col gap-8'>
+      <div className='flex flex-col gap-8 pt-2'>
         <div className='relative'>
           <input 
             type='text' 

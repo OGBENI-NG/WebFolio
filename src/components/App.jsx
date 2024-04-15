@@ -27,10 +27,10 @@ export default function App() {
   ;
   const bodyTxt = theme === "light" ? "text-dark" : "text-light";
 
-  const highLightTxt = `text-brand text-3xl block`
+  const highLightTxt = `text-brand text-3xl font-semibold text-center`
 
   const highLightTxtOne = ` 
-    leading-loose pb-5 m-auto text-center
+    leading-loose pb-5 m-auto block
     ${theme === 'light' ? 'text-dark' : 'text-light'} 
      font-inherit mr-auto text-lg font-bold w-max `
   ;

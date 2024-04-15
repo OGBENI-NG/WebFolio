@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function HomeFooter({data, footerTheme}) {
+export default function HomeFooter({data, footerTheme, bodyTxt}) {
 
   const iconEl = data.footerEl.filter(icon => icon.type === "icon")
   const renderLinksIcon = iconEl.map(iconEl => (
@@ -17,10 +17,10 @@ export default function HomeFooter({data, footerTheme}) {
   const renderHeroContact = heroContact.map(info => (
     <div 
       key={info.id} 
-      className={`text-lg font-semibold text-[#D5D5D5] flex items-center gap-2`}
+      className={`${bodyTxt} text-lg font-semibold flex items-center gap-2`}
     >
       <span className=''>{info.iconN({size: 20})}</span>
-      <span>{info.name}</span>
+      <span >{info.name}</span>
     </div>
   ))
   
@@ -38,7 +38,7 @@ export default function HomeFooter({data, footerTheme}) {
       <div className='flex items-center justify-center gap-8'>
         {renderLinksIcon}
       </div>
-      <span className='block text-center pt-10 text-xl font-bold text-mainBg'>&copy; 2024</span>
+      <span className={`${bodyTxt} block text-center pt-10 text-xl font-bold`}>&copy; 2024</span>
 
     </footer>
   )

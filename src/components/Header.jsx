@@ -8,7 +8,7 @@ export default function Header(
 
   return (
     <header className={`flex items-center justify-between py-2
-      border-b ${headerNavbarTheme}
+      border-b-[1px] ${headerNavbarTheme}
        fixed w-full z-50 
        ${visible ? 'top-0 opacity-100 h-[75px]' : 'h-[0px] opacity-0'}`}>
       <img 
