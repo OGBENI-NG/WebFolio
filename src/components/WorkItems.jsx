@@ -21,7 +21,8 @@ export default function WorkItem({ item, layoutTheme, themeColor,
             </p>
             <div className='flex items-center ml-auto gap-4'>
               <button 
-                className='bg-brand/5 shadow-lg shadow-brand/30 text-brand p-[10px] rounded-full' 
+                className='bg-brand/5 shadow-[1px_1px_12px_#38bdf8] shadow-brand/30
+                 text-brand p-[10px] rounded-full' 
                 onClick={() => toggleDescription(item.id)}> {/* Pass item.id to toggleDescription */}
                 <FaChevronDown className={`transition-all  duration-500 text-lg
                   ${openId === item.id ? '-rotate-360' : 'rotate-180'}`}/>
