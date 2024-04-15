@@ -41,14 +41,13 @@ export default function SelectedWork({
           toggleDescription={toggleDescription}
         />
       ))}
-      <div className='px-4 pt-4'>
-        <CustomButton className={`w-full py-2`}>
-          <NavLink to="works">
+      <div className='pt-5'>
+        <NavLink to="works">
+          <CustomButton className={`w-full py-2`}>
             More works
-          </NavLink>
-        </CustomButton>
+          </CustomButton>
+        </NavLink>
       </div>
-      
     </div>
   );
 }

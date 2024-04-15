@@ -19,7 +19,7 @@ export default function App() {
     ? "block text-darkest" 
     : "block text-lightest"
   ;
-  const appTheme = theme === "light" ? 'bg-light' : 'bg-darkest';
+  const appTheme = theme === "light" ? 'bg-light/30' : 'bg-darkest';
 
   const layoutTheme = theme === 'light' 
     ? 'bg-lightest border-mid/10' 

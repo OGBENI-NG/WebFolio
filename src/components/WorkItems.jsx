@@ -11,10 +11,10 @@ export default function WorkItem({ item, layoutTheme, themeColor,
       <AnimateSections>
         <section className={`overflow-hidden`}>
           <div className="w-full h-[250px]">
-            <img className="w-full h-full rounded-t-xl" src={item.image} alt={item.alt} />
+            <img className="w-full h-full rounded-t-lg" src={item.image} alt={item.alt} />
           </div>
           <div className={`flex items-center p-4 text-xl  
-            ${openId === item.id ? 'rounded-b-none' : 'rounded-b-xl'}
+            ${openId === item.id ? 'rounded-b-none' : 'rounded-b-xl shadow-md'}
             ${layoutTheme} backdrop-blur font-bold ${themeColor}`}
           >
             <p>
@@ -22,7 +22,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
             </p>
             <div className='flex items-center ml-auto gap-4'>
               <button 
-                className='bg-brand/15 text-brand p-[10px] rounded-full' 
+                className='bg-brand/10 shadow-md text-brand p-[10px] rounded-full' 
                 onClick={() => toggleDescription(item.id)}> {/* Pass item.id to toggleDescription */}
                 <FaChevronDown className={`transition-all  duration-500 text-lg
                   ${openId === item.id ? '-rotate-360' : 'rotate-180'}`}/>
@@ -31,7 +31,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
           </div>
           {/* Render description only if isShow is true */}
           <div className={`transition-all duration-500 ${layoutTheme} 
-          ${openId === item.id ? 'h-[310px] rounded-b-xl' : 'h-[0] opacity-0 rounded-none'}`}>
+          ${openId === item.id ? 'h-[310px] rounded-b-lg shadow-md' : 'h-[0] opacity-0 rounded-none'}`}>
             <div className='px-4'>
               <p className={` 
                 font-semibold text-lg rounded-b-full ${bodyTxt}`}>

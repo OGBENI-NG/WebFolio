@@ -7,7 +7,7 @@ import NavBar from './NavBar'
 import ThemeContext from '../UseThemeContext'
 
 
-export default function Layout({themeColor}) {
+export default function Layout({themeColor, appTheme}) {
   const {theme, toggleTheme} = useContext(ThemeContext)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
@@ -32,8 +32,8 @@ export default function Layout({themeColor}) {
   
   
 
-  const headerNavbarTheme = `transition-all duration-500 backdrop-blur px-5
-    ${theme === 'light' ? 'bg-light border-mid ' : 'bg-darkest border-mid/20 '}` 
+  const headerNavbarTheme = `transition-all duration-500 backdrop-blur-[100px] px-5
+    ${theme === 'light' ? 'bg-light/30 border-mid ' : 'bg-darkest border-mid/20 '}` 
   ;
 
   return (

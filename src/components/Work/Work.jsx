@@ -33,9 +33,11 @@ export default function Work(
        <span className={highLightTxt}>Work</span>
       </h1>
       {workItems}
-      <CustomButton className={`w-full py-2`}>
-        <a href="https://github.com/OGBENI-NG" target="_blank">More work on github</a>
-      </CustomButton>
+        <a href="https://github.com/OGBENI-NG" target="_blank">
+          <CustomButton className={`w-full py-2`}>
+            More work on github
+          </CustomButton>
+        </a>
     </section>
   )
 }
