@@ -25,7 +25,7 @@ export default function Work(
   ))
   return (
     <section className='py-[110px] px-5 pb-[130px]'>
-      <h1 className={`${highLightTxtOne}`}>
+      <h1 className={`${highLightTxtOne} text-center pb-5`}>
        What i have made 
        <span className={`${highLightTxt} block`}>Work</span>
       </h1>
