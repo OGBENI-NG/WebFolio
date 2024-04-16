@@ -25,7 +25,7 @@ export default function SkillsIcons({highLightTxtOne, theme, highLightTxt}) {
                 </div>
             </AnimateSections>
             <AnimateSections>
-                <div className='grid grid-cols-5 gap-x-0 gap-y-2'>
+                <div className='grid mt-5 grid-cols-5 gap-x-0 gap-y-2'>
                     <RiHtml5Line className={styleIcons}/>
                     <RiCss3Line className={styleIcons}/>
                     <RiJavascriptLine className={styleIcons}/>

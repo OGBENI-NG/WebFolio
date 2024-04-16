@@ -29,19 +29,21 @@ export default function SelectedWork({
           <span className={highLightTxtOne}>What i have made</span>
         </h2>
       </AnimateSections>
-      {SelectedWorkEl.map((item, index) => (
-        <WorkItem 
-          key={item.id} 
-          item={item} 
-          layoutTheme={layoutTheme} 
-          hoverColor={hoverColor}
-          themeColor={themeColor}
-          className={`${index === SelectedWorkEl.length - 1 ? 'py-0' : 'pb-7'}`}
-          bodyTxt={bodyTxt}
-          openId={openId}
-          toggleDescription={toggleDescription}
-        />
-      ))}
+      <div className='mt-5'>
+        {SelectedWorkEl.map((item, index) => (
+          <WorkItem 
+            key={item.id} 
+            item={item} 
+            layoutTheme={layoutTheme} 
+            hoverColor={hoverColor}
+            themeColor={themeColor}
+            className={`${index === SelectedWorkEl.length - 1 ? 'py-0' : 'pb-7'}`}
+            bodyTxt={bodyTxt}
+            openId={openId}
+            toggleDescription={toggleDescription}
+          />
+        ))}
+      </div>
       <div className='pt-5 relative -z-[1]'>
         <NavLink to="works">
           <CustomButton className={`w-full py-2`}>
