@@ -24,12 +24,12 @@ export default function HomeAbout({theme, bodyTxt, highLightTxtOne, highLightTxt
         <CustomSVG theme={theme} />
       </div>
       <AnimateSections className=''>
-        <h2 className={`${highLightTxt} text-center leading-normal`}>
+        <h2 className={`${highLightTxt} text-center`}>
           Who i am
-          <span className={` ${highLightTxtOne}`}>
+          <span className={` ${highLightTxtOne} leading-5 pt-2`}>
             I Enjoy Solving Problems 
+            <span className={`${highLightTxtOne}`}>With Scalable Solutions</span>
           </span>
-          <span className={`${highLightTxtOne}`}>With Scalable Solutions</span>
         </h2>
       </AnimateSections>
       <AnimateSections>
