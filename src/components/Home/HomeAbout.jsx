@@ -5,8 +5,8 @@ import AnimateSections from '../AnimateSections'
 
 export default function HomeAbout({theme, bodyTxt, highLightTxtOne, highLightTxt}) {
   return (
-    <div className='relative py-[80px] -z-[0] px-4'>
-      <div className='absolute -left-[90px] -top-[100px] -z-[2]' >
+    <div className='relative py-[80px] px-4'>
+      <div className='absolute -left-[90px] -top-[100px] -z-[0]' >
         <svg 
           width="251" height="225" viewBox="0 0 251 225" 
           fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,9 @@ export default function HomeAbout({theme, bodyTxt, highLightTxtOne, highLightTxt
         <CustomSVG theme={theme} />
       </div>
       <AnimateSections className=''>
-        <h2 className={`${highLightTxt} text-center`}>
+        <h2 className={`${highLightTxt} text-center `}>
           Who i am
-          <span className={` ${highLightTxtOne} leading-5 pt-2`}>
+          <span className={` ${highLightTxtOne} leading-5 pt-3`}>
             I Enjoy Solving Problems 
             <span className={`${highLightTxtOne}`}>With Scalable Solutions</span>
           </span>

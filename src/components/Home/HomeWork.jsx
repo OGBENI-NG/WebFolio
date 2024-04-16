@@ -29,7 +29,7 @@ export default function SelectedWork({
           <span className={highLightTxtOne}>What i have made</span>
         </h2>
       </AnimateSections>
-      <div className='mt-5'>
+      <div className='mt-5 relative z-[1]'>
         {SelectedWorkEl.map((item, index) => (
           <WorkItem 
             key={item.id} 
@@ -44,7 +44,7 @@ export default function SelectedWork({
           />
         ))}
       </div>
-      <div className='pt-5 relative -z-[1]'>
+      <div className='pt-5 relative z-[2]'>
         <NavLink to="works">
           <CustomButton className={`w-full py-2`}>
             More works
