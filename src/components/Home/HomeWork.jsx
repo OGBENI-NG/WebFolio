@@ -22,7 +22,7 @@ export default function SelectedWork({
   const SelectedWorkEl = data.workEl.slice(2, 5);
 
   return (
-    <div className="px-5 mt-[20px] relative z-[1]">
+    <div className="px-5 mt-[20px]">
       <AnimateSections>
         <h2 className={`${highLightTxt}`}>
           Work
