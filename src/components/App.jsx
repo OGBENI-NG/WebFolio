@@ -30,7 +30,7 @@ export default function App() {
   const highLightTxt = `text-brand text-3xl font-semibold text-center`
 
   const highLightTxtOne = ` 
-    leading-loose m-auto block
+     m-auto block
     ${theme === 'light' ? 'text-dark' : 'text-light'} 
      font-inherit mr-auto text-lg font-bold `
   ;
