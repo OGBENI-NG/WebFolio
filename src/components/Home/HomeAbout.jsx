@@ -26,14 +26,15 @@ export default function HomeAbout({theme, bodyTxt, highLightTxtOne, highLightTxt
       <AnimateSections className=''>
         <h2 className={`${highLightTxt} text-center`}>
           Who i am
-          <span className={` ${highLightTxtOne} w-[250px] leading-normal pt-2`}>
-            I Enjoy Solving Problems With Scalable Solutions
+          <span className={` ${highLightTxtOne} pb-0 pt-2`}>
+            I Enjoy Solving Problems 
           </span>
+          <span className={`${highLightTxtOne} pb-0`}>With Scalable Solutions</span>
         </h2>
       </AnimateSections>
       <AnimateSections>
         <p className={`text-lg tracking-wide font-bold border-t-[2px]
-         border-brand py-2 pb-5 px-1
+         border-brand py-2 pb-5 px-1 mt-3
         ${bodyTxt} mt-1 text-center`}>
         My name is <span className='font-bold text-brand'>Adeolu Miracle</span> , and I'm a passionate frontend developer based in Lagos, Nigeria. I began my coding journey in 2019, and since then, I've been captivated by the art of creating intuitive and visually appealing user experiences. Over time, I've honed my skills in HTML, CSS, and JavaScript, which form the foundation of any great web application... 
         <NavLink 
