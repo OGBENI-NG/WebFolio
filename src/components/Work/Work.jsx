@@ -25,9 +25,9 @@ export default function Work(
   ))
   return (
     <section className='py-[110px] px-5 pb-[130px]'>
-      <h1 className={`${highLightTxtOne} text-center m-auto`}>
+      <h1 className={`${highLightTxtOne}`}>
        What i have made 
-       <span className={highLightTxt}>Work</span>
+       <span className={`${highLightTxt} block`}>Work</span>
       </h1>
       {workItems}
         <a href="https://github.com/OGBENI-NG" target="_blank">
