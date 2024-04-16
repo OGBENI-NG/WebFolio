@@ -26,7 +26,7 @@ export default function HomeAbout({theme, bodyTxt, highLightTxtOne, highLightTxt
       <AnimateSections className=''>
         <h2 className={`${highLightTxt} text-center`}>
           Who i am
-          <span className={` ${highLightTxtOne} w-[265px] leading-normal pt-2`}>
+          <span className={` ${highLightTxtOne} w-[250px] leading-normal pt-2`}>
             I Enjoy Solving Problems With Scalable Solutions
           </span>
         </h2>
