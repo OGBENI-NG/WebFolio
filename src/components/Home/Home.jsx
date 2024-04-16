@@ -14,7 +14,7 @@ import HomeFooter from './HomeFooter'
 export default function Home(
     {theme, openId, toggleDescription, 
     themeColor, layoutTheme, highLightTxtOne, 
-    bodyTxt, highLightTxt}  
+    bodyTxt, highLightTxt, borderStyle}  
   ) {
 
   const [formData, setFormData] = useState({
@@ -70,6 +70,7 @@ export default function Home(
         toggleDescription={toggleDescription}
         openId={openId}
         highLightTxt={highLightTxt}
+        
       />
       <HomeAbout
         theme={theme}
@@ -85,6 +86,7 @@ export default function Home(
         handleSubmit={handleSubmit}
         highLightTxt={highLightTxt}
         bodyTxt={bodyTxt}
+        borderStyle={borderStyle}
       />
       <HomeFooter 
         data={data}

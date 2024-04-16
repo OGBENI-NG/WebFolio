@@ -13,7 +13,7 @@ import ThemeContext from '../UseThemeContext'
 export default function App() {
   const {theme, openId, toggleDescription} = useContext(ThemeContext)
 
-
+  
   //light
   const themeColor = theme === "light" 
     ? "block text-darkest" 
@@ -25,7 +25,7 @@ export default function App() {
     ? 'bg-lightest border-mid/10' 
     : 'bg-dark/30 border-mid/20'
   ;
-  const bodyTxt = theme === "light" ? "text-dark" : "text-light";
+  const bodyTxt = `text-lg ${theme === "light" ? "text-dark" : "text-light"}`
 
   const highLightTxt = `text-brand text-3xl font-semibold text-center`
 
@@ -34,6 +34,12 @@ export default function App() {
     ${theme === 'light' ? 'text-dark' : 'text-light'} 
      font-inherit mr-auto text-lg font-bold `
   ;
+
+  const borderStyle =  theme === "light"
+  ? "border border-slate-900/10 text-darkest bg-lightest" 
+   : "border border-slate-300/10 bg-darkest text-lightest";
+  ;
+
   
 
   return(
@@ -45,6 +51,7 @@ export default function App() {
           <Route path='/' element={
             <Layout 
                 themeColor={themeColor}
+                borderStyle={borderStyle}
               />
             }
           >
@@ -58,6 +65,7 @@ export default function App() {
                   highLightTxtOne={highLightTxtOne}
                   bodyTxt={bodyTxt}
                   highLightTxt={highLightTxt} 
+                  borderStyle={borderStyle}
                 />
               }
             />
@@ -76,7 +84,7 @@ export default function App() {
                 />
               }
             />
-            <Route path='about' element={<About/>}/>
+            <Route path='about' element={<About bodyTxt={bodyTxt}/>}/>
             <Route path='contact' element={<Contact/>}/>
             <Route path='*' element={<PageNotFound/>}/>
           </Route>

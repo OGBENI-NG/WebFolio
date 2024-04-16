@@ -4,20 +4,16 @@ import CustomButton from '../CustomButton';
 
 export default function HomeContact(
   {highLightTxt, highLightTxtOne, 
-     formData, handleChange, handleSubmit, theme}
+     formData, handleChange, handleSubmit, theme, borderStyle}
   ) {
 
-  const inputColor =  theme === "light"
-  ? "border border-slate-900/10 text-darkest bg-lightest" 
-   : "border border-slate-300/10 bg-darkest text-lightest";
-  ;
-
+  
   const labelColor = theme === "light"
     ? "bg-lightest text-darkest"
     : "bg-darkest text-lightest"
   ;
 
-  const inputStyle = `${inputColor}
+  const inputStyle = `${borderStyle}
     w-full h-[55px] rounded-[8px] outline:none 
     text-lg px-4 peer placeholder-transparent 
     focus:outline-none font-semibold transition-all duration-500`
@@ -99,7 +95,7 @@ export default function HomeContact(
             placeholder='not-shown'
             value={formData.message}
             onChange={handleChange}
-            className={`${inputColor}
+            className={`${borderStyle}
             w-full h-[158px] rounded-[8px] outline:none 
             text-lg p-4 peer leading-tight placeholder-transparent resize-none
             focus:outline-none font-semibold transition-all`}
