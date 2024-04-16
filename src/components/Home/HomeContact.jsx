@@ -47,7 +47,7 @@ export default function HomeContact(
         <span className={`${highLightTxtOne}`}>feel free to contact</span>
       </h1>
 
-      <div className='flex flex-col gap-8 pt-2'>
+      <div className='flex flex-col gap-8 pt-2 mt-3'>
         <div className='relative'>
           <input 
             type='text' 
