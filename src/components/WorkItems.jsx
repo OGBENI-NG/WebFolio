@@ -13,7 +13,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
           <div className="w-full h-[250px]">
             <img className="w-full h-full" src={item.image} alt={item.alt} />
           </div>
-          <div className={`flex items-center p-4 text-xl  
+          <div className={`flex items-center p-5 text-xl  
             ${layoutTheme} font-bold ${themeColor}`}
           >
             <p>
@@ -21,7 +21,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
             </p>
             <div className='flex items-center ml-auto gap-4'>
               <button 
-                className='bg-brand/5 shadow-[1px_1px_12px_#38bdf8] shadow-brand/30
+                className='bg-brand/5 shadow-[0px_0px_6px_2px_#38bdf8]
                  text-brand p-[10px] rounded-full' 
                 onClick={() => toggleDescription(item.id)}> {/* Pass item.id to toggleDescription */}
                 <FaChevronDown className={`transition-all  duration-500 text-lg
@@ -32,7 +32,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
           {/* Render description only if isShow is true */}
           <div className={`transition-all duration-500 ${layoutTheme} 
           ${openId === item.id ? 'h-[310px] rounded-b-lg shadow-md' : 'h-[0] opacity-0 rounded-none'}`}>
-            <div className='px-4'>
+            <div className='px-5'>
               <p className={` 
                 font-semibold text-lg rounded-b-full ${bodyTxt}`}>
                 {item.description}

@@ -25,13 +25,13 @@ export default function Layout({themeColor, appTheme}) {
 
   const switchIcon = theme === "light" 
     ?
-      <HiMoon className='w-full h-full'/>
+      <HiMoon className='w-full h-full text-dark'/>
     : 
-      <LuSun className='w-full h-full text-mainBg'/> 
+      <LuSun className='w-full h-full text-light'/> 
   ;
   
-  const headerNavbarTheme = `transition-all duration-500 px-5
-    ${theme === 'light' ? 'bg-lightest border-mid/90 ' : 'bg-darkest border-mid/15 '}` 
+  const headerNavbarTheme = `transition-all duration-500 px-5 border-mid/10
+    ${theme === 'light' ? 'bg-lightest ' : 'bg-darkest'}` 
   ;
 
   return (

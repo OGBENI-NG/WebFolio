@@ -11,9 +11,6 @@ export default function Work(
     bodyTxt, highLightTxt }
   ) {
 
-  
-  
-
   const workItems = data.workEl.map(item => (
     <WorkItem
       key={item.id} 
