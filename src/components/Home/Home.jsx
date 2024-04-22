@@ -4,17 +4,16 @@ import logoIllustration from '../../asset/img/intro-illtra.svg'
 import logoIllusDark from '../../asset/img/intro-illus-dark.svg'
 import frameLogo from '../../asset/img/frame.svg'
 import HomeWork from './HomeWork'
-import data from '../../data'
 import SkillsIcons from './SkillsIcons'
 import HomeAbout from './HomeAbout'
-import HomeContact from './HomeContact'
+import ContactForm from '../ContactForm'
 import HomeFooter from './HomeFooter'
 
 
 export default function Home(
     {theme, openId, toggleDescription, 
     themeColor, layoutTheme, highLightTxtOne, 
-    bodyTxt, highLightTxt, borderStyle}  
+    bodyTxt, highLightTxt, borderStyle, data}  
   ) {
 
   const [formData, setFormData] = useState({
@@ -29,12 +28,23 @@ export default function Home(
     setFormData({...formData, [id]: value})
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(formData)
-    setFormData('')
-  }
+  const inputFields = [
+    { id: 'name', type: 'text', label: 'Name' },
+    { id: 'email', type: 'email', label: 'Email' },
+    { id: 'phone', type: 'tel', label: 'Phone' },
+    { id: 'message', type: 'textarea', label: 'Message' }
+  ];
 
+  const clearFormFields = () => {
+    const emptyFormData = Object.fromEntries(Object.keys(formData).map(key => [key, '']));
+    setFormData(emptyFormData);
+  };
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    clearFormFields();
+    console.log(formData); 
+  };
 
   const switchIllustration = theme === "light" 
     ? logoIllustration
@@ -45,7 +55,6 @@ export default function Home(
     ${theme === "light"? "bg-lightest": "bg-darkest"}` 
   ;
 
- 
   return (
     <main>
       <Intro 
@@ -78,16 +87,17 @@ export default function Home(
         highLightTxtOne={highLightTxtOne}
         highLightTxt={highLightTxt}
       />
-      <HomeContact
-        highLightTxtOne={highLightTxtOne}
-        theme={theme}
-        handleChange={handleChange}
-        formData={formData}
-        handleSubmit={handleSubmit}
+      <ContactForm
         highLightTxt={highLightTxt}
-        bodyTxt={bodyTxt}
+        highLightTxtOne={highLightTxtOne}
+        formData={formData}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        theme={theme}
         borderStyle={borderStyle}
+        inputFields={inputFields}
       />
+      
       <HomeFooter 
         data={data}
         themeColor={themeColor}

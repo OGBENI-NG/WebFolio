@@ -6,9 +6,11 @@ import Work from './Work/Work'
 import About from './About/About'
 import Contact from './Contact/Contact'
 import PageNotFound from './PageNotFound'
+import data from '../data'
 
 
 import ThemeContext from '../UseThemeContext'
+
 
 export default function App() {
   const {theme, openId, toggleDescription} = useContext(ThemeContext)
@@ -36,9 +38,16 @@ export default function App() {
   ;
 
   const borderStyle =  theme === "light"
-  ? "border border-slate-900/10 text-darkest bg-lightest" 
-   : "border border-slate-300/10 bg-darkest text-lightest";
+    ? "border border-slate-900/10 text-darkest bg-lightest" 
+    : "border border-slate-300/10 bg-darkest text-lightest";
   ;
+
+  const inputFields = [
+    { id: 'name', type: 'text', label: 'Name' },
+    { id: 'email', type: 'email', label: 'Email' },
+    { id: 'phone', type: 'tel', label: 'Phone' },
+    { id: 'message', type: 'textarea', label: 'Message' }
+  ];
 
   
 
@@ -66,11 +75,13 @@ export default function App() {
                   bodyTxt={bodyTxt}
                   highLightTxt={highLightTxt} 
                   borderStyle={borderStyle}
+                  inputFields={inputFields}
+                  data={data}
                 />
               }
             />
             <Route 
-              path='Works' 
+              path='works' 
               element={
                 <Work 
                   theme={theme} 
@@ -81,11 +92,26 @@ export default function App() {
                   highLightTxtOne={highLightTxtOne}
                   bodyTxt={bodyTxt}
                   highLightTxt={highLightTxt} 
+                  data={data}
                 />
               }
             />
-            <Route path='about' element={<About bodyTxt={bodyTxt}/>}/>
-            <Route path='contact' element={<Contact/>}/>
+            <Route 
+              path='about' 
+              element={
+                <About 
+                  bodyTxt={bodyTxt}
+                  data={data}
+                  theme={theme} 
+                  openId={openId} 
+                  toggleDescription={toggleDescription}
+                  themeColor={themeColor} 
+                  layoutTheme={layoutTheme}
+                  highLightTxt={highLightTxt}
+                  highLightTxtOne={highLightTxtOne}
+                />
+            }/>
+            <Route path='contact' element={<Contact inputFields={inputFields}/>}/>
             <Route path='*' element={<PageNotFound/>}/>
           </Route>
         </Routes>

@@ -49,7 +49,7 @@ export default function NavBar({ themeColor, headerNavbarTheme, visible }) {
   return (
     <nav className={`flex items-center justify-between
      ${visible ? "opacity-100" : "opacity-10"} 
-     py-[12px] fixed bottom-0 w-full z-50 transition-all duration-500
+     pb-[12px] pt-[8px] fixed bottom-0 w-full z-50 transition-all duration-500
      ${headerNavbarTheme} border-t-[1px]`}
     >
       {navBarData}

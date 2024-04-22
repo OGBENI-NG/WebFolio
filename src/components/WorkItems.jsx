@@ -10,8 +10,12 @@ export default function WorkItem({ item, layoutTheme, themeColor,
     <div className={`${className} `}>
       <AnimateSections>
         <section className={`overflow-hidden shadow-sm rounded-lg`}>
-          <div className="w-full h-[250px]">
-            <img className="w-full h-full" src={item.image} alt={item.alt} />
+          <div className="relative w-full aspect-w-16 aspect-h-9">
+            <img 
+              className="w-full h-full object-cover" 
+              loading='lazy' 
+              src={item.image}
+              alt={item.alt} />
           </div>
           <div className={`flex items-center p-5 text-xl  
             ${layoutTheme} font-bold ${themeColor}`}
@@ -21,6 +25,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
             </p>
             <div className='flex items-center ml-auto gap-4'>
               <button 
+                title='toggle'
                 className='bg-brand/5 shadow-[0px_0px_3px_2px_#38bdf8]
                  text-brand p-[10px] rounded-full' 
                 onClick={() => toggleDescription(item.id)}> {/* Pass item.id to toggleDescription */}
@@ -43,7 +48,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
                 <FaGithub className='text-[37px]'/>
                 </a>
                 <a href={item.liveApp} target='_blank' 
-                  className=" text-brand hover:text-brand/50" title="github-link">
+                  className="text-brand hover:text-brand/50" title="github-link">
                 <FiExternalLink className='text-[37px]'/>
                 </a>
               </div>

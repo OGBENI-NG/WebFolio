@@ -35,7 +35,8 @@ const data = {
                   liveApp: 'https://velvety-brioche-957d1f.netlify.app/',
                   image: landingPageImg,
                   gitRepository: 'https://github.com/OGBENI-NG/manage-landing-page-master',
-                  alt: 'landing-page-img'
+                  alt: 'landing-page-img',
+                  type: 'recent'
             },
             {
                   id: generateUniqueId(),
@@ -45,7 +46,8 @@ const data = {
                   liveApp: 'https://moonlit-twilight-1225c8.netlify.app/',
                   image: shortlyUrl, 
                   gitRepository: 'https://github.com/OGBENI-NG/url-shortening-api-master',
-                  alt: 'shortly-url-img'
+                  alt: 'shortly-url-img',
+                  type: 'recent'
             },
             {
                   id: generateUniqueId(),
@@ -85,7 +87,7 @@ const data = {
                   isShow: false,
                   description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
                   name: 'Job listing',
-                  type: "web",
+                  type: "recent",
                   image: jobLister,
                   liveApp: ' https://rad-panda-9b4e17.netlify.app/',
                   gitRepository: 'https://github.com/OGBENI-NG/job-listings',
@@ -157,16 +159,12 @@ const data = {
                   name: 'adeolumiracle@yahoo.com',
                   type: 'info',
                   id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
                   iconN: FaRegEnvelope
             },
             {
                   name: '+2348146432387',
                   type: 'info',
                   id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
                   iconN: MdOutlineLocalPhone
 
             },
@@ -174,40 +172,30 @@ const data = {
                   name: 'Lagos, NG',
                   type: 'info',
                   id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
                   iconN: IoLocationOutline
             },
             {
                   icon: RiTwitterXFill,
                   type: 'icon',
                   id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
                   live: 'x.com/miracleadeolu'
             },
             {
                   icon: IoLogoLinkedin,
                   type: 'icon',
                   id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
                   live: 'https://www.linkedin.com/in/adeolu-miracle-998047259/'
             },
             {
                   icon: RiGithubFill,
                   type: 'icon',
                   id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
                   live: 'https://github.com/OGBENI-NG'
             },
             {
                   icon: RiFacebookFill,
                   type: 'icon',
                   id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
                   live: 'https://www.facebook.com/profile.php?id=100090510967232&mibextid=AEUHqQ'
             },
       ]

@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export default function HomeFooter({data, footerTheme, bodyTxt}) {
 
   const iconEl = data.footerEl.filter(icon => icon.type === "icon")
@@ -9,7 +8,7 @@ export default function HomeFooter({data, footerTheme, bodyTxt}) {
       key={iconEl.id} 
       className='text-brand hover:text-brand/60'
     >
-      {iconEl.icon({size: 35})}
+      <a href={iconEl.live} target='_blank'>{iconEl.icon({size: 35})}</a>
     </div>
   ))
 
