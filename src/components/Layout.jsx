@@ -30,7 +30,7 @@ export default function Layout({themeColor, borderStyle}) {
       <LuSun className='w-full h-full text-light'/> 
   ;
   
-  const headerNavbarTheme = `transition-all duration-500 px-5 ${borderStyle}
+  const headerNavbarTheme = `transition-all duration-500 px-4 ${borderStyle}
     ${theme === 'light' ? 'bg-lightest ' : 'bg-darkest'}` 
   ;
 
@@ -44,9 +44,9 @@ export default function Layout({themeColor, borderStyle}) {
         switchIcon={switchIcon}
         visible={visible}
       />
-        <main className='overflow-hidden'>
-          <Outlet/>
-        </main>
+      <main className='overflow-hidden'>
+        <Outlet/>
+      </main>
       <NavBar 
         themeColor={themeColor}
         headerNavbarTheme={headerNavbarTheme}

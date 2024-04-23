@@ -11,10 +11,13 @@ export default function ContactForm({
   theme,
   borderStyle,
   inputFields,
+  className,
+  showTitle = true,
+  btnStyle
 }) {
   const labelColor = theme === 'light' 
     ? 'bg-lightest text-darkest' 
-    : 'bg-darkest text-lightest'
+    : 'bg-darkest text-lightest' 
   ;
 
   const inputStyle = `${borderStyle} w-full h-[55px] rounded-[8px]
@@ -30,10 +33,12 @@ export default function ContactForm({
   const formTheme = theme === 'light' ? 'bg-light/40' : 'bg-dark/20';
 
   return (
-    <form onSubmit={handleSubmit} className={`py-[80px] px-5 ${formTheme} overflow-x-hidden`}>
-      <h1 className={`${highLightTxt}`}>
-        Get in touch <span className={`${highLightTxtOne}`}>feel free to contact</span>
-      </h1>
+    <form onSubmit={handleSubmit} className={`py-[80px] px-5 ${className} ${formTheme} overflow-x-hidden`}>
+      {showTitle && ( // Render the title only if showTitle is true
+        <h1 className={`${highLightTxt}`}>
+          Get in touch <span className={`${highLightTxtOne}`}>feel free to contact</span>
+        </h1>
+      )}
 
       <div className="flex flex-col gap-8 pt-2 mt-3">
         {inputFields.map((field) => (
@@ -62,7 +67,7 @@ export default function ContactForm({
             </label>
           </div>
         ))}
-        <CustomButton className={`py-2 -mt-3`} type={'submit'}>
+        <CustomButton className={`py-2 -mt-3 ${btnStyle}`} type={'submit'}>
           Submit
         </CustomButton>
       </div>

@@ -12,7 +12,7 @@ export default function SkillsIcons({highLightTxtOne, theme, highLightTxt}) {
 
     return (
       
-        <article className='py-[100px] px-5 transition-all overflow-hidden relative z-0 w-full'>
+        <article className='py-[100px] px-4 transition-all overflow-hidden relative z-0 w-full'>
             <div className='absolute w-full top-[20px] -z-[1] -right-[60px]'>
                 <CustomSVG width='380px' theme={theme}/>
             </div>

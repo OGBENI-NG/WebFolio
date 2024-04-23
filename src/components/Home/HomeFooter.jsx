@@ -31,7 +31,7 @@ export default function HomeFooter({data, footerTheme, bodyTxt}) {
       >
         WebFolio
       </h1>
-      <div className='flex flex-col items-center justify-center gap-4 py-10 '>
+      <div className='flex flex-col items-center justify-center gap-5 py-10 '>
         {renderHeroContact}
       </div>
       <div className='flex items-center justify-center gap-8'>

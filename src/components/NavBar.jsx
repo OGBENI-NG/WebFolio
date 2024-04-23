@@ -24,8 +24,8 @@ export default function NavBar({ themeColor, headerNavbarTheme, visible }) {
       ${isActive 
       ? `text-brand font-extrabold before:content-[''] before:w-[60px] 
         before:h-[3.5px] before:absolute before:bg-brand before:-top-[1.1px] 
-        before:transition-all duration-500` 
-      : `${themeColor} before:w-[0px]` } transition-all duration-300`
+        before:transition-all before:duration-500` 
+      : `${themeColor} before:w-[0px]` }`
     ;
 
     return (
@@ -48,8 +48,8 @@ export default function NavBar({ themeColor, headerNavbarTheme, visible }) {
 
   return (
     <nav className={`flex items-center justify-between
-     ${visible ? "opacity-100" : "opacity-10"} 
-     pb-[12px] pt-[8px] fixed bottom-0 w-full z-50 transition-all duration-500
+    
+     pb-[12px] pt-[8px] fixed bottom-0 w-full z-50
      ${headerNavbarTheme} border-t-[1px]`}
     >
       {navBarData}

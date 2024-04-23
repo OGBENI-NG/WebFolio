@@ -48,7 +48,7 @@ export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) 
         <CustomSVG width="297" height="369" theme={theme} />
       </div>
     
-      <section className='px-5'>
+      <section className='px-4'>
         <h1 className='text-brand font-OpenSan text-[30px] 
           font-bold leading-relaxed'
         >

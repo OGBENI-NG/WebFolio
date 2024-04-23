@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useState} from 'react'
 import Intro from './Intro'
 import logoIllustration from '../../asset/img/intro-illtra.svg'
 import logoIllusDark from '../../asset/img/intro-illus-dark.svg'
@@ -13,7 +13,7 @@ import HomeFooter from './HomeFooter'
 export default function Home(
     {theme, openId, toggleDescription, 
     themeColor, layoutTheme, highLightTxtOne, 
-    bodyTxt, highLightTxt, borderStyle, data}  
+    bodyTxt, highLightTxt, borderStyle, data, inputFields}  
   ) {
 
   const [formData, setFormData] = useState({
@@ -28,13 +28,7 @@ export default function Home(
     setFormData({...formData, [id]: value})
   }
 
-  const inputFields = [
-    { id: 'name', type: 'text', label: 'Name' },
-    { id: 'email', type: 'email', label: 'Email' },
-    { id: 'phone', type: 'tel', label: 'Phone' },
-    { id: 'message', type: 'textarea', label: 'Message' }
-  ];
-
+  
   const clearFormFields = () => {
     const emptyFormData = Object.fromEntries(Object.keys(formData).map(key => [key, '']));
     setFormData(emptyFormData);
@@ -43,7 +37,7 @@ export default function Home(
   const handleSubmit = (e) => {
     e.preventDefault();
     clearFormFields();
-    console.log(formData); 
+     
   };
 
   const switchIllustration = theme === "light" 

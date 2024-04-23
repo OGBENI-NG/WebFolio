@@ -15,7 +15,7 @@ export default function About({bodyTxt, data, themeColor, layoutTheme, openId, t
   return (
     <section 
       className={`${bodyTxt} tracking-wider 
-      font-semibold flex flex-col items-center justify-center py-[120px] px-5`}
+      font-semibold flex flex-col items-center justify-center py-[120px] px-4`}
     >
       <div>
         <img 
@@ -33,7 +33,7 @@ export default function About({bodyTxt, data, themeColor, layoutTheme, openId, t
       <article className={articleStyle}>
       Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment to excellence, I approach each project with zeal. Strive to deliver high-quality solutions that go above and, beyond expectations.
       </article>
-      <h1 className='text-2xl font-bold pt-10 text-left'>Recent Works</h1>
+      <h1 className='text-2xl font-bold pt-10 text-brand'>Recent Works</h1>
       <div className='mt-4'>
         {recentWork.map(work => (
           <WorkItem 
