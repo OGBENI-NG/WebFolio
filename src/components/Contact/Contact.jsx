@@ -44,7 +44,9 @@ export default function Contact(
   const renderLinksIcon = iconEl.map(iconEl => (
     <div 
       key={iconEl.id} 
-      className='text-brand hover:text-brand/60 bg-brand/15 p-3 rounded-full'
+      className={`
+      ${theme === "light" ? 'bg-darkest/10 text-darkest' : ' bg-lightest/10 text-lightest '}
+        p-3 rounded-full`}
     >
       <a href={iconEl.live} target='_blank'>{iconEl.icon({size: 25})}</a>
     </div>
