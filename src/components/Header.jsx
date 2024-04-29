@@ -3,6 +3,7 @@ import { FaChevronRight } from 'react-icons/fa'
 import { LuSun } from "react-icons/lu"
 import { HiMoon } from "react-icons/hi2"
 import NavBar from './NavBar'
+import ToggleThemeBtn from '../ToggleThemeBtn'
 
 
 export default function Header(
@@ -32,7 +33,6 @@ export default function Header(
     <header className={`relative z-50 `}>
       <div className={`flex items-center justify-center md:justify-start py-2
         ${headerNavbarTheme}  md:gap-2 border-b-[1px] md:border-b-[3px]
-        
         fixed w-full ${toggleStyle}  md:left-0  px-4 md:pl-6 md:border-r-[3px]
         ${
           visible 
@@ -57,13 +57,15 @@ export default function Header(
           </svg>
         </div>
         <h1 className={`${themeColor} ${toggleTxtStyle}
-          font-Solway text-3xl md:text-2xl font-semibold`}>WebFolio</h1>
-        <button 
-          title='toggle' 
-          onClick={toggleTheme} 
+          font-Solway text-3xl md:text-2xl font-semibold`}
+        >
+          WebFolio
+        </h1>
+        <ToggleThemeBtn 
+          toggleTheme={toggleTheme}
           className='w-[35px] h-[35px] ml-auto md:hidden'>
           {switchIcon}
-        </button>
+        </ToggleThemeBtn>
         <button 
           title='toggle'
           onClick={handleToggleNavbar}
@@ -91,6 +93,7 @@ export default function Header(
         handleToggleNavbar={handleToggleNavbar}
         toggleStyle={toggleStyle}
         toggleTxtStyle={toggleTxtStyle}
+        switchIcon={switchIcon}
       />
     </header>
   )

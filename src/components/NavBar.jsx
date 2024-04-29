@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
+import ToggleThemeBtn from '../ToggleThemeBtn'
 
 
-export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, toggleTheme, theme, data, borderColor, toggle, toggleStyle, toggleTxtStyle}) {
+export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, toggleTheme, theme, data, borderColor, toggle, toggleStyle, switchIcon, toggleTxtStyle}) {
   const [navBarItems, setNavBarItems] = useState(data.navBarEl)
   const location = useLocation()
 
@@ -94,28 +95,38 @@ export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, t
         `}>
         {navBarData}
       </div>
-      <div className={`hidden md:relative md:block 
-        ${toggle ? "md:opacity-100" : "md:opacity-0"} text-[18px] 
-        font-semibold mt-8 
-        mx-3 py-[16px] rounded-xl before:content-[""] lg:rounded-full
-        before:top-[4.5px] before:w-[90px] 
-        before:absolute before:h-[50px] before:rounded-lg before:-z-[0]
-        before:transition-[.3s] before:left-[4.5px]
-        ${theme === 'light' 
-          ? 'bg-light text-darkest before:bg-lightest before:w-[96px] ' 
-          : 'bg-dark text-lightest before:bg-darkest before:ml-[94px] '
-        } `}
-      >
-        <div 
-          onClick={toggleTheme} 
-          className={` 
-           flex justify-center gap-6 relative cursor-pointer`
-          }
-        >
-          <span className='flex items-center gap-1'><LuSun /> Light</span>
-          <span className='flex items-center gap-1'><HiMoon/> Dark</span>
-        </div>
+      <div>
+        {toggle ? (
+          <div className={`hidden md:relative md:block 
+            text-[18px] font-semibold mt-8 
+            mx-3 py-[16px] rounded-xl before:content-[""] lg:rounded-full
+            before:top-[4.5px] before:w-[90px] 
+            before:absolute before:h-[50px] before:rounded-lg before:-z-[0]
+            before:transition-[.3s] before:left-[4.5px]
+            ${theme === 'light' 
+              ? 'bg-light text-darkest before:bg-lightest before:w-[96px] ' 
+              : 'bg-dark text-lightest before:bg-darkest before:ml-[94px] '
+            }`}
+          >
+            <div 
+              onClick={toggleTheme} 
+              className={` 
+              flex justify-center gap-6 relative cursor-pointer`
+              }
+            >
+              <span className='flex items-center gap-1'><LuSun /> Light</span>
+              <span className='flex items-center gap-1'><HiMoon/> Dark</span>
+            </div>
+          </div>
+          ) : (
+          <ToggleThemeBtn 
+            toggleTheme={toggleTheme}
+            className={`w-14 h-14 md:block md:m-auto md:mt-8`}>
+            {switchIcon}
+          </ToggleThemeBtn>
+        )}
       </div>
+      
       <div className={`hidden md:block pt-10 border-b-2 ${borderColor}`}>
         <div className='grid m-auto w-max grid-cols-2 gap-4 pb-10'>
           {renderLinksIcon}
