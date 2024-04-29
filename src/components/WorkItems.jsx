@@ -7,9 +7,9 @@ export default function WorkItem({ item, layoutTheme, themeColor,
   className, bodyTxt, openId, toggleDescription }) {
 
   return (
-    <div className={`${className} overflow-hidden `}>
+    <div className={`${className} `}>
       <AnimateSections>
-        <section className={` shadow-sm rounded-lg`}>
+        <section className={`overflow-hidden shadow-sm rounded-lg`}>
           <div className="relative w-full aspect-w-16 aspect-h-9">
             <img 
               className="w-full h-full object-cover" 
@@ -35,8 +35,8 @@ export default function WorkItem({ item, layoutTheme, themeColor,
             </div>
           </div>
           {/* Render description only if isShow is true */}
-          <div className={`transition-all duration-500 overflow-hidden ${layoutTheme} 
-          ${openId === item.id ? 'h-[310px] rounded-b-lg shadow-md' : 'h-[0] opacity-0 rounded-none'}`}>
+          <div className={`transition-all duration-500 ${layoutTheme} 
+          ${openId === item.id ? 'h-[305px] rounded-b-lg shadow-md' : 'h-[0px] opacity-0 rounded-none'}`}>
             <div className='px-5'>
               <p className={` 
                 font-semibold text-lg rounded-b-full ${bodyTxt}`}>
@@ -48,7 +48,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
                 <FaGithub className='text-[37px]'/>
                 </a>
                 <a href={item.liveApp} target='_blank' 
-                  className="text-brand hover:text-brand/50" title="github-link">
+                  className="text-brand hover:text-brand/50" title="work-link">
                 <FiExternalLink className='text-[37px]'/>
                 </a>
               </div>

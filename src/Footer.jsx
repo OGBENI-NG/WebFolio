@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function HomeFooter({data, footerTheme, bodyTxt}) {
+export default function Footer({data, footerTheme, bodyTxt}) {
 
   const iconEl = data.footerEl.filter(icon => icon.type === "icon")
   const renderLinksIcon = iconEl.map(iconEl => (

@@ -1,51 +1,36 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+// tailwind.config.js
+
+module.exports = {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        OpenSan: ['Open Sans', 'sans-serif'],
-        Solway: ['Solway', 'serif'],
+        OpenSan: ["Open Sans", "sans-serif"],
+        Solway: ["Solway", "serif"],
       },
       colors: {
-        brand: '#38bdf8',
+        brand: "#38bdf8",
         darkest: "#0F172A",
         dark: "#37476C",
         mid: "#CBD5E1",
         light: "#E6ECF3",
-        lightest: "#FFFFFF"
+        lightest: "#FFFFFF",
       },
       animation: {
-        fadeInUp: 'fadeInUp .7s ease 0s 1 normal forwards',
-        fadeOut: 'fadeOutUp .7s ease 0s 1 normal forwards',
-        slideIn: 'slideIn .5s ease 0s 1 normal forwards',
+        fadeInDown: "fadeInDown .4s both",
       },
       keyframes: {
-        fadeInUp: {
-          '0%': {
-            opacity: '0',
-            transform: 'scale(0.5)',
+        fadeInDown: {
+          from: {
+            opacity: 0,
+            transform: "translate3d(0, -20%, 0)",
           },
-          '100%': {
-            opacity: '1',
-            transform: 'scale(1)',
-          },
-        },
-        slideIn: {
-          '0%': {
-            transform: 'scaleY(0)',
-            transformOrigin: '100% 0%',
-            opacity: 0
-          },
-          '100%': {
-            transform: 'scaleY(1)',
-            transformOrigin: '100% 0%',
-            opacity: 1
+          to: {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
           },
         },
+        
       },
     },
   },

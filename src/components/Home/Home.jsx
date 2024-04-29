@@ -7,11 +7,11 @@ import HomeWork from './HomeWork'
 import SkillsIcons from './SkillsIcons'
 import HomeAbout from './HomeAbout'
 import ContactForm from '../ContactForm'
-import HomeFooter from './HomeFooter'
+//import HomeFooter from './HomeFooter'
 
 
 export default function Home(
-    {theme, openId, toggleDescription, 
+    {theme, openId, toggleDescription, footerTheme, 
     themeColor, layoutTheme, highLightTxtOne, 
     bodyTxt, highLightTxt, borderStyle, data, inputFields}  
   ) {
@@ -45,9 +45,6 @@ export default function Home(
     : logoIllusDark
   ;
 
-  const footerTheme = ` 
-    ${theme === "light"? "bg-lightest": "bg-darkest"}` 
-  ;
 
   return (
     <main>
@@ -90,13 +87,6 @@ export default function Home(
         theme={theme}
         borderStyle={borderStyle}
         inputFields={inputFields}
-      />
-      
-      <HomeFooter 
-        data={data}
-        themeColor={themeColor}
-        footerTheme={footerTheme}
-        bodyTxt={bodyTxt}
       />
     </main>
   )

@@ -1,14 +1,11 @@
 import React,{useContext, useState, useEffect} from 'react'
 import { Outlet } from "react-router-dom"
-import { LuSun } from "react-icons/lu"
-import { HiMoon } from "react-icons/hi2"
 import Header from './Header'
-import NavBar from './NavBar'
-import ThemeContext from '../UseThemeContext'
+import Footer from '../Footer'
 
 
-export default function Layout({themeColor, borderStyle}) {
-  const {theme, toggleTheme} = useContext(ThemeContext)
+export default function Layout({themeColor, borderColor, data, 
+  footerTheme, bodyTxt, theme, toggleTheme, appTheme, toggle, handleToggleNavbar}) {
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
 
@@ -23,14 +20,9 @@ export default function Layout({themeColor, borderStyle}) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [prevScrollPos])
 
-  const switchIcon = theme === "light" 
-    ?
-      <HiMoon className='w-full h-full text-dark'/>
-    : 
-      <LuSun className='w-full h-full text-light'/> 
-  ;
   
-  const headerNavbarTheme = `transition-all duration-500 px-4 ${borderStyle}
+  
+  const headerNavbarTheme = `transition-color ${borderColor}
     ${theme === 'light' ? 'bg-lightest ' : 'bg-darkest'}` 
   ;
 
@@ -39,18 +31,22 @@ export default function Layout({themeColor, borderStyle}) {
       <Header 
         themeColor={themeColor}
         toggleTheme={toggleTheme}
+        toggle={toggle}
+        handleToggleNavbar={handleToggleNavbar}
         theme={theme}
         headerNavbarTheme={headerNavbarTheme}
-        switchIcon={switchIcon}
         visible={visible}
+        appTheme={appTheme}
+        data={data}
+        borderColor={borderColor}
       />
       <main className='overflow-hidden'>
         <Outlet/>
       </main>
-      <NavBar 
-        themeColor={themeColor}
-        headerNavbarTheme={headerNavbarTheme}
-        visible={visible}
+      <Footer 
+        data={data}
+        footerTheme={footerTheme}
+        bodyTxt={bodyTxt}
       />
     </div>
   )

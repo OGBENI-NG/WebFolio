@@ -13,9 +13,10 @@ import ThemeContext from '../UseThemeContext'
 
 
 export default function App() {
-  const {theme, openId, toggleDescription} = useContext(ThemeContext)
+  const {theme, openId, toggleDescription,
+       toggleTheme, toggle, handleToggleNavbar
+  } = useContext(ThemeContext)
 
-  //light
   const themeColor = theme === "light" 
     ? "block text-darkest" 
     : "block text-lightest"
@@ -35,11 +36,17 @@ export default function App() {
     ${theme === 'light' ? 'text-dark' : 'text-light'} 
      font-inherit mr-auto text-lg font-bold `
   ;
-
-  const borderStyle =  theme === "light"
-    ? "border border-slate-900/10 text-darkest bg-lightest" 
-    : "border border-slate-300/10 bg-darkest text-lightest";
+  
+  
+  const footerTheme = ` 
+    ${theme === "light"? "bg-lightest": "bg-darkest"}` 
   ;
+
+  const borderColor = `${theme === 'light' 
+    ? 'border-slate-900/10' 
+    : 'border-slate-300/10'
+    }
+  `;
 
   const inputFields = [
     { id: 'name', type: 'text', label: 'Name' },
@@ -59,7 +66,15 @@ export default function App() {
           <Route path='/' element={
             <Layout 
                 themeColor={themeColor}
-                borderStyle={borderStyle}
+                borderColor={borderColor}
+                data={data}
+                bodyTxt={bodyTxt}
+                footerTheme={footerTheme}
+                toggleTheme={toggleTheme}
+                theme={theme}
+                appTheme={appTheme}
+                toggle={toggle}
+                handleToggleNavbar={handleToggleNavbar}
               />
             }
           >
@@ -74,7 +89,7 @@ export default function App() {
                   highLightTxtOne={highLightTxtOne}
                   bodyTxt={bodyTxt}
                   highLightTxt={highLightTxt} 
-                  borderStyle={borderStyle}
+                  borderColor={borderColor}
                   inputFields={inputFields}
                   data={data}
                 />
@@ -122,7 +137,7 @@ export default function App() {
                   bodyTxt={bodyTxt}
                   theme={theme}
                   themeColor={themeColor}
-                  borderStyle={borderStyle}
+                  borderColor={borderColor}
                 />
               }
             />

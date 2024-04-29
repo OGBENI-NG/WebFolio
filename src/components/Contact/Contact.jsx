@@ -45,8 +45,10 @@ export default function Contact(
     <div 
       key={iconEl.id} 
       className={`
-      ${theme === "light" ? 'bg-darkest/10 text-darkest' : ' bg-lightest/10 text-lightest '}
-        p-3 rounded-full`}
+      ${theme === "light" 
+        ? 'bg-darkest/10 text-darkest' 
+        : ' bg-lightest/10 text-lightest '
+      } p-3 rounded-full`}
     >
       <a href={iconEl.live} target='_blank'>{iconEl.icon({size: 25})}</a>
     </div>
@@ -86,7 +88,7 @@ export default function Contact(
           inputFields={inputFields}
           className={`pt-8 pb-6 px-[14px] ${theme === 'light' ? 'bg-transparent' :'bg-dark/5'}`}
           showTitle={false}
-          btnStyle={`bg-darkest border-darkest shadow-darkest/40 hover:text-lightest`}
+          btnStyle={`bg-darkest border-darkest shadow-darkest/40 hover:text-darkest`}
         />
       </div>
     </section>

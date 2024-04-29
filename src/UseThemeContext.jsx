@@ -15,6 +15,8 @@ export const ThemeProvider = ({ children }) => {
     return storeTheme ? storeTheme.toString() : 'light'
   }
   const [theme, setTheme] = useState(saveThemeToLocalStorage)
+  
+  const [toggle, setToggle] = useState(true)
 
   useEffect(() => {
     localStorage.setItem('theme',theme)
@@ -30,6 +32,11 @@ export const ThemeProvider = ({ children }) => {
       }
   }, [])
 
+  //toggle navbar 
+  const handleToggleNavbar = () => {
+    setToggle(prevToggle => !prevToggle)
+  }
+
 
   //toggle switch between dark and light
   const toggleTheme = () => {
@@ -43,7 +50,11 @@ export const ThemeProvider = ({ children }) => {
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, openId, toggleDescription }}>
+    <ThemeContext.Provider value={
+      { theme, toggleTheme, openId, 
+        toggleDescription, toggle, handleToggleNavbar
+      }
+    }>
       {children}
     </ThemeContext.Provider>
   )
