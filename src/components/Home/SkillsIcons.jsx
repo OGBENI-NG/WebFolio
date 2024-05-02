@@ -7,13 +7,17 @@ import AnimateSections from '../AnimateSections';
 
 
 
-export default function SkillsIcons({highLightTxtOne, theme, highLightTxt}) {
-    const styleIcons = `text-[70px] ${theme === 'light' ? 'text-darkest' : 'text-light'}`
+export default function SkillsIcons({highLightTxtOne, theme, highLightTxt, bodyPadding}) {
+    const styleIcons = `text-[70px] md:text-[100px] ${theme === 'light' ? 'text-darkest' : 'text-light'}`
 
     return (
       
-        <article className='py-[100px] px-4 transition-all overflow-hidden relative z-0 w-full'>
-            <div className='absolute w-full top-[20px] -z-[1] -right-[60px]'>
+        <article 
+            className={`${bodyPadding} py-[100px] relative z-0 w-full `}>
+            <div 
+                className='absolute w-full top-[20px] -z-[1] 
+                -right-[60px] md:left-[400px]'
+            >
                 <CustomSVG width='380px' theme={theme}/>
             </div>
             <AnimateSections>

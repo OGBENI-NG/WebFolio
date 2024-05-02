@@ -15,14 +15,15 @@ export default function SelectedWork({
   bodyTxt,
   toggleDescription,
   openId,
-  highLightTxt
+  highLightTxt,
+  bodyPadding
 
   }) {
 
   const SelectedWorkEl = data.workEl.slice(2, 5);
 
   return (
-    <div className="px-4 mt-[20px]">
+    <div className={`mt-[20px] ${bodyPadding}`}>
       <AnimateSections>
         <h2 className={`${highLightTxt}`}>
           Work
@@ -46,7 +47,7 @@ export default function SelectedWork({
       </div>
       <div className='pt-5 relative z-[2]'>
         <NavLink to="works">
-          <CustomButton className={`w-full py-2`}>
+          <CustomButton className={`w-full py-2 md:py-3 md:text-[2rem] md:mt-5`}>
             More works
           </CustomButton>
         </NavLink>

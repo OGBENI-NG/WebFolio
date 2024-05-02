@@ -29,18 +29,14 @@ export default function App() {
   ;
   const bodyTxt = `text-lg ${theme === "light" ? "text-[#717171]" : "text-light/75"}`
 
-  const highLightTxt = `text-brand text-3xl font-semibold text-center`
+  const highLightTxt = `text-brand text-2xl md:text-[32px] font-semibold text-center`
 
   const highLightTxtOne = ` 
      m-auto block
     ${theme === 'light' ? 'text-dark' : 'text-light'} 
-     font-inherit mr-auto text-lg font-bold `
+     leading-normal md:leading-loose mr-auto text-[18px] md:text-2xl font-bold `
   ;
   
-  
-  const footerTheme = ` 
-    ${theme === "light"? "bg-lightest": "bg-darkest"}` 
-  ;
 
   const borderColor = `${theme === 'light' 
     ? 'border-slate-900/10' 
@@ -55,11 +51,15 @@ export default function App() {
     { id: 'message', type: 'textarea', label: 'Message' }
   ];
 
+  const bodyPadding = `${toggle 
+    ? 'px-4 md:pl-[250px] md:pr-[40px] transition-all duration-300'
+    :'md:pl-[150px] md:pr-[40px] transition-all duration-300'}`
+  ;
   
 
   return(
     <div className={`antialiased overflow-x-hidden min-h-screen 
-     !scroll-smooth font-OpenSan ${appTheme}  `}
+     !scroll-smooth font-OpenSan ${appTheme}`}
     >
       <Router>
         <Routes>
@@ -69,12 +69,12 @@ export default function App() {
                 borderColor={borderColor}
                 data={data}
                 bodyTxt={bodyTxt}
-                footerTheme={footerTheme}
                 toggleTheme={toggleTheme}
                 theme={theme}
                 appTheme={appTheme}
                 toggle={toggle}
                 handleToggleNavbar={handleToggleNavbar}
+                bodyPadding={bodyPadding}
               />
             }
           >
@@ -92,6 +92,8 @@ export default function App() {
                   borderColor={borderColor}
                   inputFields={inputFields}
                   data={data}
+                  toggle={toggle}
+                  bodyPadding={bodyPadding}
                 />
               }
             />

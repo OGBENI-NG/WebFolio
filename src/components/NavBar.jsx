@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import ToggleThemeBtn from '../ToggleThemeBtn'
+import hero from '../asset/img/my-pics.png'
+import { IoLogOutOutline } from 'react-icons/io5'
+import CustomButton from './CustomButton'
 
 
 export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, toggleTheme, theme, data, borderColor, toggle, toggleStyle, switchIcon, toggleTxtStyle}) {
@@ -32,6 +35,8 @@ export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, t
     </div>
   ))
 
+  const hiddenEl = `hidden md:block`
+
   
 
   const navBarData = navBarItems.map(item => {
@@ -41,9 +46,9 @@ export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, t
     
     const navbarStyle = `flex flex-col md:flex-row 
       items-center font-OpenSan  md:rounded-xl
-      ${toggle ? 'md:px-4 md:py-3 md:mx-3' : 'md:pl-[13.5px] md:py-3 md:mx-3'} 
+      ${toggle ? 'md:px-4 md:py-3 md:mx-3' : 'md:pl-[19px] md:py-3 md:mx-3'} 
      
-      text-brand font-extrabold md:transition-color
+      text-brand font-extrabold 
       md:hover:bg-brand/20 md:hover:text-brand
       ${isActive 
         ? `before:content-[''] md:bg-brand/15 
@@ -54,7 +59,7 @@ export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, t
       }`
     ;
     
-    const toggleIcon =  `w-6 h-6 ${toggle ? 'md:w-8 md:h-8 ' :'md:h-14 md:w-14'}`
+    const toggleIcon =  `w-6 h-6 ${toggle ? 'md:w-10 md:h-10 ' :'md:h-11 md:w-11'}`
 
     return (
       <NavLink
@@ -64,7 +69,9 @@ export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, t
         className={`w-full`}
       >
         <ul className={`${navbarStyle}`}>
-          <li className='py-1 md:p-0 md:pr-6'>
+          <li 
+            className='py-1 md:p-0 md:pr-6'
+            title={item.name}>
             {isActive 
               ? <item.isFocusedIcon 
                   className={`${toggleIcon}`} 
@@ -83,54 +90,88 @@ export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, t
   })
 
   return (
-    <nav className={`${toggleStyle} 
+    <nav className={`${toggleStyle} overflow-hidden
       pb-[15px] pt-[8px] fixed bottom-0 w-full z-10 md:left-0
-      md:top-[100px] 
+      md:top-[100px] md:pb-0
       ${headerNavbarTheme} border-t-[1px] md:border-r-[3px] `}
     >
-      <div className={`flex md:flex-col md:gap-y-8 md:items-start items-center 
-        justify-between md:mt-8 md:border-b-[3px] md:pb-8 
+      <div className={`flex md:flex-col 
+        ${toggle ? 'md:gap-y-8' :'md:gap-2'} md:items-start items-center 
+          justify-between md:mt-5 md:border-b-[3px] md:pb-8 
         md:transition-all md:duration-300
         ${borderColor}
         `}>
         {navBarData}
       </div>
-      <div>
-        {toggle ? (
-          <div className={`hidden md:relative md:block 
-            text-[18px] font-semibold mt-8 
-            mx-3 py-[16px] rounded-xl before:content-[""] lg:rounded-full
-            before:top-[4.5px] before:w-[90px] 
-            before:absolute before:h-[50px] before:rounded-lg before:-z-[0]
-            before:transition-[.3s] before:left-[4.5px]
-            ${theme === 'light' 
-              ? 'bg-light text-darkest before:bg-lightest before:w-[96px] ' 
-              : 'bg-dark text-lightest before:bg-darkest before:ml-[94px] '
-            }`}
+      
+      {toggle ? (
+        <div className={`${hiddenEl} md:relative
+          text-[18px] font-semibold mt-8 
+          mx-3 py-3 rounded-xl before:content-[""] lg:rounded-full
+          before:top-1 before:w-[90px] 
+          before:absolute before:h-[43.8px] before:rounded-lg before:-z-[0]
+          before:transition-[.3s] before:left-[4px]
+          ${theme === 'light' 
+            ? 'bg-light text-darkest before:bg-lightest before:w-[96px] ' 
+            : 'bg-dark text-lightest before:bg-darkest before:ml-[95.5px] '
+          }`}
+        >
+          <div 
+            onClick={toggleTheme} 
+            className={` 
+            flex justify-center gap-6 relative cursor-pointer`
+            }
           >
-            <div 
-              onClick={toggleTheme} 
-              className={` 
-              flex justify-center gap-6 relative cursor-pointer`
-              }
-            >
-              <span className='flex items-center gap-1'><LuSun /> Light</span>
-              <span className='flex items-center gap-1'><HiMoon/> Dark</span>
-            </div>
+            <span className='flex items-center gap-1'><LuSun /> Light</span>
+            <span className='flex items-center gap-1'><HiMoon/> Dark</span>
           </div>
-          ) : (
+        </div>
+        ) : (
+        <div className={`md:py-5 md:border-y-3 ${borderColor}`}>
           <ToggleThemeBtn 
             toggleTheme={toggleTheme}
-            className={`w-14 h-14 md:block md:m-auto md:mt-8`}>
+            className={`w-[44px] h-[44px] md:block md:m-auto `}>
             {switchIcon}
           </ToggleThemeBtn>
-        )}
-      </div>
+        </div>
+        
+      )}
+
+      {toggle && 
+        <div className={`px-4 pt-6 ${hiddenEl}`}>
+          <CustomButton className={`w-full m-auto py-2`}>Download CV</CustomButton>
+        </div>
+      }
       
-      <div className={`hidden md:block pt-10 border-b-2 ${borderColor}`}>
-        <div className='grid m-auto w-max grid-cols-2 gap-4 pb-10'>
+      <div className={`${hiddenEl}  px-4   ${borderColor}`}>
+        <div className={`m-auto  gap-3 pb-8 pt-6 items-center
+          ${toggle ? 'flex flex-wrap mt-8 justify-center' : 'md:flex md:flex-col w-max gap-2'}`}>
           {renderLinksIcon}
         </div>
+      </div>
+
+     
+
+      <div className={`${hiddenEl} border-t-[3px] ${borderColor} 
+          md:flex md:items-center md:justify-center 
+        ${toggle ? ' md:pt-10 ' :' md:flex-col md:gap-4 md:pt-6'} px-4 w-full`}
+      >
+        <div className={`${themeColor} flex items-center gap-2`}>
+          <img 
+            className={`w-[44px] h-[44px] border-4 border-brand rounded-full`}
+            src={hero} 
+            alt="hero" 
+          />
+          <p 
+            className={`text-[22px] pl:2 font-semibold ${toggle ? 'block' :'hidden'}`}
+          >
+            User
+          </p>
+        </div>
+        <IoLogOutOutline 
+          className={`w-[40px] h-[40px]  ${toggle ? ' md:ml-auto' :' md:pl-1'} 
+            ${themeColor} cursor-pointer`}
+        />
       </div>
     </nav>
   )

@@ -13,7 +13,8 @@ export default function ContactForm({
   inputFields,
   className,
   showTitle = true,
-  btnStyle
+  btnStyle,
+  bodyPadding
 }) {
   const labelColor = theme === 'light' 
     ? 'bg-lightest text-darkest' 
@@ -36,7 +37,8 @@ export default function ContactForm({
   const formTheme = theme === 'light' ? 'bg-light/40' : 'bg-dark/20';
 
   return (
-    <form onSubmit={handleSubmit} className={`py-[80px] px-5 ${className} ${formTheme} overflow-x-hidden`}>
+    <form onSubmit={handleSubmit} className={`py-[80px]  ${className} 
+      ${formTheme} ${bodyPadding} overflow-x-hidden`}>
       {showTitle && ( // Render the title only if showTitle is true
         <h1 className={`${highLightTxt}`}>
           Get in touch <span className={`${highLightTxtOne}`}>feel free to contact</span>

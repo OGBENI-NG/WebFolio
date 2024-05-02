@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CustomSVG from '../CustomSvg'
 
 
-export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) {
+export default function Intro({bodyPadding, switchIllustration, bodyTxt, theme, themeColor}) {
 
   const textsEl = [
     {text: 'Frontend Developer', color: "text-green-500"},
@@ -43,14 +43,16 @@ export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) 
   
 
   return (
-    <article className='pt-[135px] w-full relative z-[0]'>
-      <div  className='block absolute -z-[3] right-0 top-0 '>
-        <CustomSVG width="297" height="369" theme={theme} />
+    <article className={`pt-[135px] md:pt-[110px] w-full relative z-[0] ${bodyPadding}`}>
+      <div  className='block absolute -z-[3] right-0 top-0 md:-top-10 md:-right-10'>
+        <CustomSVG className={`w-[297px] h-[369px] md:w-[520px] md:h-[520px]`} 
+        theme={theme} />
       </div>
     
-      <section className='px-4'>
-        <h1 className='text-brand font-OpenSan text-[30px] 
-          font-bold leading-relaxed'
+      <section className={``}>
+        <h1 className='text-brand font-OpenSan text-[30px]
+          md:text-[40px]
+          font-bold leading-relaxed md:leading-normal'
         >
             Hello 
             <span className={`${themeColor}`}>I’m Adeolu Miracle, </span>
@@ -58,7 +60,7 @@ export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) 
               {`${displayedText} |`}
             </span>
         </h1>
-        <p className={`text-xl pt-6 w-[315px] font-medium ${bodyTxt} `}
+        <p className={`text-xl md:text-[28px] md:w-[470px] pt-6 md:pt-12 w-[315px] font-medium ${bodyTxt} md:leading-[1.456]`}
         >
           I am a frontend developer with a passion 
           for creating intuitive and user-friendly
@@ -68,7 +70,7 @@ export default function Intro({switchIllustration, bodyTxt, theme, themeColor}) 
       <img 
         src={switchIllustration} 
         alt="illustration" 
-        className={`pt-8`}
+        className={`pt-8 md:pt-12`}
       />
     </article>
   )

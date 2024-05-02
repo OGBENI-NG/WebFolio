@@ -18,6 +18,7 @@ module.exports = {
       },
       animation: {
         fadeInDown: "fadeInDown .4s both",
+        fadeOutUp: "fadeOutUp .4s both",
       },
       keyframes: {
         fadeInDown: {
@@ -28,6 +29,16 @@ module.exports = {
           to: {
             opacity: 1,
             transform: "translate3d(0, 0, 0)",
+          },
+        },
+        fadeOutUp: {
+          from: {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+          to: {
+            opacity: 1,
+            transform: "translateY(-100%)",
           },
         },
         

@@ -3,39 +3,45 @@ import CustomSVG from '../CustomSvg'
 import { NavLink } from 'react-router-dom'
 import AnimateSections from '../AnimateSections'
 
-export default function HomeAbout({theme, bodyTxt, highLightTxtOne, highLightTxt}) {
+export default function HomeAbout({
+    theme, bodyPadding,
+    bodyTxt, highLightTxtOne,
+    highLightTxt}
+  ) {
+
+
   return (
-    <div className='relative py-[80px] px-4'>
-      <div className='absolute -left-[90px] -top-[100px] -z-[0]' >
+    <div className={`relative py-[80px] md:py-[130px] transition-[.5s] ${bodyPadding}`}>
+      <div className='absolute  -top-[100px] md:-top-[180px] -left-[90px] -z-[00]' >
         <svg 
-          width="251" height="225" viewBox="0 0 251 225" 
+          className='w-[251px] h-[225px] md:w-[500px] md:h-[500px]'
+          viewBox="0 0 251 225" 
           fill="none" xmlns="http://www.w3.org/2000/svg"
         >
         <path d={`M240.869 207.154C202.441 253.542 159.113 192.396 55.7754
            195.458C66.7601 103.24 -28.5858 62.1616 9.84243 15.7727C48.2706
            -30.6162 73.9886 42.5563 194.936 27.4686C195.131 
           111.389 279.297 160.765 240.869 207.154Z`} 
-          fill={`${theme === 'light' ? '#CBD5E1' : '#CBD5E1'}  `} 
-          fillOpacity={`${theme === 'light' ? '0.17' : '0.0290'} `}
+          fill={`${theme === 'light' ? '#CBD5E1' : '#07054D'}  `} 
+          fillOpacity={`${theme === 'light' ? '0.18' : '0.60'} `}
         />
         </svg>
       </div>
       <div className='absolute w-full top-[40px] -right-[90px] -z-[1]'>
         <CustomSVG theme={theme} />
       </div>
-      <AnimateSections className=''>
+      <div className='relative -z-0 overflow-hidden'>
         <h2 className={`${highLightTxt} text-center `}>
           Who i am
-          <span className={` ${highLightTxtOne} leading-normal pt-3`}>
+          <span className={`${highLightTxtOne} leading-normal md:leading-snug pt-3 md:pt-4`}>
             I Enjoy Solving Problems 
             <span className={`${highLightTxtOne}`}>With Scalable Solutions</span>
           </span>
         </h2>
-      </AnimateSections>
-      <AnimateSections>
-        <p className={`text-lg tracking-wide font-bold border-t-[2px]
-         border-brand py-2 pb-5 mt-3
-        ${bodyTxt} mt-1 text-center`}>
+     
+        <p className={` tracking-wide md:tracking-[0.035em] font-bold border-t-[2px]
+         border-brand py-2 pt-4 md:py-6 pb-5 mt-3 md:leading-snug leading-normal
+        ${bodyTxt} text-[16px] md:text-[24px] mt-1 text-center`}>
         My name is <span className='font-bold text-brand'>Adeolu Miracle</span> , and I'm a passionate frontend developer based in Lagos, Nigeria. I began my coding journey in 2019, and since then, I've been captivated by the art of creating intuitive and visually appealing user experiences. Over time, I've honed my skills in HTML, CSS, and JavaScript, which form the foundation of any great web application... 
         <NavLink 
           className='pb-1 px-2 leading-none font-semibold text-brand underline bg-brand/10 rounded-lg' 
@@ -43,7 +49,7 @@ export default function HomeAbout({theme, bodyTxt, highLightTxtOne, highLightTxt
             Read More
         </NavLink>
         </p>
-      </AnimateSections>
+      </div>
     </div>
   )
 }

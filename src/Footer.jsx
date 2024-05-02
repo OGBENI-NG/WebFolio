@@ -1,6 +1,10 @@
 import React from 'react'
 
-export default function Footer({data, footerTheme, bodyTxt}) {
+export default function Footer({data, theme, bodyTxt, bodyPadding}) {
+
+  const footerTheme = ` 
+  ${theme === "light"? "bg-lightest": "bg-dark/20"}` 
+;
 
   const iconEl = data.footerEl.filter(icon => icon.type === "icon")
   const renderLinksIcon = iconEl.map(iconEl => (
@@ -25,7 +29,7 @@ export default function Footer({data, footerTheme, bodyTxt}) {
   
   return (
     <footer className={`pt-[50px] text-brand pb-[120px]
-      ${footerTheme}`}>
+      ${footerTheme} ${bodyPadding} m-auto`}>
       <h1 
         className={`font-Solway text-3xl font-semibold text-center`}
       >

@@ -4,7 +4,7 @@ import Header from './Header'
 import Footer from '../Footer'
 
 
-export default function Layout({themeColor, borderColor, data, 
+export default function Layout({themeColor, borderColor, data, bodyPadding,
   footerTheme, bodyTxt, theme, toggleTheme, appTheme, toggle, handleToggleNavbar}) {
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
@@ -40,13 +40,15 @@ export default function Layout({themeColor, borderColor, data,
         data={data}
         borderColor={borderColor}
       />
-      <main className='overflow-hidden'>
+      <main className={`overflow-hidden`}>
         <Outlet/>
       </main>
       <Footer 
         data={data}
         footerTheme={footerTheme}
         bodyTxt={bodyTxt}
+        theme={theme}
+        bodyPadding={bodyPadding}
       />
     </div>
   )

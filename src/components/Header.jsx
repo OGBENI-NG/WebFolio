@@ -32,7 +32,7 @@ export default function Header(
   return (
     <header className={`relative z-50 `}>
       <div className={`flex items-center justify-center md:justify-start py-2
-        ${headerNavbarTheme}  md:gap-2 border-b-[1px] md:border-b-[3px]
+        ${headerNavbarTheme}  md:gap-2 border-b-[1px] md:border-b-[2px]
         fixed w-full ${toggleStyle}  md:left-0  px-4 md:pl-6 md:border-r-[3px]
         ${
           visible 
