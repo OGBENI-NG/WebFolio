@@ -19,7 +19,6 @@ module.exports = {
       animation: {
         fadeInDown: "fadeInDown .5s ease 0s 1 normal forwards",
         fadeOutUp: "fadeOutUp .5s ease 0s 1 normal forwards",
-        fadeClose: "fadeClose .5s ease 0s 1 normal forwards",
       },
       keyframes: {
         fadeInDown: {
@@ -42,24 +41,6 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
-        fadeClose: {
-          from: {
-            opacity: 1,
-            transform: "translateY(0)",
-          },
-          "50%": {
-            height: "100%", // Transition to 50% height at 50% of the animation duration
-            opacity: 0,
-            transform: "translateY(-20px)"
-          },
-          to: {
-            opacity: 0,
-            transform: "translateY(-40px)", // Adjust as needed
-            display: "none",
-            height: "0px",
-          },
-        },
-        
         
       },
     },

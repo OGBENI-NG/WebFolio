@@ -46,7 +46,7 @@ export default function SelectedWork({
       </div>
       <div className='pt-5 relative z-[2]'>
         <NavLink to="works">
-          <CustomButton className={`w-full py-2 md:py-3 md:text-[2rem] md:mt-5`}>
+          <CustomButton className={`w-full py-2 md:py-3 md:text-[2rem] md:mt-3`}>
             More works
           </CustomButton>
         </NavLink>

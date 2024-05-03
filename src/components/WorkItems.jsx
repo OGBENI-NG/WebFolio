@@ -38,7 +38,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
           </div>
           {/* Render description only if isShow is true */}
           <div className={` ${layoutTheme} rounded-b-lg shadow-md
-          ${openId === item.id ? 'h-inherit animate-fadeInDown' : 'animate-fadeClose'} overflow-hidden`}>
+          ${openId === item.id ? 'h-inherit animate-fadeInDown' : 'transition-[.5s] h-[0px]'} overflow-hidden`}>
             <div className='p-4 md:p-6 transition-all duration-300'>
               <p className={`
                 font-semibold text-base md:text-[24px] md:leading-[1.4] tracking-normal md:tracking-wide
