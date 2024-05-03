@@ -16,9 +16,9 @@ export default function SkillsIcons({highLightTxtOne, theme, highLightTxt, bodyP
             className={`${bodyPadding} py-[100px] relative z-0 w-full `}>
             <div 
                 className='absolute w-full top-[20px] -z-[1] 
-                -right-[60px] md:left-[400px]'
+                -right-[60px] md:left-[380px] md:-top-[300px]'
             >
-                <CustomSVG width='380px' theme={theme}/>
+                <CustomSVG theme={theme}/>
             </div>
             <AnimateSections>
                 <div className={`${highLightTxt}`}>

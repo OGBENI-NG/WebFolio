@@ -1,7 +1,6 @@
 
 import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
-import AnimateSections from '../AnimateSections';
 import WorkItem from '../WorkItems'
 import CustomButton from '../CustomButton';
 
@@ -23,13 +22,13 @@ export default function SelectedWork({
   const SelectedWorkEl = data.workEl.slice(2, 5);
 
   return (
-    <div className={`mt-[20px] ${bodyPadding}`}>
-      <AnimateSections>
-        <h2 className={`${highLightTxt}`}>
-          Work
-          <span className={highLightTxtOne}>What i have made</span>
-        </h2>
-      </AnimateSections>
+    <div className={`mt-[20px] relative z-[10]  ${bodyPadding}`}>
+      
+      <h2 className={`${highLightTxt}`}>
+        Work
+        <span className={highLightTxtOne}>What i have made</span>
+      </h2>
+      
       <div className='mt-5 relative z-[1]'>
         {SelectedWorkEl.map((item, index) => (
           <WorkItem 
@@ -38,7 +37,7 @@ export default function SelectedWork({
             layoutTheme={layoutTheme} 
             hoverColor={hoverColor}
             themeColor={themeColor}
-            className={`${index === SelectedWorkEl.length - 1 ? 'py-0' : 'pb-7'}`}
+            className={`transition-[.5s] ${index === SelectedWorkEl.length - 1 ? 'py-0' : 'pb-7'}`}
             bodyTxt={bodyTxt}
             openId={openId}
             toggleDescription={toggleDescription}

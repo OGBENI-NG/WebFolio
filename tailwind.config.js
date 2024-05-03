@@ -17,14 +17,15 @@ module.exports = {
         lightest: "#FFFFFF",
       },
       animation: {
-        fadeInDown: "fadeInDown .4s both",
-        fadeOutUp: "fadeOutUp .4s both",
+        fadeInDown: "fadeInDown .5s ease 0s 1 normal forwards",
+        fadeOutUp: "fadeOutUp .5s ease 0s 1 normal forwards",
+        fadeClose: "fadeClose .5s ease 0s 1 normal forwards",
       },
       keyframes: {
         fadeInDown: {
           from: {
             opacity: 0,
-            transform: "translate3d(0, -20%, 0)",
+            transform: "translate3d(0, -40px, 0)",
           },
           to: {
             opacity: 1,
@@ -33,14 +34,32 @@ module.exports = {
         },
         fadeOutUp: {
           from: {
-            opacity: 1,
-            transform: "translateY(0)",
+            opacity: 0,
+            transform: "translateY(40px)",
           },
           to: {
             opacity: 1,
-            transform: "translateY(-100%)",
+            transform: "translateY(0)",
           },
         },
+        fadeClose: {
+          from: {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+          "50%": {
+            height: "100%", // Transition to 50% height at 50% of the animation duration
+            opacity: 0,
+            transform: "translateY(-20px)"
+          },
+          to: {
+            opacity: 0,
+            transform: "translateY(-40px)", // Adjust as needed
+            display: "none",
+            height: "0px",
+          },
+        },
+        
         
       },
     },

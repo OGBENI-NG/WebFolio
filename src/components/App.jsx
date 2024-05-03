@@ -52,8 +52,8 @@ export default function App() {
   ];
 
   const bodyPadding = `${toggle 
-    ? 'px-4 md:pl-[250px] md:pr-[40px] transition-all duration-300'
-    :'md:pl-[150px] md:pr-[40px] transition-all duration-300'}`
+    ? 'px-4 md:pl-[250px] md:pr-[40px] transition-[.5s_ease_0s_1_normal_forwards]'
+    :'md:pl-[150px] md:pr-[40px] transition-[.5s_ease_0s_1_normal_forwards]'}`
   ;
   
 

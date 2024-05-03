@@ -6,7 +6,14 @@ import { IoLogOutOutline } from 'react-icons/io5'
 import CustomButton from './CustomButton'
 
 
-export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, toggleTheme, theme, data, borderColor, toggle, toggleStyle, switchIcon, toggleTxtStyle}) {
+export default function NavBar(
+  {themeColor, headerNavbarTheme,
+  LuSun, HiMoon, toggleTheme,
+  theme, data, borderColor,
+  toggle, toggleStyle, switchIcon,
+  toggleTxtStyle}
+
+  ) {
   const [navBarItems, setNavBarItems] = useState(data.navBarEl)
   const location = useLocation()
 
@@ -90,7 +97,8 @@ export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, t
   })
 
   return (
-    <nav className={`${toggleStyle} overflow-hidden
+    <nav className={`${toggleStyle}  overflow-hidden
+      ${toggle ? 'animate-none md:animate-fadeOutUp':'animate-none md:animate-fadeInDown'}
       pb-[15px] pt-[8px] fixed bottom-0 w-full z-10 md:left-0
       md:top-[100px] md:pb-0
       ${headerNavbarTheme} border-t-[1px] md:border-r-[3px] `}
@@ -98,7 +106,6 @@ export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, t
       <div className={`flex md:flex-col 
         ${toggle ? 'md:gap-y-8' :'md:gap-2'} md:items-start items-center 
           justify-between md:mt-5 md:border-b-[3px] md:pb-8 
-        md:transition-all md:duration-300
         ${borderColor}
         `}>
         {navBarData}
@@ -110,7 +117,7 @@ export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, t
           mx-3 py-3 rounded-xl before:content-[""] lg:rounded-full
           before:top-1 before:w-[90px] 
           before:absolute before:h-[43.8px] before:rounded-lg before:-z-[0]
-          before:transition-[.3s] before:left-[4px]
+          before:transition-[.4s] before:left-[4px] overflow-hidden
           ${theme === 'light' 
             ? 'bg-light text-darkest before:bg-lightest before:w-[96px] ' 
             : 'bg-dark text-lightest before:bg-darkest before:ml-[95.5px] '
@@ -149,8 +156,6 @@ export default function NavBar({ themeColor, headerNavbarTheme, LuSun, HiMoon, t
           {renderLinksIcon}
         </div>
       </div>
-
-     
 
       <div className={`${hiddenEl} border-t-[3px] ${borderColor} 
           md:flex md:items-center md:justify-center 

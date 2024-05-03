@@ -22,8 +22,8 @@ export default function HomeAbout({
            195.458C66.7601 103.24 -28.5858 62.1616 9.84243 15.7727C48.2706
            -30.6162 73.9886 42.5563 194.936 27.4686C195.131 
           111.389 279.297 160.765 240.869 207.154Z`} 
-          fill={`${theme === 'light' ? '#CBD5E1' : '#07054D'}  `} 
-          fillOpacity={`${theme === 'light' ? '0.18' : '0.60'} `}
+          fill={`${theme === 'light' ? '#CBD5E1' : '#181748'}  `} 
+          fillOpacity={`${theme === 'light' ? '0.18' : '0.55'} `}
         />
         </svg>
       </div>

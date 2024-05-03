@@ -21,8 +21,8 @@ export default function Header(
       <LuSun className='w-full h-full text-light'/> 
   ;
 
-  const toggleStyle = `md:transition-all duration-300 
-    ${toggle ? 'md:w-[220px] ' :'md:w-[110px]'}`
+  const toggleStyle = `
+    ${toggle ? 'md:w-[220px] ' :'md:w-[110px] '}`
   ;
   const toggleTxtStyle = ` 
     ${toggle ? "md:opacity-100" :"md:opacity-0"}

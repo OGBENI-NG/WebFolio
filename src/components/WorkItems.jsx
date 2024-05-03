@@ -9,7 +9,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
     const linkIconsStyle = `text-[37px] md:text-[50px]`
 
   return (
-    <div className={`${className} `}>
+    <div className={`${className}`}>
       <AnimateSections>
         <section className={`overflow-hidden shadow-sm rounded-lg`}>
           <div className="relative w-full aspect-w-16 aspect-h-9">
@@ -31,14 +31,14 @@ export default function WorkItem({ item, layoutTheme, themeColor,
                 className='bg-brand/5 shadow-[0px_0px_3px_2px_#38bdf8]
                  text-brand p-[10px] md:p-[12px] rounded-full' 
                 onClick={() => toggleDescription(item.id)}> {/* Pass item.id to toggleDescription */}
-                <FaChevronDown className={`transition-all  duration-400 text-lg md:text-2xl
+                <FaChevronDown className={`transition-[.5s] text-lg md:text-2xl
                   ${openId === item.id ? '-rotate-360' : 'rotate-180'}`}/>
               </button>
             </div>
           </div>
           {/* Render description only if isShow is true */}
           <div className={` ${layoutTheme} rounded-b-lg shadow-md
-          ${openId === item.id ? 'h-inherit animate-fadeInDown' : 'opacity-0 h-[0px]'} overflow-hidden`}>
+          ${openId === item.id ? 'h-inherit animate-fadeInDown' : 'animate-fadeClose'} overflow-hidden`}>
             <div className='p-4 md:p-6 transition-all duration-300'>
               <p className={`
                 font-semibold text-base md:text-[24px] md:leading-[1.4] tracking-normal md:tracking-wide
