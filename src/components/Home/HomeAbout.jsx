@@ -1,18 +1,18 @@
 import React from 'react'
 import CustomSVG from '../CustomSvg'
 import { NavLink } from 'react-router-dom'
-import AnimateSections from '../AnimateSections'
 
 export default function HomeAbout({
     theme, bodyPadding,
     bodyTxt, highLightTxtOne,
-    highLightTxt}
+    highLightTxt, toggle}
   ) {
 
 
   return (
-    <div className={`relative py-[80px] md:py-[130px] transition-[.5s] ${bodyPadding}`}>
-      <div className='absolute  -top-[100px] md:-top-[180px] -left-[90px] -z-[00]' >
+    <div className={`relative py-[80px] md:py-[130px] ${bodyPadding}`}>
+      <div className={`absolute  -top-[100px] md:-top-[280px] -left-[90px]
+       -z-[00] ${toggle ? 'md:-left-[180px]' : ' md:-left-[280px]'}`} >
         <svg 
           className='w-[251px] h-[225px] md:w-[500px] md:h-[500px]'
           viewBox="0 0 251 225" 
@@ -27,10 +27,14 @@ export default function HomeAbout({
         />
         </svg>
       </div>
-      <div className='absolute w-full top-[40px] -right-[90px] -z-[1]'>
-        <CustomSVG theme={theme} />
+      <div className={`absolute w-full top-[40px] -right-[90px]
+         md:top-[25px] -z-[1]  
+         ${toggle ? 'md:-right-[320px]' : ' md:-right-[280px]'}`}>
+        <CustomSVG theme={theme} className={`md:w-[550px]`} />
       </div>
-      <div className='relative -z-0 overflow-hidden'>
+      <div className={`relative -z-0 overflow-hidden  
+        ${toggle ? 'md:w-[480px] md:m-auto' : 'md:w-[580px] md:m-auto'}`
+      }>
         <h2 className={`${highLightTxt} text-center `}>
           Who i am
           <span className={`${highLightTxtOne} leading-normal md:leading-snug pt-3 md:pt-4`}>
@@ -41,7 +45,7 @@ export default function HomeAbout({
      
         <p className={` tracking-wide md:tracking-[0.035em] font-bold border-t-[2px]
          border-brand py-2 pt-4 md:py-6 pb-5 mt-3 md:leading-snug leading-normal
-        ${bodyTxt} text-[16px] md:text-[24px] mt-1 text-center`}>
+        ${bodyTxt} text-[16px] md:text-[24px] mt-1 text-center `}>
         My name is <span className='font-bold text-brand'>Adeolu Miracle</span> , and I'm a passionate frontend developer based in Lagos, Nigeria. I began my coding journey in 2019, and since then, I've been captivated by the art of creating intuitive and visually appealing user experiences. Over time, I've honed my skills in HTML, CSS, and JavaScript, which form the foundation of any great web application... 
         <NavLink 
           className='pb-1 px-2 leading-none font-semibold text-brand underline bg-brand/10 rounded-lg' 

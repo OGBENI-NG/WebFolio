@@ -36,6 +36,7 @@ export default function App() {
     ${theme === 'light' ? 'text-dark' : 'text-light'} 
      leading-normal md:leading-loose mr-auto text-[18px] md:text-2xl font-bold `
   ;
+
   
 
   const borderColor = `${theme === 'light' 
@@ -51,9 +52,9 @@ export default function App() {
     { id: 'message', type: 'textarea', label: 'Message' }
   ];
 
-  const bodyPadding = `${toggle 
-    ? 'px-4 md:pl-[250px] md:pr-[40px] transition-[.5s_ease_0s_1_normal_forwards]'
-    :'md:pl-[150px] md:pr-[40px] transition-[.5s_ease_0s_1_normal_forwards]'}`
+  const bodyPadding = ` ${toggle 
+    ? 'px-5 md:pl-[250px] md:pr-[28px] md:animate-fadeInLeft '
+    :'px-5 md:pl-[150px] md:pr-[35px] md:animate-fadeInTop'}`
   ;
   
 
@@ -94,6 +95,7 @@ export default function App() {
                   data={data}
                   toggle={toggle}
                   bodyPadding={bodyPadding}
+                  
                 />
               }
             />
@@ -110,6 +112,7 @@ export default function App() {
                   bodyTxt={bodyTxt}
                   highLightTxt={highLightTxt} 
                   data={data}
+                  bodyPadding={bodyPadding}
                 />
               }
             />
@@ -126,6 +129,7 @@ export default function App() {
                   layoutTheme={layoutTheme}
                   highLightTxt={highLightTxt}
                   highLightTxtOne={highLightTxtOne}
+                  bodyPadding={bodyPadding}
                 />
             }/>
             <Route 
@@ -140,6 +144,8 @@ export default function App() {
                   theme={theme}
                   themeColor={themeColor}
                   borderColor={borderColor}
+                  bodyPadding={bodyPadding}
+                  
                 />
               }
             />

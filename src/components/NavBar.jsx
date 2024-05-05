@@ -97,7 +97,7 @@ export default function NavBar(
   })
 
   return (
-    <nav className={`${toggleStyle}  overflow-hidden
+    <nav className={`${toggleStyle}  overflow-hidden md:overflow-y-scroll lg:overflow-hidden
       ${toggle ? 'animate-none md:animate-fadeOutUp':'animate-none md:animate-fadeInDown'}
       pb-[15px] pt-[8px] fixed bottom-0 w-full z-10 md:left-0
       md:top-[100px] md:pb-0
@@ -117,7 +117,7 @@ export default function NavBar(
           mx-3 py-3 rounded-xl before:content-[""] lg:rounded-full
           before:top-1 before:w-[90px] 
           before:absolute before:h-[43.8px] before:rounded-lg before:-z-[0]
-          before:transition-[.4s] before:left-[4px] overflow-hidden
+          before:transition-[1s] before:left-[4px] overflow-hidden
           ${theme === 'light' 
             ? 'bg-light text-darkest before:bg-lightest before:w-[96px] ' 
             : 'bg-dark text-lightest before:bg-darkest before:ml-[95.5px] '
@@ -134,7 +134,7 @@ export default function NavBar(
           </div>
         </div>
         ) : (
-        <div className={`md:py-5 md:border-y-3 ${borderColor}`}>
+        <div className={`${hiddenEl} md:py-5 md:border-y-3 ${borderColor}`}>
           <ToggleThemeBtn 
             toggleTheme={toggleTheme}
             className={`w-[44px] h-[44px] md:block md:m-auto `}>
@@ -143,14 +143,17 @@ export default function NavBar(
         </div>
         
       )}
-
       {toggle && 
         <div className={`px-4 pt-6 ${hiddenEl}`}>
-          <CustomButton className={`w-full m-auto py-2`}>Download CV</CustomButton>
+          <CustomButton 
+            theme={theme}
+            className={`w-full m-auto md:py-[8px] md:text-xl`}>
+            Download CV
+          </CustomButton>
         </div>
       }
       
-      <div className={`${hiddenEl}  px-4   ${borderColor}`}>
+      <div className={`${hiddenEl} px-4 ${borderColor}`}>
         <div className={`m-auto  gap-3 pb-8 pt-6 items-center
           ${toggle ? 'flex flex-wrap mt-8 justify-center' : 'md:flex md:flex-col w-max gap-2'}`}>
           {renderLinksIcon}
@@ -159,7 +162,7 @@ export default function NavBar(
 
       <div className={`${hiddenEl} border-t-[3px] ${borderColor} 
           md:flex md:items-center md:justify-center 
-        ${toggle ? ' md:pt-10 ' :' md:flex-col md:gap-4 md:pt-6'} px-4 w-full`}
+        ${toggle ? ' md:pt-8 md:pb-24 ' :' md:flex-col md:gap-4 md:pt-6 md:pb-24'} px-4 w-full`}
       >
         <div className={`${themeColor} flex items-center gap-2`}>
           <img 
@@ -175,7 +178,8 @@ export default function NavBar(
         </div>
         <IoLogOutOutline 
           className={`w-[40px] h-[40px]  ${toggle ? ' md:ml-auto' :' md:pl-1'} 
-            ${themeColor} cursor-pointer`}
+            ${themeColor} cursor-pointer`
+        }
         />
       </div>
     </nav>

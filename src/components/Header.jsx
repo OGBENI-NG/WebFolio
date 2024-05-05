@@ -21,8 +21,8 @@ export default function Header(
       <LuSun className='w-full h-full text-light'/> 
   ;
 
-  const toggleStyle = `
-    ${toggle ? 'md:w-[220px] ' :'md:w-[110px] '}`
+  const toggleStyle = ` 
+    ${toggle ? 'md:w-[220px] transition-[1s]' :'md:w-[110px] transition-[1s]'}`
   ;
   const toggleTxtStyle = ` 
     ${toggle ? "md:opacity-100" :"md:opacity-0"}
@@ -33,7 +33,7 @@ export default function Header(
     <header className={`relative z-50 `}>
       <div className={`flex items-center justify-center md:justify-start py-2
         ${headerNavbarTheme}  md:gap-2 border-b-[1px] md:border-b-[2px]
-        fixed w-full ${toggleStyle}  md:left-0  px-4 md:pl-6 md:border-r-[3px]
+        fixed w-full ${toggleStyle}  md:left-0  px-5 md:pl-6 md:border-r-[3px]
         ${
           visible 
           ? 'top-0 opacity-100 h-[75px] md:h-[100px]' 

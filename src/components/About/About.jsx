@@ -5,23 +5,35 @@ import { NavLink } from 'react-router-dom'
 import WorkItem from '../WorkItems'
 
 
-export default function About({bodyTxt, data, themeColor, layoutTheme, openId, toggleDescription}) {
+export default function About(
+  {
+    bodyTxt,
+    data,
+    themeColor,
+    layoutTheme,
+    openId,
+    toggleDescription,
+    bodyPadding,
+    theme
+  }
+) {
 
   const recentWork = data.workEl.filter(work => work.type === "recent")
 
-  const articleStyle = `py-3 text-center`
+  const articleStyle = `py-3 md:py-4 text-center md:text-[24px] md:text-left`
   
   const spanTxt = `text-brand font-bold`
   return (
     <section 
-      className={`${bodyTxt} tracking-wider 
+      className={`${bodyTxt}  tracking-wider leading-snug ${bodyPadding}
       font-semibold flex flex-col items-center justify-center py-[120px] px-4`}
     >
       <div>
         <img 
           src={myPics} 
           alt="hero-pics" 
-          className='w-[200px] h-[200px] mb-8 m-auto rounded-full border-[1.5px] border-brand'
+          className={`w-[200px] h-[200px] mb-8 m-auto md:ml-0
+          rounded-full md:rounded-xl border-[1.5px] border-brand`}
         />
         <article className={articleStyle}>
         Hello, my name is <span className={spanTxt}>Adeolu Miracle</span>. I work as a Frontend Developer with a passion, for creating user-friendly interfaces. I started my coding journey in 2018. Have since been fascinated by the process of crafting visually appealing web experiences. Throughout my learning experience, I've focused on mastering languages like <span className={spanTxt}>HTML, CSS, and JavaScript </span> which are essential for building top-notch web applications.
@@ -33,8 +45,12 @@ export default function About({bodyTxt, data, themeColor, layoutTheme, openId, t
       <article className={articleStyle}>
       Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment to excellence, I approach each project with zeal. Strive to deliver high-quality solutions that go above and, beyond expectations.
       </article>
-      <h1 className='text-2xl font-bold pt-10 text-brand'>Recent Works</h1>
-      <div className='mt-4'>
+      <h1 className='text-2xl md:text-4xl underline 
+        font-bold pt-10 md:pb-3 md:py-12 text-brand '
+      >
+        Recent Works
+      </h1>
+      <div className='mt-4 md:mt-6'>
         {recentWork.map(work => (
           <WorkItem 
             key={work.id} 
@@ -49,7 +65,7 @@ export default function About({bodyTxt, data, themeColor, layoutTheme, openId, t
         ))}
       </div>
       <NavLink to="/" className='w-full'>
-        <CustomButton className="w-full py-2">
+        <CustomButton theme={theme} className={`md:py-3`}>
           Go back home
         </CustomButton>
       </NavLink>

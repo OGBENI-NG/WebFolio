@@ -1,6 +1,6 @@
 // tailwind.config.js
-
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -17,14 +17,16 @@ module.exports = {
         lightest: "#FFFFFF",
       },
       animation: {
-        fadeInDown: "fadeInDown .5s ease 0s 1 normal forwards",
-        fadeOutUp: "fadeOutUp .5s ease 0s 1 normal forwards",
+        fadeInDown: "fadeInDown 1s ease 0s 1 normal forwards",
+        fadeOutUp: "fadeOutUp 1s ease 0s 1 normal forwards",
+        fadeInLeft: "fadeInLeft 1s ease 0s 1 normal forwards",
+        fadeInTop: "fadeInTop 1s ease 0s 1 normal forwards",
       },
       keyframes: {
         fadeInDown: {
           from: {
             opacity: 0,
-            transform: "translate3d(0, -40px, 0)",
+            transform: "translate3d(0, -25px, 0)",
           },
           to: {
             opacity: 1,
@@ -34,11 +36,31 @@ module.exports = {
         fadeOutUp: {
           from: {
             opacity: 0,
-            transform: "translateY(40px)",
+            transform: "translateY(25px)",
           },
           to: {
             opacity: 1,
             transform: "translateY(0)",
+          },
+        },
+        fadeInLeft: {
+          from: {
+            
+            transform: "translateX(-25px)",
+          },
+          to: {
+           
+            transform: "translateX(0)",
+          },
+        },
+        fadeInTop: {
+          from: {
+            
+            transform: "translateX(25px)",
+          },
+          to: {
+           
+            transform: "translateX(0)",
           },
         },
         

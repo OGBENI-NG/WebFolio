@@ -11,7 +11,7 @@ import ContactForm from '../ContactForm'
 
 
 export default function Home(
-    {theme, openId, toggleDescription, footerTheme, 
+    {theme, openId, toggleDescription, buttonStyle, toggle,
     themeColor, layoutTheme, highLightTxtOne, bodyPadding,
     bodyTxt, highLightTxt, borderStyle, data, inputFields}  
   ) {
@@ -73,6 +73,8 @@ export default function Home(
         openId={openId}
         highLightTxt={highLightTxt}
         bodyPadding={bodyPadding}
+        buttonStyle={buttonStyle}
+        theme={theme}
         
       />
       <HomeAbout
@@ -81,6 +83,7 @@ export default function Home(
         highLightTxtOne={highLightTxtOne}
         highLightTxt={highLightTxt}
         bodyPadding={bodyPadding}
+        toggle={toggle}
       />
       <ContactForm
         highLightTxt={highLightTxt}
@@ -92,6 +95,7 @@ export default function Home(
         borderStyle={borderStyle}
         inputFields={inputFields}
         bodyPadding={bodyPadding}
+        buttonStyle={buttonStyle}
         
       />
     </main>

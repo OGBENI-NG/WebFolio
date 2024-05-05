@@ -70,7 +70,7 @@ export default function Intro({bodyPadding, switchIllustration, bodyTxt, theme, 
       <img 
         src={switchIllustration} 
         alt="illustration" 
-        className={`pt-8 md:pt-12`}
+        className={`pt-8 md:pt-12 w-full`}
       />
     </article>
   )

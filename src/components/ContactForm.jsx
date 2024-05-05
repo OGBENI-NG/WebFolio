@@ -13,39 +13,42 @@ export default function ContactForm({
   inputFields,
   className,
   showTitle = true,
-  btnStyle,
+  buttonStyle,
   bodyPadding
 }) {
   const labelColor = theme === 'light' 
-    ? 'bg-lightest text-darkest' 
+    ? 'bg-lightest text-gray-700' 
     : 'bg-darkest text-lightest' 
   ;
 
-  const inputTheme = `${theme === 'light' ? 'text-darkest bg-lightest' : 'bg-darkest text-lightest'}`
+  
 
-  const inputColor = `${borderColor} ${inputTheme}
-     w-full h-[55px] rounded-[8px] 
-    outline:none text-lg px-4 peer placeholder-transparent 
-    focus:outline-none font-semibold transition-all duration-500`
+  const inputColor = `${borderColor} ${labelColor}
+     w-full h-[55px] md:h-[70px] rounded-[8px] 
+    outline:none text-lg md:text-2xl px-4 peer placeholder-transparent 
+    focus:outline-none font-semibold transition-[.5s]`
   ;
 
-  const labelStyle = `${labelColor} absolute left-2 font-bold -top-5 shadow 
-    text-lg peer-placeholder-shown:top-[8px] peer-focus:shadow 
-    transition-all duration-500 peer-focus:-top-6 py-1 px-2 rounded-[6px] peer-placeholder-shown:shadow-none `
+  const labelStyle = `${labelColor} absolute left-2 font-bold -top-5 
+    shadow md:-top-8
+    text-lg md:text-[1.4rem] peer-placeholder-shown:top-[8px]
+     md:peer-placeholder-shown:top-[13px] peer-focus:shadow 
+    transition-[.5s] peer-focus:-top-6 md:peer-focus:-top-8 
+    py-1 px-2 md:py-2 md:px-3 rounded-[6px] peer-placeholder-shown:shadow-none `
   ;
 
-  const formTheme = theme === 'light' ? 'bg-light/40' : 'bg-dark/20';
+  const formTheme = theme === 'light' ? 'bg-light' : 'bg-dark';
 
   return (
     <form onSubmit={handleSubmit} className={`py-[80px]  ${className} 
-      ${formTheme} ${bodyPadding} overflow-x-hidden`}>
+      ${formTheme} ${bodyPadding} overflow-hidden`}>
       {showTitle && ( // Render the title only if showTitle is true
         <h1 className={`${highLightTxt}`}>
           Get in touch <span className={`${highLightTxtOne}`}>feel free to contact</span>
         </h1>
       )}
 
-      <div className="flex flex-col gap-8 pt-2 mt-3">
+      <div className="flex flex-col gap-8 md:gap-y-12 pt-2 mt-3">
         {inputFields.map((field) => (
           <div className="relative" key={field.id}>
             {field.type !== 'textarea' ? (
@@ -64,7 +67,7 @@ export default function ContactForm({
                 placeholder="not-shown"
                 value={formData[field.id]}
                 onChange={handleChange}
-                className={`${borderColor} ${inputTheme} w-full h-[158px] rounded-[8px] outline:none text-lg p-4 peer leading-tight placeholder-transparent resize-none focus:outline-none font-semibold transition-all`}
+                className={`${borderColor} ${labelColor} w-full h-[158px] rounded-[8px] outline:none text-lg md:text-2xl p-4 peer leading-tight placeholder-transparent resize-none focus:outline-none font-semibold transition-[.5s]`}
               />
             )}
             <label className={`${labelStyle}`} htmlFor={field.id}>
@@ -72,7 +75,11 @@ export default function ContactForm({
             </label>
           </div>
         ))}
-        <CustomButton className={`py-2 -mt-3 ${btnStyle}`} type={'submit'}>
+        <CustomButton 
+          className={`md:-mt-2`}
+          type={'submit'}
+          theme={theme}
+        >
           Submit
         </CustomButton>
       </div>
