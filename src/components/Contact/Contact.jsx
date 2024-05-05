@@ -33,9 +33,9 @@ export default function Contact(
   const renderHeroContact = heroContact.map(info => (
     <div 
       key={info.id} 
-      className={`${bodyTxt} text-lg font-semibold flex flex-col items-center gap-1 md:gap-0`}
+      className={`${bodyTxt} text-lg md:text-2xl font-semibold flex flex-col items-center gap-1 md:gap-0`}
     >
-      <info.iconN/>
+      <info.iconN />
       <span >{info.name}</span>
     </div>
   ))

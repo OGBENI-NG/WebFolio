@@ -45,8 +45,10 @@ export default function Intro({bodyPadding, switchIllustration, bodyTxt, theme, 
   return (
     <article className={`pt-[135px] md:pt-[110px] w-full relative z-[0] ${bodyPadding}`}>
       <div  className='block absolute -z-[3] right-0 top-0 md:-top-10 md:-right-10'>
-        <CustomSVG className={`w-[297px] h-[369px] md:w-[520px] md:h-[520px]`} 
-        theme={theme} />
+        <CustomSVG 
+          className={`w-[297px] h-[369px] md:w-[520px] md:h-[520px]`} 
+          theme={theme} 
+        />
       </div>
     
       <section className={``}>

@@ -8,7 +8,9 @@ import AnimateSections from '../AnimateSections';
 
 
 export default function SkillsIcons({highLightTxtOne, theme, highLightTxt, bodyPadding}) {
-    const styleIcons = `text-[70px] md:text-[100px] ${theme === 'light' ? 'text-darkest' : 'text-light'}`
+    const styleIcons = `text-[70px] md:text-[100px] 
+        ${theme === 'light' ? 'text-darkest/80' : 'text-light'}`
+    ;
 
     return (
       
