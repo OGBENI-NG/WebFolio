@@ -7,6 +7,7 @@ import HomeWork from './HomeWork'
 import SkillsIcons from './SkillsIcons'
 import HomeAbout from './HomeAbout'
 import ContactForm from '../ContactForm'
+import LogoAnim from '../../LogoAnim'
 //import HomeFooter from './HomeFooter'
 
 
@@ -48,6 +49,7 @@ export default function Home(
 
   return (
     <main>
+      
       <Intro 
         switchIllustration={switchIllustration}
         theme={theme}

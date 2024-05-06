@@ -52,11 +52,10 @@ export default function NavBar(
     ;
     
     const navbarStyle = `flex flex-col md:flex-row 
-      items-center font-OpenSan  md:rounded-xl
-      ${toggle ? 'md:px-4 md:py-3 md:mx-3' : 'md:pl-[19px] md:py-3 md:mx-3'} 
-     
+      items-center font-OpenSan md:rounded-xl
       text-brand font-extrabold 
       md:hover:bg-brand/20 md:hover:text-brand
+      ${toggle ? 'md:px-4 md:py-3 md:mx-3' : 'md:pl-[19px] md:py-3 md:mx-3'} 
       ${isActive 
         ? `before:content-[''] md:bg-brand/15 
             before:w-[60px] md:before:content-none
@@ -97,7 +96,7 @@ export default function NavBar(
   })
 
   return (
-    <nav className={`${toggleStyle}  overflow-hidden md:overflow-y-scroll lg:overflow-hidden
+    <nav className={`${toggleStyle}  overflow-hidden md:overflow-y-scroll
       ${toggle ? 'animate-none md:animate-fadeOutUp':'animate-none md:animate-fadeInDown'}
       pb-[15px] pt-[8px] fixed bottom-0 w-full z-10 md:left-0
       md:top-[100px] md:pb-0

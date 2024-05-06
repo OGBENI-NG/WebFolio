@@ -21,6 +21,7 @@ export default {
         fadeOutUp: "fadeOutUp 1s ease 0s 1 normal forwards",
         fadeInLeft: "fadeInLeft 1s ease 0s 1 normal forwards",
         fadeInTop: "fadeInTop 1s ease 0s 1 normal forwards",
+        logoAnim: "logoAnim 2s ease-in-out infinite",
       },
       keyframes: {
         fadeInDown: {
@@ -45,25 +46,37 @@ export default {
         },
         fadeInLeft: {
           from: {
-            
             transform: "translateX(-25px)",
           },
           to: {
-           
             transform: "translateX(0)",
           },
         },
         fadeInTop: {
           from: {
-            
             transform: "translateX(25px)",
           },
           to: {
-           
             transform: "translateX(0)",
           },
         },
-        
+        logoAnim: {
+          "0%": {
+            opacity: 0.5,
+            width: "30px", // Initial width
+            transform: "rotate(0deg)", // Initial rotation
+          },
+          "50%": {
+            opacity: 1,
+            width: "100px", // Intermediate width
+            transform: "rotate(180deg)", // Intermediate rotation
+          },
+          "100%": {
+            opacity: 0.5,
+            width: "30px", // Final width (same as initial)
+            transform: "rotate(360deg)", // Final rotation (360 degrees)
+          },
+        },
       },
     },
   },

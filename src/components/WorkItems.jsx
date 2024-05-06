@@ -15,7 +15,6 @@ export default function WorkItem({ item, layoutTheme, themeColor,
           <div className="relative w-full aspect-w-16 aspect-h-9">
             <img 
               className="w-full h-full object-cover" 
-              loading='lazy' 
               src={item.image}
               alt={item.alt} />
           </div>

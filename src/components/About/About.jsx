@@ -28,7 +28,7 @@ export default function About(
       className={`${bodyTxt}  tracking-wider leading-snug ${bodyPadding}
       font-semibold flex flex-col items-center justify-center py-[120px] px-4`}
     >
-      <div>
+      <div className={``}>
         <img 
           src={myPics} 
           alt="hero-pics" 
