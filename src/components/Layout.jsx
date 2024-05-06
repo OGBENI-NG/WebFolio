@@ -15,7 +15,7 @@ export default function Layout({themeColor, borderColor, data, bodyPadding,
     setIsLoading(true)
     setTimeout(() => {
       setIsLoading(false)
-    }, 3500)
+    }, 3000)
   }, [])
 
 
