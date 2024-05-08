@@ -22,15 +22,16 @@ export const ThemeProvider = ({ children }) => {
     localStorage.setItem('theme',theme)
   },[theme])
 
-  //getting window exact theme
+  
+
+
   useEffect(() => {
-    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-      if (prefersDarkMode) {
-        setTheme('dark')
-      } else {
-        setTheme('light')
-      }
-  }, [])
+    // Check if the user prefers dark mode
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Set the theme based on the user's preference
+    setTheme(prefersDarkMode ? 'dark' : 'light');
+  },[]); // Run this effect only once on component mount
 
   //toggle navbar 
   const handleToggleNavbar = () => {

@@ -18,13 +18,13 @@ export default function App() {
   } = useContext(ThemeContext)
 
   const themeColor = theme === "light" 
-    ? "block text-darkest" 
-    : "block text-lightest"
+    ? "block text-darkest/80" 
+    : "block text-lightest/80"
   ;
   const appTheme = theme === "light" ? 'bg-[#F5F5F5]' : 'bg-darkest';
 
   const layoutTheme = theme === 'light' 
-    ? 'bg-lightest' 
+    ? 'bg-lightest/80' 
     : 'bg-dark/30';
   ;
   const bodyTxt = `text-lg ${theme === "light" ? "text-[#717171]" : "text-light/75"}`
@@ -53,8 +53,8 @@ export default function App() {
   ];
 
   const bodyPadding = ` ${toggle 
-    ? 'px-5 md:pl-[250px] md:pr-[28px] md:animate-fadeInLeft '
-    :'px-5 md:pl-[150px] md:pr-[35px] md:animate-fadeInTop'}`
+    ? 'px-5 md:pl-[250px] md:pr-[28px] md:animate-fadeInLeft lg:pl-[220px] lg:pr-[45px]'
+    :'px-5 md:pl-[150px] md:pr-[35px] md:animate-fadeInTop lg:pl-[150px] lg:pr-[60px]'}`
   ;
   
 

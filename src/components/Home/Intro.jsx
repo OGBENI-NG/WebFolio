@@ -43,37 +43,42 @@ export default function Intro({bodyPadding, switchIllustration, bodyTxt, theme, 
   
 
   return (
-    <article className={`pt-[135px] md:pt-[110px] w-full relative z-[0] ${bodyPadding}`}>
+    <article className={`pt-[135px] md:pt-[110px] lg:pt-[140px] 
+      w-full relative z-[0] ${bodyPadding}`}
+    >
       <div  className='block absolute -z-[3] right-0 top-0 md:-top-10 md:-right-10'>
         <CustomSVG 
           className={`w-[297px] h-[369px] md:w-[520px] md:h-[520px]`} 
           theme={theme} 
         />
       </div>
-    
-      <section className={``}>
-        <h1 className='text-brand font-OpenSan text-[30px]
-          md:text-[40px]
-          font-bold leading-relaxed md:leading-normal'
-        >
-            Hello 
-            <span className={`${themeColor}`}>I’m Adeolu Miracle, </span>
-            <span className={`${textsEl[currentWordIndex].color}`}>
-              {`${displayedText} |`}
-            </span>
-        </h1>
-        <p className={`text-xl md:text-[28px] md:w-[470px] pt-6 md:pt-12 w-[315px] font-medium ${bodyTxt} md:leading-[1.456]`}
-        >
-          I am a frontend developer with a passion 
-          for creating intuitive and user-friendly
-          web interfaces.
-        </p>
+      <section className='lg:grid lg:grid-cols-2 gap-8'>
+        <div className={``}>
+          <h1 className='text-brand font-OpenSan text-[30px]
+            md:text-[40px] lg:text-[32px]
+            font-bold leading-relaxed md:leading-normal'
+          >
+              Hello 
+              <span className={`${themeColor}`}>I’m Adeolu Miracle, </span>
+              <span className={`${textsEl[currentWordIndex].color}`}>
+                {`${displayedText} |`}
+              </span>
+          </h1>
+          <p className={`text-xl md:text-[28px] md:w-[470px] pt-6 md:pt-12 w-[315px] font-medium ${bodyTxt} md:leading-[1.456] lg:text-[20px] lg:w-[360px] lg:pt-13`}
+          >
+            I am a frontend developer with a passion 
+            for creating intuitive and user-friendly
+            web interfaces.
+          </p>
+        </div>
+        <div className=''>
+          <img 
+            src={switchIllustration} 
+            alt="illustration" 
+            className={`pt-8 md:pt-12 lg:pt-0 w-full lg:h-full`}
+          />
+        </div>
       </section>
-      <img 
-        src={switchIllustration} 
-        alt="illustration" 
-        className={`pt-8 md:pt-12 w-full`}
-      />
     </article>
   )
 }
