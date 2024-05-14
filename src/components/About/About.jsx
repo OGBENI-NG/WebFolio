@@ -40,13 +40,14 @@ export default function About(
         </article>
       </div>
       <article className={articleStyle}>
-      In addition to these skills, I've delved into technologies such as <span className={spanTxt}>React, Tailwind CSS, and Firebase and even dabbled in artificial intelligence (AI)</span> to add innovative features to my projects. Prioritizing design principles is crucial for me to ensure that users have interactions across different devices. Tools like Figma also play a role in my work as they help me design user interfaces with attention to detail.
+      In addition to these skills, I've delved into technologies such as 
+      <span className={spanTxt}>React, Tailwind CSS, and Firebase and even dabbled in artificial intelligence (AI)</span> to add innovative features to my projects. Prioritizing design principles is crucial for me to ensure that users have interactions across different devices. Tools like Figma also play a role in my work as they help me design user interfaces with attention to detail.
       </article>
       <article className={articleStyle}>
       Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment to excellence, I approach each project with zeal. Strive to deliver high-quality solutions that go above and, beyond expectations.
       </article>
       <h1 className='text-2xl md:text-4xl underline 
-        font-bold pt-10 md:pb-3 md:py-12 text-brand '
+        font-bold pt-10 md:pb-3 md:py-12 text-brand'
       >
         Recent Works
       </h1>

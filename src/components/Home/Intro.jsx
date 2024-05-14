@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import CustomSVG from '../CustomSvg'
+import logoIllustration from '../../asset/img/intro-illtra.svg'
 
 
-export default function Intro({bodyPadding, switchIllustration, bodyTxt, theme, themeColor}) {
+export default function Intro({bodyPadding, bodyTxt, theme, themeColor}) {
 
   const textsEl = [
-    {text: 'Frontend Developer', color: "text-green-500"},
+    {text: 'Frontend Developer', color: "text-pink-500"},
     {text: 'Creative Designer', color: "text-red-500"},
     {text: 'Freelancer', color: "#0B5AF1"},
 
@@ -43,7 +44,7 @@ export default function Intro({bodyPadding, switchIllustration, bodyTxt, theme, 
   
 
   return (
-    <article className={`pt-[135px] md:pt-[110px] lg:pt-[140px] 
+    <article className={`pt-[135px] md:pt-[110px] lg:pt-[110px] 
       w-full relative z-[0] ${bodyPadding}`}
     >
       <div  className='block absolute -z-[3] right-0 top-0 md:-top-10 md:-right-10'>
@@ -52,10 +53,10 @@ export default function Intro({bodyPadding, switchIllustration, bodyTxt, theme, 
           theme={theme} 
         />
       </div>
-      <section className='lg:grid lg:grid-cols-2 gap-8'>
-        <div className={``}>
+      <section className='lg:grid lg:grid-cols-2 lg:gap-12'>
+        <div className={`lg:pt-6 xl:pt-10`}>
           <h1 className='text-brand font-OpenSan text-[30px]
-            md:text-[40px] lg:text-[32px]
+            md:text-[40px] lg:text-[30px]
             font-bold leading-relaxed md:leading-normal'
           >
               Hello 
@@ -64,18 +65,20 @@ export default function Intro({bodyPadding, switchIllustration, bodyTxt, theme, 
                 {`${displayedText} |`}
               </span>
           </h1>
-          <p className={`text-xl md:text-[28px] md:w-[470px] pt-6 md:pt-12 w-[315px] font-medium ${bodyTxt} md:leading-[1.456] lg:text-[20px] lg:w-[360px] lg:pt-13`}
+          <p className={`text-xl md:text-[28px] md:w-[470px] 
+            pt-6 md:pt-12 w-[315px] font-medium
+           ${bodyTxt} md:leading-[1.456] lg:text-[16px] lg:w-[360px] lg:pt-13`}
           >
             I am a frontend developer with a passion 
             for creating intuitive and user-friendly
             web interfaces.
           </p>
         </div>
-        <div className=''>
+        <div className='-order-1'>
           <img 
-            src={switchIllustration} 
+            src={logoIllustration} 
             alt="illustration" 
-            className={`pt-8 md:pt-12 lg:pt-0 w-full lg:h-full`}
+            className={`pt-8 md:pt-12 lg:pt-0 w-full lg:h-full xl:max-w-[500px]`}
           />
         </div>
       </section>

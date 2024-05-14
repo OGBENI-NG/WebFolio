@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Intro from './Intro'
-import logoIllustration from '../../asset/img/intro-illtra.svg'
-import logoIllusDark from '../../asset/img/intro-illus-dark.svg'
+
+
 import frameLogo from '../../asset/img/frame.svg'
 import HomeWork from './HomeWork'
 import SkillsIcons from './SkillsIcons'
@@ -14,7 +14,7 @@ import LogoAnim from '../../LogoAnim'
 export default function Home(
     {theme, openId, toggleDescription, buttonStyle, toggle,
     themeColor, layoutTheme, highLightTxtOne, bodyPadding,
-    bodyTxt, highLightTxt, borderStyle, data, inputFields}  
+    bodyTxt, highLightTxt, borderStyle, data, inputFields, formTheme}  
   ) {
 
   const [formData, setFormData] = useState({
@@ -41,17 +41,10 @@ export default function Home(
      
   };
 
-  const switchIllustration = theme === "light" 
-    ? logoIllustration
-    : logoIllusDark
-  ;
-
-
   return (
     <main>
       
       <Intro 
-        switchIllustration={switchIllustration}
         theme={theme}
         themeColor={themeColor}
         frameLogo={frameLogo}
@@ -98,6 +91,8 @@ export default function Home(
         inputFields={inputFields}
         bodyPadding={bodyPadding}
         buttonStyle={buttonStyle}
+        formTheme={formTheme}
+        toggle={toggle}
         
       />
     </main>

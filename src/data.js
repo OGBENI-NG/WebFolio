@@ -75,12 +75,12 @@ const data = {
                   id: generateUniqueId(),
                   isShow: false,
                   description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
-                  name: 'Dynamic calculator',
+                  name: 'Dyn calculator',
                   type: "web",
                   image: calculator,
                   liveApp: 'https://age-calculator-by-ade.netlify.app/',
                   gitRepository: 'https://github.com/OGBENI-NG/age-calculator-app-main',
-                  alt: 'dynamic-calculator-img'
+                  alt: 'dyn-calculator-img'
             },
             {
                   id: generateUniqueId(),
@@ -156,10 +156,10 @@ const data = {
       ],
       footerEl: [
             {
-                  name: 'adeolumiracle@yahoo.com',
+                  name: 'Lagos, NG',
                   type: 'info',
                   id: generateUniqueId(),
-                  iconN: FaRegEnvelope
+                  iconN: IoLocationOutline
             },
             {
                   name: '+2348146432387',
@@ -169,10 +169,10 @@ const data = {
 
             },
             {
-                  name: 'Lagos, NG',
+                  name: 'adeolumiracle@yahoo.com',
                   type: 'info',
                   id: generateUniqueId(),
-                  iconN: IoLocationOutline
+                  iconN: FaRegEnvelope
             },
             {
                   icon: RiTwitterXFill,

@@ -29,19 +29,19 @@ export default function App() {
   ;
   const bodyTxt = `text-lg ${theme === "light" ? "text-[#717171]" : "text-light/75"}`
 
-  const highLightTxt = `text-brand text-2xl md:text-[32px] font-semibold text-center`
+  const highLightTxt = `text-brand text-2xl md:text-[32px] lg:text-3xl font-semibold text-center`
 
   const highLightTxtOne = ` 
      m-auto block
     ${theme === 'light' ? 'text-dark' : 'text-light'} 
-     leading-normal md:leading-loose mr-auto text-[18px] md:text-2xl font-bold `
+     leading-normal md:leading-loose mr-auto text-[18px] lg:leading-loose md:text-2xl lg:text-lg font-bold `
   ;
 
   
 
   const borderColor = `${theme === 'light' 
     ? 'border-slate-900/10' 
-    : 'border-slate-300/10'
+    : 'border-slate-300/5'
     }
   `;
 
@@ -53,14 +53,18 @@ export default function App() {
   ];
 
   const bodyPadding = ` ${toggle 
-    ? 'px-5 md:pl-[250px] md:pr-[28px] md:animate-fadeInLeft lg:pl-[220px] lg:pr-[45px]'
-    :'px-5 md:pl-[150px] md:pr-[35px] md:animate-fadeInTop lg:pl-[150px] lg:pr-[60px]'}`
+    ? `px-5 md:pl-[250px] md:pr-[28px] md:animate-fadeInLeft
+     lg:pl-[245px] lg:pr-[60px] xl:pl-[250px] xl:pr-[60px]`
+    :`px-5 md:pl-[150px] md:pr-[35px] md:animate-fadeInTop 
+    lg:pl-[165px] lg:pr-[65px] xl:pl-[180px] xl:pr-[80px]`}`
   ;
+
+  const formTheme = theme === 'light' ? 'bg-slate-200/90' : 'bg-dark/40';
   
 
   return(
     <div className={`antialiased overflow-x-hidden min-h-screen 
-     !scroll-smooth font-OpenSan ${appTheme}`}
+     !scroll-smooth font-OpenSan  ${appTheme}`}
     >
       <Router>
         <Routes>
@@ -95,6 +99,7 @@ export default function App() {
                   data={data}
                   toggle={toggle}
                   bodyPadding={bodyPadding}
+                  formTheme={formTheme}
                   
                 />
               }
@@ -145,6 +150,7 @@ export default function App() {
                   themeColor={themeColor}
                   borderColor={borderColor}
                   bodyPadding={bodyPadding}
+                  formTheme={formTheme}
                   
                 />
               }

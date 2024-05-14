@@ -8,22 +8,9 @@ export const useTheme = () => useContext(ThemeContext)
 
 // Create the ThemeProvider component to wrap your application
 export const ThemeProvider = ({ children }) => {
-
-  // save theme to local storage
-  const saveThemeToLocalStorage = () => {
-    const storeTheme = localStorage.getItem('theme')
-    return storeTheme ? storeTheme.toString() : 'light'
-  }
-  const [theme, setTheme] = useState(saveThemeToLocalStorage)
   
+  const [theme, setTheme] = useState('light')
   const [toggle, setToggle] = useState(true)
-
-  useEffect(() => {
-    localStorage.setItem('theme',theme)
-  },[theme])
-
-  
-
 
   useEffect(() => {
     // Check if the user prefers dark mode
@@ -53,7 +40,8 @@ export const ThemeProvider = ({ children }) => {
   return (
     <ThemeContext.Provider value={
       { theme, toggleTheme, openId, 
-        toggleDescription, toggle, handleToggleNavbar
+        toggleDescription, toggle, 
+        handleToggleNavbar
       }
     }>
       {children}

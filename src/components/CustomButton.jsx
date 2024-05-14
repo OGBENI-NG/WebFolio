@@ -10,7 +10,7 @@ export default function CustomButton({ title, children, onClick, type, className
     } 
     rounded-lg font-bold
     w-full py-2 md:py-4 text-xl md:text-[2rem] md:mt-3 shadow-lg text-lightest
-    border-[2px] font-semibold md:text-[2rem] hover:bg-transparent`
+    border-[1.5px] font-semibold md:text-[2rem] hover:bg-transparent`
   ;
   
   return (

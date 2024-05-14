@@ -8,8 +8,12 @@ export default {
         OpenSan: ["Open Sans", "sans-serif"],
         Solway: ["Solway", "serif"],
       },
+      screens: {
+        'xl': {'min': '1200px', 'max': '1280px'},
+        // => @media (min-width: 1280px and max-width: 1535px) { ... }
+      },
       colors: {
-        brand: "#38bdf8",
+        brand: "#2b7f4f",
         darkest: "#0F172A",
         dark: "#37476C",
         mid: "#CBD5E1",
@@ -21,6 +25,7 @@ export default {
         fadeOutUp: "fadeOutUp 1s ease 0s 1 normal forwards",
         fadeInLeft: "fadeInLeft 1s ease 0s 1 normal forwards",
         fadeInTop: "fadeInTop 1s ease 0s 1 normal forwards",
+        fadeInClose: "fadeInClose 1s ease 0s 1 normal forwards",
         logoAnim: "logoAnim 2s ease-in-out infinite",
       },
       keyframes: {
@@ -58,6 +63,15 @@ export default {
           },
           to: {
             transform: "translateX(0)",
+          },
+        },
+        fadeInClose: {
+          from: {
+            transform: "translateY(25px)",
+          },
+          to: {
+            transform: "translateY(0)",
+            opacity: 0,
           },
         },
         logoAnim: {

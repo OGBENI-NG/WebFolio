@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import ContactForm from '../ContactForm'
 
 export default function Contact(
-  {data, bodyTxt, themeColor, theme, inputFields, borderStyle, bodyPadding}) {
+  {data, bodyTxt, themeColor, theme, inputFields, borderStyle, bodyPadding, formTheme}) {
 
     const [formData, setFormData] = useState({
       name: '',
@@ -63,10 +63,10 @@ export default function Contact(
         Any question or remarks? Just write us a message!
       </p>
 
-      <div className={`p-[10px] md:p-[12px] rounded-[7px] mt-10 
-        ${theme === 'light' ? 'bg-light' : 'bg-dark'}`}
+      <div className={`${formTheme} p-[6px] md:p-[7px] rounded-[8px] mt-10 
+        `}
       >
-        <div className={`overflow-hidden p-6 rounded-[5px]
+        <div className={`overflow-hidden p-4 md:p-8 rounded-t-[5px]
           ${theme === 'light' ? 'bg-lightest' : 'bg-darkest'}`}
         >
           <h2 className={`text-xl md:text-3xl font-bold pb-2 md:pb-3 ${themeColor}`}>Contact information</h2>
@@ -87,7 +87,7 @@ export default function Contact(
           theme={theme}
           borderStyle={borderStyle}
           inputFields={inputFields}
-          className={`pt-8 pb-6 px-[14px] md:px-[6px] ${theme === 'light' ? 'bg-transparent' :'bg-dark/5'}`}
+          className={`pt-8 pb-6 px-[14px] md:px-[10px] bg-none `}
           showTitle={false}
         />
       </div>
