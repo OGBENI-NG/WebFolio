@@ -13,7 +13,7 @@ import LogoAnim from '../../LogoAnim'
 
 export default function Home(
     {theme, openId, toggleDescription, buttonStyle, toggle,
-    themeColor, layoutTheme, highLightTxtOne, bodyPadding,
+    themeColor, layoutTheme, highLightTxtOne, bodyPadding, borderColor,
     bodyTxt, highLightTxt, borderStyle, data, inputFields, formTheme}  
   ) {
 
@@ -93,6 +93,8 @@ export default function Home(
         buttonStyle={buttonStyle}
         formTheme={formTheme}
         toggle={toggle}
+        borderColor={borderColor}
+        className={`${theme === 'light' ? 'bg-lightest/40' : 'bg-darkest/40'}`}
         
       />
     </main>

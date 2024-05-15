@@ -6,7 +6,7 @@ import LogoAnim from '../../LogoAnim';
 
 export default function Work({
   openId, themeColor, 
-  toggleDescription, 
+  toggleDescription, theme,
   layoutTheme, highLightTxtOne, 
   bodyTxt, highLightTxt, bodyPadding, className
 }) {
@@ -30,9 +30,10 @@ export default function Work({
       item={item} 
       layoutTheme={layoutTheme} 
       themeColor={themeColor}
-      className={`pb-7 md:mt-5`}
+      className={`pb-7 md:mt-5 lg:pb-0 lg:mt-0`}
       bodyTxt={bodyTxt}
       openId={openId}
+      theme={theme}
       toggleDescription={toggleDescription}
     />
   ));
@@ -41,15 +42,17 @@ export default function Work({
     <section className={`py-[110px] px-4 pb-[130px] ${bodyPadding}`}>
       {loadData !== null ? ( // Check if data has been loaded
         <div className={``}>
-          <h1 className={`${highLightTxt} text-center pb-5`}>
+          <h1 className={`${highLightTxt} text-center pb-5 lg:pb-8`}>
             Works
             <span className={`${highLightTxtOne} block`}> What I have made</span>
           </h1>
-          <div>
+          <div className='lg:grid lg:grid-cols-2 lg:gap-8'>
             {workItems}
           </div>
-          <a href="https://github.com/OGBENI-NG" target="_blank">
-            <CustomButton className={`w-full py-2`}>
+          <a className='w-full lg:w-max lg:block lg:m-auto ' href="https://github.com/OGBENI-NG" target="_blank">
+            <CustomButton 
+              theme={theme} 
+              className={`py-2 lg:mt-6 text-lg md:text-2xl lg:text-lg lg:px-12`}>
               More work on GitHub
             </CustomButton>
           </a>

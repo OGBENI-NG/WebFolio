@@ -178,7 +178,7 @@ const data = {
                   icon: RiTwitterXFill,
                   type: 'icon',
                   id: generateUniqueId(),
-                  live: 'x.com/miracleadeolu'
+                  live: 'https://x.com/miracleadeolu'
             },
             {
                   icon: IoLogoLinkedin,

@@ -41,7 +41,7 @@ export default function App() {
 
   const borderColor = `${theme === 'light' 
     ? 'border-slate-900/10' 
-    : 'border-slate-300/5'
+    : 'border-slate-400/30'
     }
   `;
 
@@ -54,9 +54,9 @@ export default function App() {
 
   const bodyPadding = ` ${toggle 
     ? `px-5 md:pl-[250px] md:pr-[28px] md:animate-fadeInLeft
-     lg:pl-[245px] lg:pr-[60px] xl:pl-[250px] xl:pr-[60px]`
+     lg:pl-[220px] lg:pr-[40px] xl:pl-[250px] xl:pr-[60px]`
     :`px-5 md:pl-[150px] md:pr-[35px] md:animate-fadeInTop 
-    lg:pl-[165px] lg:pr-[65px] xl:pl-[180px] xl:pr-[80px]`}`
+    lg:pl-[150px] lg:pr-[50px] xl:pl-[180px] xl:pr-[80px]`}`
   ;
 
   const formTheme = theme === 'light' ? 'bg-slate-200/90' : 'bg-dark/40';

@@ -28,7 +28,7 @@ export default function ContactForm({
      w-full h-[55px] md:h-[70px] rounded-[8px] 
     outline:none text-lg md:text-2xl px-4 peer placeholder-transparent 
     focus:outline-none font-semibold transition-[.5s] 
-    lg:text-lg lg:h-[45px] border-[1px]`
+    lg:text-lg lg:h-[45px] border-[1px] lg:border-[1.8px]`
   ;
 
   const labelStyle = `${labelColor} absolute left-2 font-bold -top-6 
@@ -44,7 +44,7 @@ export default function ContactForm({
   
 
   return (
-    <form onSubmit={handleSubmit} className={`py-[80px]  ${className} 
+    <form onSubmit={handleSubmit} className={`py-[80px] lg:pt-[20px]  ${className} 
        ${bodyPadding} overflow-hidden`}>
       {showTitle && ( // Render the title only if showTitle is true
         <h1 className={`${highLightTxt}`}>
@@ -52,21 +52,18 @@ export default function ContactForm({
         </h1>
       )}
 
-      <div className='lg:flex
-       lg:items-start lg:justify-center lg:pt-10'>
+      <div className='lg:grid lg:grid-cols-2 lg:pt-10 xl:max-w-[680px]
+        xl:place-content-center xl:m-auto'>
         <img 
           src={contactIllustrator} 
           alt="illustrator"
-          className={`'lg:w-full xl:pr-6 
-            ${toggle ? 'lg:max-w-[360px] xl:max-w-[410px]':'lg:max-w-[380px] xl:max-w-[450px]'} '`}
+          className={`lg:w-full lg:h-full lg:pr-4`}
         />
-        <div className={`w-full h-[2px] my-2 lg:w-[2px] lg:h-[434px] lg:my-0
-        ${theme === 'light' ? 'bg-slate-900/10':'bg-slate-300/10'}`}></div>
-        <div className="flex flex-col gap-8 md:gap-y-12 pt-2 mt-3 lg:gap-y-7 lg:pt-0
-          lg:mt-0 lg:w-[380px] lg:pl-10">
+        <div className={`flex flex-col gap-8 md:gap-y-12 pt-2 mt-3 lg:gap-y-5 lg:pt-0
+          lg:mt-0 lg:border-l-[1.8px] lg:pl-9 ${borderColor}`}>
           {inputFields.map((field) => (
             <div 
-              className="relative" 
+              className="relative w-full" 
               key={field.id}
             >
               {field.type !== 'textarea' ? (
@@ -85,10 +82,10 @@ export default function ContactForm({
                   placeholder="not-shown"
                   value={formData[field.id]}
                   onChange={handleChange}
-                  className={`${borderColor} ${labelColor} w-full h-[158px] rounded-[8px]
+                  className={`${borderColor} ${labelColor} w-full h-[158px] lg:h-[120px] rounded-[8px]
                   outline:none text-lg md:text-2xl lg:text-lg p-4 peer leading-tight
                     placeholder-transparent resize-none md:resize-y focus:outline-none 
-                    font-semibold transition-[.5s] border-[1px]`}
+                    font-semibold transition-[.5s] border-[1.8px]`}
                 />
               )}
               <label className={`${labelStyle}`} htmlFor={field.id}>
@@ -97,7 +94,7 @@ export default function ContactForm({
             </div>
           ))}
           <CustomButton 
-            className={`md:-mt-2 lg:-mt-4 lg:text-lg lg:py-1`}
+            className={`md:-mt-2 lg:-mt-2 py-2 text-lg md:text-2xl lg:text-lg lg:py-1`}
             type={'submit'}
             theme={theme}
           >

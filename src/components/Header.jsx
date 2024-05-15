@@ -34,8 +34,8 @@ export default function Header(
   return (
     <header className={`relative z-50 x`}>
       <div className={` flex items-center justify-center md:justify-start py-2
-        ${headerNavbarTheme} md:gap-2 border-b-[1px] md:border-b-[2px] lg:border-b-[1.8px]
-        fixed w-full ${toggleNavWidth} md:left-0 px-5 md:pl-6 md:border-r-[3px] lg:border-r-[1.8px]
+        ${headerNavbarTheme} md:gap-2 border-b-[1.8px] md:border-b-[1.8px] 
+        fixed w-full ${toggleNavWidth} md:left-0 px-5 md:pl-6 md:border-r-[1.8px]
         lg:py-1 lg:pl-5 lg:gap-1 xl:
         ${
           visible 

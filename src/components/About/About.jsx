@@ -28,12 +28,13 @@ export default function About(
       className={`${bodyTxt}  tracking-wider leading-snug ${bodyPadding}
       font-semibold flex flex-col items-center justify-center py-[120px] px-4`}
     >
-      <div className={``}>
+      <div className={`lg:flex`}>
         <img 
           src={myPics} 
           alt="hero-pics" 
-          className={`w-[200px] h-[200px] mb-8 m-auto md:ml-0
-          rounded-full md:rounded-xl border-[1.5px] border-brand`}
+          className={`w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] mb-8 m-auto md:ml-0
+          rounded-full md:rounded-xl border-[1.5px] lg:rounded-md lg:border-none 
+          lg:drop-shadow-lg border-brand`}
         />
         <article className={articleStyle}>
         Hello, my name is <span className={spanTxt}>Adeolu Miracle</span>. I work as a Frontend Developer with a passion, for creating user-friendly interfaces. I started my coding journey in 2018. Have since been fascinated by the process of crafting visually appealing web experiences. Throughout my learning experience, I've focused on mastering languages like <span className={spanTxt}>HTML, CSS, and JavaScript </span> which are essential for building top-notch web applications.
@@ -66,7 +67,7 @@ export default function About(
         ))}
       </div>
       <NavLink to="/" className='w-full'>
-        <CustomButton theme={theme} className={`md:py-3`}>
+        <CustomButton theme={theme} className={`text-lg md:text-2xl lg:text-lg py-2 md:py-3 `}>
           Go back home
         </CustomButton>
       </NavLink>

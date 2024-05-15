@@ -168,7 +168,7 @@ export default function NavBar(
           <div className={`pt-6 lg:pt-3 ${hiddenEl}`}>
             <CustomButton 
               theme={theme}
-              className={`w-full m-auto md:py-[8px] md:text-xl lg:text-[14px] lg:py-1`}>
+              className={`w-full m-auto md:py-[8px] lg:py-1 md:text-lg lg:text-[14px]`}>
               Download CV
             </CustomButton>
           </div>
