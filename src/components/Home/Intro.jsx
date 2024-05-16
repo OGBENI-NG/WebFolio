@@ -53,7 +53,7 @@ export default function Intro({bodyPadding, bodyTxt, theme, themeColor}) {
           theme={theme} 
         />
       </div>
-      <section className='lg:grid lg:grid-cols-2 lg:gap-12'>
+      <section className='lg:grid lg:grid-cols-2 lg:gap-14'>
         <div className={`lg:pt-6 xl:pt-10`}>
           <h1 className='text-brand font-OpenSan text-[30px]
             md:text-[40px] lg:text-[30px]
@@ -67,7 +67,7 @@ export default function Intro({bodyPadding, bodyTxt, theme, themeColor}) {
           </h1>
           <p className={`text-xl md:text-[28px] md:w-[470px] 
             pt-6 md:pt-12 w-[315px] font-medium
-           ${bodyTxt} md:leading-[1.456] lg:text-[16px] lg:w-[360px] lg:pt-13`}
+           ${bodyTxt} md:leading-[1.456] lg:text-[16px] lg:w-[340px] lg:pt-13`}
           >
             I am a frontend developer with a passion 
             for creating intuitive and user-friendly

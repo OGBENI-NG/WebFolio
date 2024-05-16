@@ -45,7 +45,7 @@ export default function SelectedWork({
           />
         ))}
       </div>
-      <div className='pt-5 lg:pt-7 relative z-[2]'>
+      <div className='pt-5 lg:pt-12 relative z-[2]'>
         <NavLink to="works" className={`lg:w-max lg:m-auto lg:block`}>
           <CustomButton 
             tittle='submit'

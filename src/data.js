@@ -109,7 +109,7 @@ const data = {
                   isShow: false,
                   description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
                   name: 'Interactive comment section',
-                  type: "web",
+                  type: "recent",
                   image: commentSection,
                   liveApp: 'https://comments-section-adeolu.netlify.app/',
                   gitRepository: 'https://github.com/OGBENI-NG/interactive-comments-section-main',

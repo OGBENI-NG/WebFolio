@@ -56,17 +56,18 @@ export default function NavBar(
     //navbar styles
     const navbarStyle = `flex flex-col md:flex-row 
     ${theme === 'light' 
-      ? 'text-dark md:hover:bg-dark/20'
-      :'text-lightest md:hover:bg-lightest/10'}
+      ? 'md:text-dark md:hover:bg-dark/20'
+      :'md:text-lightest md:hover:bg-lightest/10'}
       items-center font-OpenSan md:rounded-[8px]
        font-extrabold lg:justify-start 
        md:py-3 lg:py-2
       ${isActive 
-        ? `before:content-['']  ${theme === 'light' ? 'md:bg-dark/20' : 'md:bg-lightest/10'}
+        ? `before:content-[''] text-brand  
+          ${theme === 'light' ? ' md:bg-dark/20' : 'text md:bg-lightest/10'}
             before:w-[60px] md:before:content-none
             before:h-[3.5px] before:absolute before:bg-brand before:-top-[1.1px] 
             before:transition-[1s]` 
-        : `md:gap-x-0 before:w-[0px]`
+        : `md:gap-x-0 before:w-[0px] ${theme === 'light' ? 'text-dark' : 'text-lightest'}`
       }`
     ;
     
@@ -165,7 +166,7 @@ export default function NavBar(
 
         {/* cv BTN style */}
         {toggle && 
-          <div className={`pt-6 lg:pt-3 ${hiddenEl}`}>
+          <div className={`pt-6 lg:pt-5  ${hiddenEl}`}>
             <CustomButton 
               theme={theme}
               className={`w-full m-auto md:py-[8px] lg:py-1 md:text-lg lg:text-[14px]`}>
@@ -187,10 +188,11 @@ export default function NavBar(
       </div>
 
       <div className={`px-4 w-full ${hiddenEl} border-t-[1.8px] ${borderColor} 
-          md:flex md:items-center md:justify-center
+          md:flex md:items-center md:justify-center md:pt-10 md:pb-8
+           
         ${toggle 
-          ? ' md:pt-8 md:pb-24 lg:pb-7 xl:pt-8' 
-          :' md:flex-col md:gap-4 md:pt-6 md:pb-24 lg:pb-7'
+          ? 'md:gap-8 lg:py-8 xl:py-14 ' 
+          :'md:flex-col md:gap-6'
         } `}
       >
         <div className={`${themeColor} flex items-center gap-2`}>
@@ -207,11 +209,13 @@ export default function NavBar(
             User
           </p>
         </div>
-        <IoLogOutOutline 
-          className={`text-4xl  lg:text-3xl ${toggle ? ' md:ml-auto' :' md:pl-1 lg:text-4xl'} 
+       <div>
+       <IoLogOutOutline 
+          className={`text-4xl lg:text-3xl ${toggle ? ' md:ml-auto' :'md:text-5xl md:pl-1 lg:text-4xl'} 
             ${themeColor} cursor-pointer`
         }
         />
+       </div>
       </div>
     </nav>
   )

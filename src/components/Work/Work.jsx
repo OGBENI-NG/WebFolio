@@ -52,7 +52,7 @@ export default function Work({
           <a className='w-full lg:w-max lg:block lg:m-auto ' href="https://github.com/OGBENI-NG" target="_blank">
             <CustomButton 
               theme={theme} 
-              className={`py-2 lg:mt-6 text-lg md:text-2xl lg:text-lg lg:px-12`}>
+              className={`py-2 lg:mt-12 text-lg md:text-2xl lg:text-lg lg:px-12`}>
               More work on GitHub
             </CustomButton>
           </a>

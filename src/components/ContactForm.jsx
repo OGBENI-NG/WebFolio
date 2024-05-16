@@ -53,14 +53,14 @@ export default function ContactForm({
       )}
 
       <div className='lg:grid lg:grid-cols-2 lg:pt-10 xl:max-w-[680px]
-        xl:place-content-center xl:m-auto'>
+        lg:place-content-center xl:m-auto'>
         <img 
           src={contactIllustrator} 
           alt="illustrator"
           className={`lg:w-full lg:h-full lg:pr-4`}
         />
         <div className={`flex flex-col gap-8 md:gap-y-12 pt-2 mt-3 lg:gap-y-5 lg:pt-0
-          lg:mt-0 lg:border-l-[1.8px] lg:pl-9 ${borderColor}`}>
+          lg:mt-0 lg:border-l-[1.8px] lg:pl-12 ${borderColor}`}>
           {inputFields.map((field) => (
             <div 
               className="relative w-full" 
