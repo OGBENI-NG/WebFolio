@@ -1,7 +1,7 @@
 import { 
       RiContactsBook2Line, RiHome3Line, RiTwitterXFill, RiFacebookFill,
       RiHome3Fill, RiUser6Line, RiUser6Fill,  
-      RiContactsBook2Fill, RiGithubFill } from "react-icons/ri"
+      RiContactsBook2Fill, RiGithubFill, RiDiscordFill } from "react-icons/ri"
 import { IoBriefcase, IoBriefcaseOutline, 
       IoLogoLinkedin, IoLocationOutline} from "react-icons/io5"
 import {FaRegEnvelope} from "react-icons/fa"
@@ -27,65 +27,11 @@ const generateUniqueId = (() => {
   
 const data = {
       workEl: [
+            
             {
                   id: generateUniqueId(),
                   isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
-                  name: 'Manage-landing-page',
-                  liveApp: 'https://velvety-brioche-957d1f.netlify.app/',
-                  image: landingPageImg,
-                  gitRepository: 'https://github.com/OGBENI-NG/manage-landing-page-master',
-                  alt: 'landing-page-img',
-                  type: 'recent'
-            },
-            {
-                  id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
-                  name: 'Shortly-URL',
-                  liveApp: 'https://moonlit-twilight-1225c8.netlify.app/',
-                  image: shortlyUrl, 
-                  gitRepository: 'https://github.com/OGBENI-NG/url-shortening-api-master',
-                  alt: 'shortly-url-img',
-                  type: 'recent'
-            },
-            {
-                  id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
-                  name: 'Product page',
-                  type: "web",
-                  image: productPageImg,
-                  liveApp: 'https://ornate-biscuit-723ae1.netlify.app/',
-                  gitRepository: 'https://github.com/OGBENI-NG/e-commerce-product-page',
-                  alt: 'product-page-img'
-            },
-            {
-                  id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
-                  name: 'Age calculator',
-                  type: "web",
-                  image: ageCalculatorImg,
-                  liveApp: 'https://age-calculator-by-ade.netlify.app/',
-                  gitRepository: 'https://github.com/OGBENI-NG/age-calculator-app-main',
-                  alt: 'age-calculator-img'
-            },
-            {
-                  id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
-                  name: 'Dyn calculator',
-                  type: "web",
-                  image: calculator,
-                  liveApp: 'https://age-calculator-by-ade.netlify.app/',
-                  gitRepository: 'https://github.com/OGBENI-NG/age-calculator-app-main',
-                  alt: 'dyn-calculator-img'
-            },
-            {
-                  id: generateUniqueId(),
-                  isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
                   name: 'Job listing',
                   type: "recent",
                   image: jobLister,
@@ -96,7 +42,63 @@ const data = {
             {
                   id: generateUniqueId(),
                   isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  name: 'Shortly-URL',
+                  liveApp: 'https://moonlit-twilight-1225c8.netlify.app/',
+                  image: shortlyUrl, 
+                  gitRepository: 'https://github.com/OGBENI-NG/url-shortening-api-master',
+                  alt: 'shortly-url-img',
+                  type: 'recent'
+            },
+            {
+                  id: generateUniqueId(),
+                  isShow: false,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  name: 'Product page',
+                  type: "recent",
+                  image: productPageImg,
+                  liveApp: 'https://ornate-biscuit-723ae1.netlify.app/',
+                  gitRepository: 'https://github.com/OGBENI-NG/e-commerce-product-page',
+                  alt: 'product-page-img'
+            },
+            {
+                  id: generateUniqueId(),
+                  isShow: false,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  name: 'Age calculator',
+                  type: "web",
+                  image: ageCalculatorImg,
+                  liveApp: 'https://age-calculator-by-ade.netlify.app/',
+                  gitRepository: 'https://github.com/OGBENI-NG/age-calculator-app-main',
+                  alt: 'age-calculator-img'
+            },
+            {
+                  id: generateUniqueId(),
+                  isShow: false,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  name: 'Landing-page',
+                  liveApp: 'https://velvety-brioche-957d1f.netlify.app/',
+                  image: landingPageImg,
+                  gitRepository: 'https://github.com/OGBENI-NG/manage-landing-page-master',
+                  alt: 'landing-page-img',
+                  type: 'web'
+            },
+            {
+                  id: generateUniqueId(),
+                  isShow: false,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  name: 'Dyn calculator',
+                  type: "web",
+                  image: calculator,
+                  liveApp: 'https://age-calculator-by-ade.netlify.app/',
+                  gitRepository: 'https://github.com/OGBENI-NG/age-calculator-app-main',
+                  alt: 'dyn-calculator-img'
+            },
+            
+            {
+                  id: generateUniqueId(),
+                  isShow: false,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
                   name: 'Todo main',
                   type: "web",
                   image: todo,
@@ -107,9 +109,9 @@ const data = {
             {
                   id: generateUniqueId(),
                   isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment`,
-                  name: 'Interactive comment section',
-                  type: "recent",
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  name: 'comment section',
+                  type: "web",
                   image: commentSection,
                   liveApp: 'https://comments-section-adeolu.netlify.app/',
                   gitRepository: 'https://github.com/OGBENI-NG/interactive-comments-section-main',
@@ -197,6 +199,12 @@ const data = {
                   type: 'icon',
                   id: generateUniqueId(),
                   live: 'https://www.facebook.com/profile.php?id=100090510967232&mibextid=AEUHqQ'
+            },
+            {
+                  icon: RiDiscordFill,
+                  type: 'icon',
+                  id: generateUniqueId(),
+                  live: 'https://discord.com/users/994248077194039366'
             },
       ]
 }

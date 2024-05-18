@@ -21,7 +21,7 @@ export default function About(
   const recentWork = data.workEl.filter(work => work.type === "recent")
 
   const articleStyle = `py-3 md:py-4 text-center md:text-[24px] md:text-left
-    lg:text-[15px] lg:w-[700px] lg:max-w-[700px] lg:leading-[1.7]`
+    lg:text-[14px] lg:w-[700px] xl:w-[750px] lg:leading-[1.7]`
   
   const spanTxt = `text-brand font-bold`
   return (
@@ -29,7 +29,7 @@ export default function About(
       className={`${bodyTxt}  tracking-wider leading-snug ${bodyPadding}
       font-semibold flex flex-col items-center justify-center py-[120px] lg:pt-[80px] px-4`}
     >
-      <div className={`lg:flex lg:justify-center lg:gap-8 lg:w-[700px] lg:pb-8`}>
+      <div className={`lg:flex lg:justify-center lg:gap-8 lg:w-[700px] lg:pb-8 xl:w-[750px]`}>
         <img 
           src={myPics} 
           alt="hero-pics" 
@@ -53,8 +53,8 @@ export default function About(
       >
         Recent Works
       </h1>
-      <div className='mt-4 md:mt-6 lg:grid lg:grid-cols-2 lg:gap-6 xl:gap-8'>
-        {recentWork.map(work => (
+      <div className='mt-4 md:mt-6 lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-4 xl:gap-6'>
+        {recentWork.map((work, index) => (
           <WorkItem 
             key={work.id} 
             item={work} 
@@ -63,10 +63,12 @@ export default function About(
             bodyTxt={bodyTxt}
             openId={openId}
             toggleDescription={toggleDescription}
-            className={`pb-7 lg:pb-0`}
+            className={`pb-7 lg:pb-0 ${index > 1 ? 'lg:hidden xl:block' : ''}`}
           />
         ))}
       </div>
+
+
       <NavLink to="/" className='w-full lg:w-max lg:mt-12'>
         <CustomButton theme={theme} className={`text-lg md:text-2xl lg:text-lg py-2 md:py-3 lg:py-2 lg:px-12`}>
           Go back home

@@ -14,7 +14,7 @@ import LogoAnim from '../../LogoAnim'
 export default function Home(
     {theme, openId, toggleDescription, buttonStyle, toggle,
     themeColor, layoutTheme, highLightTxtOne, bodyPadding, borderColor,
-    bodyTxt, highLightTxt, borderStyle, data, inputFields, formTheme}  
+    bodyTxt, highLightTxt, borderStyle, data, inputFields, formTheme, contactClass}  
   ) {
 
   const [formData, setFormData] = useState({
@@ -94,6 +94,7 @@ export default function Home(
         formTheme={formTheme}
         toggle={toggle}
         borderColor={borderColor}
+        contactClass={`lg:w-[600px] lg:m-auto`}
         className={`${theme === 'light' ? 'bg-lightest/40' : 'bg-darkest/40'}`}
         
       />

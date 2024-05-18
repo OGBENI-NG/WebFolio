@@ -27,7 +27,7 @@ export default function App() {
     ? 'bg-lightest/80' 
     : 'bg-dark/30';
   ;
-  const bodyTxt = `text-lg ${theme === "light" ? "text-[#717171]" : "text-light/75"}`
+  const bodyTxt = `text-lg ${theme === "light" ? "text-[#717171]" : "text-light/80"}`
 
   const highLightTxt = `text-brand text-2xl md:text-[32px] lg:text-3xl font-semibold text-center`
 

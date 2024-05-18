@@ -15,7 +15,7 @@ export default function ContactForm({
   className,
   showTitle = true,
   bodyPadding,
-  toggle
+  contactClass
 }) {
   const labelColor = theme === 'light' 
     ? 'bg-lightest text-gray-700' 
@@ -28,7 +28,7 @@ export default function ContactForm({
      w-full h-[55px] md:h-[70px] rounded-[8px] 
     outline:none text-lg md:text-2xl px-4 peer placeholder-transparent 
     focus:outline-none font-semibold transition-[.5s] 
-    lg:text-lg lg:h-[45px] border-[1px] lg:border-[1.8px]`
+    lg:text-base lg:h-[40px] border-[1px] lg:border-[1.8px]`
   ;
 
   const labelStyle = `${labelColor} absolute left-2 font-bold -top-6 
@@ -37,14 +37,14 @@ export default function ContactForm({
      md:peer-placeholder-shown:top-[13px] peer-focus:shadow 
     transition-[.5s] peer-focus:-top-6 md:peer-focus:-top-8 
     py-1 px-2 md:py-2 md:px-3 rounded-[6px] peer-placeholder-shown:shadow-none 
-    lg:text-[13px] lg:py-0 lg:px-2 lg:-top-5 lg:peer-placeholder-shown:top-[10px]
-    lg:peer-focus:-top-4`
+    lg:text-[12px] lg:py-0 lg:px-2 lg:-top-4 lg:peer-placeholder-shown:top-[8px]
+    lg:peer-focus:-top-4 `
   ;
 
   
 
   return (
-    <form onSubmit={handleSubmit} className={`py-[80px] lg:pt-[20px]  ${className} 
+    <form onSubmit={handleSubmit} className={`py-[80px]  ${className} 
        ${bodyPadding} overflow-hidden`}>
       {showTitle && ( // Render the title only if showTitle is true
         <h1 className={`${highLightTxt}`}>
@@ -52,18 +52,18 @@ export default function ContactForm({
         </h1>
       )}
 
-      <div className='lg:grid lg:grid-cols-2 lg:pt-10 xl:max-w-[680px]
-        lg:place-content-center xl:m-auto'>
+      <div className={`lg:grid lg:grid-cols-2 lg:place-items-center 
+        lg:pt-10 lg:w-[700px] ${contactClass}`}>
         <img 
           src={contactIllustrator} 
           alt="illustrator"
-          className={`lg:w-full lg:h-full lg:pr-4`}
+          className={`lg:w-[380px] lg:h-full lg:pr-10`}
         />
-        <div className={`flex flex-col gap-8 md:gap-y-12 pt-2 mt-3 lg:gap-y-5 lg:pt-0
-          lg:mt-0 lg:border-l-[1.8px] lg:pl-12 ${borderColor}`}>
+        <div className={`flex flex-col gap-8 md:gap-y-12 pt-2 mt-3 lg:gap-y-6 lg:pt-0
+          lg:mt-0 lg:border-l-[1.8px] lg:pl-[50px] ${borderColor}`}>
           {inputFields.map((field) => (
             <div 
-              className="relative w-full" 
+              className="relative lg:w-[295px]" 
               key={field.id}
             >
               {field.type !== 'textarea' ? (

@@ -10,7 +10,7 @@ export default function HomeAbout({
 
 
   return (
-    <div className={`relative py-[80px] md:py-[130px] ${bodyPadding}`}>
+    <div className={`relative py-[80px] md:py-[130px] lg:py-[100px] ${bodyPadding}`}>
       <div className={`absolute  -top-[100px] md:-top-[280px] -left-[90px]
        -z-[00] 
         ${toggle 

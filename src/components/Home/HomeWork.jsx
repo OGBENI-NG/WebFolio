@@ -20,7 +20,7 @@ export default function SelectedWork({
 
   }) {
 
-  const SelectedWorkEl = data.workEl.slice(2, 6);
+  const SelectedWorkEl = data.workEl.slice(2, 5);
 
   return (
     <div className={`mt-[20px] relative z-[10]  lg:overflow-hidden ${bodyPadding}`}>
@@ -30,15 +30,20 @@ export default function SelectedWork({
         <span className={highLightTxtOne}>What i have made</span>
       </h2>
       
-      <div className='mt-5 lg:overflow-hidden lg:mt-7 lg:grid lg:grid-cols-2 lg:gap-6 xl:gap-8'>
+      <div className='mt-5 lg:overflow-hidden lg:mt-7 lg:grid lg:grid-cols-2 
+        xl:grid-cols-3 lg:gap-4 xl:gap-5 '>
         {SelectedWorkEl.map((item, index) => (
+         
           <WorkItem 
             key={item.id} 
             item={item} 
             layoutTheme={layoutTheme} 
             hoverColor={hoverColor}
             themeColor={themeColor}
-            className={ `${index === SelectedWorkEl.length - 1 ? 'py-0' : 'pb-7 lg:pb-0'}`}
+            className={ `
+              ${index === SelectedWorkEl.length - 1 ? 'py-0' : 'pb-7 lg:pb-0'} 
+              ${index > 1 ? 'lg:hidden xl:block' : ''} `
+            }
             bodyTxt={bodyTxt}
             openId={openId}
             toggleDescription={toggleDescription}

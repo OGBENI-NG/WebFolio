@@ -30,7 +30,7 @@ export default function Work({
       item={item} 
       layoutTheme={layoutTheme} 
       themeColor={themeColor}
-      className={`pb-7 md:mt-5 lg:pb-0 lg:mt-0`}
+      className={`pb-5 md:mt-5 lg:pb-0 lg:mt-0`}
       bodyTxt={bodyTxt}
       openId={openId}
       theme={theme}
@@ -46,7 +46,7 @@ export default function Work({
             Works
             <span className={`${highLightTxtOne} block`}> What I have made</span>
           </h1>
-          <div className='lg:grid lg:grid-cols-2 lg:gap-8'>
+          <div className='lg:grid lg:grid-cols-2 xl:grid-cols-3 xl:gap-5 lg:gap-6'>
             {workItems}
           </div>
           <a className='w-full lg:w-max lg:block lg:m-auto ' href="https://github.com/OGBENI-NG" target="_blank">
