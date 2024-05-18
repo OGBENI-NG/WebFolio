@@ -11,7 +11,7 @@ export default function Contact(
     bodyPadding,
     formTheme,
     borderColor,
-    contactClass
+  
   }
   ) {
 

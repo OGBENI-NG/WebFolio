@@ -2,7 +2,7 @@ import React from 'react'
 import { RiCss3Line, RiHtml5Line, RiJavascriptLine, RiReactjsLine } from 'react-icons/ri'
 import { TbBrandTailwind, TbBrandFigma, TbBrandFirebase, TbBrandFramer } from "react-icons/tb";
 import CustomSVG from '../CustomSvg';
-import AnimateSections from '../AnimateSections';
+
 
 
 
@@ -23,15 +23,15 @@ export default function SkillsIcons({highLightTxtOne, theme, highLightTxt, bodyP
             >
                 <CustomSVG className={`lg:w-[700px] lg:h-[500px]`} theme={theme}/>
             </div>
-            <AnimateSections>
+        
                 <div className={`${highLightTxt}`}>
                     <h1>
                         Skills
                         <span className={highLightTxtOne}>What i can do</span>
                     </h1>
                 </div>
-            </AnimateSections>
-            <AnimateSections>
+            
+        
                 <div className='mt-5 lg:mt-7 grid-cols-5 gap-x-4 
                     gap-y-2 flex justify-center flex-wrap lg:gap-8'>
                     <RiHtml5Line className={styleIcons}/>
@@ -43,7 +43,7 @@ export default function SkillsIcons({highLightTxtOne, theme, highLightTxt, bodyP
                     <TbBrandFirebase  className={styleIcons}/>
                     <TbBrandFramer  className={styleIcons}/>
                 </div>
-            </AnimateSections>
+            
         </article>
         
     )

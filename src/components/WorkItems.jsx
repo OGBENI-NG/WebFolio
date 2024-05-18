@@ -1,5 +1,4 @@
 import React from 'react';
-import AnimateSections from './AnimateSections';
 import { FaChevronDown, FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 
@@ -10,7 +9,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
 
   return (
     <div className={`${className}`}>
-      <AnimateSections>
+    
         <section className={`overflow-hidden shadow-sm rounded-lg`}>
           <div className="w-full h-full">
             <img 
@@ -62,7 +61,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
             </div>
           </div>
         </section>
-      </AnimateSections>
+      
     </div>
   )
 }
