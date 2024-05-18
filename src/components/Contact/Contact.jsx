@@ -64,7 +64,7 @@ export default function Contact(
         : ' bg-lightest/10 text-lightest hover:bg-lightest/20'
       } p-2 md:p-5 lg:p-3 rounded-full`}
     >
-      <iconEl.icon className={`text-xl md:text-4xl lg:text-lg`}/>
+      <iconEl.icon className={`text-xl md:text-2xl lg:text-lg`}/>
     </a>
   ))
 

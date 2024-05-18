@@ -12,7 +12,7 @@ export default function Footer({data, theme, bodyTxt, bodyPadding}) {
       key={iconEl.id} 
       className='text-brand hover:text-brand/60'
     >
-      <a href={iconEl.live} className="text-3xl md:text-6xl lg:text-3xl" target='_blank'>
+      <a href={iconEl.live} className="text-3xl md:text-5xl lg:text-[30px]" target='_blank'>
         <iconEl.icon /></a>
     </div>
   ))
@@ -46,7 +46,7 @@ export default function Footer({data, theme, bodyTxt, bodyPadding}) {
           lg:p-0 lg:gap-5 lg:items-start'>
           {renderHeroContact}
         </div>
-        <div className='flex items-center justify-center gap-8 md:gap-12 lg:gap-8' >
+        <div className='flex items-center justify-center gap-8 md:gap-12 lg:gap-6' >
           {renderLinksIcon}
         </div>
       </div>
