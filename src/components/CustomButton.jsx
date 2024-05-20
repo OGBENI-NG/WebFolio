@@ -9,8 +9,8 @@ export default function CustomButton({ title, children, onClick, type, className
         shadow-brand/40 hover:shadow-lightest/30`
     } 
     rounded-lg
-    w-full shadow-lg text-lightest
-    border-[1.8px] font-semibold hover:bg-transparent`
+    w-full shadow-lg text-lightest lg:shadow-
+    border-[1.8px] lg:border-[1px] font-semibold hover:bg-transparent`
   ;
   
   return (
@@ -18,7 +18,7 @@ export default function CustomButton({ title, children, onClick, type, className
       title={title}
       type={type}
       onClick={onClick}
-      className={` ${buttonStyle} ${className} `}
+      className={` ${buttonStyle} ${className} shadow-lg`}
     >
       {children}
     </button>

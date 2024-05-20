@@ -20,10 +20,10 @@ export default function About(
 
   const recentWork = data.workEl.filter(work => work.type === "recent")
 
-  const articleStyle = `py-3 md:py-4 text-center md:text-[24px] md:text-left
+  const articleStyle = `py-3 md:py-4 text-center md:leading-[1.6] md:text-[20px] md:text-left
     lg:text-[14px] lg:w-[700px] xl:w-[750px] lg:leading-[1.7]`
-  
-  const spanTxt = `text-brand font-bold`
+  ;
+  const spanTxt = `text-brand font-bold`;
   return (
     <section 
       className={`${bodyTxt}  tracking-wider leading-snug ${bodyPadding}
@@ -68,9 +68,11 @@ export default function About(
         ))}
       </div>
 
-
       <NavLink to="/" className='w-full lg:w-max lg:mt-12'>
-        <CustomButton theme={theme} className={`text-lg md:text-2xl lg:text-lg py-2 md:py-3 lg:py-2 lg:px-12`}>
+        <CustomButton 
+          theme={theme} 
+          className={`text-lg md:text-2xl lg:text-lg py-2 md:py-3 lg:py-1 lg:px-12`}
+        >
           Go back home
         </CustomButton>
       </NavLink>

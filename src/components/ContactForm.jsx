@@ -28,7 +28,7 @@ export default function ContactForm({
      w-full h-[55px] md:h-[70px] rounded-[8px] 
     outline:none text-lg md:text-2xl px-4 peer placeholder-transparent 
     focus:outline-none font-semibold transition-[.5s] 
-    lg:text-base lg:h-[40px] border-[1px] lg:border-[1.8px]`
+    lg:text-base lg:h-[40px] border-[1px] lg:border-[1px]`
   ;
 
   const labelStyle = `${labelColor} absolute left-2 font-bold -top-6 
@@ -44,7 +44,7 @@ export default function ContactForm({
   
 
   return (
-    <form onSubmit={handleSubmit} className={`py-[80px]  ${className} 
+    <form onSubmit={handleSubmit} className={`py-[100px] lg:py-[80px]  ${className} 
        ${bodyPadding} overflow-hidden`}>
       {showTitle && ( // Render the title only if showTitle is true
         <h1 className={`${highLightTxt}`}>
@@ -60,7 +60,7 @@ export default function ContactForm({
           className={`lg:w-[380px] lg:h-full lg:pr-10`}
         />
         <div className={`flex flex-col gap-8 md:gap-y-12 pt-2 mt-3 lg:gap-y-6 lg:pt-0
-          lg:mt-0 lg:border-l-[1.8px] lg:pl-[50px] ${borderColor}`}>
+          lg:mt-0 lg:border-l-[1.5px] lg:pl-[50px] ${borderColor}`}>
           {inputFields.map((field) => (
             <div 
               className="relative lg:w-[295px]" 
@@ -85,7 +85,7 @@ export default function ContactForm({
                   className={`${borderColor} ${labelColor} w-full h-[158px] lg:h-[120px] rounded-[8px]
                   outline:none text-lg md:text-2xl lg:text-lg p-4 peer leading-tight
                     placeholder-transparent resize-none md:resize-y focus:outline-none 
-                    font-semibold transition-[.5s] border-[1.8px]`}
+                    font-semibold transition-[.5s] border-[1px]`}
                 />
               )}
               <label className={`${labelStyle}`} htmlFor={field.id}>
@@ -94,7 +94,7 @@ export default function ContactForm({
             </div>
           ))}
           <CustomButton 
-            className={`md:-mt-2 lg:-mt-2 py-2 text-lg md:text-2xl lg:text-lg lg:py-1`}
+            className={`md:-mt-2 lg:-mt-2 py-2 md:py-3 text-lg md:text-2xl lg:text-lg lg:py-1`}
             type={'submit'}
             theme={theme}
           >

@@ -15,13 +15,13 @@ export default function SkillsIcons({highLightTxtOne, theme, highLightTxt, bodyP
     return (
       
         <article 
-            className={`${bodyPadding} py-[100px] relative z-0 w-full `}>
+            className={`${bodyPadding} py-[100px] lg:py-[50px] relative z-0 w-full `}>
             <div 
                 className='absolute w-full top-[20px] -z-[1] 
-                -right-[60px] md:left-[380px] md:-top-[300px] lg:top-[50px]
-                lg:-left-[110px]'
+                -right-[60px] md:left-[380px] md:-top-[300px] lg:top-[170px]
+                lg:-left-[130px]'
             >
-                <CustomSVG className={`lg:w-[700px] lg:h-[500px]`} theme={theme}/>
+                <CustomSVG className={`lg:w-[600px] lg:h-[600px]`} theme={theme}/>
             </div>
         
                 <div className={`${highLightTxt}`}>
@@ -30,10 +30,9 @@ export default function SkillsIcons({highLightTxtOne, theme, highLightTxt, bodyP
                         <span className={highLightTxtOne}>What i can do</span>
                     </h1>
                 </div>
-            
         
                 <div className='mt-5 lg:mt-7 grid-cols-5 gap-x-4 
-                    gap-y-2 flex justify-center flex-wrap lg:gap-8'>
+                    gap-y-2 flex justify-center flex-wrap lg:gap-8 xl:gap-12'>
                     <RiHtml5Line className={styleIcons}/>
                     <RiCss3Line className={styleIcons}/>
                     <RiJavascriptLine className={styleIcons}/>

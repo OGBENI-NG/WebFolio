@@ -1,14 +1,13 @@
 import React, {useState} from 'react'
 import Intro from './Intro'
-
-
 import frameLogo from '../../asset/img/frame.svg'
 import HomeWork from './HomeWork'
 import SkillsIcons from './SkillsIcons'
 import HomeAbout from './HomeAbout'
 import ContactForm from '../ContactForm'
-import LogoAnim from '../../LogoAnim'
-//import HomeFooter from './HomeFooter'
+import Testimonials from './Testimonial'
+
+
 
 
 export default function Home(
@@ -58,6 +57,14 @@ export default function Home(
         bodyTxt={bodyTxt}
         bodyPadding={bodyPadding}
       />
+      <HomeAbout
+        theme={theme}
+        bodyTxt={bodyTxt}
+        highLightTxtOne={highLightTxtOne}
+        highLightTxt={highLightTxt}
+        bodyPadding={bodyPadding}
+        toggle={toggle}
+      />
       <HomeWork
         data={data}
         themeColor={themeColor}
@@ -72,14 +79,17 @@ export default function Home(
         theme={theme}
         
       />
-      <HomeAbout
+      <Testimonials
+        data={data}
         theme={theme}
-        bodyTxt={bodyTxt}
-        highLightTxtOne={highLightTxtOne}
-        highLightTxt={highLightTxt}
         bodyPadding={bodyPadding}
-        toggle={toggle}
+        highLightTxt={highLightTxt}
+        highLightTxtOne={highLightTxtOne}
+        layoutTheme={layoutTheme}
+        themeColor={themeColor}
+        bodyTxt={bodyTxt}
       />
+      
       <ContactForm
         highLightTxt={highLightTxt}
         highLightTxtOne={highLightTxtOne}

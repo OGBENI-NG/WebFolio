@@ -4,7 +4,7 @@ export default function LogoAnim({className}) {
   return (
     <div className={className}>
       <svg 
-        className='animate-logoAnim ' 
+        className='animate-logoAnim' 
         viewBox="0 0 182 142" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"

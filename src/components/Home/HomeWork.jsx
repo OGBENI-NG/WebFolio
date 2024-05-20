@@ -23,14 +23,14 @@ export default function SelectedWork({
   const SelectedWorkEl = data.workEl.slice(2, 5);
 
   return (
-    <div className={`mt-[20px] relative z-[10]  lg:overflow-hidden ${bodyPadding}`}>
+    <div className={`mt-[20px] lg:overflow-hidden ${bodyPadding}`}>
       
       <h2 className={`${highLightTxt}`}>
         Work
         <span className={highLightTxtOne}>What i have made</span>
       </h2>
       
-      <div className='mt-5 lg:overflow-hidden lg:mt-7 lg:grid lg:grid-cols-2 
+      <div className='relative -z-[0] mt-5 lg:overflow-hidden lg:mt-7 lg:grid lg:grid-cols-2 
         xl:grid-cols-3 lg:gap-4 xl:gap-5 '>
         {SelectedWorkEl.map((item, index) => (
          
@@ -50,12 +50,12 @@ export default function SelectedWork({
           />
         ))}
       </div>
-      <div className='pt-5 lg:pt-12 relative z-[2]'>
+      <div className='pt-5 lg:py-12 relative z-[2]'>
         <NavLink to="works" className={`lg:w-max lg:m-auto lg:block`}>
           <CustomButton 
             tittle='submit'
             theme={theme}
-            className={` lg:px-12 text-lg md:text-2xl lg:text-lg py-2`}
+            className={` lg:px-12 text-lg md:text-2xl lg:text-lg py-2 md:py-3 lg:py-1`}
           >
             More works
           </CustomButton>

@@ -1,7 +1,10 @@
 import React,{useState} from 'react'
 import ContactForm from '../ContactForm'
+import ContactInfo from '../ContactInfo'
+import SocialIcons from '../SocialIcons'
 
 export default function Contact(
+  //props
   { data,
     bodyTxt,
     themeColor,
@@ -11,62 +14,42 @@ export default function Contact(
     bodyPadding,
     formTheme,
     borderColor,
-  
+
   }
-  ) {
+) {
 
-    const [formData, setFormData] = useState({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    })
+  //form data
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  })
+
+  //handle change in input fields
+  const handleChange = (e) => {
+    const {id, value} = e.target
+    setFormData({...formData, [id]: value})
+  }
+
+  //clear form input fields
+  const clearFormFields = () => {
+    const emptyFormData = Object.fromEntries(Object.keys(formData).map(key => [key, '']));
+    setFormData(emptyFormData);
+  };
   
+  //handle submit function
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    clearFormFields();
+      
+  };
 
-    const handleChange = (e) => {
-      const {id, value} = e.target
-      setFormData({...formData, [id]: value})
-    }
-  
-    
-    const clearFormFields = () => {
-      const emptyFormData = Object.fromEntries(Object.keys(formData).map(key => [key, '']));
-      setFormData(emptyFormData);
-    };
-    
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      clearFormFields();
-       
-    };
+  //fetch contact info from data
+  const contactInfo = data.contactLinkEl.filter(infoEl => infoEl.type === "info")
 
-  const heroContact = data.footerEl.filter(infoEl => infoEl.type === "info")
-  const renderHeroContact = heroContact.map(info => (
-    <div 
-      key={info.id} 
-      className={`${bodyTxt} text-lg md:text-2xl lg:text-base font-semibold flex flex-col 
-      items-center gap-1 md:gap-0 lg:flex-row lg:gap-[3px]`}
-    >
-      <info.iconN />
-      <span >{info.name}</span>
-    </div>
-  ))
-
-  const iconEl = data.footerEl.filter(icon => icon.type === "icon")
-  const renderLinksIcon = iconEl.map(iconEl => (
-    <a 
-      key={iconEl.id} 
-      href={iconEl.live}
-      target='_blank'
-      className={`
-      ${theme === "light" 
-        ? 'bg-darkest/10 text-darkest hover:bg-darkest/20' 
-        : ' bg-lightest/10 text-lightest hover:bg-lightest/20'
-      } p-2 md:p-5 lg:p-3 rounded-full`}
-    >
-      <iconEl.icon className={`text-xl md:text-2xl lg:text-lg`}/>
-    </a>
-  ))
+  //fetch social icon from data
+  const socialIconEl = data.contactLinkEl.filter(icon => icon.type === "icon")
 
   return (
     <section className={`py-[125px] lg:pt-[80px] text-center ${bodyPadding}`}>
@@ -87,14 +70,31 @@ export default function Contact(
             <p className={`${bodyTxt} md:text-2xl lg:text-base font-medium`}>Say something to start a live chat!</p>
             <div>
             <div className='flex flex-col items-center lg:flex-row lg:gap-12 
-              justify-center gap-8 py-12 lg:py-20'>
-              {renderHeroContact}
+              justify-center gap-8 py-12 lg:py-16'
+            >
+              {/* contact info component in use in contact route */}
+              <ContactInfo 
+                info={contactInfo} 
+                className={`${bodyTxt} text-lg md:text-2xl lg:text-base 
+                font-semibold flex flex-col items-center gap-1 md:gap-0 lg:flex-row lg:gap-[3px]`}
+              />
             </div>
             <div className='flex items-center justify-center pt-4 gap-4 md:gap-6 lg:gap-8'>
-              {renderLinksIcon}
+              {/* social icon component in use in contact route */}
+              <SocialIcons 
+                icons={socialIconEl}
+                iconSize={`md:text-xl lg:text-xl`}
+                className={`
+                  ${theme === "light" 
+                    ? 'bg-darkest/10 text-darkest hover:bg-darkest/20' 
+                    : ' bg-lightest/10 text-lightest hover:bg-lightest/20'
+                  } p-2 md:p-5 lg:p-3 rounded-full`}
+                />
+              
             </div>
             </div>
           </div>
+          {/* contact form component in use in contact route */}
           <ContactForm
             formData={formData}
             handleChange={handleChange}

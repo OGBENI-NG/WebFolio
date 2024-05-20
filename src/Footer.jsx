@@ -1,4 +1,6 @@
 import React from 'react'
+import SocialIcons from './components/SocialIcons';
+import ContactInfo from './components/ContactInfo';
 
 export default function Footer({data, theme, bodyTxt, bodyPadding}) {
 
@@ -6,33 +8,14 @@ export default function Footer({data, theme, bodyTxt, bodyPadding}) {
   ${theme === "light"? "bg-lightest": "bg-dark/20"}` 
 ;
 
-  const iconEl = data.footerEl.filter(icon => icon.type === "icon")
-  const renderLinksIcon = iconEl.map(iconEl => (
-    <div 
-      key={iconEl.id} 
-      className='text-brand hover:text-brand/60'
-    >
-      <a href={iconEl.live} className="text-3xl md:text-5xl lg:text-[30px]" target='_blank'>
-        <iconEl.icon /></a>
-    </div>
-  ))
+  //fetch links icon from 
+  const linkIconEl = data.contactLinkEl.filter(icon => icon.type === "icon")
 
-  const heroContact = data.footerEl.filter(infoEl => infoEl.type === "info")
-  const renderHeroContact = heroContact.map(iconInfo => (
-    <div 
-      key={iconInfo.id} 
-      className={`${bodyTxt} text-lg md:text-[1.7rem] lg:text-base xl:text-[14px]
-        font-semibold flex items-center gap-2 md:gap-3`
-      }
-    >
-      <iconInfo.iconN className='text-lg md:text-2xl lg:text-xl xl:text-lg'/>
-      <span >{iconInfo.name}</span>
-    </div>
-  ))
+  const contactInfoEl = data.contactLinkEl.filter(infoEl => infoEl.type === "info")
   
   return (
     <footer className={`pt-[50px] text-brand pb-[120px] md:py-[140px]
-      ${footerTheme} ${bodyPadding} m-auto lg:py-[80px]`}>
+      ${footerTheme} ${bodyPadding} m-auto lg:py-[100px]`}>
       <div className='lg:grid lg:grid-cols-3 lg:place-items-start lg:gap-12'>
         <div className='lg:flex lg:flex-col gap-12 leading-none'>
           <h1 
@@ -44,10 +27,10 @@ export default function Footer({data, theme, bodyTxt, bodyPadding}) {
         </div>
         <div className='flex flex-col items-center justify-center gap-5 md:gap-10 py-10 md:py-20
           lg:p-0 lg:gap-5 lg:items-start'>
-          {renderHeroContact}
+         <ContactInfo info={contactInfoEl} bodyTxt={bodyTxt}/>
         </div>
-        <div className='flex items-center justify-center gap-8 md:gap-12 lg:gap-6' >
-          {renderLinksIcon}
+        <div className='flex items-center justify-center gap-8 md:gap-12 lg:gap-4 xl:gap-6' >
+          <SocialIcons icons={linkIconEl} className={`text-brand hover:text-brand/60`}/>
         </div>
       </div>
       <span className={`${bodyTxt} block text-center md:text-3xl pt-10 md:pt-16 

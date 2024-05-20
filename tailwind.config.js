@@ -16,9 +16,10 @@ export default {
         brand: "#2b7f4f",
         darkest: "#0F172A",
         dark: "#37476C",
-        mid: "#CBD5E1",
+        mid: "#717171",
         light: "#E6ECF3",
         lightest: "#FFFFFF",
+        bodyBg: "#F5F5F5"
       },
       animation: {
         fadeInDown: "fadeInDown 1s ease 0s 1 normal forwards",

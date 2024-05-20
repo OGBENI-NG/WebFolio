@@ -14,6 +14,9 @@ import calculator from "./asset/img/calcu.png"
 import commentSection from "./asset/img/comment.png"
 import jobLister from "./asset/img/job-list.png"
 import todo from "./asset/img/todo-main.png"
+import beth from "./asset/img/beth.png"
+import adam from "./asset/img/adam.png"
+import andrew from "./asset/img/andrew.png"
 
 const generateUniqueId = (() => {
       const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min) + min)
@@ -156,7 +159,30 @@ const data = {
             
             
       ],
-      footerEl: [
+      testimonials:[
+            {
+                  id: generateUniqueId(), 
+                  name: 'Andrew Jones', 
+                  position: 'Product Developer',
+                  img: andrew,
+                  review: `Ut non aliqua adipisicing deserunt sint incididunt. Cupidatat anim sit officia eu non irure pariatur. In qui aliquip laborum quis officia excepteur anim aliqua esse est sunt dolore eu reprehenderit.`
+            },
+            {
+                  id: generateUniqueId(), 
+                  name: 'Adam Smith', 
+                  position: 'Web Designer',
+                  img: adam,
+                  review: `Ut non aliqua adipisicing deserunt sint incididunt. Cupidatat anim sit officia eu non irure pariatur. In qui aliquip laborum quis officia excepteur anim aliqua esse est sunt dolore eu reprehenderit.`
+            },
+            {
+                  id: generateUniqueId(), 
+                  name: 'Lauren White', 
+                  position: 'Product Manager',
+                  img: beth,
+                  review: `Ut non aliqua adipisicing deserunt sint incididunt. Cupidatat anim sit officia eu non irure pariatur. In qui aliquip laborum quis officia excepteur anim aliqua esse est sunt dolore eu reprehenderit.`
+            },
+      ],
+      contactLinkEl: [
             {
                   name: 'Lagos, NG',
                   type: 'info',

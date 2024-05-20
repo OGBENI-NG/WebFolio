@@ -21,24 +21,28 @@ export default function App() {
     ? "block text-darkest/80" 
     : "block text-lightest/80"
   ;
-  const appTheme = theme === "light" ? 'bg-[#F5F5F5]' : 'bg-darkest';
+  const appTheme = theme === "light" ? 'bg-bodyBg' : 'bg-darkest';
 
   const layoutTheme = theme === 'light' 
     ? 'bg-lightest/80' 
-    : 'bg-dark/30';
+    : 'bg-dark/50'
   ;
-  const bodyTxt = `text-lg ${theme === "light" ? "text-[#717171]" : "text-light/80"}`
+  
+  //main body 
+  const bodyTxt = `${theme === "light" ? "text-mid" : "text-light/80"}`
 
   const highLightTxt = `text-brand text-2xl md:text-[32px] lg:text-3xl font-semibold text-center`
 
   const highLightTxtOne = ` 
-     m-auto block
+     m-auto block uppercase
     ${theme === 'light' ? 'text-dark' : 'text-light'} 
-     leading-normal md:leading-loose mr-auto text-[18px] lg:leading-loose md:text-2xl lg:text-lg font-bold `
+     leading-normal md:leading-loose mr-auto text-[18px] 
+     lg:leading-loose md:text-2xl lg:text-lg font-semibold `
   ;
 
   
 
+  //borderColor style
   const borderColor = `${theme === 'light' 
     ? 'border-slate-900/10' 
     : 'border-slate-400/30'
@@ -53,9 +57,9 @@ export default function App() {
   ];
 
   const bodyPadding = ` ${toggle 
-    ? `px-5 md:pl-[250px] md:pr-[28px] md:animate-fadeInLeft
+    ? `px-5 md:pl-[255px] md:pr-[28px] md:animate-fadeInLeft
      lg:pl-[220px] lg:pr-[40px] xl:pl-[250px] xl:pr-[60px]`
-    :`px-5 md:pl-[150px] md:pr-[35px] md:animate-fadeInTop 
+    :`px-5 md:pl-[160px] md:pr-[45px] md:animate-fadeInTop 
     lg:pl-[150px] lg:pr-[50px] xl:pl-[180px] xl:pr-[80px]`}`
   ;
 
@@ -64,7 +68,7 @@ export default function App() {
 
   return(
     <div className={`antialiased overflow-x-hidden min-h-screen 
-     !scroll-smooth font-OpenSan  ${appTheme}`}
+     !scroll-smooth font-OpenSan   ${appTheme}`}
     >
       <Router>
         <Routes>

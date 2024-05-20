@@ -4,6 +4,8 @@ import ToggleThemeBtn from '../ToggleThemeBtn'
 import hero from '../asset/img/my-pics.png'
 import { IoLogOutOutline } from 'react-icons/io5'
 import CustomButton from './CustomButton'
+import SocialIcons from './SocialIcons'
+
 
 
 export default function NavBar(
@@ -28,39 +30,32 @@ export default function NavBar(
     setNavBarItems(updatedItems)
   }
 
-  const iconEl = data.footerEl.filter(icon => icon.type === "icon")
-  const socialIcons = iconEl.map(iconEl => (
-    <div 
-      key={iconEl.id} 
-      className={`
-      ${theme === "light" 
-        ? 'bg-darkest/10 text-darkest hover:bg-darkest/20' 
-        : ' bg-lightest/10 text-lightest  hover:bg-lightest/20'
-      } p-3 lg:p-2 rounded-full`}
-    >
-      <a href={iconEl.live} target='_blank'>
-        <iconEl.icon className="text-[25px] lg:text-xl xl:text-[20px]" />
-      </a>
-    </div>
-  ))
+  //fetch social icons from data
+  const socialIcon = data.contactLinkEl.filter(icon => icon.type === "icon")
 
+  //hidden some elements in mobile devices
   const hiddenEl = `hidden md:block`
+
+  //light and dark theme styles desktop mode
   const lightDarkStyle = `flex items-center gap-1 lg:gap-x-[8px] xl:gap-x-[4px]`
 
+  //fetch navigation data from data
   const navBarData = navBarItems.map(item => {
-    
+
+    //set focus style on current route
     const isActive = location.pathname === (item.name.toLowerCase() === 'home' 
       ? '/' : `/${item.name.toLowerCase()}`)
     ;
   
     //navbar styles
     const navbarStyle = `flex flex-col md:flex-row 
-    ${theme === 'light' 
-      ? 'md:text-dark md:hover:bg-dark/20'
-      :'md:text-lightest md:hover:bg-lightest/10'}
+      ${theme === 'light' 
+        ? 'md:text-dark md:hover:bg-dark/20'
+        :'md:text-lightest md:hover:bg-lightest/10'
+      }
       items-center font-OpenSan md:rounded-[8px]
-       font-extrabold lg:justify-start 
-       md:py-3 lg:py-2
+      font-extrabold lg:justify-start 
+      md:py-3 lg:py-2
       ${isActive 
         ? `before:content-[''] text-brand  
           ${theme === 'light' ? ' md:bg-dark/20' : 'text md:bg-lightest/10'}
@@ -71,7 +66,7 @@ export default function NavBar(
       }`
     ;
     
-    //set focus between active routes
+    //set focus between active routes style changes
     const toggleIcon = `text-2xl 
       ${toggle 
         ? 'md:text-[44px] lg:text-2xl xl:text-lg' 
@@ -118,12 +113,12 @@ export default function NavBar(
       pb-[15px] pt-[8px] fixed bottom-0 w-full z-10 md:left-0
       md:top-[100px] md:pb-0 lg:top-[80px] lg:pt-[12px]
       xl:top-[70px] 
-      ${headerNavbarTheme} border-t-[1px] md:border-t-0 md:border-r-[1.8px] `}
+      ${headerNavbarTheme} border-t-[1px] md:border-t-0 md:border-r-[1.8px] lg:border-r-[1px]`}
     >
       {/* navbar links to routes */}
       <div className={`flex md:flex-col xl:gap-y-4
         ${toggle ? 'md:gap-y-8 lg:gap-y-4 ' :'md:gap-y-2'} md:items-start items-center 
-          justify-between md:mt-5 md:border-b-[1.8px] md:pb-8 
+          justify-between md:mt-5 md:border-b-[1.8px] lg:border-b-[1px] md:pb-8 
         ${borderColor}
         `}>
         {navBarData}
@@ -143,7 +138,7 @@ export default function NavBar(
             ${theme === 'light' 
               ? 'bg-light text-darkest before:bg-lightest' 
               : `bg-dark text-lightest before:bg-darkest 
-                before:ml-[96px] lg:before:ml-[69.5px] lg:before:w-[68px] xl:before:ml-[65.5px]`
+                before:ml-[96px] lg:before:ml-[69.5px] lg:before:w-[68px] xl:before:ml-[66.2px]`
             }`}
           >
             <div 
@@ -178,16 +173,24 @@ export default function NavBar(
 
       {/* social icon styles */}
       <div className={`cursor-pointer ${hiddenEl} px-4 xl:px-2 ${borderColor}`}>
-        <div className={`m-auto gap-4 pb-8 pt-4 items-center
+        <div className={`m-auto gap-4 lg:gap-2 pb-8 pt-4 items-center
           ${toggle 
             ? 'flex flex-wrap mt-8 justify-center' 
-            : 'md:flex md:flex-col w-max gap-2'
+            : 'md:flex md:flex-col w-max gap-3'
           }`}>
-          {socialIcons}
+            
+          <SocialIcons 
+            icons={socialIcon} 
+            className={`${theme === "light" 
+              ? 'bg-darkest/10 text-darkest hover:bg-darkest/20' 
+              : ' bg-lightest/10 text-lightest  hover:bg-lightest/20'
+            } p-3 rounded-full `}
+            iconSize={`md:text-xl lg:text-lg`}
+          />
         </div>
       </div>
 
-      <div className={`px-4 w-full ${hiddenEl} border-t-[1.8px] ${borderColor} 
+      <div className={`px-4 w-full ${hiddenEl} border-t-[1.8px] lg:border-t-[1px] ${borderColor} 
           md:flex md:items-center md:justify-center md:pt-10 md:pb-8
            
         ${toggle 
@@ -197,7 +200,7 @@ export default function NavBar(
       >
         <div className={`${themeColor} flex items-center gap-2`}>
           <img 
-            className={`w-[44px] h-[44px] lg:w-[35px] lg:h-[35px] border-2
+            className={`w-[44px] h-[44px] lg:w-[35px] lg:h-[35px] border-2 lg:border-1
              border-brand rounded-full `}
             src={hero} 
             alt="hero" 
