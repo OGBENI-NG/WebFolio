@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import data from '../../data';
 import WorkItem from '../WorkItems';
 import CustomButton from '../CustomButton';
-import LogoAnim from '../../LogoAnim';
+import LogoAnim from '../../LoadingLogo';
 
 export default function Work({
   openId, themeColor, 
@@ -58,7 +58,7 @@ export default function Work({
           </a>
         </div>
       ) : (
-        <div className={` h-[400px] p-0 flex items-center justify-center m-auto`}>
+        <div className={` h-[400px] overflow-hidden p-0 flex items-center justify-center m-auto`}>
           <LogoAnim className='m-auto bg-transparent'/>
         </div>
       )}

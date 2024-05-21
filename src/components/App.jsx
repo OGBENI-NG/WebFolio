@@ -10,6 +10,7 @@ import data from '../data'
 
 
 import ThemeContext from '../UseThemeContext'
+import ScrollToTop from './ScrollPosition'
 
 
 export default function App() {
@@ -71,6 +72,7 @@ export default function App() {
      !scroll-smooth font-OpenSan   ${appTheme}`}
     >
       <Router>
+        <ScrollToTop/>
         <Routes>
           <Route path='/' element={
             <Layout 

@@ -2,7 +2,7 @@ import React,{useContext, useState, useEffect} from 'react'
 import { Outlet } from "react-router-dom"
 import Header from './Header'
 import Footer from '../Footer'
-import LogoAnim from '../LogoAnim'
+import LogoAnim from '../LoadingLogo'
 
 
 export default function Layout({themeColor, borderColor, data, bodyPadding,
