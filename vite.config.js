@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     // Specify the base path for your application (adjust as needed)
-    base: 'https://webfolio-adeolu.netlify.app',
+    base: 'https://webfolio-adeolu.netlify.app/',
 
     // Define the rollup options
     rollupOptions: {
