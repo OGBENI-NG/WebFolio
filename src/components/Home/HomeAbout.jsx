@@ -10,8 +10,8 @@ export default function HomeAbout({
 
 
   return (
-    <div className={`py-[80px] md:py-[130px] lg:py-[100px] ${bodyPadding}`}>
-      <div className={`overflow-hidden w-full md:w-[470px] lg:w-[550px]  xl:w-[560px] m-auto`
+    <div className={`py-[80px]  md:py-[130px] lg:py-[100px] ${bodyPadding}`}>
+      <div className={`relative z-10 w-full md:w-[470px] lg:w-[550px]  xl:w-[560px] m-auto`
       }>
         <h2 className={`${highLightTxt} text-center `}>
           Who i am
@@ -26,7 +26,7 @@ export default function HomeAbout({
         ${bodyTxt} text-[16px] md:text-[24px] mt-1 text-center lg:text-[15px] lg:pt-2`}>
         My name is <span className='font-bold text-brand'>Adeolu Miracle</span> , and I'm a passionate frontend developer based in Lagos, Nigeria. I began my coding journey in 2019, and since then, I've been captivated by the art of creating intuitive and visually appealing user experiences. Over time, I've honed my skills in HTML, CSS, and JavaScript, which form the foundation of any great web application... 
         <NavLink 
-          className='pb-1 px-2 leading-none font-semibold text-brand underline bg-brand/10 rounded-lg' 
+          className='pb-1 px-2 leading-none font-semibold text-brand underline bg-brand/5 rounded-lg' 
           to='about'>
             Read More
         </NavLink>

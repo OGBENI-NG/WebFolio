@@ -25,7 +25,7 @@ export default function App() {
 
   const layoutTheme = theme === 'light' 
     ? 'bg-lightest/80' 
-    : 'bg-dark/50'
+    : 'bg-dark/45'
   ;
   
   //main body 

@@ -1,17 +1,17 @@
 import React from 'react'
 
-export default function Testimonials({data, layoutTheme, theme, bodyPadding, highLightTxt, highLightTxtOne, themeColor, bodyTxt}) {
+export default function Testimonials({data, layoutTheme, theme, bodyPadding, highLightTxt, highLightTxtOne}) {
 
   const testimonialsData = data.testimonials.map((item, index) => (
     <div 
       key={item.id}
       className={`cursor-pointer px-4 py-5 md:p-8 rounded-md mt-7 md:mt-8 
         flex flex-col gap-y-8 lg:gap-y-4 lg:m-0 lg:p-4 
-        hover:text-lightest transition-colors duration-300
+        hover:text-lightest/80 transition-colors duration-300
         ${layoutTheme}  
         ${theme === 'light' 
-          ? 'hover:bg-brand/70 text-mid'
-          :'hover:bg-brand/50 text-light/80'
+          ? 'hover:bg-brand/80 text-mid'
+          :'hover:bg-brand/45 text-light/80'
         }`
       }
     >
@@ -40,7 +40,7 @@ export default function Testimonials({data, layoutTheme, theme, bodyPadding, hig
   ))
   
   return (
-    <section className={`${bodyPadding} pt-[130px]  pb-[20px] lg:py-[80px]`}>
+    <section className={`${bodyPadding} pt-[130px]  pb-[80px] lg:py-[80px]`}>
       <h3 className={`${highLightTxt}`}>Testimonials 
         <span className={`${highLightTxtOne}`}>what my clients have says</span>
       </h3>
