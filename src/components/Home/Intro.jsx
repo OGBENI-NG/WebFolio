@@ -54,7 +54,7 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor }) {
       w-full relative z-[0] ${bodyPadding}`}
     >
       {/* Background Custom SVG */}
-      <div className='block absolute -z-[0] right-0 top-0 md:-top-10 md:-right-10'>
+      <div className='block absolute -z-[5] right-0 top-0 md:-top-10 md:-right-10'>
         <CustomSVG
           className={`w-[297px] h-[369px] md:w-[520px] md:h-[520px]`}
           theme={theme}
