@@ -14,7 +14,8 @@ export default function About(
     openId,
     toggleDescription,
     bodyPadding,
-    theme
+    theme,
+    brandColor
   }
 ) {
 
@@ -23,7 +24,7 @@ export default function About(
   const articleStyle = `py-3 md:py-4 text-center md:leading-[1.6] md:text-[20px] md:text-left
     lg:text-[14px] lg:w-[700px] xl:w-[750px] lg:leading-[1.7]`
   ;
-  const spanTxt = `text-brand font-bold`;
+  const spanTxt = `${brandColor} font-bold`;
   return (
     <section 
       className={`${bodyTxt}  tracking-wider leading-snug ${bodyPadding}
@@ -35,7 +36,7 @@ export default function About(
           alt="hero-pics" 
           className={`w-[200px] h-[200px] lg:w-[250px] lg:h-[250px] mb-8 m-auto md:ml-0
           rounded-full md:rounded-xl border-[1.5px] lg:rounded-md lg:border-none 
-          lg:drop-shadow-lg lg:mb-0 border-brand leading-relaxed`}
+          lg:drop-shadow-lg lg:mb-0 ${brandColor} leading-relaxed`}
         />
         <article className={` lg:py-0 lg:-mt-1 ${articleStyle} `}>
         Hello, my name is <span className={spanTxt}>Adeolu Miracle</span>. I work as a Frontend Developer with a passion, for creating user-friendly interfaces. I started my coding journey in 2018. Have since been fascinated by the process of crafting visually appealing web experiences. Throughout my learning experience, I've focused on mastering languages like <span className={spanTxt}>HTML, CSS, and JavaScript </span> which are essential for building top-notch web applications.
@@ -48,8 +49,8 @@ export default function About(
       <article className={articleStyle}>
       Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively. With a rooted passion for innovation and a commitment to excellence, I approach each project with zeal. Strive to deliver high-quality solutions that go above and, beyond expectations.
       </article>
-      <h1 className='text-2xl md:text-4xl underline 
-        font-bold pt-10 md:pb-3 md:py-12 text-brand lg:text-lg'
+      <h1 className={`'text-2xl md:text-4xl underline 
+        font-bold pt-10 md:pb-3 md:py-12 lg:text-lg ${themeColor}`}
       >
         Recent Works
       </h1>
@@ -63,6 +64,7 @@ export default function About(
             bodyTxt={bodyTxt}
             openId={openId}
             toggleDescription={toggleDescription}
+            brandColor={brandColor}
             className={`pb-7 lg:pb-0 ${index > 1 ? 'lg:hidden xl:block' : ''}`}
           />
         ))}

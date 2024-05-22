@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CustomSVG from '../CustomSvg';
 import logoIllustration from '../../asset/img/intro-illtra.svg';
 
-export default function Intro({ bodyPadding, bodyTxt, theme, themeColor }) {
+export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandColor }) {
   // Array of texts to display with corresponding colors
   const textsEl = [
     { text: 'Frontend Engineer', color: 'text-pink-500' },
@@ -65,12 +65,12 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor }) {
         {/* Text Section */}
         <div className={`lg:pt-6 xl:pt-10`}>
           <h1
-            className='text-brand font-OpenSan text-[30px]
-            md:text-[40px] lg:text-[30px]
-            font-bold leading-relaxed md:leading-normal'
+            className={`${brandColor} font-OpenSan text-[30px]
+            md:text-[40px] lg:text-[30px] ${themeColor}
+            font-bold leading-relaxed md:leading-normal`}
           >
-            Hello{' '}
-            <span className={`${themeColor}`}>I’m Adeolu Miracle, </span>
+            Hello I'm
+            <span className={`block ${brandColor}`}>Adeolu Miracle,</span>
             <span className={`${textsEl[currentWordIndex].color}`}>
               {`${displayedText}`} <span className='animate-ping'>|</span>
             </span>
@@ -90,7 +90,7 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor }) {
           <img
             src={logoIllustration}
             alt='illustration'
-            className={`pt-8 md:pt-12 lg:pt-0 w-full lg:h-full xl:max-w-[500px]`}
+            className={`pt-8 md:pt-12 lg:pt-0 w-full h-auto xl:max-w-[500px]`}
           />
         </div>
       </section>

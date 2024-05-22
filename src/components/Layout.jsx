@@ -6,7 +6,8 @@ import LogoAnim from '../LoadingLogo'
 
 
 export default function Layout({themeColor, borderColor, data, bodyPadding,
-  footerTheme, bodyTxt, theme, toggleTheme, appTheme, toggle, handleToggleNavbar}) {
+  footerTheme, bodyTxt, theme, toggleTheme, appTheme, toggle, handleToggleNavbar,
+  brandColor}) {
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
   const [isLoading, setIsLoading] = useState(true)
@@ -15,14 +16,14 @@ export default function Layout({themeColor, borderColor, data, bodyPadding,
     setIsLoading(true)
     setTimeout(() => {
       setIsLoading(false)
-    }, 3000)
+    }, 5000)
   }, [])
 
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 50)
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 70)
       setPrevScrollPos(currentScrollPos)
     }
 
@@ -33,7 +34,7 @@ export default function Layout({themeColor, borderColor, data, bodyPadding,
   
   
   const headerNavbarTheme = `transition-color ${borderColor}
-    ${theme === 'light' ? 'bg-lightest ' : 'bg-darkest'}` 
+    ${theme === 'light' ? 'bg-lightest ' : 'bg-darkest/95'}` 
   ;
 
   return (
@@ -68,6 +69,7 @@ export default function Layout({themeColor, borderColor, data, bodyPadding,
             bodyTxt={bodyTxt}
             theme={theme}
             bodyPadding={bodyPadding}
+            brandColor={brandColor}
           />
         </div>
        

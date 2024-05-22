@@ -2,7 +2,7 @@ import React from 'react'
 import SocialIcons from './components/SocialIcons';
 import ContactInfo from './components/ContactInfo';
 
-export default function Footer({data, theme, bodyTxt, bodyPadding}) {
+export default function Footer({data, theme, bodyTxt, bodyPadding, brandColor}) {
 
   const footerTheme = ` 
   ${theme === "light"? "bg-lightest": "bg-dark/20"}` 
@@ -14,7 +14,7 @@ export default function Footer({data, theme, bodyTxt, bodyPadding}) {
   const contactInfoEl = data.contactLinkEl.filter(infoEl => infoEl.type === "info")
   
   return (
-    <footer className={`pt-[50px] text-brand pb-[120px] md:py-[140px]
+    <footer className={`pt-[50px] ${brandColor} pb-[120px] md:py-[140px]
       ${footerTheme} ${bodyPadding} m-auto lg:py-[100px]`}>
       <div className='lg:grid lg:grid-cols-3 lg:place-items-start lg:gap-12'>
         <div className='lg:flex lg:flex-col gap-12 leading-none'>
@@ -30,7 +30,7 @@ export default function Footer({data, theme, bodyTxt, bodyPadding}) {
          <ContactInfo info={contactInfoEl} bodyTxt={bodyTxt}/>
         </div>
         <div className='flex items-center justify-center gap-8 md:gap-12 lg:gap-4 xl:gap-6' >
-          <SocialIcons icons={linkIconEl} className={`text-brand hover:text-brand/60`}/>
+          <SocialIcons icons={linkIconEl} className={`${brandColor} hover:text-brand/60`}/>
         </div>
       </div>
       <span className={`${bodyTxt} block text-center md:text-3xl pt-10 md:pt-16 

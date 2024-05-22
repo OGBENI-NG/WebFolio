@@ -16,7 +16,8 @@ export default function SelectedWork({
   openId,
   highLightTxt,
   bodyPadding,
-  theme
+  theme,
+  brandColor
 
   }) {
 
@@ -47,6 +48,7 @@ export default function SelectedWork({
             bodyTxt={bodyTxt}
             openId={openId}
             toggleDescription={toggleDescription}
+            brandColor={brandColor}
           />
         ))}
       </div>

@@ -54,7 +54,7 @@ export default function ContactForm({
         <img 
           src={contactIllustrator} 
           alt="illustrator"
-          className={`lg:w-[380px] lg:h-full lg:pr-10 pb-4 lg:pb-0`}
+          className={`lg:w-[380px] h-auto lg:pr-10 pb-4 lg:pb-0`}
         />
         
         <div className={`flex flex-col gap-8 md:gap-y-12 pt-2 mt-3 lg:gap-y-6 lg:pt-0 lg:mt-0 lg:border-l-[1.5px] lg:pl-[50px] ${borderColor}`}>

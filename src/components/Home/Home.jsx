@@ -13,7 +13,7 @@ import Testimonials from './Testimonial'
 export default function Home(
     {theme, openId, toggleDescription, buttonStyle, toggle,
     themeColor, layoutTheme, highLightTxtOne, bodyPadding, borderColor,
-    bodyTxt, highLightTxt, borderStyle, data, inputFields, formTheme, contactClass}  
+    bodyTxt, highLightTxt, borderStyle, data, inputFields, formTheme, brandColor}  
   ) {
 
   const [formData, setFormData] = useState({
@@ -49,6 +49,7 @@ export default function Home(
         frameLogo={frameLogo}
         bodyTxt={bodyTxt}
         bodyPadding={bodyPadding}
+        brandColor={brandColor}
       />
       <SkillsIcons 
         highLightTxtOne={highLightTxtOne}
@@ -64,6 +65,7 @@ export default function Home(
         highLightTxt={highLightTxt}
         bodyPadding={bodyPadding}
         toggle={toggle}
+        brandColor={brandColor}
       />
       <HomeWork
         data={data}
@@ -77,6 +79,7 @@ export default function Home(
         bodyPadding={bodyPadding}
         buttonStyle={buttonStyle}
         theme={theme}
+        brandColor={brandColor}
         
       />
       <Testimonials

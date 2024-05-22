@@ -55,7 +55,7 @@ export default function Header(
           <path 
             d="M90.3492 11L67.2328 131M90.3492 41L171 
             71L73.0119 101M44.1164 41L10.5 71L44.1164 101" 
-            stroke="#2b7f4f" 
+            stroke={`${theme === 'light' ? '#2b7f4f' : '#06C156'}`} 
             strokeWidth="21" 
             strokeLinecap="round" 
             strokeLinejoin="round"/>
