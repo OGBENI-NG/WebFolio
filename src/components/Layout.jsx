@@ -23,7 +23,7 @@ export default function Layout({themeColor, borderColor, data, bodyPadding,
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 70)
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 50)
       setPrevScrollPos(currentScrollPos)
     }
 
