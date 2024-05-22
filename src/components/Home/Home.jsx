@@ -91,6 +91,7 @@ export default function Home(
         layoutTheme={layoutTheme}
         themeColor={themeColor}
         bodyTxt={bodyTxt}
+        brandColor={brandColor}
       />
       
       <ContactForm

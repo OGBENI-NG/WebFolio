@@ -1,17 +1,18 @@
 import React from 'react'
 
-export default function Testimonials({data, layoutTheme, theme, bodyPadding, highLightTxt, highLightTxtOne}) {
+export default function Testimonials({data, layoutTheme, theme, bodyPadding, 
+  highLightTxt, highLightTxtOne, brandColor}) {
 
   const testimonialsData = data.testimonials.map((item, index) => (
     <div 
       key={item.id}
-      className={`cursor-pointer px-4 py-5 md:p-8 rounded-md mt-7 md:mt-8 
+      className={`group cursor-pointer px-4 py-5 md:p-8 rounded-md mt-7 md:mt-8 
         flex flex-col gap-y-8 lg:gap-y-4 lg:m-0 lg:p-4 
         hover:text-lightest/80 transition-colors duration-300
         ${layoutTheme}  
         ${theme === 'light' 
           ? 'hover:bg-brand/80 text-mid'
-          :'hover:bg-brand/45 text-light/80'
+          :'hover:bg-brandDark/45 text-light/80'
         }`
       }
     >
@@ -27,12 +28,15 @@ export default function Testimonials({data, layoutTheme, theme, bodyPadding, hig
           <img 
             src={item.img} 
             alt={`${item.name}-pic`}
-            className='h-full w-full object-cover border-2 border-brand rounded-full' 
+            className={`h-full w-full object-cover border-2 border-brandDark rounded-full`} 
           />
         </div>
         <div>
-          <p className={`text-lg md:text-xl lg:text-lg font-bold
-          lg:-mb-1 ${theme === 'light' ? 'text-darkest/80' :'text-lightest'}`}>{item.name}</p>
+          <p className={`group-hover:text-blue-500 text-lg md:text-xl lg:text-lg font-bold
+          lg:-mb-1 
+          ${theme === 'light' 
+            ? 'text-darkest/80 group-hover:text-darkest' 
+            :'text-lightest/80 group-hover:text-lightest'}`}>{item.name}</p>
           <p className='text-base lg:text-[14px] font-semibold'>{item.position}</p>
         </div>
       </div>

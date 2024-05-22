@@ -165,21 +165,21 @@ const data = {
                   name: 'Andrew Jones', 
                   position: 'Product Developer',
                   img: andrew,
-                  review: `Ut non aliqua adipisicing deserunt sint incididunt. Cupidatat anim sit officia eu non irure pariatur. In qui aliquip laborum quis officia excepteur anim aliqua esse est sunt dolore eu reprehenderit.`
+                  review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, eveniet minima placeat velit voluptas ipsa in voluptate sed enim.`
             },
             {
                   id: generateUniqueId(), 
                   name: 'Adam Smith', 
                   position: 'Web Designer',
                   img: adam,
-                  review: `Ut non aliqua adipisicing deserunt sint incididunt. Cupidatat anim sit officia eu non irure pariatur. In qui aliquip laborum quis officia excepteur anim aliqua esse est sunt dolore eu reprehenderit.`
+                  review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, eveniet minima placeat velit voluptas ipsa in voluptate sed enim.`
             },
             {
                   id: generateUniqueId(), 
                   name: 'Lauren White', 
                   position: 'Product Manager',
                   img: beth,
-                  review: `Ut non aliqua adipisicing deserunt sint incididunt. Cupidatat anim sit officia eu non irure pariatur. In qui aliquip laborum quis officia excepteur anim aliqua esse est sunt dolore eu reprehenderit.`
+                  review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, eveniet minima placeat velit voluptas ipsa in voluptate sed enim.`
             },
       ],
       contactLinkEl: [
