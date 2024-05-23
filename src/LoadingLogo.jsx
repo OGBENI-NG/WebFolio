@@ -4,7 +4,7 @@ export default function LoadingLogo({className}) {
   return (
     <div className={className}>
       <svg 
-        className='w-[280px] h-[220px] animate-logoAnim' 
+        className='animate-loading' 
         viewBox="0 0 311 256" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"

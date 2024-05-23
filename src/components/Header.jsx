@@ -10,7 +10,7 @@ export default function Header(
   {themeColor, toggleTheme, 
     headerNavbarTheme, data,
     visible, appTheme, theme, borderColor,
-    toggle, handleToggleNavbar
+    toggle, handleToggleNavbar, brandColor
   }
   ) {
 
@@ -77,7 +77,7 @@ export default function Header(
           title='toggle'
           onClick={handleToggleNavbar}
           className={`${appTheme} shadow-[0px_0px_3px_2px_#2b7f4f]
-            text-brand rounded-full hidden md:block 
+            ${brandColor} rounded-full hidden md:block 
             md:absolute md:-right-5 md:p-[8px] lg:p-[5px] lg:-right-[15px]
             xl:p-[5px]`
           } 

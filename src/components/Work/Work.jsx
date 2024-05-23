@@ -16,8 +16,8 @@ export default function Work({
   useEffect(() => {
     const fetchData = async () => {
       // Simulating fetching data asynchronously from your system
-      await new Promise((resolve) => setTimeout(resolve, 3500)); // Simulate delay
-      const fetchedData = data.workEl; // Replace with your actual data fetching logic
+      await new Promise((resolve) => setTimeout(resolve, 4000)); // Simulate delay
+      const fetchedData = data.workEl; 
       setLoadData(fetchedData);
     };
 
@@ -43,8 +43,8 @@ export default function Work({
   return (
     <section className={`py-[110px] pb-[130px]`}>
       <div className={`${bodyPadding} 
-        ${!loadData && `fixed inset-0 animate-none
-           ${theme === 'light' ? 'bg-light':'bg-darkest'} z-10`}`}>
+        ${!loadData && `fixed inset-0
+           ${theme === 'light' ? 'bg-lightest :bg-light/20':'bg-darkest'} z-10`}`}>
         {loadData !== null ? ( // Check if data has been loaded
           <div className={``}>
             <h1 className={`${highLightTxt} text-center pb-5 lg:pb-8`}>

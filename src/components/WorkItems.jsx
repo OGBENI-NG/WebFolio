@@ -40,9 +40,9 @@ export default function WorkItem({ item, layoutTheme, themeColor,
           ${openId === item.id ? 'animate-fadeInDown lg:block' : 'hidden lg:block'} overflow-hidden`}
         >
           <div className='p-4 md:p-6 lg:pt-0 lg:pb-4 lg:px-6'>
-            <p className={`font-semibold text-[15px] md:text-[24px]
+            <p className={`text-base md:text-[24px]
               md:leading-[1.4] tracking-normal md:tracking-wide
-              lg:text-[13px] lg:leading-[1.6] xl:text-[12px]
+              lg:text-[14px] lg:leading-[1.6] xl:text-[13px]
               ${bodyTxt}`}
             >
               {item.description}

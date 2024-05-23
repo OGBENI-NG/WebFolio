@@ -34,7 +34,7 @@ const data = {
             {
                   id: generateUniqueId(),
                   isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods...`,
                   name: 'Job listing',
                   type: "recent",
                   image: jobLister,
@@ -45,7 +45,7 @@ const data = {
             {
                   id: generateUniqueId(),
                   isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods...`,
                   name: 'Shortly-URL',
                   liveApp: 'https://moonlit-twilight-1225c8.netlify.app/',
                   image: shortlyUrl, 
@@ -56,7 +56,7 @@ const data = {
             {
                   id: generateUniqueId(),
                   isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods...`,
                   name: 'Product page',
                   type: "recent",
                   image: productPageImg,
@@ -67,7 +67,7 @@ const data = {
             {
                   id: generateUniqueId(),
                   isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods...`,
                   name: 'Age calculator',
                   type: "web",
                   image: ageCalculatorImg,
@@ -78,7 +78,7 @@ const data = {
             {
                   id: generateUniqueId(),
                   isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods...`,
                   name: 'Landing-page',
                   liveApp: 'https://velvety-brioche-957d1f.netlify.app/',
                   image: landingPageImg,
@@ -89,7 +89,7 @@ const data = {
             {
                   id: generateUniqueId(),
                   isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods...`,
                   name: 'Dyn calculator',
                   type: "web",
                   image: calculator,
@@ -101,7 +101,7 @@ const data = {
             {
                   id: generateUniqueId(),
                   isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods...`,
                   name: 'Todo main',
                   type: "web",
                   image: todo,
@@ -112,7 +112,7 @@ const data = {
             {
                   id: generateUniqueId(),
                   isShow: false,
-                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods that enable me to create interfaces that engage users effectively.`,
+                  description: `Being a learner in the field of front-end development motivates me to stay abreast of the trends. I enjoy exploring tools and methods...`,
                   name: 'comment section',
                   type: "web",
                   image: commentSection,

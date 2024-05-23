@@ -66,7 +66,7 @@ export default function App() {
 
   return(
     <div className={`antialiased overflow-x-hidden min-h-screen 
-     !scroll-smooth font-OpenSan   ${appTheme}`}
+     !scroll-smooth font-OpenSan  ${appTheme}`}
     >
       <Router>
         <ScrollToTop/>
@@ -158,6 +158,7 @@ export default function App() {
                   borderColor={borderColor}
                   bodyPadding={bodyPadding}
                   formTheme={formTheme}
+                  brandColor={brandColor}
                   
                 />
               }

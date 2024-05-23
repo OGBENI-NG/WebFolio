@@ -10,6 +10,7 @@ export default {
       },
       screens: {
         'xl': {'min': '1200px', 'max': '1280px'},
+        'xlg': {'min': '1290px', 'max': '1536px'}
         // => @media (min-width: 1280px and max-width: 1535px) { ... }
       },
       colors: {
@@ -28,7 +29,7 @@ export default {
         fadeInLeft: "fadeInLeft 1s ease 0s 1 normal forwards",
         fadeInTop: "fadeInTop 1s ease 0s 1 normal forwards",
         fadeInClose: "fadeInClose 1s ease 0s 1 normal forwards",
-        logoAnim: "logoAnim 2s ease-in-out infinite",
+        loading: "loading 2s linear infinite",
       },
       keyframes: {
         fadeInDown: {
@@ -76,21 +77,31 @@ export default {
             opacity: 0,
           },
         },
-        logoAnim: {
+        loading: {
           "0%": {
             opacity: 0.5,
-            width: "30px", // Initial width
+            width: "80px", // Initial width
             transform: "rotate(0deg)", // Initial rotation
+          },
+          "25%": {
+            opacity: 0.8,
+            width: "20px", // Intermediate width
+            transform: "rotate(90deg)", // Intermediate rotation
           },
           "50%": {
             opacity: 1,
-            width: "100px", // Intermediate width
-            transform: "rotate(180deg)", // Intermediate rotation
+            width: "80px", // Intermediate width
+            transform: "rotate(1800deg)", // Intermediate rotation
+          },
+          "75%": {
+            opacity: 0.8,
+            width: "20px", // Intermediate width
+            transform: "rotate(-270deg)", // Intermediate rotation
           },
           "100%": {
             opacity: 0.5,
-            width: "30px", // Final width (same as initial)
-            transform: "rotate(360deg)", // Final rotation (360 degrees)
+            width: "80px", // Final width (same as initial)
+            transform: "rotate(-360deg)", // Final rotation (360 degrees)
           },
         },
       },

@@ -14,6 +14,7 @@ export default function Contact(
     bodyPadding,
     formTheme,
     borderColor,
+    brandColor
 
   }
 ) {
@@ -54,7 +55,7 @@ export default function Contact(
   return (
     <section className={`py-[125px] lg:pt-[80px] text-center ${bodyPadding}`}>
       <div className='xl:px-[80px]'>
-        <h1 className='text-[30px] md:text-[40px] lg:text-3xl font-bold text-brand'>Contact us</h1>
+        <h1 className={`text-[30px] md:text-[40px] lg:text-3xl font-bold ${brandColor}`}>Contact us</h1>
         <p className={`${bodyTxt} md:text-2xl lg:text-base leading-snug 
           font-medium w-[230px] md:w-[400px] lg:w-[200px] pt-4 m-auto`}>
           Any question or remarks? Just write us a message!

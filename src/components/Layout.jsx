@@ -59,6 +59,7 @@ export default function Layout({themeColor, borderColor, data, bodyPadding,
             appTheme={appTheme}
             data={data}
             borderColor={borderColor}
+            brandColor={brandColor}
           />
           <main className={`overflow-hidden`}>
             <Outlet/>
