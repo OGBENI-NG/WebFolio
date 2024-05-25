@@ -36,7 +36,7 @@ export default function App() {
     ? "block text-darkest/80" 
     : "block text-lightest/80";
 
-  const appTheme = theme === "light" ? 'bg-bodyBg' : 'bg-darkest';
+  const appTheme = theme === "light" ? 'bg-light/20' : 'bg-darkest';
 
   const brandColor = theme === 'light' ? 'text-brand' : 'text-brandDark';
 

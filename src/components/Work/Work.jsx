@@ -94,7 +94,7 @@ export default function Work({
 
   return (
     <section className={`py-[110px] pb-[130px]
-      ${theme === 'light' ? 'bg-lightest :bg-light/20':'bg-darkest'}`}>
+      ${theme === 'light' ? 'bg-light/30':'bg-darkest'}`}>
       <div className={`${bodyPadding}`}
       >
         {isLoading ? (

@@ -59,10 +59,12 @@ export default function NavBar({
       font-extrabold lg:justify-start
       md:py-3 lg:py-2
       ${isActive
-        ? `before:content-[''] text-brand
-          ${theme === 'light' ? ' md:bg-dark/20' : 'text-brandDark md:bg-lightest/10'}
+        ? `before:content-[''] 
+          ${theme === 'light' ? 'text-brand md:bg-dark/20' : 'text-brandDark md:bg-lightest/10'}
             before:w-[60px] md:before:content-none
-            before:h-[3.5px] before:absolute before:bg-brand before:-top-[1.1px]
+            before:h-[4px] before:absolute 
+            ${theme === 'light' ? 'before:bg-brand' : 'before:bg-brandDark'}
+             before:bg-brand before:-top-[1.1px]
             before:transition-[1s]`
         : `md:gap-x-0 before:w-[0px] ${theme === 'light' ? 'text-dark' : 'text-lightest'}`
       }`;
