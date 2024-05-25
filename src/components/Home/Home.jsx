@@ -12,7 +12,7 @@ import Testimonials from './Testimonial'
 
 export default function Home(
     {theme, openId, toggleDescription, buttonStyle, toggle,
-    themeColor, layoutTheme, highLightTxtOne, bodyPadding, borderColor,
+    themeColor, layoutTheme, highLightTxtOne, bodyPadding, borderColor, firebaseData,
     bodyTxt, highLightTxt, borderStyle, data, inputFields, formTheme, brandColor}  
   ) {
 
@@ -42,7 +42,6 @@ export default function Home(
 
   return (
     <main>
-      
       <Intro 
         theme={theme}
         themeColor={themeColor}
@@ -80,6 +79,7 @@ export default function Home(
         buttonStyle={buttonStyle}
         theme={theme}
         brandColor={brandColor}
+        firebaseData={firebaseData}
         
       />
       <Testimonials

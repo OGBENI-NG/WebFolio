@@ -13,8 +13,8 @@ export default function WorkItem({ item, layoutTheme, themeColor,
         <div className="w-full h-full ">
           <img 
             className="w-full h-full object-cover" 
-            src={item.image}
-            alt={item.alt} />
+            src={item.imageUrl}
+            alt={item.name} />
         </div>
         <div className={`flex items-center p-5 md:p-6 text-xl 
           md:text-2xl lg:px-6 lg:pb-2 lg:pt-3

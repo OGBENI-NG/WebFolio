@@ -17,11 +17,12 @@ export default function SelectedWork({
   highLightTxt,
   bodyPadding,
   theme,
-  brandColor
+  brandColor,
+  firebaseData
 
   }) {
 
-  const SelectedWorkEl = data.workEl.slice(2, 5);
+  const SelectedWorkEl = firebaseData.slice(2, 5);
 
   return (
     <div className={`mt-[20px] lg:overflow-hidden ${bodyPadding}`}>
