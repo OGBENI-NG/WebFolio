@@ -10,7 +10,7 @@ export default function Testimonials({data, layoutTheme, theme, bodyPadding,
         rounded-lg mt-7 md:mt-8 lg:hover:translate-y-1 transition-[1s]
         flex flex-col gap-y-8 lg:gap-y-4 lg:m-0 lg:p-4 
         hover:text-lightest/80 
-        ${index > 0 && ` before:absolute before:content-[''] before:bg-brand/60 
+        ${index > 0 && ` before:absolute before:content-[''] before:bg-brandDark/50 
         before:w-[15px] before:h-[28px] md:before:h-[32px] md:before:-top-[32px]
          before:-top-[28px] before:left-0 before:right-0 before:m-auto
          lg:before:-left-[20px] lg:before:top-0

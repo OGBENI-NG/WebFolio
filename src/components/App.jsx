@@ -41,24 +41,28 @@ export default function App() {
   const brandColor = theme === 'light' ? 'text-brand' : 'text-brandDark';
 
   const layoutTheme = theme === 'light' 
-    ? 'bg-lightest/90' 
-    : 'bg-dark/45';
+    ? 'bg-lightest' 
+    : 'bg-dark/35';
 
   // Text-related styles
   const bodyTxt = theme === "light" ? "text-mid" : "text-light/80";
 
-  const highLightTxt = `${brandColor} text-brand text-2xl md:text-[32px] lg:text-3xl font-semibold text-center`;
+  const highLightTxt = `${brandColor} text-brand text-2xl md:text-[32px] 
+    lg:text-3xl font-semibold text-center`
+  ;
 
   const highLightTxtOne = `
     m-auto block uppercase
     ${theme === 'light' ? 'text-dark' : 'text-light'}
     leading-normal md:leading-loose mr-auto text-[18px]
-    lg:leading-loose md:text-2xl lg:text-lg font-semibold`;
+    lg:leading-loose md:text-2xl lg:text-lg font-semibold`
+  ;
 
   // Border color style
   const borderColor = theme === 'light'
     ? 'border-slate-900/10'
-    : 'border-slate-400/30';
+    : 'border-slate-400/30'
+  ;
 
   // Input fields for the contact form
   const inputFields = [

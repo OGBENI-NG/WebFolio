@@ -23,8 +23,7 @@ export const ThemeProvider = ({ children }) => {
   //toggle navbar 
   const handleToggleNavbar = () => {
     setToggle(prevToggle => !prevToggle)
-  }
-
+  } 
 
   //toggle switch between dark and light
   const toggleTheme = () => {
