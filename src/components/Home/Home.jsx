@@ -16,6 +16,8 @@ export default function Home(
     bodyTxt, highLightTxt, borderStyle, data, inputFields, formTheme, brandColor}  
   ) {
 
+    
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',

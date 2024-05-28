@@ -1,6 +1,6 @@
 import React from 'react'
-import SocialIcons from './components/SocialIcons';
-import ContactInfo from './components/ContactInfo';
+import SocialIcons from './SocialIcons';
+import ContactInfo from './ContactInfo';
 
 export default function Footer({data, theme, bodyTxt, bodyPadding, brandColor}) {
 

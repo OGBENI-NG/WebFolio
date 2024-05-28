@@ -7,9 +7,9 @@ import About from './About/About';
 import Contact from './Contact/Contact';
 import PageNotFound from './PageNotFound';
 import data from '../data';
-import ThemeContext from '../UseThemeContext';
 import ScrollToTop from './ScrollPosition';
 import fetchDataWithImages from '../fetchData';
+import ThemeContext from './UseThemeContext'
 
 export default function App() {
   // Destructuring the theme context
@@ -20,16 +20,18 @@ export default function App() {
 
   // State to hold the fetched data
   const [firebaseData, setFirebaseData] = useState([]);
-
+  
   // Fetch data from Firebase on component mount
   useEffect(() => {
     const fetchData = async () => {
       const fetchedData = await fetchDataWithImages();
       setFirebaseData(fetchedData);
     };
-
+    
     fetchData();
   }, []);
+  
+ 
 
   // Theme-related styles
   const themeColor = theme === "light" 
@@ -124,6 +126,7 @@ export default function App() {
                   formTheme={formTheme}
                   brandColor={brandColor}
                   firebaseData={firebaseData} 
+                  
                 />
               }
             />
@@ -142,6 +145,8 @@ export default function App() {
                   data={data}
                   bodyPadding={bodyPadding}
                   brandColor={brandColor}
+                  
+
                 />
               }
             />
@@ -161,6 +166,7 @@ export default function App() {
                   bodyPadding={bodyPadding}
                   brandColor={brandColor}
                   firebaseData={firebaseData}
+                  
                 />
               }
             />

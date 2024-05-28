@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import contactIllustrator from '../asset/img/contact-us.svg'; // Import the contact illustration image
 
 import CustomButton from './CustomButton'; // Import the custom button component
@@ -17,6 +17,17 @@ export default function ContactForm({
   bodyPadding, // Padding for the form body
   contactClass // Additional CSS classes for the contact section
 }) {
+
+  const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = contactIllustrator;
+    img.onload = () => {
+      setImageDimensions({ width: img.width, height: img.height });
+    };
+  }, []);
+
   // Determine the label color based on the theme
   const labelColor = theme === 'light' 
     ? 'bg-lightest text-gray-700' 
@@ -55,6 +66,8 @@ export default function ContactForm({
           src={contactIllustrator} 
           alt="illustrator"
           className={`lg:w-[380px] h-auto lg:pr-10 pb-4 lg:pb-0`}
+          width={imageDimensions.width}
+          height={imageDimensions.height}
         />
         
         <div className={`flex flex-col gap-8 md:gap-y-12 pt-2 mt-3 lg:gap-y-6 lg:pt-0 lg:mt-0 lg:border-l-[1.5px] lg:pl-[50px] ${borderColor}`}>

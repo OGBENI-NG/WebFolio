@@ -1,8 +1,8 @@
-import React,{useContext, useState, useEffect} from 'react'
+import React,{ useState, useEffect} from 'react'
 import { Outlet } from "react-router-dom"
 import Header from './Header'
-import Footer from '../Footer'
-import LogoAnim from '../LoadingLogo'
+import Footer from './Footer'
+import LogoAnim from './LoadingLogo'
 
 
 export default function Layout({themeColor, borderColor, data, bodyPadding,
@@ -16,7 +16,7 @@ export default function Layout({themeColor, borderColor, data, bodyPadding,
     setIsLoading(true)
     setTimeout(() => {
       setIsLoading(false)
-    }, 5000)
+    }, 4000)
   }, [])
 
 
@@ -34,16 +34,20 @@ export default function Layout({themeColor, borderColor, data, bodyPadding,
   
   
   const headerNavbarTheme = `transition-color ${borderColor}
-    ${theme === 'light' ? 'bg-lightest ' : 'bg-darkest/95'}` 
+    ${theme === 'light' ? 'bg-lightest ' : 'bg-darkest'}` 
   ;
 
   return (
     <div>
       {isLoading ? (
-        <div className={`grid place-content-center h-screen m-auto`}>
-          <h1 className={`${themeColor} font-bold text-5xl md:text-8xl
-           text-center mt-auto font-Solway`}>welcome</h1>
-         <LogoAnim className={`m-auto h-[400px] pt-[120px] md:pt-[180px]`}/>
+        <div className={`${themeColor} grid place-content-center h-screen m-auto text-center`}>
+          <h1 className={` font-bold text-5xl md:text-8xl
+           text-center mt-auto font-Solway pt-10`}>welcome</h1>
+           <p className='px-6 pt-12 md:px-16 lg:pt-6 text-lg md:text-2xl 
+            leading-normal'>
+            I'm excited to share my projects with you. Let's 
+            build something incredible together!</p>
+        <LogoAnim className={`m-auto h-[400px] pt-[120px] md:pt-[180px]`}/>
         </div>
         
       ) :(

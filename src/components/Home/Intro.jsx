@@ -3,6 +3,17 @@ import CustomSVG from '../CustomSvg';
 import logoIllustration from '../../asset/img/intro-illtra.svg';
 
 export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandColor }) {
+
+  const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = logoIllustration;
+    img.onload = () => {
+      setImageDimensions({ width: img.width, height: img.height });
+    };
+  }, []);
+
   // Array of texts to display with corresponding colors
   const textsEl = [
     { text: 'Frontend Engineer', color: 'text-pink-500' },
@@ -86,11 +97,13 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandCo
         </div>
         
         {/* Image Section */}
-        <div className='-order-1'>
+        <div className='-order-1  w-full max-w-[500px] h-auto aspect-auto'>
           <img
             src={logoIllustration}
+            width={imageDimensions.width}
+            height={imageDimensions.height}
             alt='illustration'
-            className={`pt-8 md:pt-12 lg:pt-0 w-full h-auto xl:max-w-[500px]`}
+            className={`pt-8 md:pt-12 lg:pt-0  h-full w-full `}
           />
         </div>
       </section>

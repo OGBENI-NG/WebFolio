@@ -3,7 +3,7 @@ import { FaChevronRight } from 'react-icons/fa'
 import { LuSun } from "react-icons/lu"
 import { HiMoon } from "react-icons/hi2"
 import NavBar from './NavBar'
-import ToggleThemeBtn from '../ToggleThemeBtn'
+import ToggleThemeBtn from './ToggleThemeBtn'
 
 
 export default function Header(
@@ -16,9 +16,9 @@ export default function Header(
 
   const switchIcon = theme === "light" 
     ?
-      <HiMoon className='w-full h-full text-dark'/>
+      <HiMoon className='text-dark'/>
     : 
-      <LuSun className='w-full h-full text-light'/> 
+      <LuSun className='text-light'/> 
   ;
 
   const toggleNavWidth = ` 
@@ -70,7 +70,7 @@ export default function Header(
         </h1>
         <ToggleThemeBtn 
           toggleTheme={toggleTheme}
-          className='w-[35px] h-[35px] ml-auto md:hidden'>
+          className=' ml-auto text-3xl md:hidden'>
           {switchIcon}
         </ToggleThemeBtn>
         <button 
