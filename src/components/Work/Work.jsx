@@ -26,12 +26,12 @@ export default function Work({
   }, []);
 
   return (
-    <section className={`py-[110px] pb-[130px]
-      ${theme === 'light' ? 'bg-light/30':'bg-darkest'}`}>
+    <section className={`py-[110px] pb-[130px]`}>
       <div className={`${bodyPadding}`}
       >
         {isLoading ? (
-          <div className={`flex justify-center items-center m-auto w-[300px] h-[200px]`}>
+          <div className={`flex justify-center items-center m-auto w-[300px] h-[200px]
+          xl:h-[250px]`}>
             <LoadingLogo 
               className=" mt-[75px] md:mt-0" />
           </div>

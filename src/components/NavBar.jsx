@@ -54,13 +54,13 @@ export default function NavBar({
       : `/${item.name.toLowerCase()}`);
     // Navbar styles
     const navbarStyle = `flex flex-col md:flex-row
-      ${theme === 'light' ? 'md:text-dark md:hover:bg-dark/20' : 'md:text-lightest md:hover:bg-lightest/10'}
+      ${theme === 'light' ? 'md:text-dark md:hover:bg-dark/20' : 'md:text-lightest md:hover:bg-dark/65'}
       items-center font-OpenSan md:rounded-[8px]
       font-extrabold lg:justify-start
       md:py-3 lg:py-2
       ${isActive
         ? `before:content-[''] 
-          ${theme === 'light' ? 'text-brand md:bg-dark/20' : 'text-brandDark md:bg-lightest/10'}
+          ${theme === 'light' ? 'text-brand md:bg-dark/20' : 'text-brandDark md:bg-dark/65'}
             before:w-[60px] md:before:content-none
             before:h-[4px] before:absolute 
             ${theme === 'light' ? 'before:bg-brand' : 'before:bg-brandDark'}
@@ -132,8 +132,8 @@ export default function NavBar({
             lg:rounded-[8px] lg:before:rounded-[6px]
             xl:before:w-[60px]
             ${theme === 'light'
-              ? 'bg-light/50 text-darkest before:bg-lightest'
-              : `bg-dark/50 text-lightest before:bg-darkest 
+              ? 'bg-light/65 text-darkest before:bg-lightest'
+              : `bg-dark/65 text-lightest before:bg-darkest 
                 before:ml-[96px] lg:before:ml-[69.5px] lg:before:w-[68px] xl:before:ml-[66.2px]`
             }`}>
             <div

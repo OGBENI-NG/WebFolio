@@ -44,10 +44,10 @@ export default function App() {
 
   const layoutTheme = theme === 'light' 
     ? 'bg-lightest' 
-    : 'bg-dark/35';
+    : 'bg-dark/55';
 
   // Text-related styles
-  const bodyTxt = theme === "light" ? "text-mid" : "text-light/80";
+  const bodyTxt = theme === "light" ? "text-mid/90" : "text-light/85";
 
   const highLightTxt = `${brandColor} text-brand text-2xl md:text-[32px] 
     lg:text-3xl font-semibold text-center`

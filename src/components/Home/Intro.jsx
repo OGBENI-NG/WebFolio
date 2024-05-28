@@ -102,6 +102,8 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandCo
             src={logoIllustration}
             width={imageDimensions.width}
             height={imageDimensions.height}
+            sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+            loading="lazy"
             alt='illustration'
             className={`pt-8 md:pt-12 lg:pt-0  h-full w-full `}
           />

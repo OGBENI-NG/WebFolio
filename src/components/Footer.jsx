@@ -5,7 +5,7 @@ import ContactInfo from './ContactInfo';
 export default function Footer({data, theme, bodyTxt, bodyPadding, brandColor}) {
 
   const footerTheme = ` 
-  ${theme === "light"? "bg-light/25": "bg-dark/30"}` 
+  ${theme === "light"? "bg-light/50": "bg-dark/55"}` 
 ;
 
   //fetch links icon from 
@@ -15,7 +15,7 @@ export default function Footer({data, theme, bodyTxt, bodyPadding, brandColor}) 
   
   return (
     <footer className={`pt-[50px] ${brandColor} pb-[120px] md:py-[140px]
-      ${footerTheme} ${bodyPadding} m-auto lg:py-[100px]`}>
+      ${footerTheme} ${bodyPadding} m-auto lg:py-[80px]`}>
       <div className='lg:grid lg:grid-cols-3 lg:place-items-start lg:gap-12'>
         <div className='lg:flex lg:flex-col gap-12 leading-none'>
           <h1 
