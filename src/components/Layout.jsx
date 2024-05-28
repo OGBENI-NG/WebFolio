@@ -20,7 +20,7 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
 
     const welcomeTimeout = setTimeout(() => {
       setShowWelcome(true);
-    }, 100); // 1 second delay for the welcome text
+    }, 100); // 100mille second delay for the welcome text
 
     const textTimeout = setTimeout(() => {
       setShowText(true);
@@ -32,7 +32,7 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
 
     const endLoadingTimeout = setTimeout(() => {
       setIsLoading(false);
-    }, 4000); // 4 seconds total delay for ending the loading screen
+    }, 4800); // 4.5 seconds total delay for ending the loading screen
 
     return () => {
       clearTimeout(welcomeTimeout);
@@ -58,16 +58,21 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
   return (
     <div>
       {isLoading ? (
-        <div className={`${themeColor} transition-all duration-1000   text-center`}>
-          <h1 className={`font-bold text-5xl md:text-8xl text-center mt-auto font-Solway pt-10 transition-opacity duration-1000 ${showWelcome ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`${themeColor} transition-opacity duration-1000 
+        ${!isLoading ? 'opacity-0' : 'opacity-100'} py-[130px] lg:py-[80px] text-center`}>
+          <h1 className={`font-bold text-5xl md:text-8xl text-center mt-auto font-Solway transition-opacity duration-1000 ${showWelcome ? 'opacity-100' : 'opacity-0'}`}>
             welcome
           </h1>
-          <p className={`px-10 pt-12 md:px-20 lg:pt-6 text-lg md:text-2xl leading-relaxed lg:leading-loose transition-opacity duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
+          <p className={`px-10 pt-8 md:pt-10 md:px-24 lg:pt-6 text-xl md:text-3xl lg:text-xl
+             leading-relaxed md:leading-relaxed transition-opacity duration-1000 
+
+             ${showText ? 'opacity-100' : 'opacity-0'}`}>
             I'm excited to share my projects with you. Let's build something incredible together!
           </p>
           {showLoading && (
              <div className='grid place-content-center m-auto overflow-hidden'>
-              <LogoAnim className={`mt-[80px] lg:mt-[30px] pt-[120px] md:pt-[180px] transition-opacity duration-1000 ${showLoading ? 'opacity-100' : 'opacity-0'}`} />
+              <LogoAnim className={`mt-[10px] pt-[140px] md:pt-[180px] lg:pt-[150px]
+              transition-all duration-1000  ${showLoading ? 'opacity-100' : 'opacity-0'}`} />
              </div>
           )}
         </div>
