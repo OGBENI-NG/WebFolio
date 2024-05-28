@@ -34,7 +34,7 @@ export default function Layout({themeColor, borderColor, data, bodyPadding,
   
   
   const headerNavbarTheme = `transition-color ${borderColor}
-    ${theme === 'light' ? 'bg-lightest ' : 'bg-darkest'}` 
+    ${theme === 'light' ? 'bg-lightest' : 'bg-darkest'}` 
   ;
 
   return (
@@ -44,7 +44,7 @@ export default function Layout({themeColor, borderColor, data, bodyPadding,
           <h1 className={` font-bold text-5xl md:text-8xl
            text-center mt-auto font-Solway pt-10`}>welcome</h1>
            <p className='px-6 pt-12 md:px-16 lg:pt-6 text-lg md:text-2xl 
-            leading-normal'>
+            leading-normal lg:leading-loose'>
             I'm excited to share my projects with you. Let's 
             build something incredible together!</p>
         <LogoAnim className={`m-auto h-[400px] pt-[120px] md:pt-[180px]`}/>

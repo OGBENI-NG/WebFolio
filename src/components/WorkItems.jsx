@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaChevronDown, FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 
 export default function WorkItem({ item, layoutTheme, themeColor, className, bodyTxt, openId, toggleDescription, brandColor }) {
-  const [imageLoaded, setImageLoaded] = useState(false);
+  
 
   const linkIconsStyle = `text-[37px] md:text-[50px] lg:text-3xl xl:text-2xl`;
 
@@ -12,13 +12,11 @@ export default function WorkItem({ item, layoutTheme, themeColor, className, bod
       <section className={`overflow-hidden shadow-sm rounded-lg`}>
         <div className="w-full h-full">
           <img
-            className={`w-full h-full object-cover ${!imageLoaded ? 'hidden' : ''}`}
+            className={`w-full h-full object-cover`}
             src={item.imageUrl}
             alt={item.name}
             loading="lazy"
-            onLoad={() => setImageLoaded(true)}
           />
-          
         </div>
         <div className={`flex items-center p-5 md:p-6 text-xl md:text-2xl lg:px-6 lg:pb-2 lg:pt-3 ${layoutTheme} font-bold ${themeColor} lg:text-lg`}>
           <p>{item.name}</p>

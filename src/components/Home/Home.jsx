@@ -111,7 +111,7 @@ export default function Home(
         toggle={toggle}
         borderColor={borderColor}
         contactClass={`lg:w-[600px] lg:m-auto`}
-        className={`${theme === 'light' ? 'bg-lightest/40' : 'bg-darkest/40'}`}
+        className={`${theme === 'light' ? 'bg-lightest' : 'bg-darkest/15'}`}
         
       />
     </main>

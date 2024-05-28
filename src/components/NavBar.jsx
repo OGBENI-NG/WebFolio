@@ -132,7 +132,7 @@ export default function NavBar({
             lg:rounded-[8px] lg:before:rounded-[6px]
             xl:before:w-[60px]
             ${theme === 'light'
-              ? 'bg-light text-darkest before:bg-lightest'
+              ? 'bg-light/50 text-darkest before:bg-lightest'
               : `bg-dark/60 text-lightest before:bg-darkest 
                 before:ml-[96px] lg:before:ml-[69.5px] lg:before:w-[68px] xl:before:ml-[66.2px]`
             }`}>
