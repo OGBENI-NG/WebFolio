@@ -172,9 +172,9 @@ export default function NavBar({
           }`}>
           <SocialIcons
             icons={socialIcon}
-            className={`${theme === "light"
-              ? 'bg-darkest/10 text-darkest hover:bg-darkest/20'
-              : ' bg-lightest/10 text-lightest hover:bg-lightest/20'
+            className={`hover:bg-brandDark/50 ${theme === "light"
+              ? 'bg-dark/15 text-darkest'
+              : ' bg-dark/50 text-lightest '
             } p-3 rounded-full`}
             iconSize={`md:text-xl lg:text-lg`}
           />
