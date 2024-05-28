@@ -32,7 +32,7 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
 
     const endLoadingTimeout = setTimeout(() => {
       setIsLoading(false);
-    }, 5000); // 4.5 seconds total delay for ending the loading screen
+    }, 5000); // 5 seconds total delay for ending the loading screen
 
     return () => {
       clearTimeout(welcomeTimeout);
@@ -58,9 +58,9 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
   return (
     <div>
       {isLoading ? (
-        <div className={`${themeColor} overflow-hidden transition-opacity duration-1000 
+        <div className={`overflow-hidden transition-opacity duration-1000 
         ${!isLoading ? 'opacity-0' : 'opacity-100'} py-[100px] lg:py-[80px] text-center`}>
-          <h1 className={`font-bold text-5xl md:text-8xl text-center mt-auto font-Solway transition-opacity duration-1000 ${showWelcome ? 'opacity-100' : 'opacity-0'}`}>
+          <h1 className={`font-bold text-5xl md:text-8xl text-center mt-auto font-Solway transition-opacity duration-1000 ${themeColor} ${showWelcome ? 'opacity-100' : 'opacity-0'}`}>
             welcome
           </h1>
           <p className={`px-10 pt-8 md:pt-10 md:px-24 lg:pt-6 text-xl md:text-3xl lg:text-xl

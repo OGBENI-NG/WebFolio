@@ -80,11 +80,11 @@ export default function Contact(
                 font-semibold flex flex-col items-center gap-1 md:gap-0 lg:flex-row lg:gap-[3px]`}
               />
             </div>
-            <div className='flex items-center justify-center pt-4 gap-4 md:gap-6 lg:gap-8'>
+            <div className='flex items-center justify-center pt-5 gap-4 md:gap-6 lg:gap-8'>
               {/* social icon component in use in contact route */}
               <SocialIcons 
                 icons={socialIconEl}
-                iconSize={`md:text-xl lg:text-xl`}
+                iconSize={`text-[20px] md:text-xl lg:text-xl`}
                 className={`
                   ${theme === "light" 
                     ? 'bg-darkest/10 text-darkest hover:bg-darkest/20' 

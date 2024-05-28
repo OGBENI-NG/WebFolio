@@ -5,7 +5,7 @@ import ContactInfo from './ContactInfo';
 export default function Footer({data, theme, bodyTxt, bodyPadding, brandColor}) {
 
   const footerTheme = ` 
-  ${theme === "light"? "bg-light/50": "bg-dark/55"}` 
+  ${theme === "light"? "bg-light/55": "bg-dark/50"}` 
 ;
 
   //fetch links icon from 
