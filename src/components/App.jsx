@@ -68,10 +68,10 @@ export default function App() {
 
   // Input fields for the contact form
   const inputFields = [
-    { id: 'name', type: 'text', label: 'Name' },
-    { id: 'email', type: 'email', label: 'Email' },
-    { id: 'phone', type: 'tel', label: 'Phone' },
-    { id: 'message', type: 'textarea', label: 'Message' }
+    { id: 'name', type: 'text', label: 'Name*' },
+    { id: 'email', type: 'email', label: 'Email*' },
+    { id: 'phone', type: 'tel', label: 'Phone*' },
+    { id: 'message', type: 'textarea', label: 'Message*'}
   ];
 
   // Body padding style depending on toggle state

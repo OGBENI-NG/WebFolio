@@ -15,7 +15,7 @@ export default function ContactForm({
   className, // Additional CSS classes for the form
   showTitle = true, // Boolean to show or hide the title
   bodyPadding, // Padding for the form body
-  contactClass // Additional CSS classes for the contact section
+  contactClass, // Additional CSS classes for the contact section
 }) {
 
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
@@ -35,15 +35,15 @@ export default function ContactForm({
 
   // CSS styles for input elements
   const inputStyle = `${borderColor} ${labelColor}
-    w-full h-[55px] md:h-[70px] rounded-[8px] 
+    w-full h-[55px] md:h-[70px] rounded-[8px]
     outline:none text-lg md:text-2xl px-4 peer placeholder-transparent 
     focus:outline-none font-semibold transition-[.5s] 
     lg:text-base lg:h-[40px] border-[1px] lg:border-[1px]`;
 
   // CSS styles for label elements
-  const labelStyle = `${labelColor} absolute left-2 font-bold -top-6 
-    shadow md:-top-8
-    text-base md:text-[1.4rem] peer-placeholder-shown:top-[13px]
+  const labelStyle = `${labelColor} absolute left-2 font-bold -top-6
+    shadow md:-top-8 
+    text-base md:text-[1.4rem] peer-placeholder-shown:top-[12px]
     md:peer-placeholder-shown:top-[13px] peer-focus:shadow 
     transition-[.5s] peer-focus:-top-6 md:peer-focus:-top-8 
     py-1 px-2 md:py-2 md:px-3 rounded-[6px] peer-placeholder-shown:shadow-none 
@@ -51,7 +51,8 @@ export default function ContactForm({
     lg:peer-focus:-top-4`;
 
   return (
-    <form onSubmit={handleSubmit} className={`py-[100px] lg:py-[80px] ${className} ${bodyPadding} overflow-hidden`}>
+    <form onSubmit={handleSubmit} className={`py-[100px] lg:py-[80px] 
+      ${className} ${bodyPadding} overflow-hidden`}>
       <div className='pb-4 lg:pb-0'>
         {showTitle && ( // Render the title only if showTitle is true
           <h1 className={`${highLightTxt}`}>
@@ -71,7 +72,7 @@ export default function ContactForm({
         />
         
         <div className={`flex flex-col gap-8 md:gap-y-12 pt-2 mt-3 lg:gap-y-6 lg:pt-0 lg:mt-0 lg:border-l-[1.5px] lg:pl-[50px] ${borderColor}`}>
-          {inputFields.map((field) => (
+          {inputFields.map((field, index) => (
             <div className="relative lg:w-[295px]" key={field.id}>
               {/* Render input or textarea based on the field type */}
               {field.type !== 'textarea' ? (
@@ -97,7 +98,7 @@ export default function ContactForm({
                 />
               )}
               {/* Label for the input or textarea */}
-              <label className={`${labelStyle}`} htmlFor={field.id}>
+              <label className={`${labelStyle} `} htmlFor={field.id}>
                 {field.label}
               </label>
             </div>
