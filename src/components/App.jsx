@@ -44,7 +44,7 @@ export default function App() {
 
   const layoutTheme = theme === 'light' 
     ? 'bg-lightest' 
-    : 'bg-dark/55';
+    : 'bg-dark/40';
 
   // Text-related styles
   const bodyTxt = theme === "light" ? "text-mid/90" : "text-light/85";

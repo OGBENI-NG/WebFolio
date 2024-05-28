@@ -32,7 +32,7 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
 
     const endLoadingTimeout = setTimeout(() => {
       setIsLoading(false);
-    }, 4800); // 4.5 seconds total delay for ending the loading screen
+    }, 5000); // 4.5 seconds total delay for ending the loading screen
 
     return () => {
       clearTimeout(welcomeTimeout);
@@ -58,17 +58,17 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
   return (
     <div>
       {isLoading ? (
-        <div className={`${themeColor} transition-opacity duration-1000 
-        ${!isLoading ? 'opacity-0' : 'opacity-100'} py-[130px] lg:py-[80px] text-center`}>
+        <div className={`${themeColor} overflow-hidden transition-opacity duration-1000 
+        ${!isLoading ? 'opacity-0' : 'opacity-100'} py-[100px] lg:py-[80px] text-center`}>
           <h1 className={`font-bold text-5xl md:text-8xl text-center mt-auto font-Solway transition-opacity duration-1000 ${showWelcome ? 'opacity-100' : 'opacity-0'}`}>
             welcome
           </h1>
-          <p className={`px-10 pt-8 md:pt-10 md:px-24 lg:pt-6 text-2xl md:text-3xl lg:text-xl
+          <p className={`px-10 pt-8 md:pt-10 md:px-24 lg:pt-6 text-xl md:text-3xl lg:text-xl
              leading-relaxed md:leading-relaxed transition-opacity duration-1000 
              font-semibold
-             bg-gradient-to-r from-light via-green-600 to-indigo-400 inline-block text-transparent bg-clip-text
+             bg-gradient-to-r from-red-600 via-brandDark to-pink-600 inline-block text-transparent bg-clip-text
              ${showText ? 'opacity-100' : 'opacity-0'}`}>
-            I'm excited to share my projects with you. Let's build something incredible together!
+            I'm excited to share my projects with you.
           </p>
           {showLoading && (
              <div className='grid place-content-center m-auto overflow-hidden'>
