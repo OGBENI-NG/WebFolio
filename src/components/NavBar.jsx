@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import ToggleThemeBtn from './ToggleThemeBtn';
-import hero from '../asset/img/my-pics.png';
+import hero from '../asset/img/hero.png';
 import { IoLogOutOutline } from 'react-icons/io5';
 import CustomButton from './CustomButton';
 import SocialIcons from './SocialIcons';

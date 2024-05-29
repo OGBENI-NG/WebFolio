@@ -1,5 +1,5 @@
 import React from 'react'
-import myPics from '../../asset/img/my-pics.png'
+import myPics from '../../asset/img/hero.png'
 import CustomButton from '../CustomButton'
 import { NavLink } from 'react-router-dom'
 import WorkItem from '../WorkItems'

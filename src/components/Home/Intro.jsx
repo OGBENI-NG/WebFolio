@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import CustomSVG from '../CustomSvg';
 import logoIllustration from '../../asset/img/intro-illtra.svg';
+import CustomButton from '../CustomButton';
+import { NavLink } from 'react-router-dom';
 
 export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandColor }) {
 
@@ -89,11 +91,33 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandCo
           <p
             className={`text-xl md:text-[28px] md:w-[470px] 
             pt-6 md:pt-12 w-[315px] font-medium
-           ${bodyTxt} md:leading-[1.456] lg:text-[16px] lg:w-[340px] lg:pt-13`}
+           ${bodyTxt} md:leading-[1.456] lg:text-[16px] lg:w-[340px] lg:pt-6`}
           >
             I am a frontend developer with a passion for creating intuitive and
             user-friendly web interfaces.
           </p>
+        <div className='flex gap-6 items-center py-8 lg:py-4'>
+          <NavLink to="works">
+            <CustomButton theme={theme} className={`py-2 px-5 w-max `}>
+              See my works
+            </CustomButton>
+          </NavLink>
+          <NavLink to='contact'>
+            <CustomButton
+              className={`w-max py-2 bg-transparent px-5 
+                ${theme === 'light' 
+                  ?`shadow-darkest/50 text-darkest/95 hover:shadow-brand/50
+                  hover:border-brand
+                  border-darkest hover:bg-brand hover:text-lightest/95`
+                  :`bg-transparent text-white border-lightest shadow-lightest/30
+                    hover:bg-lightest/90 hover:text-darkest/95
+                  `}`
+                }
+            >
+              Get in touch
+            </CustomButton>
+          </NavLink>
+        </div>
         </div>
         
         {/* Image Section */}

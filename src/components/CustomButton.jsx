@@ -6,10 +6,10 @@ export default function CustomButton({ title, children, onClick, type, className
       ? `bg-darkest/80 hover:text-darkest border-darkest  
         hover:border-darkest shadow-darkest/40 `
       :`bg-brandDark/40 border-brandDark hover:border-lightest 
-        shadow-brand/40 hover:shadow-lightest/30`
+        shadow-brand/80 hover:shadow-lightest/30`
     } 
     rounded-lg
-    w-full shadow-lg text-lightest lg:shadow-
+    w-full shadow-lg text-lightest
     border-[1.8px] lg:border-[1px] font-semibold hover:bg-transparent`
   ;
   
@@ -18,7 +18,7 @@ export default function CustomButton({ title, children, onClick, type, className
       title={title}
       type={type}
       onClick={onClick}
-      className={` ${buttonStyle} ${className} shadow-lg`}
+      className={` ${className} ${buttonStyle}`}
     >
       {children}
     </button>

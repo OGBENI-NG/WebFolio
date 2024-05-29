@@ -61,7 +61,9 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
         <div className={`absolute inset-0 h-screen overflow-hidden`}>
           <div className='flex flex-col justify-self-center items-center gap-10 my-[100px]'>
             <div className='text-center'>
-              <h1 className={`font-bold text-5xl md:text-8xl text-center mt-auto font-Solway transition-opacity duration-1000 ${themeColor} ${showWelcome ? 'opacity-100' : 'opacity-0'}`}>
+              <h1 className={`font-bold text-5xl md:text-8xl text-center mt-auto 
+                font-Solway transition-opacity duration-1000
+               ${themeColor} ${showWelcome ? 'opacity-100' : 'opacity-0'}`}>
                 welcome
               </h1>
               <p className={`px-10 pt-8 md:pt-10 md:px-24 lg:pt-6 text-xl md:text-3xl lg:text-xl

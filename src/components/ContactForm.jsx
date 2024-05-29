@@ -38,7 +38,7 @@ export default function ContactForm({
     w-full h-[55px] md:h-[70px] rounded-[8px]
     outline:none text-lg md:text-2xl px-4 peer placeholder-transparent 
     focus:outline-none font-semibold transition-[.5s] 
-    lg:text-base lg:h-[40px] border-[1px] lg:border-[1px]`;
+    lg:text-base lg:h-[40px] border-[1.8px]`;
 
   // CSS styles for label elements
   const labelStyle = `${labelColor} absolute left-2 font-bold -top-6
@@ -94,7 +94,7 @@ export default function ContactForm({
                   className={`${borderColor} ${labelColor} w-full h-[158px] lg:h-[120px] rounded-[8px]
                   outline:none text-lg md:text-2xl lg:text-lg p-4 peer leading-tight
                     placeholder-transparent resize-none md:resize-y focus:outline-none 
-                    font-semibold transition-[.5s] border-[1px]`}
+                    font-semibold transition-[.5s] border-[1.8px]`}
                 />
               )}
               {/* Label for the input or textarea */}
