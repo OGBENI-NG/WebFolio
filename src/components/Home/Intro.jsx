@@ -102,20 +102,20 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandCo
               See my works
             </CustomButton>
           </NavLink>
-          <NavLink to='contact'>
-            <CustomButton
-              className={`w-max py-2 bg-transparent px-5 
-                ${theme === 'light' 
-                  ?`shadow-black/30 text-black/95 hover:shadow-brand/50
-                  hover:border-brand
-                  border-darkest hover:bg-brand hover:text-lightest/95`
-                  :`bg-transparent text-white border-lightest shadow-lightest/30
-                    hover:bg-lightest/90 hover:text-black/95
-                  `}`
-                }
-            >
+          <NavLink 
+            to='contact' 
+            className={`w-max py-2  px-5 border-[1px] rounded-md shadow-lg
+            ${theme === 'light' 
+              ?`bg-transparent text-darkest shadow-darkest/30 hover:shadow-brand/50
+              hover:border-brand
+              border-darkest hover:bg-brand hover:text-lightest/95`
+              :`bg-transparent text-white border-lightest shadow-lightest/30
+                hover:bg-lightest/90 hover:text-black/95
+              `}`
+            }>
+            <button>
               Get in touch
-            </CustomButton>
+            </button>
           </NavLink>
         </div>
         </div>

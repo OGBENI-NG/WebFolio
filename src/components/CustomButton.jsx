@@ -8,7 +8,7 @@ export default function CustomButton({ title, children, onClick, type, className
       :`bg-brandDark/40 border-brandDark hover:border-lightest 
         shadow-brand/80 hover:shadow-lightest/30`
     } 
-    rounded-lg
+    rounded-md
     w-full shadow-lg text-lightest
     border-[1.8px] lg:border-[1px] font-semibold hover:bg-transparent`
   ;
