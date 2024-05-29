@@ -106,11 +106,11 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandCo
             <CustomButton
               className={`w-max py-2 bg-transparent px-5 
                 ${theme === 'light' 
-                  ?`shadow-darkest/50 text-darkest/95 hover:shadow-brand/50
+                  ?`shadow-black/30 text-black/95 hover:shadow-brand/50
                   hover:border-brand
                   border-darkest hover:bg-brand hover:text-lightest/95`
                   :`bg-transparent text-white border-lightest shadow-lightest/30
-                    hover:bg-lightest/90 hover:text-darkest/95
+                    hover:bg-lightest/90 hover:text-black/95
                   `}`
                 }
             >
