@@ -67,7 +67,7 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
               <p className={`px-10 pt-8 md:pt-10 md:px-24 lg:pt-6 text-xl md:text-3xl lg:text-xl
                 leading-relaxed md:leading-relaxed transition-opacity duration-1000 
                 font-semibold
-                bg-gradient-to-r from-red-600 via-brandDark to-pink-600 inline-block text-transparent bg-clip-text
+                bg-gradient-to-r from-red-600 via-brandDark to-blue-800 inline-block text-transparent bg-clip-text
                 ${showText ? 'opacity-100' : 'opacity-0'}`}>
                 I'm excited to share my projects with you.
               </p>
