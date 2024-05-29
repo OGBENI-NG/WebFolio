@@ -10,7 +10,7 @@ export default function CustomButton({ title, children, onClick, type, className
     } 
     rounded-md
     w-full shadow-lg text-lightest
-    border-[1.8px] lg:border-[1px] font-semibold hover:bg-transparent`
+    border-[1px] font-semibold hover:bg-transparent`
   ;
   
   return (
