@@ -15,7 +15,7 @@ const CustomSVG = ({className, theme }) => {
         413.863 -30.7084 18.3093 5.79493 103.493C42.2982 
         188.676 507.904 152.389 258.307 22.4743Z`} 
         fill={`${theme === 'light' ? '#2b7f4f' : '#06C156'}  `} 
-        fillOpacity={`${theme === 'light' ? '0.18' : '0.30'} `}
+        fillOpacity={`${theme === 'light' ? '0.18' : '0.25'} `}
       />
     </svg>
   );
