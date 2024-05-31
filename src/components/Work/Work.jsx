@@ -25,9 +25,6 @@ export default function Work({
     fetchData();
   }, []);
 
-  const tool = firebaseData.map(item => item.tools)
- 
-
   return (
     <section className={`py-[110px] pb-[130px]`}>
       <div className={`${bodyPadding}`}
