@@ -2,10 +2,11 @@ import React from 'react';
 import { FaChevronDown, FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 
-export default function WorkItem({ item, layoutTheme, themeColor, className, bodyTxt, openId, toggleDescription, brandColor, theme }) {
+export default function WorkItem({ item, layoutTheme, themeColor,
+   className, bodyTxt, openId, toggleDescription, brandColor, theme }) {
   
 
-  const linkIconsStyle = `text-[25px] md:text-[40px] lg:text-2xl xl:text-xl`;
+  const linkIconsStyle = `text-[25px] md:text-[40px] lg:text-2xl xl:text-base`;
 
   return (
     <div className={`${className}`}>
@@ -33,7 +34,7 @@ export default function WorkItem({ item, layoutTheme, themeColor, className, bod
         </div>
         <div className={`${layoutTheme} rounded-b-lg shadow-md ${openId === item.id ? 'animate-fadeInDown lg:block' : 'hidden lg:block'} overflow-hidden`}>
           <div className='p-4 md:p-6 lg:pt-0 lg:pb-4 lg:px-5 xl:px-4'>
-            <p className={`text-base md:text-[24px] md:leading-[1.4] tracking-normal md:tracking-wide lg:text-[14px] lg:leading-[1.6] xl:text-[13px] ${bodyTxt}`}>
+            <p className={`h-[90px] md:h-[130px] lg:h-[90px] text-base md:text-[24px] md:leading-[1.4] tracking-normal md:tracking-wide lg:text-[14px] lg:leading-[1.6] xl:text-[13px] ${bodyTxt}`}>
               {item.description}
             </p>
             <div className='flex items-center gap-x-2 pt-5 md:pt-8 lg:pt-5'>
@@ -50,7 +51,7 @@ export default function WorkItem({ item, layoutTheme, themeColor, className, bod
                   {item.tools.map((tool, index) => (
                     <span 
                       key={index} 
-                      className={`py-[2px] px-2  text-[12px] lg:text-[11px] font-bold
+                      className={`py-[2px] px-[5px]  text-[12px] md:text-xl lg:text-[8px] font-bold
                         rounded-[4px] ${theme === 'light' ? 'bg-brand/5 text-brand ' :'text-brandDark bg-brandDark/15'}`}
                     >
                       {tool}

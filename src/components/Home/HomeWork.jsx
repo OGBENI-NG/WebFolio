@@ -42,6 +42,7 @@ export default function SelectedWork({
             openId={openId}
             toggleDescription={toggleDescription}
             brandColor={brandColor}
+            theme={theme}
           />
         ))}
       </div>

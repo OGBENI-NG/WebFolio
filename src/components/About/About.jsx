@@ -67,6 +67,7 @@ export default function About(
             toggleDescription={toggleDescription}
             brandColor={brandColor}
             className={`pb-7 lg:pb-0 ${index > 1 ? 'lg:hidden xl:block' : ''}`}
+            theme={theme}
           />
         ))}
       </div>
