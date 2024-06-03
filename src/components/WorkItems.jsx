@@ -51,7 +51,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
                   {item.tools.map((tool, index) => (
                     <span 
                       key={index} 
-                      className={`py-[2px] px-[5px] w-auto text-[13px] font-semibold lg:py-[1px]
+                      className={`py-[2px] px-[5px] w-auto text-[14px] font-semibold lg:py-[1px]
                         lg:text-[10px] xl:text-[8px]
                         rounded-[3px] ${theme === 'light' ? 'bg-brand/5 text-brand ' :'text-brandDark bg-brandDark/15'}`}
                     >
