@@ -72,14 +72,14 @@ const data = {
                   name: 'Adam Smith', 
                   position: 'Web Designer',
                   img: adam,
-                  review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, eveniet minima placeat velit voluptas ipsa in voluptate sed enim.`
+                  review: `Frontend Mentor challenge: Built an e-commerce product page with a lightbox gallery and cart functionality, with JavaScript skills.`
             },
             {
                   id: generateUniqueId(), 
                   name: 'Lauren White', 
                   position: 'Product Manager',
                   img: beth,
-                  review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, eveniet minima placeat velit voluptas ipsa in voluptate sed enim.`
+                  review: `This user-friendly age calculator web app with ReactJS empowers users to calculate their age correctly `
             },
       ],
       contactLinkEl: [

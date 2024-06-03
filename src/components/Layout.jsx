@@ -75,7 +75,7 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
               </p>
             </div>
             {showLoading && (
-              <div className=' my-[100px] overflow-hidden'>
+              <div className=' my-[10px] overflow-hidden'>
                 <LogoAnim className={`transition-all duration-1000 ${showLoading ? 'opacity-100' : 'opacity-0'}`} />
               </div>
             )}

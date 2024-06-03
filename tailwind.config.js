@@ -80,7 +80,7 @@ export default {
         loading: {
           "0%": {
             opacity: 0.5,
-            width: "80px", // Initial width
+            width: "75px", // Initial width
             transform: "rotate(0deg)", // Initial rotation
           },
           "25%": {
@@ -90,7 +90,7 @@ export default {
           },
           "50%": {
             opacity: 1,
-            width: "80px", // Intermediate width
+            width: "75px", // Intermediate width
             transform: "rotate(1800deg)", // Intermediate rotation
           },
           "75%": {
@@ -100,7 +100,7 @@ export default {
           },
           "100%": {
             opacity: 0.5,
-            width: "80px", // Final width (same as initial)
+            width: "75px", // Final width (same as initial)
             transform: "rotate(-360deg)", // Final rotation (360 degrees)
           },
         },

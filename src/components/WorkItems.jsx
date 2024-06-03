@@ -37,7 +37,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
             <p className={`h-[90px] md:h-[130px] lg:h-[90px] text-base md:text-[24px] md:leading-[1.4] tracking-normal md:tracking-wide lg:text-[14px] lg:leading-[1.6] xl:text-[13px] ${bodyTxt}`}>
               {item.description}
             </p>
-            <div className='flex items-center gap-x-2 pt-5 md:pt-8 lg:pt-5'>
+            <div className='flex items-center gap-x-2 pt-8 md:pt-8 lg:pt-5 '>
               <div className='flex items-center gap-x-4 md:gap-5 lg:gap-3'>
                 <a href={item.gitRepository} target='_blank' className={`${brandColor} hover:text-brand/70`} title="github-link">
                   <FaGithub className={linkIconsStyle} />
@@ -47,12 +47,13 @@ export default function WorkItem({ item, layoutTheme, themeColor,
                 </a>
               </div>
               <div className='ml-auto'>
-                <div className='flex items-center flex-wrap justify-end gap-[6px]'>
+                <div className='flex items-center flex-wrap justify-end gap-[8px] xl:gap-[6px]'>
                   {item.tools.map((tool, index) => (
                     <span 
                       key={index} 
-                      className={`py-[2px] px-[5px]  text-[12px] md:text-xl lg:text-[8px] font-bold
-                        rounded-[4px] ${theme === 'light' ? 'bg-brand/5 text-brand ' :'text-brandDark bg-brandDark/15'}`}
+                      className={`py-[2px] px-[5px] w-auto text-[13px] font-semibold lg:py-[1px]
+                        lg:text-[10px] xl:text-[8px]
+                        rounded-[3px] ${theme === 'light' ? 'bg-brand/5 text-brand ' :'text-brandDark bg-brandDark/15'}`}
                     >
                       {tool}
                     </span>
