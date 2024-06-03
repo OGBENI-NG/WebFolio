@@ -10,7 +10,7 @@ export default {
       },
       screens: {
         'xl': {'min': '1200px', 'max': '1280px'},
-        'xlg': {'min': '1290px', 'max': '1536px'}
+        'xxl': {'min': '1290px', 'max': '1536px'}
         // => @media (min-width: 1280px and max-width: 1535px) { ... }
       },
       colors: {
@@ -80,9 +80,9 @@ export default {
         loading: {
           "0%": {
             opacity: 0.5,
-            width: "50px", // Initial width
+            width: "60px", // Initial width
             height: "auto",
-            transform: "rotate(0deg)", // Initial rotation
+            transform: "rotate(1800deg)", // Initial rotation
           },
           "25%": {
             opacity: 0.8,
@@ -92,27 +92,27 @@ export default {
           },
           "50%": {
             opacity: 1,
-            width: "70px", // Intermediate width
+            width: "60px", // Intermediate width
             height: "auto",
-            transform: "rotate(-180deg)", // Intermediate rotation
+            transform: "rotate(1800deg)", // Intermediate rotation
           },
           "75%": {
             opacity: 0.8,
             width: "20px", // Intermediate width
             height: "auto",
-            transform: "rotate(-270deg)", // Intermediate rotation
+            transform: "rotate(270deg)", // Intermediate rotation
           },
           "85%": {
             opacity: 0.5,
-            width: "70px", // Final width (same as initial)
+            width: "60px", // Final width (same as initial)
             height: "auto",
-            transform: "rotate(-180deg)", // Final rotation (360 degrees)
+            transform: "rotate(360deg)", // Final rotation (360 degrees)
           },
           "100%": {
             opacity: 0.5,
-            width: "50px", // Final width (same as initial)
+            width: "20px", // Final width (same as initial)
             height: "auto",
-            transform: "rotate(360deg)", // Final rotation (360 degrees)
+            transform: "rotate(180deg)", // Final rotation (360 degrees)
           },
         },
       },

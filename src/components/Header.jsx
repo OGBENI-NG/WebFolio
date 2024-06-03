@@ -23,8 +23,8 @@ export default function Header(
 
   const toggleNavWidth = ` 
     ${toggle 
-      ? 'md:w-[225px] lg:w-[180px] xl:w-[180px] transition-[1s]' 
-      :'md:w-[110px] lg:w-[100px] xl:w-[100px] transition-[1s]'}`
+      ? 'md:w-[225px] lg:w-[180px]  xxl:w-[300px] transition-[1s]' 
+      :'md:w-[110px] lg:w-[100px]  transition-[1s]'}`
   ;
   const toggleTxtStyle = ` 
     ${toggle ? "md:w-max" :"md:w-0 opacity-0"}
@@ -32,7 +32,7 @@ export default function Header(
 
 
   return (
-    <header className={`relative z-50 x`}>
+    <header className={`relative z-50 `}>
       <div className={` flex items-center justify-center md:justify-start py-2
         ${headerNavbarTheme} md:gap-2 border-b-[1.8px]  lg:border-b-[1px] 
         fixed w-full ${toggleNavWidth} md:left-0 px-5 md:pl-6 md:border-r-[1.8px]
