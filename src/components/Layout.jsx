@@ -66,7 +66,7 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
                ${themeColor} ${showWelcome ? 'opacity-100' : 'opacity-0'}`}>
                 welcome
               </h1>
-              <p className={`px-10 pt-8 md:pt-10 md:px-24 lg:pt-6 text-xl md:text-3xl lg:text-xl
+              <p className={`px-10 pt-9 md:pt-10 md:px-24 lg:pt-8 text-xl md:text-3xl lg:text-xl
                 leading-relaxed md:leading-relaxed transition-opacity duration-1000 
                 font-semibold
                 bg-gradient-to-r from-red-600 via-brandDark to-blue-800 inline-block text-transparent bg-clip-text
@@ -75,7 +75,7 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
               </p>
             </div>
             {showLoading && (
-              <div className=' my-[10px] overflow-hidden'>
+              <div className=' my-[100px] overflow-hidden'>
                 <LogoAnim className={`transition-all duration-1000 ${showLoading ? 'opacity-100' : 'opacity-0'}`} />
               </div>
             )}

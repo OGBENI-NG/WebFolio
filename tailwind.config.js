@@ -80,28 +80,39 @@ export default {
         loading: {
           "0%": {
             opacity: 0.5,
-            width: "75px", // Initial width
+            width: "50px", // Initial width
+            height: "auto",
             transform: "rotate(0deg)", // Initial rotation
           },
           "25%": {
             opacity: 0.8,
             width: "20px", // Intermediate width
-            transform: "rotate(90deg)", // Intermediate rotation
+            height: "auto",
+            transform: "rotate(360deg)", // Intermediate rotation
           },
           "50%": {
             opacity: 1,
-            width: "75px", // Intermediate width
-            transform: "rotate(1800deg)", // Intermediate rotation
+            width: "70px", // Intermediate width
+            height: "auto",
+            transform: "rotate(-180deg)", // Intermediate rotation
           },
           "75%": {
             opacity: 0.8,
             width: "20px", // Intermediate width
+            height: "auto",
             transform: "rotate(-270deg)", // Intermediate rotation
+          },
+          "85%": {
+            opacity: 0.5,
+            width: "70px", // Final width (same as initial)
+            height: "auto",
+            transform: "rotate(-180deg)", // Final rotation (360 degrees)
           },
           "100%": {
             opacity: 0.5,
-            width: "75px", // Final width (same as initial)
-            transform: "rotate(-360deg)", // Final rotation (360 degrees)
+            width: "50px", // Final width (same as initial)
+            height: "auto",
+            transform: "rotate(360deg)", // Final rotation (360 degrees)
           },
         },
       },
