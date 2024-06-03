@@ -46,13 +46,13 @@ export default function WorkItem({ item, layoutTheme, themeColor,
                   <FiExternalLink className={linkIconsStyle} />
                 </a>
               </div>
-              <div className='ml-auto'>
+              <div className='ml-auto '>
                 <div className='flex items-center flex-wrap justify-end gap-[8px] xl:gap-[6px]'>
                   {item.tools.map((tool, index) => (
                     <span 
                       key={index} 
-                      className={`py-[2px] px-[5px] w-auto text-[14px] font-semibold lg:py-[1px]
-                        lg:text-[10px] xl:text-[8px]
+                      className={`py-[2px] px-[5px] w-auto text-[14px] font-semibold
+                        lg:text-[10px] xl:text-[8px] 
                         rounded-[3px] ${theme === 'light' ? 'bg-brand/5 text-brand ' :'text-brandDark bg-brandDark/15'}`}
                     >
                       {tool}
