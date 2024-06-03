@@ -53,7 +53,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
                       key={index} 
                       className={`py-[2px] px-[5px] w-auto text-[14px] font-semibold
                         lg:text-[10px] xl:text-[8px] 
-                        rounded-[3px] ${theme === 'light' ? 'bg-brand/5 text-brand ' :'text-brandDark bg-brandDark/15'}`}
+                        rounded-[3px] ${theme === 'light' ? 'bg-brand/10 text-brand ' :'text-brandDark bg-brandDark/15'}`}
                     >
                       {tool}
                     </span>
