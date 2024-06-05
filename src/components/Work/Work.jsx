@@ -31,7 +31,7 @@ export default function Work({
       >
         {isLoading ? (
           <div className={`flex justify-center items-center m-auto 
-          w-[300px] h-[200px] xl:h-[300px]`}>
+          w-[300px] h-[200px] xl:h-[300px] xxl:h-[320px]`}>
             <LoadingLogo 
               className=" mt-[75px] md:mt-0" />
           </div>
@@ -41,14 +41,14 @@ export default function Work({
               Works
               <span className={`${highLightTxtOne} block`}> What I have made</span>
             </h1>
-            <div className='lg:grid lg:grid-cols-2 xl:grid-cols-3 xl:gap-5 lg:gap-6'>
+            <div className='lg:grid lg:grid-cols-2 xl:grid-cols-3 xl:gap-5 lg:gap-6 xxl:grid-cols-3'>
               {firebaseData.map(item => (
                 <WorkItem
                   key={item.id}
                   item={item}
                   layoutTheme={layoutTheme}
                   themeColor={themeColor}
-                  className={`pb-5 md:mt-5 lg:pb-0 lg:mt-0`}
+                  className={`pb-5 shadow-lg rounded-b-[8px] md:mt-5 lg:pb-0 lg:mt-0`}
                   bodyTxt={bodyTxt}
                   openId={openId}
                   theme={theme}

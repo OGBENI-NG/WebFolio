@@ -24,19 +24,19 @@ export default function Header(
   const toggleNavWidth = ` 
     ${toggle 
       ? 'md:w-[225px] lg:w-[180px]  xxl:w-[300px] transition-[1s]' 
-      :'md:w-[110px] lg:w-[100px]  transition-[1s]'}`
+      :'md:w-[110px] lg:w-[90px]  transition-[1s]'}`
   ;
   const toggleTxtStyle = ` 
-    ${toggle ? "md:w-max" :"md:w-0 opacity-0"}
+    ${toggle ? "md:w-max" :"md:hidden"}
   `;
 
 
   return (
     <header className={`relative z-50 `}>
       <div className={` flex items-center justify-center md:justify-start py-2
-        ${headerNavbarTheme} md:gap-2 border-b-[1.8px]  lg:border-b-[1px] 
+        ${headerNavbarTheme} md:gap-2 border-b-[1.8px]  lg:border-b-[1.5px] 
         fixed w-full ${toggleNavWidth} md:left-0 px-5 md:pl-6 md:border-r-[1.8px]
-        lg:py-1 lg:pl-5 lg:gap-1 lg:border-r-[1px]
+        lg:py-1 lg:pl-5 lg:gap-1 lg:border-r-[1.5px] rounded-br-lg  xxl:pl-8 
         ${
           visible 
           ? 'top-0 opacity-100 h-[75px] md:h-[100px] lg:h-[80px] xl:h-[70px]' 
@@ -63,7 +63,7 @@ export default function Header(
         </div>
         <h1 className={`${themeColor} ${toggleTxtStyle}
           font-Solway text-3xl md:text-2xl lg:text-lg 
-          font-semibold
+          font-semibold xxl:text-2xl 
          `}
         >
           WebFolio

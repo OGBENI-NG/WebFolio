@@ -67,7 +67,8 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandCo
       w-full relative z-[0] ${bodyPadding}`}
     >
       {/* Background Custom SVG */}
-      <div className='block absolute -z-[5] right-0 top-0 md:-top-10 md:-right-10'>
+      <div className='block absolute -z-[5] right-0 top-0 md:-top-10 md:-right-10
+       lg:-right-36'>
         <CustomSVG
           className={`w-[297px] h-[369px] md:w-[520px] md:h-[520px]`}
           theme={theme}
@@ -85,7 +86,7 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandCo
             Hello I'm
             <span className={`block ${brandColor}`}>Adeolu Miracle,</span>
             <span className={`${textsEl[currentWordIndex].color}`}>
-              {`${displayedText}`} <span className='animate-ping'>|</span>
+              {`${displayedText}`} <span className='animate-pulse'>|</span>
             </span>
           </h1>
           <p

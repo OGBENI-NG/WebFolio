@@ -58,8 +58,8 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
   return (
     <>
       {isLoading ? (
-        <div className={`absolute inset-0 h-screen overflow-hidden`}>
-          <div className='flex flex-col justify-self-center items-center gap-10 my-[100px]'>
+        <div className={`absolute inset-0 h-auto overflow-hidden`}>
+          <div className='flex flex-col justify-center items-center gap-10 my-[100px]'>
             <div className='text-center'>
               <h1 className={`font-bold text-5xl md:text-8xl text-center mt-auto 
                 font-Solway transition-opacity duration-1000

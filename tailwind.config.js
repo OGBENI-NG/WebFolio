@@ -30,6 +30,7 @@ export default {
         fadeInTop: "fadeInTop 1s ease 0s 1 normal forwards",
         fadeInClose: "fadeInClose 1s ease 0s 1 normal forwards",
         loading: "loading 2s linear infinite",
+        pulse: 'pulse .5s cubic-bezier(0.4, 0, 0.6, 1) infinite'
       },
       keyframes: {
         fadeInDown: {
@@ -94,7 +95,7 @@ export default {
             opacity: 1,
             width: "60px", // Intermediate width
             height: "auto",
-            transform: "rotate(1800deg)", // Intermediate rotation
+            transform: "rotate(190deg)", // Intermediate rotation
           },
           "75%": {
             opacity: 0.8,
@@ -112,9 +113,20 @@ export default {
             opacity: 0.5,
             width: "20px", // Final width (same as initial)
             height: "auto",
-            transform: "rotate(180deg)", // Final rotation (360 degrees)
+            transform: "rotate(1800deg)", // Final rotation (360 degrees)
           },
         },
+        purse: {
+          "0%" :{
+           opacity: .8,
+          },
+          "50%": {
+            opacity: 0.5
+          },
+          "100%" : {
+            opacity: 1
+          }
+        }
       },
       
     },

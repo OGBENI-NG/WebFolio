@@ -19,6 +19,7 @@ export default function Testimonials({
       key={item.id}
       className={`relative group cursor-pointer rounded-lg mt-7 
         lg:hover:translate-y-1 transition-[1s] hover:text-lightest/80 
+        shadow-md
         ${ index > 0 &&
           `lg:before:absolute lg:before:content-[''] lg:before:bg-brandDark/50 lg:before:-left-[20px] lg:before:top-0 lg:before:m-0 lg:before:h-[5px] lg:before:w-[24px] lg:before:rounded-lg`
         } 

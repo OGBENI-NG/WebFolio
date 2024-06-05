@@ -55,7 +55,7 @@ export default function About(
       >
         Recent Works
       </h1>
-      <div className='mt-4 md:mt-6 lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-4 xl:gap-6'>
+      <div className='mt-4 md:mt-6 lg:grid lg:grid-cols-2 xxl:grid-cols-3 xl:grid-cols-3 lg:gap-4 xl:gap-4'>
         {recentWork.map((work, index) => (
           <WorkItem 
             key={work.id} 
@@ -66,7 +66,7 @@ export default function About(
             openId={openId}
             toggleDescription={toggleDescription}
             brandColor={brandColor}
-            className={`pb-7 lg:pb-0 ${index > 1 ? 'lg:hidden xl:block' : ''}`}
+            className={`pb-7 lg:pb-0 ${index > 1 ? 'lg:hidden xl:block xxl:block' : ''}`}
             theme={theme}
           />
         ))}

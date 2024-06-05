@@ -38,7 +38,7 @@ export default function App() {
     ? "block text-darkest/80" 
     : "block text-lightest/80";
 
-  const appTheme = theme === "light" ? 'bg-light/25' : 'bg-darkest';
+  const appTheme = theme === "light" ? 'bg-light/40' : 'bg-darkest';
 
   const brandColor = theme === 'light' ? 'text-brand' : 'text-brandDark';
 
@@ -77,9 +77,9 @@ export default function App() {
   // Body padding style depending on toggle state
   const bodyPadding = toggle 
     ? `px-5 md:pl-[255px] md:pr-[28px] md:animate-fadeInLeft
-     lg:pl-[220px] lg:pr-[40px] xl:pl-[250px] xl:pr-[60px]`
+     lg:pl-[220px] lg:pr-[40px] xl:pl-[250px] xl:pr-[60px] xxl:pl-[340px]`
     : `px-5 md:pl-[160px] md:pr-[45px] md:animate-fadeInTop 
-    lg:pl-[150px] lg:pr-[50px] xl:pl-[180px] xl:pr-[80px]`;
+    lg:pl-[150px] lg:pr-[50px] xl:pl-[180px] xl:pr-[80px] xxl:pl-[190px] xxl:pr-[80px]`;
 
   // Form theme style
   const formTheme = theme === 'light' ? 'bg-slate-200/90' : 'bg-dark/40';

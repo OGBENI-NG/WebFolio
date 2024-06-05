@@ -5,9 +5,12 @@ import ContactInfo from './ContactInfo';
 export default function Footer({data, theme, bodyTxt, bodyPadding, brandColor}) {
 
   const footerTheme = ` 
-  ${theme === "light"? "bg-light/55": "bg-dark/50"}` 
-;
-
+    ${theme === "light"? "bg-light/55": "bg-dark/50"}`
+  ;
+  const linkStyle = theme === 'light' 
+    ? 'text-brand/75 hover:text-brand' 
+    :' text-brandDark/75 hover:text-brandDark'
+  ;
   //fetch links icon from 
   const linkIconEl = data.contactLinkEl.filter(icon => icon.type === "icon")
 
@@ -30,7 +33,7 @@ export default function Footer({data, theme, bodyTxt, bodyPadding, brandColor}) 
          <ContactInfo info={contactInfoEl} bodyTxt={bodyTxt}/>
         </div>
         <div className='flex items-center justify-center gap-8 md:gap-12 lg:gap-4 xl:gap-6' >
-          <SocialIcons icons={linkIconEl} className={`${brandColor} hover:text-brand/60`}/>
+          <SocialIcons icons={linkIconEl} className={`${linkStyle}`}/>
         </div>
       </div>
       <span className={`${bodyTxt} block text-center md:text-3xl pt-10 md:pt-16 
