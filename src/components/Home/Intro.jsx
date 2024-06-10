@@ -63,7 +63,7 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandCo
 
   return (
     <article
-      className={`pt-[135px] md:pt-[110px] lg:pt-[110px] 
+      className={`pt-[135px] md:pt-[100px] lg:pt-[80px] 
       w-full relative z-[0] ${bodyPadding}`}
     >
       {/* Background Custom SVG */}

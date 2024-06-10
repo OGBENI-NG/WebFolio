@@ -58,9 +58,10 @@ export default function WorkItem({ item, layoutTheme, themeColor,
                   {item.tools.map((tool, index) => (
                     <span 
                       key={index} 
-                      className={`cursor-pointer py-[2px] px-[5px] w-auto text-[14px] font-semibold
-                        lg:text-[10px] xl:text-[10px] 
-                        rounded-[3px] ${theme === 'light' ? 'bg-brand/10 text-brand ' :'text-brandDark bg-brandDark/15'}`}
+                      className={`cursor-pointer py-[4px] px-[5px] md:py-[4px] md:px-[8px] 
+                        w-max text-[14px] font-semibold md:text-lg lg:py-0 leading-none
+                        lg:text-[10px] lg:px-[6px]
+                        rounded-[3px] md:rounded-[4px] ${theme === 'light' ? 'bg-brand/10 text-brand ' :'text-brandDark bg-brandDark/15'}`}
                     >
                       {tool}
                     </span>

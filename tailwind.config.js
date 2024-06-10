@@ -10,7 +10,7 @@ export default {
       },
       screens: {
         'xl': {'min': '1200px', 'max': '1280px'},
-        'xxl': {'min': '1290px', 'max': '1536px'}
+        'xxl': {'min': '1290px', 'max': '1536px'},
         // => @media (min-width: 1280px and max-width: 1535px) { ... }
       },
       colors: {

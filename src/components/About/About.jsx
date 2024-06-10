@@ -8,7 +8,6 @@ import WorkItem from '../WorkItems'
 export default function About(
   {
     bodyTxt,
-    data,
     themeColor,
     layoutTheme,
     openId,
@@ -16,7 +15,8 @@ export default function About(
     bodyPadding,
     theme,
     brandColor,
-    firebaseData
+    firebaseData,
+    borderColor
   }
 ) {
 
@@ -37,7 +37,7 @@ export default function About(
           alt="hero-pics" 
           className={`w-[200px] h-[200px] lg:w-[220px] lg:h-[228px] mb-8 m-auto md:ml-0
           rounded-full xl:h-[205px] md:rounded-xl border-[1.5px] lg:rounded-md lg:border-none 
-          lg:drop-shadow-xl lg:m-0 ${brandColor} leading-relaxed`}
+          lg:drop-shadow-xl lg:m-0 ${borderColor} leading-relaxed`}
         />
         <article className={` lg:py-0 lg:-mt-1 ${articleStyle} `}>
         Hello, my name is <span className={spanTxt}>Adeolu Miracle</span>. I work as a Frontend Developer with a passion, for creating user-friendly interfaces. I started my coding journey in 2018. Have since been fascinated by the process of crafting visually appealing web experiences. Throughout my learning experience, I've focused on mastering languages like <span className={spanTxt}>HTML, CSS, and JavaScript </span> which are essential for building top-notch web applications. In addition to these skills, I've delved into technologies such as 

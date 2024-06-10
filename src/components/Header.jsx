@@ -23,8 +23,8 @@ export default function Header(
 
   const toggleNavWidth = ` 
     ${toggle 
-      ? 'md:w-[225px] lg:w-[180px]  xxl:w-[300px] transition-[1s]' 
-      :'md:w-[110px] lg:w-[90px]  transition-[1s]'}`
+      ? 'md:w-[225px] lg:w-[180px]  xxl:w-[250px] transition-[1s]' 
+      :'md:w-[110px] lg:w-[80px]  transition-[1s]'}`
   ;
   const toggleTxtStyle = ` 
     ${toggle ? "md:w-max" :"md:hidden"}
@@ -36,7 +36,7 @@ export default function Header(
       <div className={` flex items-center justify-center md:justify-start py-2
         ${headerNavbarTheme} md:gap-2 border-b-[1.8px]  lg:border-b-[1.5px] 
         fixed w-full ${toggleNavWidth} md:left-0 px-5 md:pl-6 md:border-r-[1.8px]
-        lg:py-1 lg:pl-5 lg:gap-1 lg:border-r-[1.5px] rounded-br-lg  xxl:pl-8 
+        lg:py-1 lg:pl-5 lg:gap-1 lg:border-r-[1.5px] rounded-br-lg  xxl:pl-4 
         ${
           visible 
           ? 'top-0 opacity-100 h-[75px] md:h-[100px] lg:h-[80px] xl:h-[70px]' 
@@ -46,8 +46,7 @@ export default function Header(
         <div className={`mr-auto md:m-0 md:pr-1 transition-[1s] 
           ${toggle ? 'lg:-ml-1' : 'lg:-pl-9 xl:-pl-10'}`}>
           <svg 
-           className={`w-[50px] h-[50px] 
-            ${toggle ? 'lg:w-[40px]':'lg:w-[45px]'}`}
+           className={`w-[50px] h-[50px] transition-all lg:w-[35px]`}
             viewBox="0 0 182 142" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
@@ -74,17 +73,18 @@ export default function Header(
           {switchIcon}
         </ToggleThemeBtn>
         <button 
-          title='toggle'
+          title={`${toggle ? 'Close' : 'Open'}`}
           onClick={handleToggleNavbar}
-          className={`${appTheme} shadow-[0px_0px_3px_2px_#2b7f4f]
-            ${brandColor} rounded-full hidden md:block 
-            md:absolute md:-right-5 md:p-[8px] lg:p-[5px] lg:-right-[15px]
-            xl:p-[5px]`
+          className={`${theme === 'light' ? 'bg-lightest':'bg-darkest'} shadow-[0px_0px_3px_2px_#2b7f4f]
+            ${brandColor} rounded-full hidden md:flex md:items-center opacity-70
+            hover:opacity-100
+            md:absolute md:-right-[15px] md:p-[8px] lg:p-[4px] lg:-right-[13px]
+            xxl:p-[6px] xl:-right-[11px]`
           } 
         > 
           <FaChevronRight 
-            className={`transition-[1s] text-[2xl] lg:text-base
-            ${toggle ? 'rotate-360':'rotate-180'}`}
+            className={`m-auto transition-[1s] text-[2xl] lg:text-base xl:text-[12px]
+            ${toggle ? 'rotate-180':'rotate-360'}`}
           />
         </button>
       </div>
