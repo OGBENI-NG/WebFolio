@@ -213,7 +213,7 @@ export default function NavBar({
          `}
       >
         <p className={`${themeColor} text-center 
-        ${toggle ? 'py-[70px] lg:py-[50px] xl:py-[50px]':'md:py-[40px] lg:py-[30px] xl:py-[50px] xxl:py-[40px]'} 
+        ${toggle ? 'py-[50px] xxl:py-[80px]':'md:py-[40px] lg:py-[30px] xl:py-[50px] xxl:py-[60px]'} 
          border-[1.5px] xlMd:hidden
           ${borderColor} font-bold`}>ad here
         </p>

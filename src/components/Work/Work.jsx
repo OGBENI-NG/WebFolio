@@ -48,7 +48,7 @@ export default function Work({
                   item={item}
                   layoutTheme={layoutTheme}
                   themeColor={themeColor}
-                  className={`pb-5 shadow-lg rounded-b-[8px] md:mt-5 lg:pb-0 lg:mt-0`}
+                  className={`mb-6 md:mt-5 lg:pb-0 lg:mt-0`}
                   bodyTxt={bodyTxt}
                   openId={openId}
                   theme={theme}
@@ -60,7 +60,7 @@ export default function Work({
             <a className='w-full lg:w-max lg:block lg:m-auto ' href="https://github.com/OGBENI-NG" target="_blank">
               <CustomButton
                 theme={theme}
-                className={`py-2 md:py-3 lg:py-1 lg:mt-12 text-lg md:text-2xl lg:text-lg lg:px-12`}>
+                className={`py-2 md:py-3 lg:py-1 lg:mt-6 text-lg md:text-2xl lg:text-lg lg:px-12`}>
                 More work on GitHub
               </CustomButton>
             </a>

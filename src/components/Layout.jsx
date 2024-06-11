@@ -59,14 +59,14 @@ export default function Layout({ themeColor, borderColor, data, bodyPadding,
     <>
       {isLoading ? (
         <div className={`absolute inset-0 h-auto overflow-hidden`}>
-          <div className='flex flex-col justify-center items-center gap-10 my-[100px]'>
+          <div className='flex flex-col justify-center items-center gap-10 py-[100px] xl:py-[150px] '>
             <div className='text-center'>
               <h1 className={`font-bold text-5xl md:text-8xl text-center mt-auto 
                 font-Solway transition-opacity duration-1000
                ${themeColor} ${showWelcome ? 'opacity-100' : 'opacity-0'}`}>
                 welcome
               </h1>
-              <p className={`px-10 pt-9 md:pt-10 md:px-24 lg:pt-8 text-xl md:text-3xl lg:text-xl
+              <p className={`px-10 pt-9 md:pt-10 md:px-24 lg:pt-8 xl:pt-10 text-xl md:text-3xl lg:text-xl
                 leading-relaxed md:leading-relaxed transition-opacity duration-1000 
                 font-semibold
                 bg-gradient-to-r from-red-600 via-brandDark to-blue-800 inline-block text-transparent bg-clip-text

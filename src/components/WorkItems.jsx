@@ -13,10 +13,10 @@ export default function WorkItem({ item, layoutTheme, themeColor,
   ;
 
   return (
-    <div className={`${className}`}>
-      <section className={`overflow-hidden h-auto`}>
+    <div className={`${className} `}>
+      <section className={`overflow-hidden h-auto shadow-lg rounded-b-[8px]`}>
         <img
-          className={`w-full h-full object-cover rounded-t-lg`}
+          className={`w-full h-full object-cover rounded-t-[8px]`}
           src={item.imageUrl}
           alt={item.name}
           loading="lazy"
@@ -34,7 +34,7 @@ export default function WorkItem({ item, layoutTheme, themeColor,
             </button>
           </div>
         </div>
-        <div className={`${layoutTheme} ${openId === item.id ? 'animate-fadeInDown lg:block' : 'hidden lg:block'} overflow-hidden rounded-b-lg shadow-inherit`}>
+        <div className={`${layoutTheme} ${openId === item.id ? 'animate-fadeInDown lg:block' : 'hidden lg:block'} overflow-hidden rounded-b-lg`}>
           <div className='p-4 md:p-6 lg:pt-0 lg:pb-4 lg:px-5 xl:px-4'>
             <p className={`h-[90px] md:h-[130px] lg:h-[90px] text-base md:text-[24px] md:leading-[1.4] tracking-normal md:tracking-wide lg:text-[14px] lg:leading-[1.6] xl:text-[13px] ${bodyTxt}`}>
               {item.description}

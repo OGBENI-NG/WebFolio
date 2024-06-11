@@ -26,7 +26,7 @@ export default function SelectedWork({
         Work
         <span className={highLightTxtOne}>What I have made</span>
       </h2>
-      <div className='relative -z-[0] mt-5 lg:overflow-hidden lg:mt-7 lg:grid lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-3 lg:gap-4 xl:gap-5'>
+      <div className='relative -z-[0] mt-5 lg:mt-7 lg:grid lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-3 lg:gap-4 xl:gap-5'>
         {SelectedWorkEl.map((item, index) => (
           <WorkItem 
             key={item.id} 
@@ -35,7 +35,7 @@ export default function SelectedWork({
             hoverColor={hoverColor}
             themeColor={themeColor}
             className={ `
-              ${index === SelectedWorkEl.length - 1 ? 'py-0' : 'pb-7 lg:pb-0'} 
+              ${index === SelectedWorkEl.length - 1 ? 'py-0 ' : 'pb-7 lg:pb-8'} 
               ${index > 1 ? 'lg:hidden xl:block xxl:block' : ''}`
             }
             bodyTxt={bodyTxt}

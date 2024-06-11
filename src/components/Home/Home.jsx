@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Intro from './Intro'
-import frameLogo from '../../asset/img/frame.svg'
 import HomeWork from './HomeWork'
 import SkillsIcons from './SkillsIcons'
 import HomeAbout from './HomeAbout'
@@ -47,7 +46,7 @@ export default function Home(
       <Intro 
         theme={theme}
         themeColor={themeColor}
-        frameLogo={frameLogo}
+        
         bodyTxt={bodyTxt}
         bodyPadding={bodyPadding}
         brandColor={brandColor}
