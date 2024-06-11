@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import CustomSVG from '../CustomSvg';
-import logoIllustration from '../../asset/img/intro-illtra.svg';
-import CustomButton from '../CustomButton';
-import { NavLink } from 'react-router-dom';
+import CustomSVG from '../CustomSvg'; // Importing custom SVG component
+import logoIllustration from '../../asset/img/intro-illtra.svg'; // Importing logo illustration image
+import CustomButton from '../CustomButton'; // Importing custom button component
+import { NavLink } from 'react-router-dom'; // Importing NavLink from react-router-dom for navigation
 
 export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandColor }) {
 
+  // State to manage image dimensions
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
 
+  // Effect to update image dimensions on component mount
   useEffect(() => {
     const img = new Image();
     img.src = logoIllustration;
@@ -29,6 +31,7 @@ export default function Intro({ bodyPadding, bodyTxt, theme, themeColor, brandCo
   const [isDeleting, setIsDeleting] = useState(false); // Flag for deleting state
   const [displayedText, setDisplayedText] = useState(''); // Text currently displayed
 
+  // Effect to handle typing and deleting text effect
   useEffect(() => {
     // Function to handle the typing and deleting effect
     const typingTxt = () => {

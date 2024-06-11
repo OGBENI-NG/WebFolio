@@ -1,6 +1,8 @@
 import React from 'react';
 
 export default function CustomButton({ title, children, onClick, type, className, theme }) {
+
+  //button style base on current theme
   const buttonStyle = `
     ${theme === 'light' 
       ? `bg-darkest/80 hover:text-darkest border-darkest  

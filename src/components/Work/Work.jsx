@@ -21,10 +21,9 @@ export default function Work({
       setFirebaseData(fetchedData);
       setIsLoading(false); // Set to false after data is fetched
     };
-
     fetchData();
   }, []);
-
+    
   return (
     <section className={`py-[110px] pb-[130px]`}>
       <div className={`${bodyPadding}`}

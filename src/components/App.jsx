@@ -1,27 +1,31 @@
+// Import necessary modules from React and React Router
 import React, { useContext, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Import custom components
 import Layout from './Layout';
 import Home from './Home/Home';
 import Work from './Work/Work';
 import About from './About/About';
 import Contact from './Contact/Contact';
 import PageNotFound from './PageNotFound';
-import data from '../data';
-import ScrollToTop from './ScrollPosition';
-import fetchDataWithImages from '../fetchData';
-import ThemeContext from './UseThemeContext'
+import data from '../data';  // Import data
+import ScrollToTop from './ScrollPosition';  // Import scroll position utility
+import fetchDataWithImages from '../fetchData';  // Import function to fetch data with images
+import ThemeContext from './UseThemeContext';  // Import theme context
 
+// Define the main App component and export it as the default export
 export default function App() {
-  // Destructuring the theme context
+  // Destructure the theme context to get necessary values and functions
   const {
     theme, openId, toggleDescription,
     toggleTheme, toggle, handleToggleNavbar
   } = useContext(ThemeContext);
 
-  // State to hold the fetched data
+  // State to hold the fetched data from Firebase
   const [firebaseData, setFirebaseData] = useState([]);
   
-  // Fetch data from Firebase on component mount
+  // useEffect to fetch data from Firebase on component mount
   useEffect(() => {
     const fetchData = async () => {
       const fetchedData = await fetchDataWithImages();
@@ -31,9 +35,7 @@ export default function App() {
     fetchData();
   }, []);
   
- 
-
-  // Theme-related styles
+  // Define styles related to the current theme
   const themeColor = theme === "light" 
     ? "block text-darkest/80" 
     : "block text-lightest/80";
@@ -46,7 +48,7 @@ export default function App() {
     ? 'bg-lightest' 
     : 'bg-dark/40';
 
-  // Text-related styles
+  // Define text-related styles based on the current theme
   const bodyTxt = theme === "light" ? "text-mid/90" : "text-light/85";
 
   const highLightTxt = `${brandColor} text-brand text-2xl md:text-[32px] 
@@ -60,13 +62,13 @@ export default function App() {
     lg:leading-loose md:text-2xl lg:text-lg font-semibold`
   ;
 
-  // Border color style
+  // Define border color style based on the current theme
   const borderColor = theme === 'light'
     ? 'border-brand/25'
     : 'border-brandDark/25'
   ;
 
-  // Input fields for the contact form
+  // Define input fields for the contact form
   const inputFields = [
     { id: 'name', type: 'text', label: 'Name*' },
     { id: 'email', type: 'email', label: 'Email*' },
@@ -74,7 +76,7 @@ export default function App() {
     { id: 'message', type: 'textarea', label: 'Message*'}
   ];
 
-  // Body padding style depending on toggle state
+  // Define body padding style based on the toggle state
   const bodyPadding = toggle 
     ? `px-5 md:pl-[255px] md:pr-[28px] md:animate-fadeInLeft
      lg:pl-[220px] lg:pr-[40px] xl:pl-[250px] xl:pr-[60px] xxl:pl-[290px]`
@@ -83,9 +85,10 @@ export default function App() {
     xxl:pl-[160px] xxl:pr-[80px]`
   ;
 
-  // Form theme style
+  // Define form theme style based on the current theme
   const formTheme = theme === 'light' ? 'bg-slate-200/90' : 'bg-dark/40';
 
+  // Render the application
   return (
     <div className={`antialiased overflow-x-hidden min-h-screen 
      !scroll-smooth font-OpenSan ${appTheme}`}>
@@ -147,8 +150,6 @@ export default function App() {
                   data={data}
                   bodyPadding={bodyPadding}
                   brandColor={brandColor}
-                  
-
                 />
               }
             />
@@ -169,7 +170,6 @@ export default function App() {
                   brandColor={brandColor}
                   firebaseData={firebaseData}
                   borderColor={borderColor}
-                  
                 />
               }
             />

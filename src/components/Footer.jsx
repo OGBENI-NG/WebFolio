@@ -1,21 +1,26 @@
-import React from 'react'
-import SocialIcons from './SocialIcons';
-import ContactInfo from './ContactInfo';
+import React from 'react';
+import SocialIcons from './SocialIcons'; // Importing the SocialIcons component
+import ContactInfo from './ContactInfo'; // Importing the ContactInfo component
 
-export default function Footer({data, theme, bodyTxt, bodyPadding, brandColor}) {
-
-  const footerTheme = ` 
-    ${theme === "light"? "bg-light/55": "bg-dark/50"}`
-  ;
+// Define the Footer functional component
+export default function Footer({ data, theme, bodyTxt, bodyPadding, brandColor }) {
+  
+  // Conditional theme styles for the footer background
+  const footerTheme = `
+    ${theme === "light" ? "bg-light/55" : "bg-dark/50"}
+  `;
+  
+  // Conditional link styles based on the theme
   const linkStyle = theme === 'light' 
     ? 'text-brand/75 hover:text-brand' 
-    :' text-brandDark/75 hover:text-brandDark'
-  ;
-  //fetch links icon from 
-  const linkIconEl = data.contactLinkEl.filter(icon => icon.type === "icon")
+    : 'text-brandDark/75 hover:text-brandDark';
 
-  const contactInfoEl = data.contactLinkEl.filter(infoEl => infoEl.type === "info")
-  
+  // Filter contact link elements to get only icons
+  const linkIconEl = data.contactLinkEl.filter(icon => icon.type === "icon");
+
+  // Filter contact link elements to get only info elements
+  const contactInfoEl = data.contactLinkEl.filter(infoEl => infoEl.type === "info");
+
   return (
     <footer className={`pt-[50px] ${brandColor} pb-[120px] md:py-[140px]
       ${footerTheme} ${bodyPadding} m-auto lg:py-[80px]`}>
@@ -30,15 +35,14 @@ export default function Footer({data, theme, bodyTxt, bodyPadding, brandColor}) 
         </div>
         <div className='flex flex-col items-center justify-center gap-5 md:gap-10 py-10 md:py-20
           lg:p-0 lg:gap-5 lg:items-start'>
-         <ContactInfo info={contactInfoEl} bodyTxt={bodyTxt}/>
+          <ContactInfo info={contactInfoEl} bodyTxt={bodyTxt} />
         </div>
-        <div className='flex items-center justify-center gap-8 md:gap-12 lg:gap-4 xl:gap-6' >
-          <SocialIcons icons={linkIconEl} className={`${linkStyle}`}/>
+        <div className='flex items-center justify-center gap-8 md:gap-12 lg:gap-4 xl:gap-6'>
+          <SocialIcons icons={linkIconEl} className={`${linkStyle}`} />
         </div>
       </div>
       <span className={`${bodyTxt} block text-center md:text-3xl pt-10 md:pt-16 
       text-xl lg:hidden font-bold`}>&copy; 2024</span>
-
     </footer>
-  )
+  );
 }
